@@ -1,0 +1,47 @@
+{
+  "name": "logseq-awesome-ui",
+  "description": "Reworked, simplified, fixed and pumped-up Logseq app, you always dreamed about.! Layout, components, etc...",
+  "version": "0.0.1",
+  "author": "yoyurec <yoyurec@gmail.com>",
+  "main": "dist/index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && cp -f -r src/css dist/assets",
+    "preinstall": "npx only-allow pnpm",
+    "semantic-release": "semantic-release"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "@logseq/libs": "0.0.8"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^9.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^8.24.0",
+    "semantic-release": "^19.0.5",
+    "typescript": "^4.8.4",
+    "vite": "3.1.0",
+    "vite-plugin-logseq": "^1.1.2"
+  },
+  "license": "MIT",
+  "logseq": {
+    "title": "Awesome UI",
+    "icon": "./icon.png",
+    "id": "logseq-awesome-ui"
+  },
+  "repository": "https://github.com/yoyurec/logseq-awesome-ui.git",
+  "effect": true,
+  "sponsors": [
+    "https://www.buymeacoffee.com/yoyurec"
+  ]
+}
