@@ -5,10 +5,15 @@
     </a>
 </p>
 
-
-...........
-...........
-
+* 🐱‍👤 Changed default UI layout, sidebars
+* ✨ Changed icons, new added
+* 🔥 Redesigned head toolbar: navigation arrows on left side, hidden home...
+* 🔍 Redesigned search <a href="#-search-panel">🡖</a>
+* 🗂 **"Tabs"** plugin panel was moved to top & auto-recolored to current (ANY) theme<a href="#-tabs-plugin">🡖</a>
+* ⚙ Simplified, less noise and compact Logseq plugins settings popup
+* 📋 Compact QUERY results header: settings, table toggler <a href="#-compact-query-results-header">🡖</a>
+* 📝 Redesigned admonition blocks <a href="#-redesigned-admonition-blocks">🡖</a>
+* 🧮 Redesigned calculator via @Playerofgames <a href="#-redesigned-calculator">🡖</a>
 
 ## If you ❤ what i'm doing - you can support my work! ☕
 <a href="https://www.buymeacoffee.com/yoyurec" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 50px !important;width: 178px !important;" ></a>
@@ -25,8 +30,29 @@ From Logseq store - `Plugins -> Marketplace`.
 * 📰 [Banners](https://github.com/yoyurec/logseq-banners-plugin)
 * [Tabs](https://github.com/pengx17/logseq-plugin-tabs)
 
-...........
-...........
+### 🔍 Search panel
+
+Wide responsive search like in browser!
+
+<img src="screenshots/search.png" width="800">
+
+### 🗂 Tabs plugin
+
+Theme supports [Tabs plugin](https://github.com/pengx17/logseq-plugin-tabs)
+
+<img src="screenshots/tabs.png" width="800">
+
+### 📝 Redesigned admonition blocks
+
+<img src="screenshots/admonition.png" width="540">
+
+### 📋 Compact QUERY results header
+
+<img src="screenshots/queries.png" width="600">
+
+### 🧮 Redesigned calculator
+
+<img src="screenshots/calculator.png" width="800">
 
 
 ## What is Logseq?
@@ -39,6 +65,7 @@ Logseq is a privacy-first, open-source knowledge base. Visit https://logseq.com 
 
 ## Credits
 * Icon - https://www.flaticon.com/free-icon/handcraft_3859663 + https://www.flaticon.com/free-icon/firewood_1732431
+* Calculator styles - @Playerofgames https://github.com/playerofgames/logseq-mia-theme
 
 ## License
 
