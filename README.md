@@ -30,6 +30,9 @@ From Logseq store - `Plugins -> Marketplace`.
 * 📰 [Banners](https://github.com/yoyurec/logseq-banners-plugin)
 * [Tabs](https://github.com/pengx17/logseq-plugin-tabs)
 
+
+## Features
+
 ### 🔍 Search panel
 
 Wide responsive search like in browser!
