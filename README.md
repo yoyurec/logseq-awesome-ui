@@ -38,8 +38,6 @@ Wide responsive search like in browser!
 
 ### 🗂 Tabs plugin
 
-Theme supports [Tabs plugin](https://github.com/pengx17/logseq-plugin-tabs)
-
 <img src="screenshots/tabs.png" width="800">
 
 ### 📝 Redesigned admonition blocks
@@ -53,7 +51,6 @@ Theme supports [Tabs plugin](https://github.com/pengx17/logseq-plugin-tabs)
 ### 🧮 Redesigned calculator
 
 <img src="screenshots/calculator.png" width="800">
-
 
 ## What is Logseq?
 Logseq is a privacy-first, open-source knowledge base. Visit https://logseq.com for more information.
