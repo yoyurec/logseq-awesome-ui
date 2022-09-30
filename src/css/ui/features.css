@@ -1,0 +1,32 @@
+/* hide home button */
+#head .button[title="Home"] {
+    display: var(--awesomeUI-home-button, flex) !important;
+}
+
+/* add new block (+) bullet */
+.add-button-link {
+    opacity: calc(var(--awesomeUI-new-bullet-hidden, 0) * 1);
+}
+
+/* sidebar page icon */
+#left-sidebar .left-sidebar-inner .page-icon i {
+    visibility: var(--awesomeUI-sidebar-page-icon, hidden) !important;
+}
+
+/* new page button */
+#left-sidebar .left-sidebar-inner .new-page {
+    display: var(--awesomeUI-sidebar-new-page, none) !important;
+    position: fixed;
+}
+
+/* promo */
+.is-solext .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="promoSolExt"] {
+    display: none;
+}
+.desc-item[data-key="promoSolExt"] {
+    margin: 1em 0 !important;
+    font-size: 1.3em;
+}
+.desc-item[data-key="promoSolExt"] .form-checkbox {
+    display: none;
+}

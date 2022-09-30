@@ -22,7 +22,8 @@ From Logseq store - `Plugins -> Marketplace`.
 * 🐱‍👤 [Solarized Extended](https://github.com/yoyurec/logseq-solarized-extended-theme)
 * ⭐ [Awesome Links](https://github.com/yoyurec/logseq-awesome-links)
 * 📌 [Sticky Headers](https://github.com/yoyurec/logseq-sticky-headers)
-
+* 📰 [Banners](https://github.com/yoyurec/logseq-banners-plugin)
+* [Tabs](https://github.com/pengx17/logseq-plugin-tabs)
 
 ...........
 ...........

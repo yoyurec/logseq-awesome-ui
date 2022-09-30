@@ -1,0 +1,28 @@
+/* "App pages" page*/
+.cp__all_pages .actions {
+    margin: 0 -30px;
+    padding: 0 30px;
+    border: 1px solid var(--ls-border-color);
+}
+
+
+/* "Journal" page */
+#journals .journal-item {
+    margin: 0;
+}
+.journal-title {
+    transition: none;
+}
+.journal-title .title,
+.ls-page-title {
+    margin-bottom: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+/* today queries */
+#today-queries {
+    margin-bottom: 16px;
+}
+#today-queries .lazy-visibility {
+    min-height: unset !important;
+}

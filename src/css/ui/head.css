@@ -1,0 +1,75 @@
+#head {
+    background-color: var(--awesomeUI-calc-bg);
+}
+/* head left part */
+#head>.l {
+    flex-basis: 140px;
+    width: unset !important;
+    justify-content: unset !important;
+}
+html.is-mac:not(.is-fullscreen) body:not(.is-tabs-loaded) #head>.l {
+    flex-basis: 208px;
+}
+
+/* left sidebar toggle button*/
+#head .ti-menu-2::before {
+    content: "\f005";
+}
+.ls-left-sidebar-open #head .ti-menu-2::before {
+    content: "\f004";
+}
+
+/* arrows navigation */
+#head>.r>.flex {
+    position: absolute;
+    left: -74px;
+}
+
+/* head right part */
+#head>.r {
+    height: 100%;
+    flex: unset;
+    flex-basis: 100%;
+    justify-content: flex-start;
+}
+html.is-mac body:not(.is-pdf-active):not(.is-tabs-loaded) #head>.r>.flex {
+    left: calc(-1 * var(--ls-left-sidebar-width) + 178px);
+}
+#head>.r::before {
+    content: "";
+    margin-left: auto;
+}
+#head .button {
+    opacity: 0.6;
+}
+#head .button:hover {
+    opacity: 1;
+}
+#head .button .ti {
+    opacity: 1;
+}
+/* settings dot button */
+#head .ui__dropdown-trigger .button {
+    opacity: 1;
+}
+/* right sidebar toggle button*/
+#head .toggle-right-sidebar {
+    display: flex;
+    height: 30px;
+}
+#head .ti-layout-sidebar-right::before {
+    content: "\f007";
+}
+.ls-right-sidebar-open #head .ti-layout-sidebar-right::before {
+    content: "\f006";
+}
+
+/* Doc View Exporter plugin */
+.kef-doc-icon {
+    opacity: 0.5 !important;
+}
+
+.kef-doc-icon:hover {
+    background-color: none !important;
+    opacity: 1 !important;
+}

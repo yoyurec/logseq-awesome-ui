@@ -1,0 +1,12 @@
+.cp__plugins-page {
+    /* more space to see last row plugins "uninstall" menu item ;) */
+    padding: 1.5rem 2rem 5rem 2rem;
+}
+
+.cp__plugins-page .text-xl {
+    font-size: 16px;
+}
+
+.cp__plugins-item-card>.r .ctl .de .menu-list>li:hover {
+    background-color: var(--ls-secondary-background-color);
+}

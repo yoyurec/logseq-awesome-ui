@@ -1,0 +1,38 @@
+/*
+  >>> BEGIN: Tabs plugin
+*/
+.is-tabs-loaded #logseq-tabs_lsp_main {
+    height: var(--awesomeUI-tabs-height) !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background-color: var(--awesome-ui-calc-bg, var(--ls-secondary-background-color));
+    -webkit-app-region: drag;
+}
+html.is-mac .is-tabs-loaded .cp__header>.l {
+    padding-left: 1rem;
+}
+/*
+  <<<< END: Tabs plugin
+*/
+
+
+/*
+  >>> BEGIN: Doc View Exporter plugin
+*/
+.kef-doc-exported .is-banner-active #banner,
+.kef-doc-exported .is-tabs-loaded.is-banner-active #banner,
+.kef-doc-exported body:not(.is-banner-active) .cp__sidebar-main-content,
+.kef-doc-exported .is-tabs-loaded:not(.is-banner-active) .cp__sidebar-main-content {
+    margin-top: 0 !important;
+}
+.kef-doc-exported .theme-inner {
+    overflow: overlay;
+}
+.kef-doc-exported .add-button-link-wrap {
+    display: none;
+}
+/*
+  <<<< END: Doc View Exporter plugin
+*/

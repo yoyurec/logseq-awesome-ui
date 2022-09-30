@@ -1,0 +1,26 @@
+@import url("ui/layout.css");
+@import url("ui/head.css");
+@import url("ui/search.css");
+
+@import url("ui/features.css");
+@import url("ui/query.css");
+@import url("ui/admonition.css");
+@import url("ui/calculator.css");
+
+@import url("ui/pages.css");
+@import url("ui/settings.css");
+@import url("ui/market.css");
+
+@import url("ui/plugins.css");
+
+:root {
+    --awesomeUI-tabs-height: 0px;
+    --awesomeUI-head-height: 48px;
+
+    --awesomeUI-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --awesomeUI-font-size: 13px;
+}
+
+.is-tabs-loaded {
+    --awesomeUI-tabs-height: 40px;
+}
