@@ -1,7 +1,7 @@
 {
   "name": "logseq-awesome-ui",
   "description": "Reworked, simplified, fixed and pumped-up Logseq app, you always dreamed about.! Layout, components, etc...",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "yoyurec <yoyurec@gmail.com>",
   "main": "dist/index.html",
   "scripts": {
