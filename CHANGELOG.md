@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.1.0...v1.1.1) (2022-10-03)
+
+
+### Bug Fixes
+
+* **meggages:** solext detection ([4e088cc](https://github.com/yoyurec/logseq-awesome-ui/commit/4e088ccf59ac7c9fe627dc98a5b476a438e68d08))
+
 # [1.1.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.0.1...v1.1.0) (2022-10-03)
 
 
