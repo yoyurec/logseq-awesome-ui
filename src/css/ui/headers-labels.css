@@ -1,0 +1,37 @@
+.ls-block :is(h1, h2, h3, h4, h5)::after {
+    display: var(--headers-labels, inline-block);
+    margin-left: 4px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-size: 11px;
+    vertical-align: baseline;
+    color: var(--ls-primary-text-color);
+    font-family: var(--awUI-code-font);
+    opacity: 0.3;
+    transition: opacity 0.3s;
+  }
+  .ls-block :is(h1, h2, h3, h4, h5):hover::after {
+    opacity: 0.5;
+  }
+  .ls-block h1::after {
+    content: "h1";
+  }
+  .ls-block h2::after {
+    content: "h2";
+  }
+  .ls-block h3::after {
+    content: "h3";
+  }
+  .ls-block h4::after {
+    content: "h4";
+  }
+  .ls-block h5::after {
+    content: "h5";
+  }
+  .block-ref :is(h1, h2, h3, h4, h5) {
+    border-bottom: none;
+    font-size: 1em;
+  }
+  .block-ref :is(h1, h2, h3, h4, h5)::after {
+    display: none;
+  }

@@ -2,7 +2,7 @@
   >>> BEGIN: Settings modal
 */
 .ui__modal {
-    font-family: var(--awesomeUI-font);
+    font-family: var(--awUI-font);
 }
 .ui__modal .settings-modal {
     font-size: 16px;
@@ -20,6 +20,9 @@
     .ui__modal-panel .panel-content {
         min-width: 1000px;
     }
+}
+.ui__modal .ui__modal-panel > .absolute {
+    z-index: 10;
 }
 /*
   <<<< END: Settings modal
@@ -54,7 +57,6 @@ html[data-theme="dark"] .ui__modal .ui__button:hover {
 .cp__plugins-settings-inner>.edit-file {
     z-index: 1;
 }
-
 .settings-modal .heading-item {
     color: var(--ls-link-text-color);
     border-color: var(--ls-link-text-color);
@@ -71,11 +73,9 @@ html[data-theme="dark"] .ui__modal .ui__button:hover {
 .settings-modal .desc-item :is(h2, strong) {
     font-weight: 500 !important;
 }
-
 .settings-modal .desc-item>.form-control {
     padding: 0;
 }
-
 .settings-modal .form-input:not(.color-input-helper) {
     background-color: var(--ls-primary-background-color) !important;
 }
@@ -84,7 +84,6 @@ html[data-theme="dark"] .ui__modal .ui__button:hover {
     background-color: none;
     box-shadow: 0px 0px 4px var(--ls-link-text-color);
 }
-
 .settings-modal .form-checkbox {
     margin-right: 6px;
     background-color: var(--ls-link-text-color);
@@ -92,7 +91,6 @@ html[data-theme="dark"] .ui__modal .ui__button:hover {
 .settings-modal .form-checkbox:hover {
     transform: none;
 }
-
 .settings-modal .form-radio {
     color: var(--ls-link-text-color);
     background-color: var(--ls-link-text-color);
@@ -100,7 +98,6 @@ html[data-theme="dark"] .ui__modal .ui__button:hover {
 .settings-modal .form-radio:focus {
     box-shadow: none;
 }
-
 .settings-modal .form-select:focus {
     border-color: transparent;
     background-color: var(--ls-primary-background-color);
@@ -110,8 +107,7 @@ html[data-theme="dark"] .ui__modal .ui__button:hover {
     background-color: var(--ls-primary-background-color);
     color: var(--ls-primary-text-color);
 }
-
-.settings-modal .desc-item>h2 :is(code, .ti-caret-right) {
+.settings-modal .desc-item>h2 :is(code, .ls-icon-caret-right) {
     display: none;
 }
 .settings-modal .desc-item .wrap .pl-1 {
@@ -123,11 +119,105 @@ html[data-theme="dark"] .ui__modal .ui__button:hover {
 
 
 /*
-  >>> BEGIN: Thems popup
+  >>> BEGIN: Themes popup
 */
 .cp__themes-installed .text-xs .opacity-60 {
     display: none;
 }
 /*
-  <<<< END: Thems popup
+  <<<< END: Themes popup
 */
+
+/*
+  >>> BEGIN: Settings icons
+*/
+.panel-wrap[data-id="logseq-awesome-ui"] .heading-item h2::before,
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key] small::before {
+    display: inline-block;
+    margin-right: 4px;
+    font-family: "tabler-icons";
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .heading-item h2::before {
+    font-size: 22px;
+    line-height: 0;
+    transform: translateY(3px);
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key] small::before {
+    transform: translateY(1px);
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="infoHeading"] h2::before {
+    content: "\eac5";
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="featureHeading"] h2::before {
+    content: "\ea38";
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureTasksEnabled"] small::before {
+    content: "\eb6a";
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureColumnsEnabled"] small::before {
+    content: "\ec3f";
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureHeadersLabelsEnabled"] small::before {
+    content: "\eb34";
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureHomeButtonEnabled"] small::before {
+    content: "\eac1";
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureSidebarNewPageEnabled"] small::before {
+    content: "\eb2a";
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureSidebarPageIconEnabled"] small::before {
+    content: "\eaa2";
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureNewBlockBulletEnabled"] small::before {
+    content: "\ea69";
+}
+
+/*
+  <<<< END: Settings icons
+*/
+
+
+/* promo */
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="promoSolExt"] {
+    display: none;
+}
+body:not(.is-solext) .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="promoSolExt"],
+body:not(.is-solext-loaded) .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="promoSolExt"] {
+    display: block;
+}
+.desc-item[data-key="promoSolExt"] {
+    margin: 1em 0 !important;
+    font-size: 1.3em;
+}
+.desc-item[data-key="promoSolExt"] .form-checkbox {
+    display: none;
+}
+
+/* upd */
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="promoUpdSolExt"] {
+    display: none;
+}
+.is-solext .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="promoUpdSolExt"] {
+    display: block;
+}
+.desc-item[data-key="promoUpdSolExt"] {
+    margin: 1em 0 !important;
+    font-size: 1.3em;
+}
+.desc-item[data-key="promoUpdSolExt"] .form-checkbox {
+    display: none;
+}

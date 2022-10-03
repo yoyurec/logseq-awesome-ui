@@ -14,13 +14,13 @@
     border: 1px solid #AAAAAA60;
     background-color: var(--ls-primary-background-color);
     transition: all .3s;
-    font-family: var(--awesomeUI-font);
+    font-family: var(--awUI-font);
 }
 .is-search-reordered #search-button::after {
     display: block;
     content: "Search...";
     margin: 2px 0 0 5px;
-    font-size: calc(var(--awesomeUI-font-size) + 2px);
+    font-size: calc(var(--awUI-font-size) + 2px);
 }
 @media (min-width: 1024px) {
     .is-search-reordered #search-button::after {
@@ -30,7 +30,7 @@
 
 /* search popup position */
 .is-search-opened .ui__modal {
-    top: calc(var(--awesomeUI-tabs-height) + 8px);
+    top: calc(var(--awUI-tabs-height) + 8px);
     padding: 0;
 }
 .ui__modal .ui__modal-panel {
@@ -82,7 +82,7 @@
     top: 0;
 }
 .ui__modal .ls-search .input-wrap .cp__palette-input {
-    font-size: calc(var(--awesomeUI-font-size) + 2px);
+    font-size: calc(var(--awUI-font-size) + 2px);
     padding: 5px 32px 3px 32px;
 
 }

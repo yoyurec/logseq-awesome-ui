@@ -2,7 +2,13 @@ import '@logseq/libs';
 import { SettingSchemaDesc, LSPluginBaseInfo } from '@logseq/libs/dist/LSPlugin.user';
 import { logseq as PL } from '../../package.json';
 
-import tabsPluginStyles from '../css/ui/tabsPlugin.css';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import '../css/awesomeUI.css';
+import tasksStyles from '../css/ui/tasks.css?inline';
+import columnsStyles from '../css/ui/columns.css?inline';
+import headersLabelsStyles from '../css/ui/headers-labels.css?inline';
+
+import tabsPluginStyles from '../css/ui/tabsPlugin.css?inline';
 
 const pluginID = PL.id;
 const isAwesomeUIClass = 'is-awesomeUI';
@@ -19,11 +25,21 @@ let tabsPluginIframe: HTMLIFrameElement | null;
 let pluginConfig: LSPluginBaseInfo['settings'];
 let oldPluginConfig: LSPluginBaseInfo['settings'];
 
+const promoSolExtMsg = '🐱‍👤 To customize UI & content text/bg colors, install "Awesome Styler" (former "Solarized Extended") theme! https://github.com/yoyurec/logseq-awesome-styler';
+const promoUpdSolExtMgs = '⚠ Update "Solarized Extended" to latest to avoid same functionality conflicts!';
+
 const settingSchema: SettingSchemaDesc[] = [
     {
         key: 'promoSolExt',
         title: '',
-        description: '🐱‍👤 To customize UI & content text/bg colors, install "Solarized Extended" theme! https://github.com/yoyurec/logseq-solarized-extended-theme',
+        description: promoSolExtMsg,
+        type: 'boolean',
+        default: false,
+    },
+    {
+        key: 'promoUpdSolExt',
+        title: '',
+        description: promoUpdSolExtMgs,
         type: 'boolean',
         default: false,
     },
@@ -33,6 +49,27 @@ const settingSchema: SettingSchemaDesc[] = [
         description: '',
         type: 'heading',
         default: null,
+    },
+    {
+        key: 'featureTasksEnabled',
+        title: '',
+        description: 'Enable tasks status and priority restyling?',
+        type: 'boolean',
+        default: true,
+    },
+    {
+        key: 'featureColumnsEnabled',
+        title: '',
+        description: 'Enable columns: ".kanban" & ".grid" tags?',
+        type: 'boolean',
+        default: true,
+    },
+    {
+        key: 'featureHeadersLabelsEnabled',
+        title: '',
+        description: 'Show headers (h1-h5) labels?',
+        type: 'boolean',
+        default: true,
     },
     {
         key: 'featureHomeButtonEnabled',
@@ -51,7 +88,7 @@ const settingSchema: SettingSchemaDesc[] = [
     {
         key: 'featureSidebarPageIconEnabled',
         title: '',
-        description: 'Show on default page icons on left sidebar favs/recent?',
+        description: 'Show default page icons on left sidebar favs/recent?',
         type: 'boolean',
         default: false,
     },
@@ -233,23 +270,26 @@ const tabsPluginUnload = () => {
 
 // Main logic runners
 const runStuff = () => {
-    let runtimeout = 500;
     setTimeout(() => {
-        root.style.setProperty('--awesomeUI-calc-bg', getInheritedBackgroundColor(doc.querySelector('.left-sidebar-inner')).trim());
+        root.style.setProperty('--awUI-calc-bg', getInheritedBackgroundColor(doc.querySelector('.left-sidebar-inner')).trim());
         tabsPluginIframe = doc.getElementById('logseq-tabs_iframe') as HTMLIFrameElement;
         setFeaturesCSSVars();
         runModalObserver();
         searchLoad();
         rightSidebarLoad();
         tabsPluginLoad();
+        tasksLoad();
+        columnsLoad();
         body.classList.add(isAwesomeUIClass);
-    }, runtimeout)
+    }, 500)
 }
 const stopStuff = () => {
     unregisterPlugin();
     searchUnload();
     rightSidebarUnload();
     tabsPluginUnload();
+    tasksUnload();
+    columnsUnload();
     modalObserver.disconnect();
     body.classList.remove(isAwesomeUIClass);
 }
@@ -264,10 +304,19 @@ const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings'], oldSe
     oldPluginConfig = { ...oldSettings };
     pluginConfig = { ...settings };
     const settingsDiff = objectDiff(oldPluginConfig, pluginConfig)
+    console.log(`AwesomeStyler: settings changed:`, settingsDiff);
 
+    if (settingsDiff.includes('featureTasksEnabled')) {
+        toggleTasksFeature();
+    }
+    if (settingsDiff.includes('featureColumnsEnabled')) {
+        toggleColumnsFeature();
+    }
+    if (settingsDiff.includes('featureHeadersLabelsEnabled')) {
+        toggleHeadersLabelsFeature();
+    }
     setFeaturesCSSVars();
 }
-
 
 // Utils: object diff
 const objectDiff = (orig: object, updated: object) => {
@@ -285,7 +334,7 @@ const registerPlugin = async () => {
     setTimeout(() => {
         if (doc.head) {
             const logseqCSS = doc.head.querySelector(`link[href="./css/style.css"]`);
-            logseqCSS!.insertAdjacentHTML('afterend', `<link rel="stylesheet" id="css-awesomeUI" href="lsp://logseq.io/${pluginID}/dist/assets/css/awesomeUI.css">`)
+            logseqCSS!.insertAdjacentHTML('afterend', `<link rel="stylesheet" id="css-awesomeUI" href="lsp://logseq.io/${pluginID}/dist/assets/awesomeUI.css">`)
         }
     }, 100)
 }
@@ -296,28 +345,88 @@ const unregisterPlugin = () => {
 const setFeaturesCSSVars = () => {
 
     if (pluginConfig.featureHomeButtonEnabled) {
-        root.style.removeProperty('--awesomeUI-home-button');
+        root.style.removeProperty('--awUI-home-button');
     } else {
-        root.style.setProperty('--awesomeUI-home-button', 'none');
+        root.style.setProperty('--awUI-home-button', 'none');
     }
 
     if (pluginConfig.featureSidebarNewPageEnabled) {
-        root.style.setProperty('--awesomeUI-sidebar-new-page', 'block');
+        root.style.setProperty('--awUI-sidebar-new-page', 'block');
     } else {
-        root.style.removeProperty('--awesomeUI-sidebar-new-page');
+        root.style.removeProperty('--awUI-sidebar-new-page');
     }
 
     if (pluginConfig.featureSidebarPageIconEnabled) {
-        root.style.setProperty('--awesomeUI-sidebar-page-icon', 'visible');
+        root.style.setProperty('--awUI-sidebar-page-icon', 'visible');
     } else {
-        root.style.removeProperty('--awesomeUI-sidebar-page-icon');
+        root.style.removeProperty('--awUI-sidebar-page-icon');
     }
 
     if (pluginConfig.featureNewBlockBulletEnabled) {
-        root.style.setProperty('--awesomeUI-new-bullet-hidden', 'none');
+        root.style.setProperty('--awUI-new-bullet-hidden', 'none');
     } else {
-        root.style.removeProperty('--awesomeUI-new-bullet-hidden');
+        root.style.removeProperty('--awUI-new-bullet-hidden');
     }
+}
+
+const toggleTasksFeature = () => {
+    if (pluginConfig.featureTasksEnabled) {
+        tasksLoad();
+    } else {
+        tasksUnload();
+    }
+}
+
+const toggleColumnsFeature = () => {
+    if (pluginConfig.featureColumnsEnabled) {
+        columnsLoad();
+    } else {
+        columnsUnload();
+    }
+}
+
+const toggleHeadersLabelsFeature = () => {
+    if (pluginConfig.featureHeadersLabelsEnabled) {
+        headersLabelsLoad();
+    } else {
+        headersLabelsUnload();
+    }
+}
+
+const tasksLoad = () => {
+    if (!pluginConfig.featureTasksEnabled) {
+        return;
+    }
+    setTimeout(() => {
+        logseq.provideStyle({ key: 'awUI-tasks-css', style: tasksStyles });
+    }, 500)
+}
+const tasksUnload = () => {
+    doc.head.querySelector(`style[data-injected-style="awUI-tasks-css-${pluginID}"]`)?.remove();
+}
+
+const columnsLoad = () => {
+    if (!pluginConfig.featureColumnsEnabled) {
+        return;
+    }
+    setTimeout(() => {
+        logseq.provideStyle({ key: 'awUI-columns-css', style: columnsStyles });
+    }, 500)
+}
+const columnsUnload = () => {
+    doc.head.querySelector(`style[data-injected-style="awUI-columns-css-${pluginID}"]`)?.remove();
+}
+
+const headersLabelsLoad = () => {
+    if (!pluginConfig.featureHeadersLabelsEnabled) {
+        return;
+    }
+    setTimeout(() => {
+        logseq.provideStyle({ key: 'awUI-headersLabels-css', style: headersLabelsStyles });
+    }, 500)
+}
+const headersLabelsUnload = () => {
+    doc.head.querySelector(`style[data-injected-style="awUI-headersLabels-css-${pluginID}"]`)?.remove();
 }
 
 const getInheritedBackgroundColor = (el: Element | null): string => {
@@ -348,7 +457,7 @@ const tabsPluginCSSVars = (): string => {
 
 // Theme  changed
 const onThemeChangedCallback = () => {
-    root.style.setProperty('--awesomeUI-calc-bg', getInheritedBackgroundColor(doc.querySelector('.left-sidebar-inner')).trim());
+    root.style.setProperty('--awUI-calc-bg', getInheritedBackgroundColor(doc.querySelector('.left-sidebar-inner')).trim());
     if (tabsPluginIframe) {
         tabPluginInjectCSSVars(tabsPluginIframe);
     }
@@ -383,7 +492,7 @@ const main = async () => {
     initModalObserver();
     initPluginsIframesObserver();
 
-    // First thme run
+    // First theme run
     runStuff();
 
     // Later listeners
@@ -415,15 +524,20 @@ const main = async () => {
 
     }, 2000)
 
+    const promoMgs = () => {
+        let msg = '';
+        if (doc.body.classList.contains('is-solext')) {
+            msg = promoUpdSolExtMgs;
+        } else if (!doc.body.classList.contains('is-solext-loaded')) {
+            msg = promoSolExtMsg;
+        }
+        if (msg) {
+            logseq.UI.showMsg(msg, 'warning', {timeout: 300000});
+        }
+    }
     setTimeout(() => {
-        doc.querySelector(`[data-injected-style="tabs--top-padding-logseq-tabs"]`)?.remove();
-    }, 500);
-    setTimeout(() => {
-        doc.querySelector(`[data-injected-style="tabs--top-padding-logseq-tabs"]`)?.remove();
-    }, 2000);
-    setTimeout(() => {
-        doc.querySelector(`[data-injected-style="tabs--top-padding-logseq-tabs"]`)?.remove();
-    }, 4000);
+        promoMgs();
+    }, 8000)
 };
 
 logseq.ready(main).catch(console.error);

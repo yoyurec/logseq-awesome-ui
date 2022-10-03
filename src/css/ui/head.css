@@ -1,5 +1,5 @@
 #head {
-    background-color: var(--awesomeUI-calc-bg);
+    background-color: var(--awUI-calc-bg);
 }
 /* head left part */
 #head>.l {
@@ -12,10 +12,13 @@ html.is-mac:not(.is-fullscreen) body:not(.is-tabs-loaded) #head>.l {
 }
 
 /* left sidebar toggle button*/
-#head .ti-menu-2::before {
+#head .ls-icon-menu-2 svg {
+    display: none;
+}
+#head .ls-icon-menu-2::before {
     content: "\f005";
 }
-.ls-left-sidebar-open #head .ti-menu-2::before {
+.ls-left-sidebar-open #head .ls-icon-menu-2::before {
     content: "\f004";
 }
 
@@ -57,10 +60,13 @@ html.is-mac body:not(.is-pdf-active):not(.is-tabs-loaded) #head>.r>.flex {
     display: flex;
     height: 30px;
 }
-#head .ti-layout-sidebar-right::before {
+#head .ls-icon-layout-sidebar-right svg {
+    display: none;
+}
+#head .ls-icon-layout-sidebar-right::before {
     content: "\f007";
 }
-.ls-right-sidebar-open #head .ti-layout-sidebar-right::before {
+.ls-right-sidebar-open #head .ls-icon-layout-sidebar-right::before {
     content: "\f006";
 }
 

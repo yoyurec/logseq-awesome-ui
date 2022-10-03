@@ -1,32 +1,41 @@
 /* hide home button */
 #head .button[title="Home"] {
-    display: var(--awesomeUI-home-button, flex) !important;
+    display: var(--awUI-home-button, flex) !important;
 }
 
 /* add new block (+) bullet */
 .add-button-link {
-    opacity: calc(var(--awesomeUI-new-bullet-hidden, 0) * 1);
+    opacity: calc(var(--awUI-new-bullet-hidden, 0) * 1);
 }
 
 /* sidebar page icon */
-#left-sidebar .left-sidebar-inner .page-icon i {
-    visibility: var(--awesomeUI-sidebar-page-icon, hidden) !important;
+#left-sidebar .left-sidebar-inner .page-icon .ui__icon {
+    visibility: var(--awUI-sidebar-page-icon, hidden) !important;
 }
 
 /* new page button */
 #left-sidebar .left-sidebar-inner .new-page {
-    display: var(--awesomeUI-sidebar-new-page, none) !important;
+    display: var(--awUI-sidebar-new-page, none) !important;
     position: fixed;
 }
 
-/* promo */
-.is-solext .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="promoSolExt"] {
-    display: none;
+
+/*
+  >>> BEGIN: Quote
+*/
+div:not(.initial) > div > div > div > [data-refs-self='["quote"]'] {
+    --ls-guideline-color: transparent;
+    transform: translate(-4px, -5px);
+    margin: 8px 0;
+    padding: 8px 0;
+    border-radius: 5px;
+    border-left: 4px solid var(--ls-page-blockquote-border-color);
+    color: var(--ls-page-blockquote-color);
+    background-color: var(--ls-page-blockquote-bg-color);
 }
-.desc-item[data-key="promoSolExt"] {
-    margin: 1em 0 !important;
-    font-size: 1.3em;
+div:not(.initial) > div > div > div > [data-refs-self='["quote"]'].selected {
+    background-color: var(--ls-block-highlight-color);
 }
-.desc-item[data-key="promoSolExt"] .form-checkbox {
-    display: none;
-}
+/*
+  <<<< END: Quote
+*/

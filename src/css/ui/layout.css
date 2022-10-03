@@ -13,24 +13,30 @@ body.is-pdf-active #app-container {
 }
 #head {
     position: absolute;
-    top: var(--awesomeUI-tabs-height) !important;
+    top: var(--awUI-tabs-height) !important;
     width: 100vw;
 }
 body.is-pdf-active #head {
     width: calc(100vw - var(--ph-view-container-width));
 }
 #pdf-layout-container {
-    top: var(--awesomeUI-tabs-height) !important;
+    top: var(--awUI-tabs-height) !important;
 }
 #main-container {
     transition: none;
 }
 #left-sidebar {
+    padding-top: 0 !important;
     bottom: 0;
 }
-#main-content-container#main-content-container {
-    flex-wrap: wrap;
-    padding: 0;
+#left-sidebar .left-sidebar-inner>.wrap {
+    margin-top: 0;
+}
+.left-sidebar-inner .nav-contents-container {
+    padding-bottom: calc(60px + var(--awUI-tabs-height));
+}
+#main-content-container {
+    flex-wrap: wrap !important;
 }
 #main-content-container:focus-visible {
     outline: none;
@@ -39,36 +45,8 @@ body.is-pdf-active #head {
 body:not(.is-banner-active) .cp__sidebar-main-content,
 #left-sidebar,
 #right-sidebar {
-    margin-top: calc(var(--awesomeUI-tabs-height) + var(--awesomeUI-head-height)) !important;
+    margin-top: calc(var(--awUI-tabs-height) + var(--awUI-head-height)) !important;
 }
 /*
   <<<< END: Layout
-*/
-
-
-/*
-  >>> BEGIN: Left sidebar
-*/
-#left-sidebar {
-    padding-top: 0 !important;
-}
-#left-sidebar .left-sidebar-inner>.wrap {
-    margin-top: 0;
-}
-.left-sidebar-inner .nav-contents-container {
-    padding-bottom: calc(60px + var(--awesomeUI-tabs-height));
-}
-#left-sidebar .flashcards-nav .ti-infinity::before,
-#left-sidebar .cards-review .ti-infinity::before {
-    content: "\ea38";
-}
-.text-sm li {
-    margin: 0;
-}
-#left-sidebar .item {
-    padding: 5px 8px;
-    transition: none;
-}
-/*
-  <<<< END: Left sidebar
 */
