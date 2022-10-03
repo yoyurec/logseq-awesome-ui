@@ -280,6 +280,7 @@ const runStuff = () => {
         tabsPluginLoad();
         tasksLoad();
         columnsLoad();
+        headersLabelsLoad();
         body.classList.add(isAwesomeUIClass);
     }, 500)
 }
@@ -290,6 +291,7 @@ const stopStuff = () => {
     tabsPluginUnload();
     tasksUnload();
     columnsUnload();
+    headersLabelsUnload();
     modalObserver.disconnect();
     body.classList.remove(isAwesomeUIClass);
 }
