@@ -528,7 +528,7 @@ const main = async () => {
         let msg = '';
         if (doc.body.classList.contains('is-solext')) {
             msg = promoUpdSolExtMgs;
-        } else if (!doc.body.classList.contains('is-solext-loaded')) {
+        } else if (!doc.body.classList.contains('is-awesomeStyler-loaded')) {
             msg = promoSolExtMsg;
         }
         if (msg) {
