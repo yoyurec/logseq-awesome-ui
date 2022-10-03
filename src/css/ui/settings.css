@@ -192,18 +192,17 @@ html[data-theme="dark"] .ui__modal .ui__button:hover {
 
 
 /* promo */
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="promoSolExt"] {
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="promoAwesomeStyler"] {
     display: none;
 }
-body:not(.is-solext) .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="promoSolExt"],
-body:not(.is-solext-loaded) .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="promoSolExt"] {
+body:not(.is-awesomeStyler-loaded) .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="promoAwesomeStyler"] {
     display: block;
 }
-.desc-item[data-key="promoSolExt"] {
+.desc-item[data-key="promoAwesomeStyler"] {
     margin: 1em 0 !important;
     font-size: 1.3em;
 }
-.desc-item[data-key="promoSolExt"] .form-checkbox {
+.desc-item[data-key="promoAwesomeStyler"] .form-checkbox {
     display: none;
 }
 

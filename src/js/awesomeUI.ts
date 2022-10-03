@@ -25,14 +25,14 @@ let tabsPluginIframe: HTMLIFrameElement | null;
 let pluginConfig: LSPluginBaseInfo['settings'];
 let oldPluginConfig: LSPluginBaseInfo['settings'];
 
-const promoSolExtMsg = '🐱‍👤 To customize UI & content text/bg colors, install "Awesome Styler" (former "Solarized Extended") theme! https://github.com/yoyurec/logseq-awesome-styler';
+const promoAwesomeStylerMsg = '🐱‍👤 To customize UI & content text/bg colors, install "Awesome Styler" (former "Solarized Extended") theme! https://github.com/yoyurec/logseq-awesome-styler';
 const promoUpdSolExtMgs = '⚠ Update "Solarized Extended" to latest to avoid same functionality conflicts!';
 
 const settingSchema: SettingSchemaDesc[] = [
     {
-        key: 'promoSolExt',
+        key: 'promoAwesomeStyler',
         title: '',
-        description: promoSolExtMsg,
+        description: promoAwesomeStylerMsg,
         type: 'boolean',
         default: false,
     },
@@ -529,7 +529,7 @@ const main = async () => {
         if (doc.body.classList.contains('is-solext')) {
             msg = promoUpdSolExtMgs;
         } else if (!doc.body.classList.contains('is-awesomeStyler-loaded')) {
-            msg = promoSolExtMsg;
+            msg = promoAwesomeStylerMsg;
         }
         if (msg) {
             logseq.UI.showMsg(msg, 'warning', {timeout: 300000});
