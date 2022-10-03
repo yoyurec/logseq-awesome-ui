@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.0.1...v1.1.0) (2022-10-03)
+
+
+### Features
+
+* **components:** refactoring and added new from SolExt ([20cc084](https://github.com/yoyurec/logseq-awesome-ui/commit/20cc0849ffab6be4dbb34a789e16ee4982acb0be))
+
 ## [1.0.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.0.0...v1.0.1) (2022-09-30)
 
 
