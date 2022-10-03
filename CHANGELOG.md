@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.1.1...v1.1.2) (2022-10-03)
+
+
+### Bug Fixes
+
+* **promo:** plugin detection ([33db865](https://github.com/yoyurec/logseq-awesome-ui/commit/33db8655b47d4242e36cde5e4f04b9706e7a7adc))
+
 ## [1.1.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.1.0...v1.1.1) (2022-10-03)
 
 
