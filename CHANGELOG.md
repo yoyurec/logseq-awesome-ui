@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.0...v1.2.1) (2022-10-06)
+
+
+### Bug Fixes
+
+* **plugins:** agenda z-index ([f259923](https://github.com/yoyurec/logseq-awesome-ui/commit/f2599232240ba0ee9ccb916046680e833cadf092))
+
 # [1.2.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.1.3...v1.2.0) (2022-10-06)
 
 
