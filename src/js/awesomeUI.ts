@@ -281,6 +281,7 @@ const runStuff = () => {
         tasksLoad();
         columnsLoad();
         headersLabelsLoad();
+        agendaPluginLoad();
         body.classList.add(isAwesomeUIClass);
     }, 500)
 }
@@ -541,5 +542,53 @@ const main = async () => {
         promoMgs();
     }, 8000)
 };
+
+const agendaPluginLoad = () => {
+    const agendaIframe = doc.getElementById('logseq-plugin-agenda_lsp_main');
+    const agendaButton = doc.getElementById('injected-ui-item-logseq-plugin-agenda-logseq-plugin-agenda') as Element;
+    const journalsButton = doc.querySelector('.nav-header .journals-nav');
+    if (agendaIframe && agendaButton && journalsButton) {
+        const agendaLink = agendaButton.getElementsByTagName('a')[0];
+        const calendarButtonHTML = `<div class="calendar-nav" id="awUI-calendar-menu"></div>`;
+        journalsButton.insertAdjacentHTML('afterend', calendarButtonHTML);
+        const calendarButton = doc.getElementById('awUI-calendar-menu');
+        calendarButton!.insertAdjacentElement('afterbegin', agendaButton);
+        agendaLink?.classList.remove('button');
+        agendaLink?.classList.add('item', 'group', 'flex', 'items-center', 'text-sm', 'font-medium', 'rounded-md');
+        agendaLink?.insertAdjacentText('beforeend', 'Calendar / Agenda');
+
+        const navLinkList = doc.querySelectorAll('.nav-header a');
+        if (navLinkList) {
+            const navClickHandler = (event: Event) => {
+                const target = event.target as HTMLAnchorElement;
+                doc.querySelector('.nav-header .active')?.classList.remove('active');
+                target.classList.add('active');
+            }
+            for (let i = 0; i < navLinkList.length; i++) {
+                const navLinkItem = navLinkList[i];
+                navLinkItem.addEventListener('click', navClickHandler, false);
+            }
+        }
+
+        const setSidebarWidthVar = () => {
+            const rightSidebarWidth = doc.getElementById('right-sidebar')?.getBoundingClientRect()?.width;
+            root.style.setProperty('--awUI-calc-right-sidebar-width', `${rightSidebarWidth}px`);
+        }
+
+        const calendarClickHandler = () => {
+            setSidebarWidthVar();
+        }
+        agendaLink.addEventListener('click', calendarClickHandler, false);
+
+        logseq.App.onRouteChanged( () => {
+            agendaIframe.classList.remove('visible');
+            agendaLink.classList.remove('active');
+        });
+
+        logseq.App.onSidebarVisibleChanged(() => {
+            setSidebarWidthVar();
+        });
+    }
+}
 
 logseq.ready(main).catch(console.error);

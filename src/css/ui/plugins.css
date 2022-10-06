@@ -36,3 +36,15 @@ html.is-mac .is-tabs-loaded .cp__header>.l {
 /*
   <<<< END: Doc View Exporter plugin
 */
+
+#logseq-plugin-agenda_lsp_main {
+  width: calc(100% - var(--ls-left-sidebar-width) - var(--awUI-calc-right-sidebar-width));
+  height: calc(100% - var(--awUI-tabs-height) - var(--awUI-head-height))!important;
+  left: var(--ls-left-sidebar-width);
+  right: var(--awUI-calc-right-sidebar-width);
+  top: calc(var(--awUI-tabs-height) + var(--awUI-head-height))!important;
+}
+
+#awUI-calendar-menu .ti-comet::before {
+  content: "\ee21";
+}
