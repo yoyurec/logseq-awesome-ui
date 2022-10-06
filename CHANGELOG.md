@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.1.3...v1.2.0) (2022-10-06)
+
+
+### Features
+
+* **plugins:** add "Agenda" plugin calendar support and restyle ([9c71df6](https://github.com/yoyurec/logseq-awesome-ui/commit/9c71df6283c808e91e452babc99ae3a22b4d9fa4))
+
 ## [1.1.3](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.1.2...v1.1.3) (2022-10-03)
 
 
