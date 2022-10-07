@@ -8,16 +8,15 @@ import { root, doc, body, getDOMContainers} from './modules/internal';
 import { searchLoad, searchUnload } from './modules/internal';
 import { rightSidebarLoad, rightSidebarUnload } from './modules/internal';
 import { refreshTabsStyles, tabsPluginLoad, tabsPluginUnload} from './modules/internal';
-import { setFeaturesCSSVars, toggleColumnsFeature, toggleHeadersLabelsFeature, toggleTasksFeature } from './modules/internal';
 import { reorderRightSidebarToggleButton } from './modules/internal';
-import { tasksLoad, tasksUnload } from './modules/internal';
-import { columnsLoad, columnsUnload } from './modules/internal';
-import { headersLabelsLoad, headersLabelsUnload } from './modules/internal';
-import { agendaPluginLoad } from './modules/internal';
+import { toggleTasksFeature, tasksLoad, tasksUnload } from './modules/internal';
+import { toggleColumnsFeature, columnsLoad, columnsUnload } from './modules/internal';
+import { toggleHeadersLabelsFeature, headersLabelsLoad, headersLabelsUnload } from './modules/internal';
+import { toggleCalendarFeature, calendarLoad, calendarUnload } from './modules/internal';
 
 import { getInheritedBackgroundColor, objectDiff } from './modules/utils';
 
-import '../css/awesomeUI.css';
+import './awesomeUI.css';
 
 const registerPlugin = async () => {
     setTimeout(() => {
@@ -40,11 +39,11 @@ const runStuff = async () => {
         setFeaturesCSSVars();
         searchLoad();
         rightSidebarLoad();
-        agendaPluginLoad();
         tabsPluginLoad();
         tasksLoad();
         columnsLoad();
         headersLabelsLoad();
+        calendarLoad();
         body.classList.add(globalContext.isAwesomeUIClass);
     }, 1000);
 }
@@ -56,6 +55,7 @@ const stopStuff = () => {
     tasksUnload();
     columnsUnload();
     headersLabelsUnload();
+    calendarUnload();
     body.classList.remove(globalContext.isAwesomeUIClass);
 }
 
@@ -108,7 +108,36 @@ const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings'], oldSe
     if (settingsDiff.includes('featureHeadersLabelsEnabled')) {
         toggleHeadersLabelsFeature();
     }
+    if (settingsDiff.includes('featureCalendarEnabled')) {
+        toggleCalendarFeature();
+    }
     setFeaturesCSSVars();
+}
+
+const setFeaturesCSSVars = () => {
+    if (globalContext.pluginConfig.featureHomeButtonEnabled) {
+        root.style.removeProperty('--awUI-home-button');
+    } else {
+        root.style.setProperty('--awUI-home-button', 'none');
+    }
+
+    if (globalContext.pluginConfig.featureSidebarNewPageEnabled) {
+        root.style.setProperty('--awUI-sidebar-new-page', 'block');
+    } else {
+        root.style.removeProperty('--awUI-sidebar-new-page');
+    }
+
+    if (globalContext.pluginConfig.featureSidebarPageIconEnabled) {
+        root.style.setProperty('--awUI-sidebar-page-icon', 'visible');
+    } else {
+        root.style.removeProperty('--awUI-sidebar-page-icon');
+    }
+
+    if (globalContext.pluginConfig.featureNewBlockBulletEnabled) {
+        root.style.setProperty('--awUI-new-bullet-hidden', 'none');
+    } else {
+        root.style.removeProperty('--awUI-new-bullet-hidden');
+    }
 }
 
 // Theme  changed

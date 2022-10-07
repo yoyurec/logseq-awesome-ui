@@ -24,6 +24,13 @@ export const settingsConfig: SettingSchemaDesc[] = [
         default: null,
     },
     {
+        key: 'featureCalendarEnabled',
+        title: '',
+        description: 'Enable "Calendar" page menu sidebar item?',
+        type: 'boolean',
+        default: true,
+    },
+    {
         key: 'featureTasksEnabled',
         title: '',
         description: 'Enable tasks status and priority restyling?',

@@ -162,6 +162,10 @@ html[data-theme="dark"] .ui__modal .ui__button:hover {
     content: "\eb6a";
 }
 
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureCalendarEnabled"] small::before {
+    content: "\ee21";
+}
+
 .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureColumnsEnabled"] small::before {
     content: "\ec3f";
 }

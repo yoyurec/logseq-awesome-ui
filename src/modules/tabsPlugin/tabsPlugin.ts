@@ -1,9 +1,9 @@
-import globalContext from './globals';
-import { root, doc, body } from './internal';
-import { initPluginsIframesObserver, runPluginsIframesObserver, stopPluginsIframesObserver } from './internal';
+import globalContext from '../globals';
+import { root, doc, body } from '../internal';
+import { initPluginsIframesObserver, runPluginsIframesObserver, stopPluginsIframesObserver } from '../internal';
 
-import tabsPluginStyles from '../../css/ui/tabsPlugin.css?inline';
-import { getInheritedBackgroundColor } from './utils';
+import tabsPluginStyles from './tabsPlugin.css?inline';
+import { getInheritedBackgroundColor } from '../utils';
 
 // Add styles to TabsPlugin
 const injectCssToPlugin = (iframeEl: HTMLIFrameElement, cssContent: string, id: string) => {

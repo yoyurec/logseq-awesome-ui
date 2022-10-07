@@ -1,5 +1,6 @@
-import { doc } from './internal';
+import { doc } from '../internal';
 
+import './sidebars.css';
 
 // Reposition right sidebar toggle button
 export const rightSidebarLoad = async () => {

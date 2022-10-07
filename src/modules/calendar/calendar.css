@@ -1,4 +1,4 @@
-.is-agenda-reordered #logseq-plugin-agenda_lsp_main {
+#logseq-plugin-agenda_lsp_main#logseq-plugin-agenda_lsp_main {
     z-index: 1 !important;
     width: calc(100% - var(--ls-left-sidebar-width) - var(--awUI-calc-right-sidebar-width));
     height: calc(100% - var(--awUI-tabs-height) - var(--awUI-head-height))!important;
@@ -7,6 +7,6 @@
     top: calc(var(--awUI-tabs-height) + var(--awUI-head-height))!important;
 }
 
-.is-agenda-reordered #awUI-calendar-menu .ls-icon-calendar-time::before {
+#awUI-calendar-menu .ls-icon-calendar-time::before {
     content: "\ee21";
 }

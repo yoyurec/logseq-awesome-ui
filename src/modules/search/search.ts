@@ -1,6 +1,8 @@
-import { body, doc } from './internal';
-import globalContext from './globals';
-import { initSearchModalObserver, runSearchModalObserver, stopSearchModalObserver } from './internal';
+import { body, doc } from '../internal';
+import globalContext from '../globals';
+import { initSearchModalObserver, runSearchModalObserver, stopSearchModalObserver } from '../internal';
+
+import './search.css';
 
 export const initSearchModal = (searchModal: HTMLElement) => {
     searchModal.style.width = doc.getElementById('search-button')?.offsetWidth + 'px' || 'var(--ls-main-content-max-width)';

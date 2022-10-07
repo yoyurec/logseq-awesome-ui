@@ -1,6 +1,6 @@
-import globalContext from './globals';
-import { body, modalContainer } from './internal';
-import { initSearchModal } from './internal';
+import globalContext from '../globals';
+import { body, modalContainer } from '../internal';
+import { initSearchModal } from '../internal';
 
 // Detect modals opened/closed
 export let searchModalObserver: MutationObserver

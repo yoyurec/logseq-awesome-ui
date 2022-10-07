@@ -1,7 +1,7 @@
-import globalContext from './globals';
-import { body, doc } from './internal';
-import { agendaPluginLoad } from './internal';
-import { tabPluginInjectCSS, tabPluginInjectCSSVars } from './internal';
+import globalContext from '../globals';
+import { body, doc } from '../internal';
+import { calendarLoad } from '../internal';
+import { tabPluginInjectCSS, tabPluginInjectCSSVars } from '../internal';
 
 export let pluginsIframesObserver: MutationObserver
 let pluginsIframesObserverConfig: MutationObserverInit;
@@ -9,10 +9,10 @@ let pluginsIframesObserverConfig: MutationObserverInit;
 const pluginsIframesCallback: MutationCallback = function (mutationsList) {
     for (let i = 0; i < mutationsList.length; i++) {
         const addedNode = mutationsList[i].addedNodes[0] as HTMLElement;
-        if (addedNode && addedNode.id == 'logseq-plugin-agenda_lsp_main') {
+        if (addedNode && addedNode.id == 'logseq-agenda_lsp_main') {
             setTimeout(() => {
                 console.log('AwesomeUI: agenda plugin found on mutation later!');
-                agendaPluginLoad(addedNode);
+                calendarLoad(addedNode);
             }, 100)
         }
         if (addedNode && addedNode.id == 'logseq-tabs_lsp_main') {
