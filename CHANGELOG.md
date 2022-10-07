@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.3...v1.2.4) (2022-10-07)
+
+
+### Bug Fixes
+
+* **agenda:** reoredered flag ([b6f43d1](https://github.com/yoyurec/logseq-awesome-ui/commit/b6f43d1397efc48d5345a2c0f254cfc42f89d123))
+
 ## [1.2.3](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.2...v1.2.3) (2022-10-07)
 
 
