@@ -36,7 +36,7 @@ export const calendarLoad = async (agendaPlugin?: HTMLElement) => {
         console.log('AwesomeUI: agenda plugin not found!');
         return;
     }
-    const agendaButton = doc.querySelector('#injected-ui-item-logseq-plugin-agenda-logseq-plugin-agenda .button') as HTMLAnchorElement;
+    const agendaButton = doc.querySelector('#injected-ui-item-logseq-plugin-agenda-logseq-agenda .button') as HTMLAnchorElement;
     if (!agendaButton) {
         console.log('AwesomeUI: agenda button not found, plz pin it on toolbar and restart Logseq!');
         return;
