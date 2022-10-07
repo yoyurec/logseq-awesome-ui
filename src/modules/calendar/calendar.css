@@ -1,9 +1,9 @@
 #logseq-agenda_lsp_main#logseq-agenda_lsp_main {
-    z-index: 2 !important;
-    width: calc(100% - var(--ls-left-sidebar-width) - var(--awUI-calc-right-sidebar-width));
+    z-index: 3 !important;
+    width: calc(100% - var(--ls-left-sidebar-width) - var(--awUI-calc-right-sidebar-width, var(--ls-right-sidebar-width)));
     height: calc(100% - var(--awUI-tabs-height) - var(--awUI-head-height))!important;
     left: var(--ls-left-sidebar-width);
-    right: var(--awUI-calc-right-sidebar-width);
+    right: var(--awUI-calc-right-sidebar-width, var(--ls-right-sidebar-width));
     top: calc(var(--awUI-tabs-height) + var(--awUI-head-height))!important;
 }
 

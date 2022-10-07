@@ -3,6 +3,11 @@ import { root, doc } from '../internal';
 
 import calendarStyles from './calendar.css?inline';
 
+const setSidebarWidthVar = () => {
+    const rightSidebarWidth = doc.getElementById('right-sidebar')?.getBoundingClientRect()?.width;
+    root.style.setProperty('--awUI-calc-right-sidebar-width', `${rightSidebarWidth}px`);
+}
+
 export const toggleCalendarFeature = () => {
     if (globalContext.pluginConfig.featureCalendarEnabled) {
         calendarLoad();
@@ -10,6 +15,7 @@ export const toggleCalendarFeature = () => {
         calendarUnload();
     }
 }
+
 export const calendarLoad = async (agendaPlugin?: HTMLElement) => {
     if (!globalContext.pluginConfig.featureCalendarEnabled) {
         return;
@@ -25,6 +31,7 @@ export const calendarLoad = async (agendaPlugin?: HTMLElement) => {
     `;
     journalsButton?.insertAdjacentHTML('afterend', calendarButtonHTML);
     const calendarButton = doc.getElementById('awUI-calendar-menu');
+    setSidebarWidthVar();
 
     if (!agendaPlugin) {
         agendaPlugin = doc.getElementById('logseq-agenda_lsp_main') as HTMLElement;
@@ -38,28 +45,30 @@ export const calendarLoad = async (agendaPlugin?: HTMLElement) => {
     }
     const agendaButton = doc.querySelector('#injected-ui-item-logseq-plugin-agenda-logseq-agenda .button') as HTMLAnchorElement;
     if (!agendaButton) {
-        console.log('AwesomeUI: agenda button not found, plz pin it on toolbar and restart Logseq!');
+        logseq.UI.showMsg('AwesomeUI: "Agenda" plugin button not found on toolbar, plz pin it and restart Logseq!', 'warning', {timeout: 20000});
         return;
     }
 
-    const setSidebarWidthVar = () => {
-        const rightSidebarWidth = doc.getElementById('right-sidebar')?.getBoundingClientRect()?.width;
-        root.style.setProperty('--awUI-calc-right-sidebar-width', `${rightSidebarWidth}px`);
+    if (!calendarButton) {
+        console.log('AwesomeUI: calendar button not found!');
+        return;
+    }
+    const hideCalendar = () => {
+        agendaPlugin!.classList.remove('visible');
+        calendarButton.classList.remove('active');
     }
 
     const calendarClickHandler = () => {
         setSidebarWidthVar();
         agendaButton.click();
-        calendarButton!.classList.add('active');
+        calendarButton.classList.add('active');
     }
 
-    calendarButton!.addEventListener('click', calendarClickHandler, false);
+    calendarButton.addEventListener('click', calendarClickHandler, false);
 
     logseq.App.onRouteChanged(({ path }) => {
-        console.log(path);
         if (path !== '/page/Calendar') {
-            agendaPlugin!.classList.remove('visible');
-            calendarButton!.classList.remove('active');
+            hideCalendar();
         }
     });
 
