@@ -21,7 +21,7 @@ export const agendaPluginLoad = () => {
     agendaLink.classList.remove('button');
     agendaLink.classList.add('item', 'group', 'flex', 'items-center', 'text-sm', 'font-medium', 'rounded-md');
     agendaLink.insertAdjacentText('beforeend', 'Calendar / Agenda');
-    body.classList.remove(globalContext.isAgendaReorderedClass);
+    body.classList.add(globalContext.isAgendaReorderedClass);
 
     const navLinkList = doc.querySelectorAll('.nav-header a');
     if (navLinkList) {
