@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.4...v1.2.5) (2022-10-07)
+
+
+### Bug Fixes
+
+* **agenda:** add plugin listener ([48abf32](https://github.com/yoyurec/logseq-awesome-ui/commit/48abf32c408234dd71b3f380352ff9c0cf534586))
+
 ## [1.2.4](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.3...v1.2.4) (2022-10-07)
 
 
