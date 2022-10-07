@@ -1,15 +1,20 @@
 import globalContext from './globals';
 import { root, doc, body } from './internal';
 
-export const agendaPluginLoad = () => {
-    const agendaPlugin = doc.getElementById('logseq-plugin-agenda_lsp_main');
+export const agendaPluginLoad = async (agendaPlugin?: HTMLElement) => {
     if (!agendaPlugin) {
-        console.log('AwesomeUI: no agenda plugin found!');
+        agendaPlugin = doc.getElementById('logseq-plugin-agenda_lsp_main') as HTMLElement;
+        if (agendaPlugin) {
+            console.log('AwesomeUI: agenda plugin found on init!');
+        }
+    }
+    if (!agendaPlugin) {
+        console.log('AwesomeUI: agenda plugin not found!');
         return;
     }
-    const agendaButton = doc.getElementById('injected-ui-item-logseq-plugin-agenda-logseq-plugin-agenda') as Element;
+    const agendaButton = doc.getElementById('injected-ui-item-logseq-plugin-agenda-logseq-plugin-agenda');
     if (!agendaButton) {
-        console.log('AwesomeUI: no agenda button found, plz pin it on toolbar and restart Logseq!');
+        console.log('AwesomeUI: agenda button not found, plz pin it on toolbar and restart Logseq!');
         return;
     }
     const journalsButton = doc.querySelector('.nav-header .journals-nav');
@@ -48,7 +53,7 @@ export const agendaPluginLoad = () => {
     agendaLink.addEventListener('click', calendarClickHandler, false);
 
     logseq.App.onRouteChanged( () => {
-        agendaPlugin.classList.remove('visible');
+        agendaPlugin!.classList.remove('visible');
         agendaLink.classList.remove('active');
     });
 

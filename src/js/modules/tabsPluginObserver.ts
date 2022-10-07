@@ -1,5 +1,6 @@
 import globalContext from './globals';
 import { body, doc } from './internal';
+import { agendaPluginLoad } from './internal';
 import { tabPluginInjectCSS, tabPluginInjectCSSVars } from './internal';
 
 export let pluginsIframesObserver: MutationObserver
@@ -7,16 +8,22 @@ let pluginsIframesObserverConfig: MutationObserverInit;
 
 const pluginsIframesCallback: MutationCallback = function (mutationsList) {
     for (let i = 0; i < mutationsList.length; i++) {
-        const addedNode = mutationsList[i].addedNodes[0] as HTMLIFrameElement;
+        const addedNode = mutationsList[i].addedNodes[0] as HTMLElement;
+        if (addedNode && addedNode.id == 'logseq-plugin-agenda_lsp_main') {
+            setTimeout(() => {
+                console.log('AwesomeUI: agenda plugin found on mutation later!');
+                agendaPluginLoad(addedNode);
+            }, 100)
+        }
         if (addedNode && addedNode.id == 'logseq-tabs_lsp_main') {
             setTimeout(() => {
                 body.classList.add(globalContext.isTabsLoadedClass);
-                globalContext.tabsPluginIframe = doc.getElementById('logseq-tabs_iframe') as HTMLIFrameElement;
+                globalContext.tabsPluginIframe = doc.getElementById('logseq-tabs_iframe');
                 tabPluginInjectCSS(globalContext.tabsPluginIframe);
                 tabPluginInjectCSSVars(globalContext.tabsPluginIframe);
             }, 1000)
         }
-        const removedNode = mutationsList[i].removedNodes[0] as HTMLIFrameElement;
+        const removedNode = mutationsList[i].removedNodes[0] as HTMLElement;
         if (removedNode && removedNode.id == 'logseq-tabs_lsp_main') {
             body.classList.remove(globalContext.isTabsLoadedClass);
             globalContext.tabsPluginIframe = null;

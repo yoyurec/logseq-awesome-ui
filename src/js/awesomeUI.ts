@@ -40,15 +40,13 @@ const runStuff = async () => {
         setFeaturesCSSVars();
         searchLoad();
         rightSidebarLoad();
+        agendaPluginLoad();
         tabsPluginLoad();
         tasksLoad();
         columnsLoad();
         headersLabelsLoad();
         body.classList.add(globalContext.isAwesomeUIClass);
-    }, 1000)
-    setTimeout(() => {
-        agendaPluginLoad();
-    }, 3000)
+    }, 1000);
 }
 const stopStuff = () => {
     unregisterPlugin();
