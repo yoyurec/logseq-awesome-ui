@@ -2,11 +2,15 @@
 @import url("ui/head.css");
 
 @import url("ui/features.css");
+
 @import url("ui/query.css");
+@import url("ui/quoteTag.css");
 @import url("ui/admonition.css");
 @import url("ui/calculator.css");
 
 @import url("ui/pages.css");
+@import url("ui/content.css");
+
 @import url("ui/settings.css");
 @import url("ui/market.css");
 

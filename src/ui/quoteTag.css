@@ -1,0 +1,19 @@
+/*
+  >>> BEGIN: Quote
+*/
+div:not(.initial) > div > div > div > [data-refs-self='["quote"]'] {
+    --ls-guideline-color: transparent;
+    transform: translate(-4px, -5px);
+    margin: 8px 0;
+    padding: 8px 0;
+    border-radius: 5px;
+    border-left: 4px solid var(--ls-page-blockquote-border-color);
+    color: var(--ls-page-blockquote-color);
+    background-color: var(--ls-page-blockquote-bg-color);
+}
+div:not(.initial) > div > div > div > [data-refs-self='["quote"]'].selected {
+    background-color: var(--ls-block-highlight-color);
+}
+/*
+  <<<< END: Quote
+*/
