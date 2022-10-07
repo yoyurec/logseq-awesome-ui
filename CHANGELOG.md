@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.2...v1.2.3) (2022-10-07)
+
+
+### Bug Fixes
+
+* **agenda:** timeoout increaded, added CSS flag. Plus modules refactoring ([93f5e7c](https://github.com/yoyurec/logseq-awesome-ui/commit/93f5e7c0b7878bf738b5afed83e5c18d4588df3d))
+
 ## [1.2.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.1...v1.2.2) (2022-10-06)
 
 
