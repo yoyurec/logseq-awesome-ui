@@ -20,6 +20,9 @@
     padding: 5px 8px;
     transition: none;
 }
+#left-sidebar .item > .ti {
+    font-size: 18px;
+}
 /*
   <<<< END: Left sidebar
 */

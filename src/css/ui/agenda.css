@@ -7,6 +7,6 @@
     top: calc(var(--awUI-tabs-height) + var(--awUI-head-height))!important;
 }
 
-.is-agenda-reordered #awUI-calendar-menu .ti-comet::before {
+.is-agenda-reordered #awUI-calendar-menu .ls-icon-calendar-time::before {
     content: "\ee21";
 }
