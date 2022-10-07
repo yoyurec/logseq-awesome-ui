@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.5...v1.2.6) (2022-10-07)
+
+
+### Bug Fixes
+
+* **agenda:** smarter logic, 'Calendar' page route ([a81f449](https://github.com/yoyurec/logseq-awesome-ui/commit/a81f449d66821d0461293e219d124ee6f19ba2b0))
+
 ## [1.2.5](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.4...v1.2.5) (2022-10-07)
 
 
