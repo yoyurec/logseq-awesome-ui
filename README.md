@@ -14,14 +14,15 @@
 * ✨ Changed icons, new added
 * 🔥 Redesigned head toolbar: navigation arrows on left side, hidden home...
 * 🔍 Redesigned search <a href="#-search-panel">🡖</a>
-* 🗂 **"Tabs"** plugin panel was moved to top & auto-recolored to current (ANY) theme<a href="#-tabs-plugin">🡖</a>
-* ⚙ Simplified, less noise and compact Logseq plugins settings popup
+* 🗂 **"Tabs"** plugin panel was moved to top & auto-recolored to current (ANY) theme <a href="#-tabs-plugin">🡖</a>
+* 📅 **"Calendar"** menu item added with **"Agenda"** plugin support/restyle <a href="#-calendar--agenda-plugin-support">🡖</a>
 * ✅ Colored tasks statuses & priorities <a href="#-colored-tasks-statuses--priorities">🡖</a>
 * 🚥`#.kanban` & `#.grid` columns (no plugin needed) <a href="#-kanban-board">🡖</a>
+* 📝 Redesigned admonition blocks <a href="#-redesigned-admonition-blocks">🡖</a>
 * 💬 Custom styled `#quote` <a href="#-blockquotes">🡖</a>
 * 📋 Compact QUERY results header: settings, table toggler <a href="#-compact-query-results-header">🡖</a>
-* 📝 Redesigned admonition blocks <a href="#-redesigned-admonition-blocks">🡖</a>
 * 🧮 Redesigned calculator via @Playerofgames <a href="#-redesigned-calculator">🡖</a>
+* ⚙ Simplified, less noise and compact Logseq plugins settings popup
 
 ## If you ❤ what i'm doing - you can support my work! ☕
 
@@ -47,15 +48,29 @@ From Logseq store - `Plugins -> Marketplace`
 
 Wide responsive search like in browser!
 
-<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/search.png" width="800">
+<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/search.png">
 
-### 🗂 Tabs plugin
+### 🗂 Tabs plugin support
 
-<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/tabs.png" width="800">
+<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/tabs.png"
 
-### 📝 Redesigned admonition blocks
+### 📅 Calendar / Agenda plugin support
 
-<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/admonition.png" width="540">
+* custom "Calendar" menu item added (something like if it was added "Favs", but above, in the main links block)
+* on clicking you will be redirected to route /page/Calendar  -  users without "Agenda" plugin will just see the page.
+* on clicking this menu also "Agenda" toolbar button mimic click triggered (so it should be pinned!) - users with "Agenda" will see its own overlay popup, but centered and content-width (not default full-screen). after clicking "Agenda" own close (x) button - you will stay and see "Calendar" page
+
+<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/calendar.png">
+
+#### instructions:
+* install Agenda plugin
+* Agenda plugin button should be pinned on toolbar to proper work ⚠
+* go to Agenda settings and set "Home page" - Calendar
+* install latest AwesomeUI
+* restart Logseq may need
+* check that new "Calendar" item appeard in main menu
+
+<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/agenda-settings.png" width="600">
 
 
 ### ✅ Colored tasks statuses & priorities
@@ -67,20 +82,24 @@ Just add `#.kanban` tag to parent block and all children will become columns!
 Recommend additionally to install [Logseq Plugin TODO Master](https://github.com/pengx17/logseq-plugin-todo-master)
 and check [Logseq template](./extra/Kanban%20template.md)
 
-<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/kanban.png" width="600">
+<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/kanban.png" width="740">
+
+### 📝 Redesigned admonition blocks
+
+<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/admonition.png" width="600">
 
 ### 💬 Blockquotes
 Just add `#quote` tag to parent block!
 
-<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/quote.png" width="600">
+<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/quote.png" width="740">
 
 ### 📋 Compact QUERY results header
 
-<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/queries.png" width="600">
+<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/queries.png" width="740">
 
 ### 🧮 Redesigned calculator
 
-<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/calculator.png" width="800">
+<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/calculator.png">
 
 ## What is Logseq?
 Logseq is a privacy-first, open-source knowledge base. Visit https://logseq.com for more information.
