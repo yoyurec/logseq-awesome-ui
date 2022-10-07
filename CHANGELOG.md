@@ -1,3 +1,10 @@
+## [1.2.8](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.7...v1.2.8) (2022-10-07)
+
+
+### Bug Fixes
+
+* **calendar:** fix id ([5ad5d91](https://github.com/yoyurec/logseq-awesome-ui/commit/5ad5d91d0518599fe5fec59bc966415bad9e0629))
+
 ## [1.2.7](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.6...v1.2.7) (2022-10-07)
 
 
