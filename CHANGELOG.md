@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.6...v1.2.7) (2022-10-07)
+
+
+### Bug Fixes
+
+* **calendar:** refactoring and Agenda id fix ([6bf2a54](https://github.com/yoyurec/logseq-awesome-ui/commit/6bf2a54c4a80e648460a432f7e4708f5e3e452a6))
+
 ## [1.2.6](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.5...v1.2.6) (2022-10-07)
 
 
