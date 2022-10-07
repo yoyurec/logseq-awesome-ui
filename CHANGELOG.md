@@ -1,3 +1,10 @@
+## [1.2.10](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.9...v1.2.10) (2022-10-07)
+
+
+### Bug Fixes
+
+* **calendar:** sidebar width calc and z-index ([ee341fc](https://github.com/yoyurec/logseq-awesome-ui/commit/ee341fcb2b736ef2af285ea3c325d88609833af1))
+
 ## [1.2.9](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.8...v1.2.9) (2022-10-07)
 
 
