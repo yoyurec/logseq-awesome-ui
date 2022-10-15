@@ -25,7 +25,6 @@
 * 📋 Compact QUERY results header: settings, table toggler <a href="#-compact-query-results-header">🡖</a>
 * 🧮 Redesigned calculator via @Playerofgames <a href="#-redesigned-calculator">🡖</a>
 * ⚙ Simplified, less noise and compact Logseq plugins settings popup
-* 👓 Hide page props: all .dotProps or specified in list
 
 ## If you ❤ what i'm doing - you can support my work! ☕
 
