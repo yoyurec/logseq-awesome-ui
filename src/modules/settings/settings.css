@@ -3,13 +3,15 @@
 */
 .ui__modal {
     font-family: var(--awUI-font);
-    justify-content: flex-end;
 }
 .ui__modal .settings-modal {
     font-size: 16px;
 }
 .ui__modal-overlay>div {
     opacity: 0.5;
+}
+.is-settings-opened .ui__modal {
+    justify-content: flex-end;
 }
 .is-settings-opened .ui__modal-overlay>div {
     opacity: 0;
@@ -122,6 +124,9 @@ html[data-theme="dark"] .ui__modal .ui__button:hover {
 /*
   >>> BEGIN: Themes popup
 */
+.is-themes-opened .ui__modal {
+    justify-content: flex-end;
+}
 .is-themes-opened .ui__modal .panel-content {
     min-width: unset;
     width: 400px;
