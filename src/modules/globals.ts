@@ -12,6 +12,7 @@ const globalContext: globalContextType = {
     isAwesomeUIClass: 'is-awesomeUI',
     isTabsLoadedClass: 'is-tabs-loaded',
     isSearchOpenedClass: 'is-search-opened',
+    isthemesOpenedClass: 'is-themes-opened',
     isSearchReorderedClass: 'is-search-reordered',
     promoAwesomeStylerMsg: '🐱‍👤 To customize UI & content text/bg colors, install "Awesome Styler" (former "Solarized Extended") theme! https://github.com/yoyurec/logseq-awesome-styler',
     promoUpdSolExtMgs: '⚠ Update "Solarized Extended" to latest to avoid same functionality conflicts!',

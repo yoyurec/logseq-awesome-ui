@@ -3,6 +3,7 @@
 */
 .ui__modal {
     font-family: var(--awUI-font);
+    justify-content: flex-end;
 }
 .ui__modal .settings-modal {
     font-size: 16px;
@@ -121,6 +122,10 @@ html[data-theme="dark"] .ui__modal .ui__button:hover {
 /*
   >>> BEGIN: Themes popup
 */
+.is-themes-opened .ui__modal .panel-content {
+    min-width: unset;
+    width: 400px;
+}
 .cp__themes-installed .text-xs .opacity-60 {
     display: none;
 }
@@ -158,12 +163,32 @@ html[data-theme="dark"] .ui__modal .ui__button:hover {
     content: "\ea38";
 }
 
+.panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="pageHeading"] h2::before {
+    content: "\ead7";
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="contentHeading"] h2::before {
+    content: "\ebb2";
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="appUIHeading"] h2::before {
+    content: "\efe6";
+}
+
 .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureTasksEnabled"] small::before {
     content: "\eb6a";
 }
 
 .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureCalendarEnabled"] small::before {
     content: "\ee21";
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureHideDotProps"] small::before {
+    content: "\f181";
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureTanaProps"] small::before {
+    content: "\ee8f";
 }
 
 .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureColumnsEnabled"] small::before {
@@ -203,8 +228,8 @@ body:not(.is-awesomeStyler-loaded) .panel-wrap[data-id="logseq-awesome-ui"] .des
     display: block;
 }
 .desc-item[data-key="promoAwesomeStyler"] {
-    margin: 1em 0 !important;
-    font-size: 1.3em;
+    margin: 0.5em 0 !important;
+    font-size: 1.2em;
 }
 .desc-item[data-key="promoAwesomeStyler"] .form-checkbox {
     display: none;
@@ -218,8 +243,8 @@ body:not(.is-awesomeStyler-loaded) .panel-wrap[data-id="logseq-awesome-ui"] .des
     display: block;
 }
 .desc-item[data-key="promoUpdSolExt"] {
-    margin: 1em 0 !important;
-    font-size: 1.3em;
+    margin: 0.5em 0 !important;
+    font-size: 1.2em;
 }
 .desc-item[data-key="promoUpdSolExt"] .form-checkbox {
     display: none;

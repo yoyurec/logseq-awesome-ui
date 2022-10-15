@@ -42,19 +42,13 @@ html.is-mac body:not(.is-pdf-active):not(.is-tabs-loaded) #head>.r>.flex {
     content: "";
     margin-left: auto;
 }
-#head .button {
+
+#head .button i,
+#head .ti {
+    color: var(--ls-icon-color);
     opacity: 0.6;
 }
-#head .button:hover {
-    opacity: 1;
-}
-#head .button .ti {
-    opacity: 1;
-}
-/* settings dot button */
-#head .ui__dropdown-trigger .button {
-    opacity: 1;
-}
+
 /* right sidebar toggle button*/
 #head .toggle-right-sidebar {
     display: flex;

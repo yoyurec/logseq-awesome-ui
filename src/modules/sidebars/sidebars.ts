@@ -6,6 +6,10 @@ import './sidebars.css';
 export const rightSidebarLoad = async () => {
     const toggleRightSidebar = doc.querySelector('#right-sidebar .toggle-right-sidebar');
     reorderRightSidebarToggleButton(toggleRightSidebar ? true : false);
+    // Listen sidebar update
+    logseq.App.onSidebarVisibleChanged(({visible}) => {
+        onSidebarVisibleChangedCallback(visible);
+    });
 }
 export const rightSidebarUnload = async () => {
     const hideRightSidebarButton = doc.querySelector('#head .hide-right-sidebar-button');
@@ -25,4 +29,9 @@ export const reorderRightSidebarToggleButton = (visible: boolean) => {
     } else {
         doc.querySelector('#head .hide-right-sidebar-button')?.remove();
     }
+}
+
+// Sidebar toggled
+const onSidebarVisibleChangedCallback = (visible: boolean) => {
+    reorderRightSidebarToggleButton(visible);
 }

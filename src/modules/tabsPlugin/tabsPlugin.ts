@@ -76,7 +76,7 @@ export const tabsPluginUnload = () => {
     stopPluginsIframesObserver();
 }
 
-export const refreshTabsStyles = () => {
+export const setTabsStyles = () => {
     root.style.setProperty('--awUI-calc-bg', getInheritedBackgroundColor(doc.querySelector('.left-sidebar-inner')).trim());
     if (globalContext.tabsPluginIframe) {
         tabPluginInjectCSSVars(globalContext.tabsPluginIframe);

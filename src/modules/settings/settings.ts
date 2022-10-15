@@ -1,5 +1,16 @@
-import { SettingSchemaDesc } from '@logseq/libs/dist/LSPlugin.user';
-import globalContext from './globals';
+import { SettingSchemaDesc, LSPluginBaseInfo } from '@logseq/libs/dist/LSPlugin.user';
+
+import globalContext from '../globals';
+import {
+    toggleCalendarFeature,
+    toggleColumnsFeature,
+    toggleTasksFeature,
+    toggleHeadersLabelsFeature
+} from '../internal';
+import { setFeaturesCSSVars } from '../internal';
+import { objectDiff } from '../utils';
+
+import './settings.css';
 
 export const settingsConfig: SettingSchemaDesc[] = [
     {
@@ -31,6 +42,13 @@ export const settingsConfig: SettingSchemaDesc[] = [
         default: true,
     },
     {
+        key: 'contentHeading',
+        title: 'Content',
+        description: '',
+        type: 'heading',
+        default: null,
+    },
+    {
         key: 'featureTasksEnabled',
         title: '',
         description: 'Enable tasks status and priority restyling?',
@@ -50,6 +68,13 @@ export const settingsConfig: SettingSchemaDesc[] = [
         description: 'Show headers (h1-h5) labels?',
         type: 'boolean',
         default: true,
+    },
+    {
+        key: 'appUIHeading',
+        title: 'App UI tuning',
+        description: '',
+        type: 'heading',
+        default: null,
     },
     {
         key: 'featureHomeButtonEnabled',
@@ -80,3 +105,34 @@ export const settingsConfig: SettingSchemaDesc[] = [
         default: false,
     },
 ];
+
+export const settingsLoad = () => {
+    logseq.useSettingsSchema(settingsConfig);
+    globalContext.pluginConfig = logseq.settings;
+
+    // Listen settings update
+    logseq.onSettingsChanged((settings, oldSettings) => {
+        onSettingsChangedCallback(settings, oldSettings);
+    });
+}
+
+// Setting changed
+export const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings'], oldSettings: LSPluginBaseInfo['settings']) => {
+    globalContext.pluginConfig = { ...settings };
+    const settingsDiff = objectDiff({ ...oldSettings }, globalContext.pluginConfig)
+    console.log(`AwesomeUI: settings changed:`, settingsDiff);
+
+    if (settingsDiff.includes('featureTasksEnabled')) {
+        toggleTasksFeature();
+    }
+    if (settingsDiff.includes('featureColumnsEnabled')) {
+        toggleColumnsFeature();
+    }
+    if (settingsDiff.includes('featureHeadersLabelsEnabled')) {
+        toggleHeadersLabelsFeature();
+    }
+    if (settingsDiff.includes('featureCalendarEnabled')) {
+        toggleCalendarFeature();
+    }
+    setFeaturesCSSVars();
+}

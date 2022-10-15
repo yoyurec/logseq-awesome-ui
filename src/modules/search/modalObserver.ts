@@ -18,6 +18,13 @@ const modalCallback: MutationCallback = () => {
     } else {
         body.classList.remove(globalContext.isSearchOpenedClass);
     }
+    // Themes opened
+    const themesModal = modalContainer.querySelector('.cp__themes-installed') as HTMLElement;
+    if (themesModal) {
+        body.classList.add(globalContext.isThemesOpenedClass);
+    } else {
+        body.classList.remove(globalContext.isThemesOpenedClass);
+    }
 };
 
 export const initSearchModalObserver = () => {
