@@ -1,3 +1,10 @@
+## [1.2.12](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.11...v1.2.12) (2022-10-15)
+
+
+### Bug Fixes
+
+* **modals:** non settings/theme popop revert centering ([00b6ee7](https://github.com/yoyurec/logseq-awesome-ui/commit/00b6ee7e09a4664f7cdafd9443ed525f824d061a))
+
 ## [1.2.11](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.10...v1.2.11) (2022-10-15)
 
 
