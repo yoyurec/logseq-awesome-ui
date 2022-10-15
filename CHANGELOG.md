@@ -1,3 +1,10 @@
+## [1.2.11](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.10...v1.2.11) (2022-10-15)
+
+
+### Bug Fixes
+
+* **all:** refactoring ([1f6185d](https://github.com/yoyurec/logseq-awesome-ui/commit/1f6185d1cd0d3b5a661c754678ded70708be13b7))
+
 ## [1.2.10](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.9...v1.2.10) (2022-10-07)
 
 
