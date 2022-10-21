@@ -1,7 +1,7 @@
 import '@logseq/libs';
 
-import globalContext from './modules/globals';
 import {
+    globalContext,
     root, doc, body, getDOMContainers,
     settingsLoad,
     setFeaturesCSSVars,
@@ -10,11 +10,13 @@ import {
     tabsPluginLoad, tabsPluginUnload, setTabsStyles,
     tasksLoad, tasksUnload,
     columnsLoad, columnsUnload,
+    quoteLoad, quoteUnload,
     headersLabelsLoad, headersLabelsUnload,
-    calendarLoad, calendarUnload
+    calendarLoad, calendarUnload,
+    hidePropsLoad, hidePropsUnload,
+    awesomePropsLoad, awesomePropsLoadUnload
 } from './modules/internal';
-
-import { getInheritedBackgroundColor } from './modules/utils';
+import { checkUpdate, getInheritedBackgroundColor } from './modules/utils';
 
 import './awesomeUI.css';
 
@@ -41,11 +43,16 @@ const runStuff = async () => {
         tabsPluginLoad();
         rightSidebarLoad();
         tasksLoad();
-        columnsLoad();
         headersLabelsLoad();
+        columnsLoad();
+        quoteLoad();
+        awesomePropsLoad();
         calendarLoad();
-        body.classList.add(globalContext.isAwesomeUIClass);
+        body.classList.add(globalContext.isPluginEnabled);
     }, 2000);
+    setTimeout(() => {
+        hidePropsLoad();
+    }, 3000)
 }
 const stopStuff = () => {
     unregisterPlugin();
@@ -54,9 +61,12 @@ const stopStuff = () => {
     tabsPluginUnload();
     tasksUnload();
     columnsUnload();
+    quoteUnload();
     headersLabelsUnload();
+    awesomePropsLoadUnload();
     calendarUnload();
-    body.classList.remove(globalContext.isAwesomeUIClass);
+    hidePropsUnload();
+    body.classList.remove(globalContext.isPluginEnabled);
 }
 
 const onStylesChangedCallback = () => {
@@ -86,6 +96,10 @@ const main = async () => {
             stopStuff();
         });
     }, 2000)
+
+    setTimeout(() => {
+        checkUpdate();
+    }, 8000)
 };
 
 logseq.ready(main).catch(null);

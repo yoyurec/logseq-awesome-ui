@@ -1,6 +1,8 @@
-import { body, doc } from '../internal';
-import globalContext from '../globals';
-import { initSearchModalObserver, runSearchModalObserver, stopSearchModalObserver } from '../internal';
+import {
+    globalContext,
+    body, doc,
+    initSearchModalObserver, runSearchModalObserver, stopSearchModalObserver
+} from '../internal';
 
 import './search.css';
 

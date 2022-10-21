@@ -14,7 +14,7 @@
 }
 
 /* new page button */
-#left-sidebar .left-sidebar-inner .new-page {
+#left-sidebar .left-sidebar-inner .create {
     display: var(--awUI-sidebar-new-page, none) !important;
     position: fixed;
 }

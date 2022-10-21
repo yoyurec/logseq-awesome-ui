@@ -10,7 +10,9 @@ assignees: ''
 **Info:**
 - OS:
 - Logseq ver:
-- Theme ver:
+- Plugin ver:
+- Theme name:
+
 - [ ] ⚠ Do i have issue with DISABLED my `custom.css`?
 
 **Description:**

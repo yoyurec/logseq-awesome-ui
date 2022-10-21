@@ -11,61 +11,39 @@
     margin: 0 auto 0 0;
     padding: 0 6px;
     border-radius: 5px;
-    border: 1px solid #AAAAAA60;
-    background-color: var(--ls-primary-background-color);
+    border: 1px solid #88888850;
     transition: all .3s;
     font-family: var(--awUI-font);
 }
 .is-search-reordered #search-button::after {
     display: block;
-    content: "Search...";
+    content: "Search or create page";
     margin: 2px 0 0 5px;
     font-size: calc(var(--awUI-font-size) + 2px);
-}
-@media (min-width: 1024px) {
-    .is-search-reordered #search-button::after {
-        content: "Search or create page";
-    }
 }
 
 /* search popup position */
 .is-search-opened .ui__modal {
     top: calc(var(--awUI-tabs-height) + 8px);
     padding: 0;
+    left: 131px;
+    justify-content: flex-start;
 }
-.ui__modal .ui__modal-panel {
-    transition: none;
+html.is-mac .is-search-opened:not(.is-tabs-loaded) .ui__modal {
+    left: 190px;
+}
+.is-search-opened .ui__modal-panel .panel-content {
+    min-width: unset;
+}
+.cp__palette-main,
+.cp__select-main {
+    width: auto;
 }
 .ui__modal .ls-search {
     border-radius: 5px;
-    border: 1px solid #AAAAAA60;
+    border: 1px solid #88888850;
 }
-@media (min-width: 768px) {
-    .ui__modal .ls-search {
-        width: 740px;
-    }
-}
-@media (min-width: 1024px) {
-    .is-search-opened .ui__modal {
-        left: 131px;
-        justify-content: flex-start;
-    }
-    .cp__palette-main,
-    .cp__select-main {
-        width: auto;
-    }
-    html.is-mac .is-search-opened:not(.is-tabs-loaded) .ui__modal {
-        left: 190px;
-    }
-    .is-pdf-active.is-search-opened .ui__modal {
-        left: calc(var(--ph-view-container-width) + 120px);
-    }
-}
-@media (min-width: 1200px) {
-    .ui__modal-panel .panel-content .ls-search {
-        width: var(--ls-main-content-max-width);
-    }
-}
+
 
 /* search results style */
 .ui__modal .ls-search .input-wrap {
@@ -83,6 +61,6 @@
 }
 .ui__modal .ls-search .input-wrap .cp__palette-input {
     font-size: calc(var(--awUI-font-size) + 2px);
-    padding: 5px 32px 3px 32px;
+    padding: 5px 31px 3px 31px;
 
 }

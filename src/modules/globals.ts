@@ -1,22 +1,19 @@
-import { logseq as PL } from '../../package.json';
+import { logseq as PL, version } from '../../package.json';
 
 type globalContextType = {
-    pluginID: string;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [key: string]: any;
 }
 
-const globalContext: globalContextType = {
+export const globalContext: globalContextType = {
     pluginID: PL.id,
+    pluginVersion: version,
     pluginConfig: null,
-    isAwesomeUIClass: 'is-awesomeUI',
+    isPluginEnabled: 'is-awUI-enabled',
     isTabsLoadedClass: 'is-tabs-loaded',
     isSearchOpenedClass: 'is-search-opened',
-    isthemesOpenedClass: 'is-themes-opened',
+    isThemesOpenedClass: 'is-themes-opened',
     isSearchReorderedClass: 'is-search-reordered',
     promoAwesomeStylerMsg: '🐱‍👤 To customize UI & content text/bg colors, install "Awesome Styler" (former "Solarized Extended") theme! https://github.com/yoyurec/logseq-awesome-styler',
-    promoUpdSolExtMgs: '⚠ Update "Solarized Extended" to latest to avoid same functionality conflicts!',
     tabsPluginIframe: null
 };
-
-export default globalContext;

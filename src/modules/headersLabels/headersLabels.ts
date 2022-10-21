@@ -1,5 +1,7 @@
-import globalContext from '../globals';
-import { doc } from '../internal';
+import {
+    globalContext,
+    doc
+} from '../internal';
 
 import headersLabelsStyles from './headersLabels.css?inline';
 

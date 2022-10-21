@@ -1,6 +1,8 @@
 
-import globalContext from '../globals';
-import { root } from '../internal';
+import {
+    globalContext,
+    root
+} from '../internal';
 
 import './features.css';
 

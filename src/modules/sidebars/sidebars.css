@@ -16,6 +16,9 @@
 .text-sm li {
     margin: 0;
 }
+#left-sidebar .nav-header {
+    gap: 0;
+}
 #left-sidebar .item {
     padding: 5px 8px;
     transition: none;

@@ -1,5 +1,7 @@
-import globalContext from '../globals';
-import { root, doc } from '../internal';
+import {
+    globalContext,
+    root, doc
+} from '../internal';
 
 import calendarStyles from './calendar.css?inline';
 

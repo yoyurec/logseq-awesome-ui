@@ -1,6 +1,8 @@
-import globalContext from '../globals';
-import { root, doc, body } from '../internal';
-import { initPluginsIframesObserver, runPluginsIframesObserver, stopPluginsIframesObserver } from '../internal';
+import {
+    globalContext,
+    root, doc, body,
+    initPluginsIframesObserver, runPluginsIframesObserver, stopPluginsIframesObserver
+} from '../internal';
 
 import tabsPluginStyles from './tabsPlugin.css?inline';
 import { getInheritedBackgroundColor } from '../utils';

@@ -1,13 +1,17 @@
 import { SettingSchemaDesc, LSPluginBaseInfo } from '@logseq/libs/dist/LSPlugin.user';
 
-import globalContext from '../globals';
 import {
+    globalContext,
     toggleCalendarFeature,
     toggleColumnsFeature,
+    toggleQuoteFeature,
     toggleTasksFeature,
-    toggleHeadersLabelsFeature
+    toggleHeadersLabelsFeature,
+    toggleHideDotPropsFeature,
+    toggleHideSetOfPropsFeature,
+    toggleAwesomePropsFeature,
+    setFeaturesCSSVars
 } from '../internal';
-import { setFeaturesCSSVars } from '../internal';
 import { objectDiff } from '../utils';
 
 import './settings.css';
@@ -17,13 +21,6 @@ export const settingsConfig: SettingSchemaDesc[] = [
         key: 'promoAwesomeStyler',
         title: '',
         description: globalContext.promoAwesomeStylerMsg,
-        type: 'boolean',
-        default: false,
-    },
-    {
-        key: 'promoUpdSolExt',
-        title: '',
-        description: globalContext.promoUpdSolExtMgs,
         type: 'boolean',
         default: false,
     },
@@ -38,6 +35,34 @@ export const settingsConfig: SettingSchemaDesc[] = [
         key: 'featureCalendarEnabled',
         title: '',
         description: 'Enable "Calendar" page menu sidebar item?',
+        type: 'boolean',
+        default: true,
+    },
+    {
+        key: 'pageHeading',
+        title: 'Page blocks',
+        description: '',
+        type: 'heading',
+        default: null,
+    },
+    {
+        key: 'featureHideDotProps',
+        title: '',
+        description: 'Hide (in view mode) page props started with dot (.propName)?',
+        type: 'boolean',
+        default: true,
+    },
+    {
+        key: 'featureHideSetOfProps',
+        title: '',
+        description: 'Hide (in view mode) page props (comma separated). Delete to disable',
+        type: 'string',
+        default: 'propToHide,propAnother,color,banner',
+    },
+    {
+        key: 'featureAwesomeProps',
+        title: '',
+        description: 'Enable awesome styled props?',
         type: 'boolean',
         default: true,
     },
@@ -58,7 +83,14 @@ export const settingsConfig: SettingSchemaDesc[] = [
     {
         key: 'featureColumnsEnabled',
         title: '',
-        description: 'Enable columns: ".kanban" & ".grid" tags?',
+        description: 'Enable columns: "#.kanban" & "#.grid" tags?',
+        type: 'boolean',
+        default: true,
+    },
+    {
+        key: 'featureQuoteEnabled',
+        title: '',
+        description: 'Enable blockquote style for "#quote" tag?',
         type: 'boolean',
         default: true,
     },
@@ -128,11 +160,23 @@ export const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings']
     if (settingsDiff.includes('featureColumnsEnabled')) {
         toggleColumnsFeature();
     }
+    if (settingsDiff.includes('featureQuoteEnabled')) {
+        toggleQuoteFeature();
+    }
     if (settingsDiff.includes('featureHeadersLabelsEnabled')) {
         toggleHeadersLabelsFeature();
     }
     if (settingsDiff.includes('featureCalendarEnabled')) {
         toggleCalendarFeature();
+    }
+    if (settingsDiff.includes('featureHideDotProps')) {
+        toggleHideDotPropsFeature();
+    }
+    if (settingsDiff.includes('featureHideSetOfProps')) {
+        toggleHideSetOfPropsFeature();
+    }
+    if (settingsDiff.includes('featureAwesomeProps')) {
+        toggleAwesomePropsFeature();
     }
     setFeaturesCSSVars();
 }

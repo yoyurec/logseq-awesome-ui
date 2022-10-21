@@ -1,7 +1,9 @@
-import globalContext from '../globals';
-import { body, doc } from '../internal';
-import { calendarLoad } from '../internal';
-import { tabPluginInjectCSS, tabPluginInjectCSSVars } from '../internal';
+import {
+    globalContext,
+    body, doc,
+    calendarLoad,
+    tabPluginInjectCSS, tabPluginInjectCSSVars
+} from '../internal';
 
 export let pluginsIframesObserver: MutationObserver
 let pluginsIframesObserverConfig: MutationObserverInit;

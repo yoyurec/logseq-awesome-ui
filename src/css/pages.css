@@ -25,3 +25,50 @@
 #today-queries .lazy-visibility {
     min-height: unset !important;
 }
+
+/*
+  >>> BEGIN: Page bottom
+*/
+/* linked */
+.page > div:nth-last-child(2) .references .foldable-title h2::before {
+    content: '\eade';
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    display: inline-block;
+    line-height: 1em;
+    font-family: tabler-icons;
+}
+/* unlinked */
+.page > div:nth-last-child(1) .references .foldable-title h2::before {
+    content: '\eb46';
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    display: inline-block;
+    line-height: 1em;
+    font-family: tabler-icons;
+}
+/* hierarchy */
+.page-hierarchy .foldable-title h2::before {
+    content: '\eb9d';
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    display: inline-block;
+    line-height: 1em;
+    font-family: tabler-icons;
+}
+/* tagged */
+#main-content-container > div > div > div > div.references.mt-6.flex-1.flex-row > div > div > div.content > div > div > h2::before {
+    content: '\eb34';
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    display: inline-block;
+    line-height: 1em;
+    font-family: tabler-icons;
+}
+/*
+  <<<< END: Page bottom
+*/

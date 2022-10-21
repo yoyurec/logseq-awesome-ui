@@ -3,7 +3,7 @@ export let root: HTMLElement;
 export let body: HTMLElement;
 export let modalContainer: HTMLElement | null;
 
-export const getDOMContainers = async () => {
+export const getDOMContainers = () => {
     doc = parent.document;
     root = doc.documentElement;
     body = doc.body;

@@ -1,26 +1,20 @@
 /*
   >>> BEGIN: Layout
 */
-body.is-pdf-active #app-container {
-    padding-left: calc(var(--ph-view-container-width));
-}
 .theme-inner {
     overflow: hidden;
     height: 100vh;
 }
-#left-container {
-    overflow: visible;
+body.is-pdf-active #app-container {
+    padding-left: calc(var(--ph-view-container-width));
 }
 #head {
-    position: absolute;
+    position: fixed;
     top: var(--awUI-tabs-height) !important;
     width: 100vw;
 }
-body.is-pdf-active #head {
-    width: calc(100vw - var(--ph-view-container-width));
-}
 #pdf-layout-container {
-    top: var(--awUI-tabs-height) !important;
+    top: calc(var(--awUI-tabs-height) + var(--awUI-head-height))!important;
 }
 #main-container {
     transition: none;

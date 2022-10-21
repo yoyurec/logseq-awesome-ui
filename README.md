@@ -14,17 +14,19 @@
 
 * 🐱‍👤 Changed default UI layout, sidebars
 * ✨ Changed icons, new added
-* 🔥 Redesigned head toolbar: navigation arrows on left side, hidden home...
-* 🔍 Redesigned search <a href="#-search-panel">🡖</a>
+* 🔥 Redesigned **head** toolbar: navigation arrows on left side, hidden home...
+* 🔍 Redesigned **search** <a href="#-search-panel">🡖</a>
+* 📋 Restyled **page properties**: keys icons aka Notion/Tana style <a href="#-page-properties">🡖</a>
 * 🗂 **"Tabs"** plugin panel was moved to top & auto-recolored to current (ANY) theme <a href="#-tabs-plugin">🡖</a>
 * 📅 **"Calendar"** menu item added with **"Agenda"** plugin support/restyle <a href="#-calendar--agenda-plugin-support">🡖</a>
-* ✅ Colored tasks statuses & priorities <a href="#-colored-tasks-statuses--priorities">🡖</a>
-* 🚥`#.kanban` & `#.grid` columns (no plugin needed) <a href="#-kanban-board">🡖</a>
-* 📝 Redesigned admonition blocks <a href="#-redesigned-admonition-blocks">🡖</a>
+* ✅ Colored **tasks** statuses & priorities <a href="#-colored-tasks-statuses--priorities">🡖</a>
+* 🚥`#.kanban` & `#.grid` **columns** (no plugin needed) <a href="#-kanban-board">🡖</a>
+* 📝 Redesigned **admonition** blocks <a href="#-redesigned-admonition-blocks">🡖</a>
 * 💬 Custom styled `#quote` <a href="#-blockquotes">🡖</a>
 * 📋 Compact QUERY results header: settings, table toggler <a href="#-compact-query-results-header">🡖</a>
 * 🧮 Redesigned calculator via @Playerofgames <a href="#-redesigned-calculator">🡖</a>
 * ⚙ Simplified, less noise and compact Logseq plugins settings popup
+* 👓 Hide page props: all .dotProps or specified in list
 
 ## If you ❤ what i'm doing - you can support my work! ☕
 
@@ -74,6 +76,15 @@ Wide responsive search like in browser!
 
 <img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/agenda-settings.png" width="600">
 
+### 📋 Page properties
+
+Icons, according to property value or it's (predefined) name:
+* page-type, type, item-type, author, creator, owner, project, area, category, subcategory, topic, status, date, time, book, pdf, article, image, cover.
+
+
+
+![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/awesomeProps.png.png)
+
 
 ### ✅ Colored tasks statuses & priorities
 
@@ -112,7 +123,7 @@ Logseq is a privacy-first, open-source knowledge base. Visit https://logseq.com 
 * If you have any questions, issues or feature request, use the issue submission on GitHub: https://github.com/yoyurec/logseq-awesome-ui/issues
 
 ## Credits
-* Icon - https://www.flaticon.com/free-icon/handcraft_3859663 + https://www.flaticon.com/free-icon/firewood_1732431
+* Icon - https://www.flaticon.com/free-icon/lumberjack_3105596
 * Calculator styles - @Playerofgames https://github.com/playerofgames/logseq-mia-theme
 
 ## License
