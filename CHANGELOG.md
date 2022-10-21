@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.12...v1.3.0) (2022-10-21)
+
+
+### Features
+
+* **props:** props restyling, props hiding, bugfixing ([948a866](https://github.com/yoyurec/logseq-awesome-ui/commit/948a866bc9c644c3b3a18f544e5e702cda4fedb8))
+
 ## [1.2.12](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.2.11...v1.2.12) (2022-10-15)
 
 
