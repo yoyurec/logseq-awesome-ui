@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.1...v1.3.2) (2022-10-22)
+
+
+### Bug Fixes
+
+* **props:** add more icons, fix other themes support ([e7a0cd3](https://github.com/yoyurec/logseq-awesome-ui/commit/e7a0cd3996f6d3f2a76db13835421f8f1070f484))
+
 ## [1.3.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.0...v1.3.1) (2022-10-21)
 
 
