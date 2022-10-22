@@ -1,3 +1,10 @@
+## [1.3.8](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.7...v1.3.8) (2022-10-22)
+
+
+### Bug Fixes
+
+* **updater:** simplify files ([7d4d897](https://github.com/yoyurec/logseq-awesome-ui/commit/7d4d8970f1f619b59076a005c1b090f16c5f0b52))
+
 ## [1.3.7](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.6...v1.3.7) (2022-10-22)
 
 
