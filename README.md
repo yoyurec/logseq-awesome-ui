@@ -80,6 +80,7 @@ Wide responsive search like in browser!
 
 Icons, according to property value or it's (predefined) name.
 Key can contain word (`type` = `page-type`, `item-type`, `task` = `tasks`, etc...):
+* `link`, `links`, `url`, `source`
 * `tags`
 * `related`
 * `type`
@@ -93,9 +94,14 @@ Key can contain word (`type` = `page-type`, `item-type`, `task` = `tasks`, etc..
 * `date`, `day`, `week`, `month`, `year`
 * `time`, `duration`
 * `book`, `pdf`
+* `title`
+* `library`
+* `publisher`
+* `location`, `place`
 * `article`
 * `slide`
 * `summary`, `note`
+* `number`
 * `code`
 * `quote`
 * `image`, `cover`, `banner`
