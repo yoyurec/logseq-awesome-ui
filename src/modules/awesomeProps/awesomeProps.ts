@@ -17,7 +17,7 @@ export const awesomePropsLoad = () => {
     if (!globalContext.pluginConfig.featureAwesomeProps) {
         return;
     }
-    body.classList.add('awSt-props');
+    body.classList.add('awUi-props');
     setTimeout(() => {
         logseq.provideStyle({ key: 'awUI-awesomeProps-css', style: awesomePropsStyles });
     }, 500)
@@ -25,5 +25,5 @@ export const awesomePropsLoad = () => {
 
 export const awesomePropsLoadUnload = () => {
     doc.head.querySelector(`style[data-injected-style="awUI-awesomeProps-css-${globalContext.pluginID}"]`)?.remove();
-    body.classList.remove('awSt-props');
+    body.classList.remove('awUi-props');
 }

@@ -78,12 +78,35 @@ Wide responsive search like in browser!
 
 ### 📋 Page properties
 
-Icons, according to property value or it's (predefined) name:
-* page-type, type, item-type, author, creator, owner, project, area, category, subcategory, topic, status, date, time, book, pdf, article, image, cover.
+Icons, according to property value or it's (predefined) name.
+Key can contain word (`type` = `page-type`, `item-type`, `task` = `tasks`, etc...):
+* `tags`
+* `related`
+* `type`
+* `media`
+* `author`, `creator`, `owner`, `who`, `attendee`, `participant`
+* `project`
+* `task`
+* `status`
+* `area`
+* `category`, `topic`
+* `date`, `day`, `week`, `month`, `year`
+* `time`, `duration`
+* `book`, `pdf`
+* `article`
+* `slide`
+* `summary`, `note`
+* `code`
+* `quote`
+* `image`, `cover`, `banner`
+* `rating`, `quality`
+* `level`
+* `price`
+* `size`
+* `lang`, `language`
 
 
-
-![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/awesomeProps.png.png)
+![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/awesomeProps.png)
 
 
 ### ✅ Colored tasks statuses & priorities
