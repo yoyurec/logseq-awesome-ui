@@ -101,7 +101,7 @@ Key can contain word (`type` = `page-type`, `item-type`, `task` = `tasks`, etc..
 * `article`
 * `slide`
 * `summary`, `note`
-* `number`
+* `number`, `isbn`
 * `code`
 * `quote`
 * `image`, `cover`, `banner`

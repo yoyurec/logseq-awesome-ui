@@ -13,6 +13,12 @@
     /* grid-gap: 1px 0; */
     /* background-color: #88888833; */
 }
+.ls-block:not([data-collapsed="false"]) .block-properties {
+    display: none !important;
+}
+.ls-block:not([data-collapsed]) .block-properties {
+    display: grid !important;
+}
 .block-properties > div {
     display: contents !important;
 }
@@ -206,7 +212,8 @@
     content: "\efc5" !important;
 }
 /* number */
-.block-properties .page-property-key[data-ref="number"]::after {
+.block-properties .page-property-key[data-ref="number"]::after,
+.block-properties .page-property-key[data-ref="isbn"]::after {
     content: "\f1fe" !important;
 }
 /* code */
