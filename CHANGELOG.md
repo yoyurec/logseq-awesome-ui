@@ -1,3 +1,11 @@
+## [1.3.3](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.2...v1.3.3) (2022-10-22)
+
+
+### Bug Fixes
+
+* **all:** small refactoring ([04caf4c](https://github.com/yoyurec/logseq-awesome-ui/commit/04caf4caf2cbd06f6c74c7fbd1f8c5968fb8370b))
+* **props:** icon position for multiline values ([13cee51](https://github.com/yoyurec/logseq-awesome-ui/commit/13cee516d08c542d81c87a0d20470c0e536028be))
+
 ## [1.3.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.1...v1.3.2) (2022-10-22)
 
 
