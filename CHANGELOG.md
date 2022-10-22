@@ -1,3 +1,11 @@
+## [1.3.6](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.5...v1.3.6) (2022-10-22)
+
+
+### Bug Fixes
+
+* **build:** npm script ([e2aeb3e](https://github.com/yoyurec/logseq-awesome-ui/commit/e2aeb3eb7524d5dc4253f8caf11ebeb8858a9b05))
+* **version:** add prebuild script ([3474dee](https://github.com/yoyurec/logseq-awesome-ui/commit/3474dee3836684e7c24a6cd34b964f93e377145a))
+
 ## [1.3.5](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.4...v1.3.5) (2022-10-22)
 
 
