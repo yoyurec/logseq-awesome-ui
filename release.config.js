@@ -4,7 +4,7 @@ module.exports = {
     [
       "@semantic-release/exec",
       {
-        "versionCmd": "echo export default '${nextRelease.version}'; > .version.ts"
+        "verifyReleaseCmd": "echo 'export const version = \"'${nextRelease.version}'\";' > .version.ts && cat .version.ts"
       }
     ],
     [

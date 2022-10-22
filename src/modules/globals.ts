@@ -1,5 +1,5 @@
 import { logseq as PL } from '../../package.json';
-import version from '../../.version';
+import { version } from '../../.version';
 
 type globalContextType = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
