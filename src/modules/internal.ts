@@ -3,7 +3,7 @@ export * from './settings/settings';
 export * from './DOMContainers';
 export * from './features/features';
 export * from './search/search';
-export * from './search/modalObserver';
+export * from './modalObserver/modalObserver';
 export * from './sidebars/sidebars';
 export * from './tasks/tasks';
 export * from './columns/columns';

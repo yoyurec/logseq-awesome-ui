@@ -38,7 +38,7 @@
     display: none;
 }
 
-.block-properties > div > div:first-child::after {
+.block-properties > div > div:first-child::before {
     content: "●";
     position: absolute;
     top: 0.6em;
@@ -49,7 +49,7 @@
 }
 
 /* default */
-.block-properties .page-property-value::after {
+.block-properties .page-property-value::before {
     content: "\ea08";
     position: absolute;
     z-index: 0;
@@ -67,8 +67,8 @@
     content: "\eade";
     position: absolute;
     z-index: 1;
-    left: 8px;
     margin-top: -0.24ex;
+    left: 8px;
     font-family: 'tabler-icons';
     color: #888888AA;
     background: var(--ls-page-properties-background-color);
@@ -93,7 +93,7 @@
 .block-properties .page-property-key[data-ref]::after {
     position: absolute;
     z-index: 2;
-    margin-top: -0.12ex;
+    top: -0.12ex;
     left: 0;
     font-family: 'tabler-icons';
     color: #888888AA;
@@ -103,9 +103,9 @@
 }
 
 /* tags */
-.block-properties .page-property-key[data-ref="tags"]::after {
+.block-properties .page-property-key[data-ref="tags"]::after,
+.block-properties .page-property-key[data-ref="tag"]::after {
     content: "\eb34" !important;
-
 }
 /* related */
 .block-properties .page-property-key[data-ref="related"]::after {

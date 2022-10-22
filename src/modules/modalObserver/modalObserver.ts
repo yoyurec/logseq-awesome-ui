@@ -5,8 +5,8 @@ import {
 } from '../internal';
 
 // Detect modals opened/closed
-export let searchModalObserver: MutationObserver
-let searchModalObserverConfig: MutationObserverInit;
+let modalObserver: MutationObserver;
+let modalObserverConfig: MutationObserverInit;
 
 const modalCallback: MutationCallback = () => {
     if (!modalContainer) {
@@ -29,21 +29,21 @@ const modalCallback: MutationCallback = () => {
     }
 };
 
-export const initSearchModalObserver = () => {
-    searchModalObserverConfig = {
+export const initModalObserver = () => {
+    modalObserverConfig = {
         attributes: true,
         attributeFilter: ['style']
     };
-    searchModalObserver = new MutationObserver(modalCallback);
+    modalObserver = new MutationObserver(modalCallback);
 }
 
-export const runSearchModalObserver = () => {
+export const runModalObserver = () => {
     if (!modalContainer) {
         return;
     }
-    searchModalObserver.observe(modalContainer, searchModalObserverConfig);
+    modalObserver.observe(modalContainer, modalObserverConfig);
 };
 
-export const stopSearchModalObserver = () => {
-    searchModalObserver.disconnect();
+export const stopModalObserver = () => {
+    modalObserver.disconnect();
 };
