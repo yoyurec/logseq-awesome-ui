@@ -48,7 +48,6 @@ const runStuff = async () => {
         quoteLoad();
         awesomePropsLoad();
         calendarLoad();
-        body.classList.add(globalContext.isPluginEnabled);
     }, 2000);
     setTimeout(() => {
         hidePropsLoad();
@@ -66,7 +65,6 @@ const stopStuff = () => {
     awesomePropsLoadUnload();
     calendarUnload();
     hidePropsUnload();
-    body.classList.remove(globalContext.isPluginEnabled);
 }
 
 const onStylesChangedCallback = () => {
@@ -76,6 +74,7 @@ const onStylesChangedCallback = () => {
 // Main logseq on ready
 const main = async () => {
     console.log(`AwesomeUI: plugin loaded`);
+    body.classList.add(globalContext.isPluginEnabled);
 
     settingsLoad();
     registerPlugin();
@@ -93,6 +92,7 @@ const main = async () => {
         });
         // Listen plugin unload
         logseq.beforeunload(async () => {
+            body.classList.remove(globalContext.isPluginEnabled);
             stopStuff();
         });
     }, 2000)

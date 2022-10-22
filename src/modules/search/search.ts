@@ -1,7 +1,7 @@
 import {
     globalContext,
     body, doc,
-    initSearchModalObserver, runSearchModalObserver, stopSearchModalObserver
+    initModalObserver, runModalObserver, stopModalObserver
 } from '../internal';
 
 import './search.css';
@@ -12,26 +12,25 @@ export const initSearchModal = (searchModal: HTMLElement) => {
 
 // Reposition toolbar search button
 export const searchLoad = async () => {
-    if (!body.classList.contains(globalContext.isSearchReorderedClass)) {
-        const rightToolbar = doc.querySelector('#head .r');
-        if (rightToolbar) {
-            const search = doc.getElementById('search-button');
-            if (search) {
-                rightToolbar.insertAdjacentElement('afterbegin', search);
-            }
+    body.classList.add(globalContext.isSearchEnabledClass);
+    const rightToolbar = doc.querySelector('#head .r');
+    if (rightToolbar) {
+        const search = doc.getElementById('search-button');
+        if (search) {
+            rightToolbar.insertAdjacentElement('afterbegin', search);
         }
-        body.classList.add(globalContext.isSearchReorderedClass);
-        initSearchModalObserver();
-        runSearchModalObserver();
     }
+    initModalObserver();
+    runModalObserver();
 }
+
 export const searchUnload = () => {
+    body.classList.remove(globalContext.isSearchEnabledClass);
     const leftToolbar = doc.querySelector('#head .l');
     const search = doc.getElementById('search-button');
     if (!leftToolbar || !search) {
         return;
     }
     leftToolbar.insertAdjacentElement('beforeend', search);
-    body.classList.remove(globalContext.isSearchReorderedClass);
-    stopSearchModalObserver();
+    stopModalObserver();
 }

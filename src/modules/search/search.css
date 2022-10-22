@@ -2,7 +2,7 @@
 #search-button {
     display: none;
 }
-.is-search-reordered #search-button {
+.awUi-search #search-button {
     display: flex;
     justify-content: start;
     flex-grow: 1;
@@ -15,7 +15,7 @@
     transition: all .3s;
     font-family: var(--awUI-font);
 }
-.is-search-reordered #search-button::after {
+.awUi-search #search-button::after {
     display: block;
     content: "Search or create page";
     margin: 2px 0 0 5px;
@@ -62,5 +62,4 @@ html.is-mac .is-search-opened:not(.is-tabs-loaded) .ui__modal {
 .ui__modal .ls-search .input-wrap .cp__palette-input {
     font-size: calc(var(--awUI-font-size) + 2px);
     padding: 5px 31px 3px 31px;
-
 }

@@ -9,11 +9,11 @@ export const globalContext: globalContextType = {
     pluginID: PL.id,
     pluginVersion: version,
     pluginConfig: null,
-    isPluginEnabled: 'is-awUI-enabled',
+    isPluginEnabled: 'is-awUi-enabled',
     isTabsLoadedClass: 'is-tabs-loaded',
     isSearchOpenedClass: 'is-search-opened',
     isThemesOpenedClass: 'is-themes-opened',
-    isSearchReorderedClass: 'is-search-reordered',
+    isSearchEnabledClass: 'awUi-search',
     promoAwesomeStylerMsg: '🐱‍👤 To customize UI & content text/bg colors, install "Awesome Styler" (former "Solarized Extended") theme! https://github.com/yoyurec/logseq-awesome-styler',
     tabsPluginIframe: null
 };
