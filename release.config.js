@@ -2,6 +2,12 @@ module.exports = {
   branches: ["main"],
   plugins: [
     [
+      "@semantic-release/exec",
+      {
+        "versionCmd": "echo export default '${nextRelease.version}'; > .version.ts"
+      }
+    ],
+    [
       "@semantic-release/commit-analyzer",
       {
         preset: "conventionalcommits",

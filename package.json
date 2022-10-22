@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preinstall": "npx only-allow pnpm",
+    "postversion": "npx semantic-release --dry-run --no-ci",
     "semantic-release": "semantic-release"
   },
   "config": {

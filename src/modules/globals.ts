@@ -1,4 +1,5 @@
-import { logseq as PL, version } from '../../package.json';
+import { logseq as PL } from '../../package.json';
+import version from '../../.version';
 
 type globalContextType = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -14,6 +15,6 @@ export const globalContext: globalContextType = {
     isSearchOpenedClass: 'is-search-opened',
     isThemesOpenedClass: 'is-themes-opened',
     isSearchEnabledClass: 'awUi-search',
-    promoAwesomeStylerMsg: '🐱‍👤 To customize UI & content text/bg colors, install "Awesome Styler" (former "Solarized Extended") theme! https://github.com/yoyurec/logseq-awesome-styler',
+    promoAwesomeStylerMsg: 'To customize UI & content text/bg colors, install "Awesome Styler" (former "Solarized Extended") theme! https://github.com/yoyurec/logseq-awesome-styler',
     tabsPluginIframe: null
 };
