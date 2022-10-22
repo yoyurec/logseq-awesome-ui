@@ -1,3 +1,10 @@
+## [1.3.7](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.6...v1.3.7) (2022-10-22)
+
+
+### Bug Fixes
+
+* **release:** test env ([9675b3d](https://github.com/yoyurec/logseq-awesome-ui/commit/9675b3d7c9cd711b8ed5f5544d51def9e8c7f0ac))
+
 ## [1.3.6](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.5...v1.3.6) (2022-10-22)
 
 
