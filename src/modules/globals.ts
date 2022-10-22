@@ -1,5 +1,4 @@
 import { logseq as PL } from '../../package.json';
-import { version } from '../../.version';
 
 type globalContextType = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -8,7 +7,6 @@ type globalContextType = {
 
 export const globalContext: globalContextType = {
     pluginID: PL.id,
-    pluginVersion: version,
     pluginConfig: null,
     isPluginEnabled: 'is-awUi-enabled',
     isTabsLoadedClass: 'is-tabs-loaded',
