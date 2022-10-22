@@ -2,8 +2,8 @@ name: Releases
 
 env:
   PLUGIN_NAME: logseq-awesome-ui
-  GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 on:
   push:
     branches: [ "main" ]
@@ -43,7 +43,3 @@ jobs:
 
       - name: Release
         run: npx semantic-release
-
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
