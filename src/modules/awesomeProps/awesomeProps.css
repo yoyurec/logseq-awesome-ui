@@ -13,11 +13,11 @@
     /* grid-gap: 1px 0; */
     /* background-color: #88888833; */
 }
-.ls-block:not([data-collapsed="false"]) .block-properties {
-    display: none !important;
-}
 .ls-block:not([data-collapsed]) .block-properties {
     display: grid !important;
+}
+.ls-block:not([data-collapsed="false"]) .block-properties {
+    display: none !important;
 }
 .block-properties > div {
     display: contents !important;
