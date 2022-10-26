@@ -1,3 +1,10 @@
+## [1.3.9](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.8...v1.3.9) (2022-10-26)
+
+
+### Bug Fixes
+
+* **props:** hide on fold ([0b5fd7f](https://github.com/yoyurec/logseq-awesome-ui/commit/0b5fd7f8b89412752673d1a0c88324112af6118e))
+
 ## [1.3.8](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.7...v1.3.8) (2022-10-22)
 
 
