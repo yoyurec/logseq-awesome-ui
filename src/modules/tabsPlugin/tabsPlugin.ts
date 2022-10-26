@@ -7,6 +7,22 @@ import {
 import tabsPluginStyles from './tabsPlugin.css?inline';
 import { getInheritedBackgroundColor } from '../utils';
 
+
+setTimeout(() => {
+    // Listen for theme activated
+    logseq.App.onThemeChanged(() => {
+        onStylesChangedCallback();
+    });
+    // Listen for theme mode changed
+    logseq.App.onThemeModeChanged(() => {
+        onStylesChangedCallback();
+    });
+}, 2000)
+
+const onStylesChangedCallback = () => {
+    setTabsStyles();
+}
+
 // Add styles to TabsPlugin
 const injectCssToPlugin = (iframeEl: HTMLIFrameElement, cssContent: string, id: string) => {
     const pluginDocument = iframeEl.contentDocument;

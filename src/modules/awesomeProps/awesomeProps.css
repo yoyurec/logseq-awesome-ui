@@ -13,12 +13,15 @@
     /* grid-gap: 1px 0; */
     /* background-color: #88888833; */
 }
-.ls-block:not([data-collapsed="false"]) .block-properties {
+
+.ls-block[data-collapsed] > div > div > div > div > .block-content > .block-properties {
     display: none !important;
 }
-.ls-block:not([data-collapsed]) .block-properties {
+.ls-block:not([data-collapsed]) > div > div > div > div > .block-content > .block-properties,
+.ls-block[data-collapsed="false"] > div > div > div > div > .block-content > .block-properties {
     display: grid !important;
 }
+
 .block-properties > div {
     display: contents !important;
 }
