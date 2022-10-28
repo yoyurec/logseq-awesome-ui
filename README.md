@@ -82,6 +82,7 @@ Icons, according to property value or it's (predefined) name.
 Key can contain word (`type` = `page-type`, `item-type`, `task` = `tasks`, etc...):
 * `link`, `links`, `url`, `source`
 * `tags`
+* `alias`
 * `related`
 * `type`
 * `media`

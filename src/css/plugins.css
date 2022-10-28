@@ -8,7 +8,6 @@
     width: 100% !important;
     max-width: 100% !important;
     background-color: var(--awesome-ui-calc-bg, var(--ls-secondary-background-color));
-    -webkit-app-region: drag;
 }
 html.is-mac .is-tabs-loaded .cp__header>.l {
     padding-left: 1rem;

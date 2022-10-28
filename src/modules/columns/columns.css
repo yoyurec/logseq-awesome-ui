@@ -4,10 +4,8 @@
 /* layout */
 [data-refs-self*=".kanban"] > .block-children-container > .block-children {
     display: inline-flex;
-    position: relative;
     margin: 0 10px;
     border: 0;
-    overflow-x: auto;
 }
 /* column */
 [data-refs-self*=".kanban"]

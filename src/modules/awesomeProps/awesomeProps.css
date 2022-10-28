@@ -124,6 +124,11 @@
 .block-properties .page-property-key[data-ref="tag"]::after {
     content: "\eb34" !important;
 }
+
+/* alias */
+.block-properties .page-property-key[data-ref="alias"]::after {
+    content: "\edef" !important;
+}
 /* related */
 .block-properties .page-property-key[data-ref="related"]::after {
     content: "\edff" !important;
@@ -134,7 +139,7 @@
 }
 /* page-type */
 .block-properties .page-property-key[data-ref*="type"]::after {
-    content: "\f038" !important;
+    content: "\eaba" !important;
 }
 /* area */
 .block-properties .page-property-key[data-ref="area"]::after {
