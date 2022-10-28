@@ -1,3 +1,10 @@
+## [1.3.10](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.9...v1.3.10) (2022-10-28)
+
+
+### Bug Fixes
+
+* **columns:** kanban owerflow-y ([e03be9a](https://github.com/yoyurec/logseq-awesome-ui/commit/e03be9a100be17cab26805b3b84c897a34a1307b))
+
 ## [1.3.9](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.8...v1.3.9) (2022-10-26)
 
 
