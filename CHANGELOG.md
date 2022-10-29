@@ -1,3 +1,10 @@
+## [1.3.13](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.12...v1.3.13) (2022-10-29)
+
+
+### Bug Fixes
+
+* **tabs:** on pdf open, macOS ([797873e](https://github.com/yoyurec/logseq-awesome-ui/commit/797873eeea7e95f48862c670d54af62a831cb1d3))
+
 ## [1.3.12](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.11...v1.3.12) (2022-10-29)
 
 
