@@ -7,6 +7,9 @@ import {
 import './search.css';
 
 export const initSearchModal = (searchModal: HTMLElement) => {
+    if (body.classList.contains('is-pdf-active')) {
+        return;
+    }
     searchModal.style.width = doc.getElementById('search-button')?.offsetWidth + 'px' || 'var(--ls-main-content-max-width)';
 }
 

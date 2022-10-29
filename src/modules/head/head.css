@@ -1,13 +1,16 @@
 #head {
+    position: fixed;
+    top: var(--awUI-tabs-height) !important;
     background-color: var(--awUI-calc-bg);
 }
+
 /* head left part */
 #head>.l {
     flex-basis: 140px;
     width: unset !important;
     justify-content: unset !important;
 }
-html.is-mac:not(.is-fullscreen) body:not(.is-tabs-loaded) #head>.l {
+html.is-mac:not(.is-fullscreen) body:not(.is-plugin-tabs-enabled) #head>.l {
     flex-basis: 208px;
 }
 
@@ -34,9 +37,6 @@ html.is-mac:not(.is-fullscreen) body:not(.is-tabs-loaded) #head>.l {
     flex: unset;
     flex-basis: 100%;
     justify-content: flex-start;
-}
-html.is-mac body:not(.is-pdf-active):not(.is-tabs-loaded) #head>.r>.flex {
-    left: calc(-1 * var(--ls-left-sidebar-width) + 178px);
 }
 #head>.r::before {
     content: "";

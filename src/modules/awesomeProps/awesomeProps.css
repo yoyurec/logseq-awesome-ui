@@ -14,6 +14,10 @@
     /* background-color: #88888833; */
 }
 
+.is-awSt-theme .block-properties *::before, .block-properties *::after {
+    transform: translateY(-1px);
+}
+
 .ls-block[data-collapsed] > div > div > div > div > .block-content > .block-properties {
     display: none !important;
 }
@@ -38,9 +42,8 @@
 }
 
 .block-properties > div > div:first-child {
-    padding: 0 1.8em;
+    padding: 0 1.7em;
     position: relative;
-    /* background: var(--awUI-propView-icon) 0.25em -1px / 1em 2.77ex no-repeat !important; */
 }
 
 .block-properties .bracket {
@@ -201,6 +204,19 @@
 .block-properties .page-property-key[data-ref*="pdf"]::after {
     content: "\ea39" !important;
 }
+.block-properties .page-property-value a[data-href*="pdf"]::before {
+    content: "\ea39";
+    position: absolute;
+    z-index: 2;
+    margin-top: -0.12ex;
+    left: 8px;
+    font-family: 'tabler-icons';
+    color: #888888AA;
+    background: var(--ls-page-properties-background-color);
+    font-size: 1.13em;
+    font-weight: 400;
+}
+
 /* article */
 .block-properties .page-property-key[data-ref*="article"]::after {
     content: "\eafd" !important;
@@ -209,6 +225,10 @@
 .block-properties .page-property-key[data-ref*="slide"]::after,
 .block-properties .page-property-key[data-ref="presentation"]::after {
     content: "\eb70" !important;
+}
+/* file */
+.block-properties .page-property-key[data-ref*="file"]::after {
+    content: "\eb02" !important;
 }
 
 /* title */
@@ -283,10 +303,10 @@
 
 /* edit */
 .pre-block .editor-wrapper textarea {
-    padding: 0 0 0 2.05em !important;
+    padding: 0 0 0 2.2em !important;
     border: 4px solid var(--ls-primary-background-color) !important;
     background:
-        var(--awUI-propEdit-icon) 0.4em 0.1em / 1.2em 24px repeat-y local,
+        var(--awUI-propEdit-icon) 0.45em 0 / 1.2em 24px repeat-y local,
         linear-gradient(transparent 0%, transparent 96%, #88888833 100%) 0 0 / 1px 24px repeat local !important;
     white-space: pre;
     overflow: auto;

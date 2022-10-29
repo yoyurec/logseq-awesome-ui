@@ -5,17 +5,6 @@
     overflow: hidden;
     height: 100vh;
 }
-body.is-pdf-active #app-container {
-    padding-left: calc(var(--ph-view-container-width));
-}
-#head {
-    position: fixed;
-    top: var(--awUI-tabs-height) !important;
-    width: 100vw;
-}
-#pdf-layout-container {
-    top: calc(var(--awUI-tabs-height) + var(--awUI-head-height))!important;
-}
 #main-container {
     transition: none;
 }

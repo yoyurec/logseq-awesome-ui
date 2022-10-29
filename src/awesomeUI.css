@@ -1,16 +1,17 @@
-@import url("css/layout.css");
-@import url("css/head.css");
+@import url("./modules/layout/layout.css");
+@import url("./modules/head/head.css");
+@import url("./modules/pdf/pdf.css");
 
-@import url("css/query.css");
-@import url("css/admonition.css");
-@import url("css/calculator.css");
+@import url("./modules/query/query.css");
+@import url("./modules/admonition/admonition.css");
+@import url("./modules/calculator/calculator.css");
 
-@import url("css/pages.css");
-@import url("css/content.css");
+@import url("./modules/pages/pages.css");
+@import url("./modules/content/content.css");
 
-@import url("css/market.css");
+@import url("./modules/market/market.css");
 
-@import url("css/plugins.css");
+@import url("./modules/plugins/plugins.css");
 
 :root {
     --awUI-tabs-height: 0px;
@@ -20,6 +21,6 @@
     --awUI-font-size: 13px;
 }
 
-.is-tabs-loaded {
+.is-plugin-tabs-enabled {
     --awUI-tabs-height: 40px;
 }

@@ -1,7 +1,6 @@
 import {
     globalContext,
     root, doc, body,
-    initPluginsIframesObserver, runPluginsIframesObserver, stopPluginsIframesObserver
 } from '../internal';
 
 import tabsPluginStyles from './tabsPlugin.css?inline';
@@ -80,18 +79,14 @@ const tabsPluginEjectCSS = (tabsPluginIframe: HTMLIFrameElement) => {
 // First init run
 export const tabsPluginLoad = async () => {
     if (globalContext.tabsPluginIframe) {
-        body.classList.add(globalContext.isTabsLoadedClass);
         tabPluginInjectCSS(globalContext.tabsPluginIframe);
         tabPluginInjectCSSVars(globalContext.tabsPluginIframe);
     }
-    initPluginsIframesObserver();
-    runPluginsIframesObserver();
 }
 export const tabsPluginUnload = () => {
     if (globalContext.tabsPluginIframe) {
         tabsPluginEjectCSS(globalContext.tabsPluginIframe);
     }
-    stopPluginsIframesObserver();
 }
 
 export const setTabsStyles = () => {

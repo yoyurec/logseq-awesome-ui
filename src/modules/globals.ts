@@ -9,7 +9,6 @@ export const globalContext: globalContextType = {
     pluginID: PL.id,
     pluginConfig: null,
     isPluginEnabled: 'is-awUi-enabled',
-    isTabsLoadedClass: 'is-tabs-loaded',
     isSearchOpenedClass: 'is-search-opened',
     isThemesOpenedClass: 'is-themes-opened',
     isSearchEnabledClass: 'awUi-search',

@@ -18,48 +18,58 @@
 .awUi-search #search-button::after {
     display: block;
     content: "Search or create page";
-    margin: 2px 0 0 5px;
+    margin: 0 0 0 5px;
     font-size: calc(var(--awUI-font-size) + 2px);
 }
 
 /* search popup position */
 .is-search-opened .ui__modal {
-    top: calc(var(--awUI-tabs-height) + 8px);
+    top: calc(var(--awUI-tabs-height) + 7px);
     padding: 0;
     left: 131px;
     justify-content: flex-start;
 }
-html.is-mac .is-search-opened:not(.is-tabs-loaded) .ui__modal {
+html.is-mac .is-search-opened:not(.is-plugin-tabs-enabled) .ui__modal {
     left: 190px;
 }
-.is-search-opened .ui__modal-panel .panel-content {
+.is-search-opened .panel-content {
     min-width: unset;
 }
-.cp__palette-main,
-.cp__select-main {
+.is-search-opened .cp__palette-main {
     width: auto;
 }
-.ui__modal .ls-search {
+.ls-search {
     border-radius: 5px;
     border: 1px solid #88888850;
 }
-
-
-/* search results style */
-.ui__modal .ls-search .input-wrap {
+.ls-search .input-wrap {
     height: 38px;
 }
-.ui__modal .ls-search .input-wrap::before {
+.ls-search .input-wrap::before {
     font-family: "tabler-icons";
     content: "\eb1c";
-    width: 22px;
-    height: 22px;
     font-size: 20px;
     position: absolute;
     left: 7px;
-    top: 0;
+    top: 1px;
 }
-.ui__modal .ls-search .input-wrap .cp__palette-input {
+.ls-search .input-wrap .cp__palette-input {
     font-size: calc(var(--awUI-font-size) + 2px);
-    padding: 5px 31px 3px 31px;
+    padding: 4px 31px 3px 31px;
+}
+
+/* search results style */
+.ls-search .search-result,
+.ls-search .search-result .font-medium {
+    font-weight: 400;
+}
+.ls-search .search-results .menu-link {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.ls-search .menu-link {
+    border-top: 1px dashed var(--ls-secondary-background-color);
+}
+.ls-search .menu-link .chosen {
+    background-color: var(--ls-a-chosen-bg);
 }
