@@ -4,6 +4,14 @@
 ### Bug Fixes
 
 * **mac:** tabs and header ([90a4dad](https://github.com/yoyurec/logseq-awesome-ui/commit/90a4dadd732f8cd625529d29577326fd1b2b3b55))
+* **search:** on mac ([cce7a08](https://github.com/yoyurec/logseq-awesome-ui/commit/cce7a0826f6e78710127e39627dad2e5d2d08a14))
+
+## [1.3.14](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.13...v1.3.14) (2022-10-29)
+
+
+### Bug Fixes
+
+* **mac:** tabs and header ([90a4dad](https://github.com/yoyurec/logseq-awesome-ui/commit/90a4dadd732f8cd625529d29577326fd1b2b3b55))
 
 ## [1.3.13](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.12...v1.3.13) (2022-10-29)
 
