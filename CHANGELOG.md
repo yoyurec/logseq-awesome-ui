@@ -1,3 +1,10 @@
+## [1.3.11](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.10...v1.3.11) (2022-10-29)
+
+
+### Bug Fixes
+
+* **pdf:** layout for reading maximized, search popup size/position tuned ([86e4439](https://github.com/yoyurec/logseq-awesome-ui/commit/86e443917f7d8a69c73fdca3a94dac78e85c648b))
+
 ## [1.3.10](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.9...v1.3.10) (2022-10-28)
 
 
