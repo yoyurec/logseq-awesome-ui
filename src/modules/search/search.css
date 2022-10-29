@@ -26,11 +26,11 @@
 .is-search-opened .ui__modal {
     top: calc(var(--awUI-tabs-height) + 7px);
     padding: 0;
-    left: 131px;
+    left: 122px;
     justify-content: flex-start;
 }
 html.is-mac .is-search-opened:not(.is-plugin-tabs-enabled) .ui__modal {
-    left: 190px;
+    left: 184px;
 }
 .is-search-opened .panel-content {
     min-width: unset;
