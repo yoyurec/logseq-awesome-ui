@@ -1,3 +1,10 @@
+## [1.3.12](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.11...v1.3.12) (2022-10-29)
+
+
+### Bug Fixes
+
+* **pdf:** macOS tabs and header left position ([bfa9273](https://github.com/yoyurec/logseq-awesome-ui/commit/bfa927337b71bc25028357a1029c7b9c9a3e97fd))
+
 ## [1.3.11](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.10...v1.3.11) (2022-10-29)
 
 
