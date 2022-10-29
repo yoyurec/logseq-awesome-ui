@@ -1,8 +1,14 @@
 main {
     border-bottom: 1px solid #80808080;
 }
-html.is-mac:not(.is-fullscreen) main {
+html.is-mac main {
     padding-left: 84px;
+}
+html.is-mac.is-fullscreen main {
+    padding-left: 0;
+}
+html.is-mac.is-pdf-active main {
+    padding-left: 0;
 }
 main .flex {
     align-items: flex-end;
