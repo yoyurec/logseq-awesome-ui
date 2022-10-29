@@ -7,7 +7,7 @@ html.is-mac main {
 html.is-mac.is-fullscreen main {
     padding-left: 0;
 }
-html.is-mac.is-pdf-active main {
+html.is-mac .is-pdf-active main {
     padding-left: 0;
 }
 main .flex {

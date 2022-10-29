@@ -13,7 +13,7 @@ body.is-pdf-active #app-container {
 body.is-pdf-active #head {
     left: calc(var(--ph-view-container-width));
 }
-body.is-pdf-active #head>.l {
+body.is-pdf-active #head > .l {
     flex-basis: 90px;
 }
 html.is-mac body:not(.is-pdf-active):not(.is-plugin-tabs-enabled) #head>.r>.flex {
