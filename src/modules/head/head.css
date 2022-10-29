@@ -5,13 +5,17 @@
 }
 
 /* head left part */
-#head>.l {
-    flex-basis: 140px;
+#head > .l {
+    flex-basis: 130px;
     width: unset !important;
     justify-content: unset !important;
 }
-html.is-mac:not(.is-fullscreen) body:not(.is-plugin-tabs-enabled) #head>.l {
+html.is-mac:not(.is-fullscreen) body:not(.is-plugin-tabs-enabled) #head > .l {
     flex-basis: 208px;
+    padding-left: 78px;
+}
+.is-mac #head > .l {
+    padding-left: 0.5rem;
 }
 
 /* left sidebar toggle button*/

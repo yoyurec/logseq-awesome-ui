@@ -32,9 +32,6 @@ const injectCssToPlugin = (iframeEl: HTMLIFrameElement, cssContent: string, id: 
                 ${cssContent}
             </style>`
         );
-        if (doc.documentElement.classList.contains('is-mac')) {
-            pluginDocument.documentElement.classList.add('is-mac');
-        }
     }
 }
 const removeCssFromPlugin = (iframeEl: HTMLIFrameElement, id: string) => {
