@@ -1,3 +1,10 @@
+## [1.3.17](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.16...v1.3.17) (2022-10-31)
+
+
+### Bug Fixes
+
+* **props:** hide also props in block-props ([80c76cd](https://github.com/yoyurec/logseq-awesome-ui/commit/80c76cdaea8abcc85b7805502fcefa5a41c2fe66))
+
 ## [1.3.16](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.15...v1.3.16) (2022-10-31)
 
 
