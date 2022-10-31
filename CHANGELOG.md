@@ -1,3 +1,10 @@
+## [1.3.15](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.14...v1.3.15) (2022-10-31)
+
+
+### Bug Fixes
+
+* **props:** edit mode nested props ([0033b32](https://github.com/yoyurec/logseq-awesome-ui/commit/0033b3217a66c0b76c53c6a89d8d70c84955f525)), closes [#19](https://github.com/yoyurec/logseq-awesome-ui/issues/19)
+
 ## [1.3.14](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.13...v1.3.14) (2022-10-29)
 
 
