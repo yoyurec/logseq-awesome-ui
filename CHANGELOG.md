@@ -1,3 +1,10 @@
+## [1.3.16](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.15...v1.3.16) (2022-10-31)
+
+
+### Bug Fixes
+
+* **props:** styles for config "property-pages/enabled false" ([f391dc9](https://github.com/yoyurec/logseq-awesome-ui/commit/f391dc917f3c55a064af4f72fdacec9389f065e6)), closes [#21](https://github.com/yoyurec/logseq-awesome-ui/issues/21)
+
 ## [1.3.15](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.14...v1.3.15) (2022-10-31)
 
 
