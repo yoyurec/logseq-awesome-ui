@@ -69,15 +69,15 @@ export const hideProps = async () => {
     if (globalContext.pluginConfig.featureHideSetOfProps) {
         hidePropsArr = (globalContext.pluginConfig.featureHideSetOfProps as string).trim().toLowerCase().replaceAll(', ', ',').split(',');
     }
-    const propKeyList = doc.querySelectorAll('.page-properties .page-property-key');
+    const propKeyList = doc.querySelectorAll('.block-properties .page-property-key');
     if (propKeyList.length) {
         for (let i = 0; i < propKeyList.length; i++) {
-            const propKeyItem = propKeyList[i].textContent;
+            const propKeyItemText = propKeyList[i].textContent;
             const propItem = propKeyList[i].parentElement!.parentElement;
-            if (propKeyItem && propItem) {
-                if (globalContext.pluginConfig.featureHideDotProps && propKeyItem?.startsWith('.')) {
+            if (propKeyItemText && propItem) {
+                if (globalContext.pluginConfig.featureHideDotProps && propKeyItemText?.startsWith('.')) {
                     propItem.classList.add('hidden', 'awUI-hideDotProp');
-                } else if (globalContext.pluginConfig.featureHideSetOfProps && hidePropsArr.includes(propKeyItem)) {
+                } else if (globalContext.pluginConfig.featureHideSetOfProps && hidePropsArr.includes(propKeyItemText)) {
                     propItem.classList.add('hidden', 'awUI-hideSetOfProps');
                 } else {
                     propItem.classList.remove('hidden', 'awUI-hideSetOfProps');

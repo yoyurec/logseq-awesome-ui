@@ -104,6 +104,7 @@
 
 /* key */
 .block-properties .page-property-key[data-ref]::before {
+    content: '';
     position: absolute;
     z-index: 2;
     top: -0.12ex;
