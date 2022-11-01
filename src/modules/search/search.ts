@@ -6,11 +6,26 @@ import {
 
 import './search.css';
 
-export const initSearchModal = (searchModal: HTMLElement) => {
+export const initSearchModal = (searchResults: HTMLElement) => {
     if (body.classList.contains('is-pdf-active')) {
         return;
     }
-    searchModal.style.width = doc.getElementById('search-button')?.offsetWidth + 'px' || 'var(--ls-main-content-max-width)';
+    const searchModal = searchResults.closest('.ui__modal') as HTMLElement;
+    const searchButton = doc.getElementById('search-button');
+    if (!searchButton || !searchModal) {
+        return;
+    }
+    const searchModalLeft = searchButton.getBoundingClientRect().left;
+    const searchResultsWidth = searchButton.offsetWidth;
+    if (searchResultsWidth && searchResultsWidth > 600) {
+        searchResults.style.width = searchResultsWidth + 'px';
+        searchModal.style.left = searchModalLeft + 'px';
+        searchModal.style.justifyContent = 'flex-start'
+    } else {
+        searchResults.style.width = '90vw';
+        searchModal.style.left = '0';
+        searchModal.style.justifyContent = 'center';
+    }
 }
 
 // Reposition toolbar search button

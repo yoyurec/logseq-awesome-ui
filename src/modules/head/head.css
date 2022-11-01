@@ -6,12 +6,12 @@
 
 /* head left part */
 #head > .l {
-    flex-basis: 130px;
+    min-width: 120px;
     width: unset !important;
     justify-content: unset !important;
 }
 html.is-mac:not(.is-fullscreen) body:not(.is-plugin-tabs-enabled) #head > .l {
-    flex-basis: 196px;
+    min-width: 186px;
     padding-left: 78px;
 }
 .is-mac #head > .l {
@@ -39,7 +39,7 @@ html.is-mac:not(.is-fullscreen) body:not(.is-plugin-tabs-enabled) #head > .l {
 #head>.r {
     height: 100%;
     flex: unset;
-    flex-basis: 100%;
+    width: 100%;
     justify-content: flex-start;
 }
 #head>.r::before {

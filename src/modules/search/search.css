@@ -26,18 +26,23 @@
 .is-search-opened .ui__modal {
     top: calc(var(--awUI-tabs-height) + 7px);
     padding: 0;
-    left: 122px;
-    justify-content: flex-start;
 }
-html.is-mac .is-search-opened:not(.is-plugin-tabs-enabled) .ui__modal {
-    left: 184px;
-}
-.is-search-opened .panel-content {
+.is-search-opened .panel-content,
+.is-search-opened .cp__palette-main,
+.ui__modal-panel .panel-content .ls-search {
     min-width: unset;
-}
-.is-search-opened .cp__palette-main {
     width: auto;
 }
+.is-search-opened .cp__palette-main {
+    margin: -2rem -1.5rem;
+}
+@media (min-width: 640px) {
+    .is-search-opened .cp__palette-main {
+        margin: -2rem;
+    }
+}
+
+
 .ls-search {
     border-radius: 5px;
     border: 1px solid #88888850;

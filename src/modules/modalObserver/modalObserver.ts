@@ -13,10 +13,10 @@ const modalCallback: MutationCallback = () => {
         return;
     }
     // Search opened
-    const searchModal = modalContainer.querySelector('.ls-search') as HTMLElement;
-    if (searchModal) {
+    const searchResults = modalContainer.querySelector('.ls-search') as HTMLElement;
+    if (searchResults) {
         body.classList.add(globalContext.isSearchOpenedClass);
-        initSearchModal(searchModal);
+        initSearchModal(searchResults);
     } else {
         body.classList.remove(globalContext.isSearchOpenedClass);
     }
