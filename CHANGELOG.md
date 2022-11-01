@@ -1,3 +1,10 @@
+## [1.3.18](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.17...v1.3.18) (2022-11-01)
+
+
+### Bug Fixes
+
+* **search:** detect small search field and set wide popup ([b2e0aaa](https://github.com/yoyurec/logseq-awesome-ui/commit/b2e0aaa47c72a18f0cd0e5448a8e710485bad526))
+
 ## [1.3.17](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.16...v1.3.17) (2022-10-31)
 
 
