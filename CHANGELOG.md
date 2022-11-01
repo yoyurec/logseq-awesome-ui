@@ -1,3 +1,10 @@
+## [1.3.19](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.18...v1.3.19) (2022-11-01)
+
+
+### Bug Fixes
+
+* **search:** clean modal styles on close ([5f6da16](https://github.com/yoyurec/logseq-awesome-ui/commit/5f6da16cf00e7417b3801cadd589300f313eed99))
+
 ## [1.3.18](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.17...v1.3.18) (2022-11-01)
 
 
