@@ -6,7 +6,7 @@ import {
 
 import './search.css';
 
-export const initSearchModal = (searchResults: HTMLElement) => {
+export const onSearchModalOpen = (searchResults: HTMLElement) => {
     if (body.classList.contains('is-pdf-active')) {
         return;
     }
@@ -26,6 +26,12 @@ export const initSearchModal = (searchResults: HTMLElement) => {
         searchModal.style.left = '0';
         searchModal.style.justifyContent = 'center';
     }
+}
+
+export const onSearchModalClose = () => {
+    const searchModal = doc.querySelector('.ui__modal') as HTMLElement;
+    searchModal.style.left = '';
+    searchModal.style.justifyContent = '';
 }
 
 // Reposition toolbar search button

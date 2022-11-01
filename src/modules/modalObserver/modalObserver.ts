@@ -1,7 +1,7 @@
 import {
     globalContext,
     body, modalContainer,
-    initSearchModal
+    onSearchModalOpen, onSearchModalClose
 } from '../internal';
 
 // Detect modals opened/closed
@@ -16,9 +16,10 @@ const modalCallback: MutationCallback = () => {
     const searchResults = modalContainer.querySelector('.ls-search') as HTMLElement;
     if (searchResults) {
         body.classList.add(globalContext.isSearchOpenedClass);
-        initSearchModal(searchResults);
+        onSearchModalOpen(searchResults);
     } else {
         body.classList.remove(globalContext.isSearchOpenedClass);
+        onSearchModalClose();
     }
     // Themes opened
     const themesModal = modalContainer.querySelector('.cp__themes-installed') as HTMLElement;
