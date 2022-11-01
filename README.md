@@ -12,6 +12,8 @@
 
 ### ⚡ Reworked, simplified, fixed and pumped-up Logseq! Layout, components, etc...
 
+![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/scr.png)
+
 * 🐱‍👤 Changed default UI layout, sidebars
 * ✨ Changed icons, new added
 * 🔥 Redesigned **head** toolbar: navigation arrows on left side, hidden home...
@@ -66,7 +68,9 @@ Wide responsive search like in browser!
 
 <img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/calendar.png">
 
-#### instructions:
+<details>
+  <summary>⚠ Instructions for "Agenda plugin"</summary>
+
 * install Agenda plugin
 * Agenda plugin button should be pinned on toolbar to proper work ⚠
 * go to Agenda settings and set "Home page" - Calendar
@@ -76,10 +80,16 @@ Wide responsive search like in browser!
 
 <img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/agenda-settings.png" width="600">
 
+</details>
+
+
 ### 📋 Page properties
 
 Icons, according to property value or it's (predefined) name.
-Key can contain word (`type` = `page-type`, `item-type`, `task` = `tasks`, etc...):
+Key can contain word (`type` = `page-type`, `item-type`, `task` = `tasks`, etc...)
+<details>
+  <summary>Full list</summary>
+
 * `link`, `links`, `url`, `source`
 * `tags`
 * `alias`
@@ -112,6 +122,7 @@ Key can contain word (`type` = `page-type`, `item-type`, `task` = `tasks`, etc..
 * `size`
 * `lang`, `language`
 
+</details>
 
 ![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/awesomeProps.png)
 
@@ -129,7 +140,7 @@ and check [Logseq template](./extra/Kanban%20template.md)
 
 ### 📝 Redesigned admonition blocks
 
-<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/admonition.png" width="600">
+![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/admonition.png)
 
 ### 💬 Blockquotes
 Just add `#quote` tag to parent block!
@@ -138,7 +149,7 @@ Just add `#quote` tag to parent block!
 
 ### 📋 Compact QUERY results header
 
-<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/queries.png" width="740">
+![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/queries.png)
 
 ### 🧮 Redesigned calculator
 
