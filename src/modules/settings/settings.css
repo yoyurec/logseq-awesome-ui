@@ -91,6 +91,9 @@
     content: "\ea69";
 }
 
+.panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="otherHeading"] h2::before {
+    content: "\ea03";
+}
 /*
   <<<< END: Settings icons
 */

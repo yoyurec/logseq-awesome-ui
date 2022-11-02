@@ -27,9 +27,11 @@ export const pluginLoad = () => {
         });
     }, 2000)
 
-    setTimeout(() => {
-        checkUpdate();
-    }, 8000)
+    if (globalContext.pluginConfig.featureUpdaterEnabled) {
+        setTimeout(() => {
+            checkUpdate();
+        }, 8000)
+    }
 }
 
 const pluginUnload = () => {

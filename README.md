@@ -110,6 +110,8 @@ Key can contain word (`type` = `page-type`, `item-type`, `task` = `tasks`, etc..
 * `publisher`
 * `location`, `place`
 * `article`
+* `file`
+* `template`
 * `slide`
 * `summary`, `note`
 * `number`, `isbn`

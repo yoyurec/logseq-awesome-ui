@@ -1,5 +1,6 @@
 export * from './globals';
 export * from './settings/settings';
+export * from './settings/settingsConfig';
 export * from './plugin/plugin';
 export * from './DOMContainers';
 export * from './features/features';
