@@ -1,3 +1,10 @@
+## [1.3.20](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.19...v1.3.20) (2022-11-02)
+
+
+### Bug Fixes
+
+* **updater:** add option on/off ([ebdf732](https://github.com/yoyurec/logseq-awesome-ui/commit/ebdf732d00f693d3eb89138f984c631055e8258c))
+
 ## [1.3.19](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.18...v1.3.19) (2022-11-01)
 
 
