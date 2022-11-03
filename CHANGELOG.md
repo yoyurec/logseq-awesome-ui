@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.20...v1.4.0) (2022-11-03)
+
+
+### Features
+
+* **flashcard:** add cards style, quote update ([ce39397](https://github.com/yoyurec/logseq-awesome-ui/commit/ce393972eedb343c37924321e02163eda201125b))
+
 ## [1.3.20](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.19...v1.3.20) (2022-11-02)
 
 
