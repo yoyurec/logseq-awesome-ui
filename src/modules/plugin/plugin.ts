@@ -62,7 +62,6 @@ const runStuff = async () => {
         setFeaturesCSSVars();
         searchLoad();
         tabsPluginLoad();
-        rightSidebarLoad();
         awesomePropsLoad();
         tasksLoad();
         headersLabelsLoad();
@@ -71,6 +70,7 @@ const runStuff = async () => {
         calendarLoad();
     }, 2000);
     setTimeout(() => {
+        rightSidebarLoad();
         hidePropsLoad();
     }, 3000)
 }

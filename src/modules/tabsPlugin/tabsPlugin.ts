@@ -3,7 +3,8 @@ import {
     root, doc, body,
 } from '../internal';
 
-import tabsPluginStyles from './tabsPlugin.css?inline';
+import './tabs.css';
+import tabsIframeStyles from './tabsIframe.css?inline';
 import { getInheritedBackgroundColor } from '../utils';
 
 
@@ -59,7 +60,7 @@ const tabsPluginCSSVars = (): string => {
 export const tabPluginInjectCSS = (tabsPluginIframe: HTMLIFrameElement) => {
     setTimeout(() => {
         removeCssFromPlugin(tabsPluginIframe, 'tabs-styles');
-        injectCssToPlugin(tabsPluginIframe, tabsPluginStyles, 'tabs-styles');
+        injectCssToPlugin(tabsPluginIframe, tabsIframeStyles, 'tabs-styles');
     }, 400);
 }
 export const tabPluginInjectCSSVars = (tabsPluginIframe: HTMLIFrameElement) => {

@@ -13,7 +13,7 @@ export const toggleTasksFeature = () => {
     }
 }
 
-export const tasksLoad = () => {
+export const tasksLoad = async () => {
     if (!globalContext.pluginConfig.featureTasksEnabled) {
         return;
     }

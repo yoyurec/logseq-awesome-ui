@@ -13,7 +13,7 @@ export const toggleHeadersLabelsFeature = () => {
     }
 }
 
-export const headersLabelsLoad = () => {
+export const headersLabelsLoad = async () => {
     if (!globalContext.pluginConfig.featureHeadersLabelsEnabled) {
         return;
     }

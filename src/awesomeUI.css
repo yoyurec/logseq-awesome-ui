@@ -2,16 +2,16 @@
 @import url("./modules/head/head.css");
 @import url("./modules/pdf/pdf.css");
 
-@import url("./modules/query/query.css");
-@import url("./modules/admonition/admonition.css");
-@import url("./modules/calculator/calculator.css");
 
 @import url("./modules/pages/pages.css");
 @import url("./modules/content/content.css");
+@import url("./modules/query/query.css");
+@import url("./modules/admonition/admonition.css");
+@import url("./modules/calculator/calculator.css");
+@import url("./modules/flashcard/flashcard.css");
+@import url("./modules/plugins/plugins.css");
 
 @import url("./modules/market/market.css");
-
-@import url("./modules/plugins/plugins.css");
 
 :root {
     --awUI-tabs-height: 0px;

@@ -13,7 +13,7 @@ export const toggleColumnsFeature = () => {
     }
 }
 
-export const columnsLoad = () => {
+export const columnsLoad = async () => {
     if (!globalContext.pluginConfig.featureColumnsEnabled) {
         return;
     }

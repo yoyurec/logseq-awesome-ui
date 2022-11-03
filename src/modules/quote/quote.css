@@ -1,19 +1,40 @@
-/*
-  >>> BEGIN: Quote
-*/
-div:not(.initial) > div > div > div > [data-refs-self='["quote"]'] {
+blockquote,
+.ls-block[data-refs-self*='"quote"'] {
     --ls-guideline-color: transparent;
-    transform: translate(-4px, -5px);
-    margin: 8px 0;
-    padding: 8px 0;
-    border-radius: 5px;
-    border-left: 4px solid var(--ls-page-blockquote-border-color);
+    position: relative;
+    margin: 0px 0 8px 0 !important;
+    padding: 8px 32px 8px 0;
+    border-radius: 4px;
+    border: 1px solid var(--ls-page-blockquote-border-color);
+    border-left-width: 4px;
     color: var(--ls-page-blockquote-color);
     background-color: var(--ls-page-blockquote-bg-color);
+    transform: translate(-2px, -1px);
 }
-div:not(.initial) > div > div > div > [data-refs-self='["quote"]'].selected {
+
+.ls-block[data-refs*='"quote"'] > .block-children-container > .block-children-left-border {
+  display: none;
+}
+
+.ls-block[data-refs*='"quote"'] > .block-children-container > .block-children {
+  border: none;
+}
+
+blockquote {
+  padding: 8px 32px 8px 20px;
+}
+
+.ls-block[data-refs-self*='"quote"'].selected {
     background-color: var(--ls-block-highlight-color);
 }
-/*
-  <<<< END: Quote
-*/
+
+blockquote::before,
+.ls-block[data-refs-self*='"quote"'] > .flex.flex-row::before {
+  position: absolute;
+  top: 0;
+  right: 6px;
+  content: "\ee09";
+  font-family: tabler-icons;
+  font-size: 20px;
+  opacity: 0.5;
+}

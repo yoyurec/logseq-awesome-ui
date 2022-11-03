@@ -1,0 +1,33 @@
+.ls-block[data-refs-self*='"card"'] {
+    --ls-guideline-color: transparent;
+    position: relative;
+    margin-bottom: 8px!important;
+    padding: 12px 32px 12px 0;
+    border: 1px solid var(--ls-border-color);
+    border-left-width: 4px;
+    box-shadow: none;
+    /* box-shadow: 0 4px 4px -2px rgb(0 0 0 / 15%); */
+    transform: translate(-2px, -1px);
+}
+
+.ls-block[data-refs*='"card"'] > .block-children-container > .block-children-left-border {
+    display: none;
+}
+
+.ls-block[data-refs*='"card"'] > .block-children-container > .block-children {
+    border: none;
+}
+
+#cards-modal .ls-block[data-refs-self*='"card"'] {
+    transform: none;
+}
+
+.ls-block[data-refs-self*='"card"'] > .flex.flex-row::before {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    content: "\ea38";
+    font-family: tabler-icons;
+    font-size: 20px;
+    opacity: 0.5;
+}

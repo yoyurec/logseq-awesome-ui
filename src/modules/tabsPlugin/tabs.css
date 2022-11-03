@@ -1,0 +1,32 @@
+/*
+  >>> BEGIN: Tabs plugin
+*/
+#logseq-tabs_lsp_main {
+    height: var(--awUI-tabs-height) !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background-color: var(--awesome-ui-calc-bg, var(--ls-secondary-background-color));
+}
+.is-mac #logseq-tabs_lsp_main::before {
+    display: block;
+    content: '';
+    width: 84px;
+    height: 100%;
+    border-bottom: 1px solid #80808080;
+}
+.is-mac #logseq-tabs_lsp_main iframe {
+    left: 84px;
+}
+html.is-mac.is-fullscreen #logseq-tabs_lsp_main iframe,
+html.is-mac .is-pdf-active #logseq-tabs_lsp_main iframe {
+    left: 0;
+}
+html.is-mac.is-fullscreen #logseq-tabs_lsp_main::before,
+html.is-mac .is-pdf-active #logseq-tabs_lsp_main::before {
+    display: none;
+}
+/*
+  <<<< END: Tabs plugin
+*/

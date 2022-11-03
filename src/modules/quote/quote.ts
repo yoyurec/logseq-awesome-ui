@@ -13,7 +13,7 @@ export const toggleQuoteFeature = () => {
     }
 }
 
-export const quoteLoad = () => {
+export const quoteLoad = async () => {
     if (!globalContext.pluginConfig.featureQuoteEnabled) {
         return;
     }

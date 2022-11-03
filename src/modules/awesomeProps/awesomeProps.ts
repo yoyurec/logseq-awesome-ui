@@ -13,7 +13,7 @@ export const toggleAwesomePropsFeature = () => {
     }
 }
 
-export const awesomePropsLoad = () => {
+export const awesomePropsLoad = async () => {
     if (!globalContext.pluginConfig.featureAwesomeProps) {
         return;
     }
