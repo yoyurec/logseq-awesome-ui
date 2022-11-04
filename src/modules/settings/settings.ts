@@ -6,12 +6,13 @@ import {
     toggleCalendarFeature,
     toggleColumnsFeature,
     toggleQuoteFeature,
+    toggleFlashcardFeature,
     toggleTasksFeature,
     toggleHeadersLabelsFeature,
     toggleHideDotPropsFeature,
     toggleHideSetOfPropsFeature,
     toggleAwesomePropsFeature,
-    setFeaturesCSSVars
+    setFeaturesCSSVars,
 } from '../internal';
 import { objectDiff } from '../utils';
 
@@ -41,6 +42,9 @@ export const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings']
     }
     if (settingsDiff.includes('featureQuoteEnabled')) {
         toggleQuoteFeature();
+    }
+    if (settingsDiff.includes('featureFlashcardEnabled')) {
+        toggleFlashcardFeature();
     }
     if (settingsDiff.includes('featureHeadersLabelsEnabled')) {
         toggleHeadersLabelsFeature();

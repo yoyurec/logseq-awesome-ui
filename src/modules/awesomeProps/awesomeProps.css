@@ -41,7 +41,7 @@
 }
 
 .block-properties > div > :is(div, span):first-child {
-    padding: 0 1.7em;
+    padding: 0 1.8em 0 1.7em;
     position: relative;
 }
 
@@ -52,7 +52,7 @@
 .block-properties > div > :is(div, span):first-child::after {
     content: "●";
     position: absolute;
-    top: 0.6em;
+    top: 0.7em;
     right: 0.8em;
     color: var(--ls-primary-text-color);
     opacity: .2;

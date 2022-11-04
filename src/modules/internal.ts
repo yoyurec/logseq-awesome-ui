@@ -10,6 +10,7 @@ export * from './sidebars/sidebars';
 export * from './tasks/tasks';
 export * from './columns/columns';
 export * from './quote/quote';
+export * from './flashcard/flashcard';
 export * from './headersLabels/headersLabels';
 export * from './tabsPlugin/tabsPlugin';
 export * from './calendar/calendar';

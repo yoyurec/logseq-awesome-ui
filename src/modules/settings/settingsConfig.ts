@@ -82,6 +82,13 @@ export const settingsConfig: SettingSchemaDesc[] = [
         default: true,
     },
     {
+        key: 'featureFlashcardEnabled',
+        title: '',
+        description: 'Enable flashcard style for "#card" tag?',
+        type: 'boolean',
+        default: true,
+    },
+    {
         key: 'featureHeadersLabelsEnabled',
         title: '',
         description: 'Show headers (h1-h5) labels?',

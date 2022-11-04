@@ -39,7 +39,7 @@
     display: flex;
     position: absolute;
     top: -20px;
-    right: 0;
+    right: 52px;
 }
 .custom-query .initial > div > .flex.flex-row .ui__toggle::before {
     content: "\eba1";

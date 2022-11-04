@@ -2,3 +2,18 @@
 .block-content .asset-container .asset-overlay {
     height: 40px;
 }
+
+/* multiline code */
+.extensions__code {
+    border-radius: 4px;
+}
+.extensions__code-lang::after {
+    content: "\ea77";
+    font-family: tabler-icons;
+    font-size: 20px;
+    opacity: 0.5;
+    margin: 0px 0 0 6px;
+    display: inline-block;
+    position: relative;
+    top:4px;
+}
