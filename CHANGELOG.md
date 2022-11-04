@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.3...v1.4.4) (2022-11-04)
+
+
+### Bug Fixes
+
+* **flashcard:** add option: default, awesome, flat ([78142e3](https://github.com/yoyurec/logseq-awesome-ui/commit/78142e3bdb2e911808f68d6b778c214ad674d065))
+
 ## [1.4.3](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.2...v1.4.3) (2022-11-04)
 
 
