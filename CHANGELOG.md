@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.0...v1.4.1) (2022-11-04)
+
+
+### Bug Fixes
+
+* **flashcard:** add otion on/off ([9439f3d](https://github.com/yoyurec/logseq-awesome-ui/commit/9439f3d450dcca1f962fab96869252a63a2005da))
+
 # [1.4.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.3.20...v1.4.0) (2022-11-03)
 
 
