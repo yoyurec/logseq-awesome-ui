@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.1...v1.4.2) (2022-11-04)
+
+
+### Bug Fixes
+
+* **quote:** delete bottom margin ([91964b7](https://github.com/yoyurec/logseq-awesome-ui/commit/91964b7c265e7a26780db11ce28b6c09a878b80d))
+
 ## [1.4.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.0...v1.4.1) (2022-11-04)
 
 
