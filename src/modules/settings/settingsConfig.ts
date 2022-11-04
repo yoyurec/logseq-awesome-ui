@@ -82,11 +82,13 @@ export const settingsConfig: SettingSchemaDesc[] = [
         default: true,
     },
     {
-        key: 'featureFlashcardEnabled',
+        key: 'contentFlashcard',
         title: '',
-        description: 'Enable flashcard style for "#card" tag?',
-        type: 'boolean',
-        default: true,
+        description: 'Flashcard style for "#card" tag?',
+        type: 'enum',
+        enumPicker: 'radio',
+        enumChoices: ['Default', 'Awesome', 'Flat'],
+        default: 'awesome',
     },
     {
         key: 'featureHeadersLabelsEnabled',

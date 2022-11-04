@@ -23,5 +23,5 @@ export const quoteLoad = async () => {
 }
 
 export const quoteUnload = () => {
-    doc.head.querySelector(`style[data-injected-style="awUI-quote-css-${globalContext.pluginID}"]`)?.remove();
+    doc.head.querySelector('style[data-injected-style^="awUI-quote-css"]')?.remove();
 }

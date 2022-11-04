@@ -71,7 +71,7 @@
     content: "\ee09";
 }
 
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureFlashcardEnabled"] small::before {
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="contentFlashcard"] small::before {
     content: "\ea38";
 }
 

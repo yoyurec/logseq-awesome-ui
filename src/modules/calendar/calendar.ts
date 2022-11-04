@@ -80,6 +80,6 @@ export const calendarLoad = async (agendaPlugin?: HTMLElement) => {
 }
 
 export const calendarUnload = () => {
-    doc.head.querySelector(`style[data-injected-style="awUI-calendar-css-${globalContext.pluginID}"]`)?.remove();
+    doc.head.querySelector(`style[data-injected-style^="awUI-calendar-css"]`)?.remove();
     doc.querySelector('.nav-header .calendar-nav')?.remove();
 }

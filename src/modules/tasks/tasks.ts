@@ -23,5 +23,5 @@ export const tasksLoad = async () => {
 }
 
 export const tasksUnload = () => {
-    doc.head.querySelector(`style[data-injected-style="awUI-tasks-css-${globalContext.pluginID}"]`)?.remove();
+    doc.head.querySelector('style[data-injected-style^="awUI-tasks-css"]')?.remove();
 }

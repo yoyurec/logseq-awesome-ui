@@ -22,5 +22,5 @@ export const headersLabelsLoad = async () => {
     }, 500)
 }
 export const headersLabelsUnload = () => {
-    doc.head.querySelector(`style[data-injected-style="awUI-headersLabels-css-${globalContext.pluginID}"]`)?.remove();
+    doc.head.querySelector('style[data-injected-style^="awUI-headersLabels-css"]')?.remove();
 }

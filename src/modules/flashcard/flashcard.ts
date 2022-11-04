@@ -3,10 +3,11 @@ import {
     doc
 } from '../internal';
 
-import flashcardStyles from './flashcard.css?inline';
+import flashcardAwesomeStyles from './flashcardAwesome.css?inline';
+import flashcardFlatStyles from './flashcardFlat.css?inline';
 
-export const toggleFlashcardFeature = () => {
-    if (globalContext.pluginConfig.featureFlashcardEnabled) {
+export const toggleContentFlashcard = () => {
+    if (globalContext.pluginConfig.contentFlashcard != 'Default') {
         flashcardLoad();
     } else {
         flashcardUnload();
@@ -14,8 +15,14 @@ export const toggleFlashcardFeature = () => {
 }
 
 export const flashcardLoad = async () => {
-    if (!globalContext.pluginConfig.featureQuoteEnabled) {
-        return;
+    let flashcardStyles = '';
+    switch (globalContext.pluginConfig.contentFlashcard) {
+        case 'Awesome':
+            flashcardStyles = flashcardAwesomeStyles
+            break;
+        case 'Flat':
+            flashcardStyles = flashcardFlatStyles
+            break;
     }
     setTimeout(() => {
         logseq.provideStyle({ key: 'awUI-flashcard-css', style: flashcardStyles });
@@ -23,5 +30,5 @@ export const flashcardLoad = async () => {
 }
 
 export const flashcardUnload = () => {
-    doc.head.querySelector(`style[data-injected-style="awUI-flashcard-css-${globalContext.pluginID}"]`)?.remove();
+    doc.head.querySelector('style[data-injected-style^="awUI-flashcard-css"]')?.remove();
 }

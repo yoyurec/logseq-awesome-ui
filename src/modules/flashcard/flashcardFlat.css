@@ -1,0 +1,7 @@
+div[data-refs-self*='"card"'] {
+    padding: 0px!important;
+    border: none!important;
+    background: none !important;
+    box-shadow: none!important;
+    --webkit-box-shadow: none!important;
+}

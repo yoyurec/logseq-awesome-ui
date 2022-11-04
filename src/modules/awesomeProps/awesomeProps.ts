@@ -24,6 +24,6 @@ export const awesomePropsLoad = async () => {
 }
 
 export const awesomePropsLoadUnload = () => {
-    doc.head.querySelector(`style[data-injected-style="awUI-awesomeProps-css-${globalContext.pluginID}"]`)?.remove();
+    doc.head.querySelector('style[data-injected-style^="awUI-awesomeProps-css"]')?.remove();
     body.classList.remove('awUi-props');
 }

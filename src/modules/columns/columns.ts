@@ -23,5 +23,5 @@ export const columnsLoad = async () => {
 }
 
 export const columnsUnload = () => {
-    doc.head.querySelector(`style[data-injected-style="awUI-columns-css-${globalContext.pluginID}"]`)?.remove();
+    doc.head.querySelector('style[data-injected-style^="awUI-columns-css"]')?.remove();
 }
