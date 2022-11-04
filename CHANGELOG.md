@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.2...v1.4.3) (2022-11-04)
+
+
+### Bug Fixes
+
+* **flashcard:** delete css redunant import ([fe1176e](https://github.com/yoyurec/logseq-awesome-ui/commit/fe1176e034d61838143066c0ab22b94f53228139))
+
 ## [1.4.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.1...v1.4.2) (2022-11-04)
 
 
