@@ -1,3 +1,10 @@
+## [1.4.6](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.5...v1.4.6) (2022-11-07)
+
+
+### Bug Fixes
+
+* **scroll:** main content z-index ([2360f99](https://github.com/yoyurec/logseq-awesome-ui/commit/2360f99c54604016d407bfd060250fc0af59edef))
+
 ## [1.4.5](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.4...v1.4.5) (2022-11-07)
 
 
