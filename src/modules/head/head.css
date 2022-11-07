@@ -1,6 +1,7 @@
 #head {
     position: fixed;
     top: var(--awUI-tabs-height) !important;
+    z-index: 99;
     background-color: var(--awUI-calc-bg);
 }
 

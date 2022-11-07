@@ -12,7 +12,7 @@ export * from './columns/columns';
 export * from './quote/quote';
 export * from './flashcard/flashcard';
 export * from './headersLabels/headersLabels';
-export * from './tabsPlugin/tabsPlugin';
+export * from './tabs/tabs';
 export * from './calendar/calendar';
 export * from './props/props';
 export * from './props/propsObserver';

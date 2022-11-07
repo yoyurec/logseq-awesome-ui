@@ -17,3 +17,7 @@
     position: relative;
     top:4px;
 }
+
+.cards-review .ui__dropdown-trigger {
+    z-index: 11 !important;
+}

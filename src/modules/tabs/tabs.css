@@ -5,6 +5,7 @@
     height: var(--awUI-tabs-height) !important;
     top: 0 !important;
     left: 0 !important;
+    z-index: 99 !important;
     width: 100% !important;
     max-width: 100% !important;
     background-color: var(--awesome-ui-calc-bg, var(--ls-secondary-background-color));
