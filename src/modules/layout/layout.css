@@ -20,6 +20,7 @@
 }
 #main-content-container {
     flex-wrap: wrap !important;
+    z-index: 1;
 }
 #main-content-container:focus-visible {
     outline: none;
