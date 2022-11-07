@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.4...v1.4.5) (2022-11-07)
+
+
+### Bug Fixes
+
+* **ui:** increase tabs and header z-index, flashcard query dropdown z-index decrease ([4397d5c](https://github.com/yoyurec/logseq-awesome-ui/commit/4397d5c11931d25da579041144d0e3733320e9db))
+
 ## [1.4.4](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.3...v1.4.4) (2022-11-04)
 
 
