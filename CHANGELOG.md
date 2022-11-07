@@ -1,3 +1,10 @@
+## [1.4.7](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.6...v1.4.7) (2022-11-07)
+
+
+### Bug Fixes
+
+* **flashcard:** add missed loader ([101a4a1](https://github.com/yoyurec/logseq-awesome-ui/commit/101a4a11d35ab80446e541f4b11f8bf1ac5db4a8))
+
 ## [1.4.6](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.5...v1.4.6) (2022-11-07)
 
 
