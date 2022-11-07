@@ -12,6 +12,7 @@ import {
     awesomePropsLoad, awesomePropsLoadUnload,
     calendarLoad, calendarUnload,
     hidePropsUnload, hidePropsLoad,
+    flashcardLoad, flashcardUnload,
 } from '../internal';
 import { checkUpdate, getInheritedBackgroundColor } from '../utils';
 
@@ -67,6 +68,7 @@ const runStuff = async () => {
         headersLabelsLoad();
         columnsLoad();
         quoteLoad();
+        flashcardLoad();
         calendarLoad();
     }, 2000);
     setTimeout(() => {
@@ -84,6 +86,7 @@ const stopStuff = () => {
     headersLabelsUnload();
     columnsUnload();
     quoteUnload();
+    flashcardUnload();
     calendarUnload();
     hidePropsUnload();
 }

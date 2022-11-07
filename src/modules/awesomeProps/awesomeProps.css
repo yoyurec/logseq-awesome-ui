@@ -66,7 +66,7 @@
     position: absolute;
     z-index: 0;
     margin-top: -0.12ex;
-    left: 9px;
+    left: 8px;
     font-family: 'tabler-icons';
     color: #888888AA;
     background: var(--ls-page-properties-background-color);
