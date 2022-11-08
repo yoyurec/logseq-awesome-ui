@@ -6,8 +6,12 @@
     border: 1px solid var(--ls-border-color);
     border-left-width: 4px;
     box-shadow: none;
-    /* box-shadow: 0 4px 4px -2px rgb(0 0 0 / 15%); */
-    transform: translate(-2px, -1px);
+    transform: translate(4px, -2px);
+}
+
+.ls-block[data-refs-self*='"card"']:not(.pre-block)::before,
+.ls-block[data-refs-self*='"card"'] > div  {
+    transform: translateX(-8px);
 }
 
 #cards-modal .ls-block[data-refs-self*='"card"'] {

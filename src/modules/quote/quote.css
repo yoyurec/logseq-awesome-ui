@@ -8,7 +8,12 @@ blockquote,
     border-left: 4px solid var(--ls-page-blockquote-border-color);
     color: var(--ls-page-blockquote-color);
     background-color: var(--ls-page-blockquote-bg-color);
-    transform: translate(-2px, -1px);
+    transform: translate(4px, 0);
+}
+
+.ls-block[data-refs-self*='"quote"']:not(.pre-block)::before,
+.ls-block[data-refs-self*='"quote"'] > div  {
+    transform: translateX(-8px);
 }
 
 blockquote::before,
