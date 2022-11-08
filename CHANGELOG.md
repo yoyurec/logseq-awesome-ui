@@ -1,3 +1,10 @@
+## [1.4.9](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.8...v1.4.9) (2022-11-08)
+
+
+### Bug Fixes
+
+* **flashcard:** left margin + bullet threading plugin tune ([08b5df5](https://github.com/yoyurec/logseq-awesome-ui/commit/08b5df5e218aafbc7d8998543a4eaab7a78fb8be))
+
 ## [1.4.8](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.7...v1.4.8) (2022-11-07)
 
 
