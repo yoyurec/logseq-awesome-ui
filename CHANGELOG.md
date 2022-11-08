@@ -1,3 +1,10 @@
+## [1.4.10](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.9...v1.4.10) (2022-11-08)
+
+
+### Bug Fixes
+
+* **flashcard:** icon position ([4a1ea90](https://github.com/yoyurec/logseq-awesome-ui/commit/4a1ea909aa1d8dd67047394a83639a4e8417f471))
+
 ## [1.4.9](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.8...v1.4.9) (2022-11-08)
 
 
