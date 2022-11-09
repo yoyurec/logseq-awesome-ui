@@ -321,8 +321,8 @@
     padding: 0 0 0 2.2em !important;
     border: 4px solid transparent !important;
     background:
-        var(--awUI-propEdit-icon) 0.45em 0 / 1.2em 24px repeat-y local,
-        linear-gradient(transparent 0%, transparent 96%, #88888833 100%) 0 0 / 1px 24px repeat local !important;
+        var(--awUI-propEdit-icon) 0.45em 0 / 1.2em 1.5em repeat-y local,
+        linear-gradient(transparent 0%, transparent 96%, #88888833 100%) 0 0 / 1px 1.5em repeat local !important;
     white-space: pre;
     overflow: auto;
 }
