@@ -1,3 +1,10 @@
+## [1.4.11](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.10...v1.4.11) (2022-11-09)
+
+
+### Bug Fixes
+
+* **props:** edit mode responsive bg ([a46e1d9](https://github.com/yoyurec/logseq-awesome-ui/commit/a46e1d985d093b9b66c0dad38a21493a8f98fea7))
+
 ## [1.4.10](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.9...v1.4.10) (2022-11-08)
 
 
