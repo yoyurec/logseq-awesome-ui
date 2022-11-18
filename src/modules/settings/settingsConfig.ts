@@ -44,7 +44,7 @@ export const settingsConfig: SettingSchemaDesc[] = [
         title: '',
         description: 'Hide (in view mode) page props (comma separated). Delete to disable',
         type: 'string',
-        default: 'propToHide,propAnother,color,banner',
+        default: 'propToHide,propAnother,color,hidetitle,banner',
     },
     {
         key: 'featureAwesomeProps',
