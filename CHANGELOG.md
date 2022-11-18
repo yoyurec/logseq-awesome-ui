@@ -1,3 +1,10 @@
+## [1.4.12](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.11...v1.4.12) (2022-11-18)
+
+
+### Bug Fixes
+
+* **props:** add to hide list new item 'hidetitle' ([b1b955d](https://github.com/yoyurec/logseq-awesome-ui/commit/b1b955d8b2e9c1fb63bd76fd653cdf7e2390fa95))
+
 ## [1.4.11](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.10...v1.4.11) (2022-11-09)
 
 
