@@ -1,3 +1,10 @@
+## [1.4.13](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.12...v1.4.13) (2023-01-27)
+
+
+### Bug Fixes
+
+* **packages:** update deps, plus small refactoring ([82a74ef](https://github.com/yoyurec/logseq-awesome-ui/commit/82a74ef9aad66e6775f6e295cbecc577a81ba831))
+
 ## [1.4.12](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.11...v1.4.12) (2022-11-18)
 
 
