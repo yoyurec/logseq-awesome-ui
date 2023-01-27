@@ -48,7 +48,7 @@
     border: 1px solid #88888850;
 }
 .ls-search .input-wrap {
-    height: 38px;
+    height: 34px;
 }
 .ls-search .input-wrap::before {
     font-family: "tabler-icons";
@@ -60,7 +60,7 @@
 }
 .ls-search .input-wrap .cp__palette-input {
     font-size: calc(var(--awUI-font-size) + 2px);
-    padding: 4px 31px 3px 31px;
+    padding: 0 31px 2px 31px;
 }
 
 /* search results style */

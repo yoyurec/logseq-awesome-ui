@@ -14,7 +14,7 @@ import {
     hidePropsUnload, hidePropsLoad,
     flashcardLoad, flashcardUnload,
 } from '../internal';
-import { checkUpdate, getInheritedBackgroundColor } from '../utils';
+import { checkUpdate, getInheritedBackgroundColor } from '../utils/utils';
 
 export const pluginLoad = () => {
     body.classList.add(globalContext.isPluginEnabled);

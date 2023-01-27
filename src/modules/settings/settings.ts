@@ -14,7 +14,7 @@ import {
     toggleAwesomePropsFeature,
     setFeaturesCSSVars,
 } from '../internal';
-import { objectDiff } from '../utils';
+import { objectDiff } from '../utils/utils';
 
 import './settings.css';
 

@@ -15,3 +15,13 @@ export const globalContext: globalContextType = {
     promoAwesomeStylerMsg: 'To customize UI & content text/bg colors, install "Awesome Styler" (former "Solarized Extended") theme! https://github.com/yoyurec/logseq-awesome-styler',
     tabsPluginIframe: null
 };
+
+export let modalContainer: HTMLElement | null;
+
+export const doc = parent.document;
+export const root = doc.documentElement;
+export const body = doc.body;
+
+export const getDOMContainers = () => {
+    modalContainer = doc.querySelector('.ui__modal-panel');
+}

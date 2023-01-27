@@ -5,7 +5,7 @@ import {
 
 import './tabs.css';
 import tabsIframeStyles from './tabsIframe.css?inline';
-import { getInheritedBackgroundColor } from '../utils';
+import { getInheritedBackgroundColor } from '../utils/utils';
 
 
 setTimeout(() => {
