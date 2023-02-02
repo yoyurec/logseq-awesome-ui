@@ -75,6 +75,7 @@
 .ls-search .menu-link {
     border-top: 1px dashed var(--ls-secondary-background-color);
 }
+.ls-search .menu-link:hover,
 .ls-search .menu-link .chosen {
-    background-color: var(--ls-a-chosen-bg);
+    background-color: var(--ls-primary-background-color);
 }

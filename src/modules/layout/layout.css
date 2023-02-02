@@ -28,7 +28,8 @@
 .is-banner-active #banner,
 body:not(.is-banner-active) .cp__sidebar-main-content,
 #left-sidebar,
-#right-sidebar {
+#right-sidebar,
+#search-in-page {
     margin-top: calc(var(--awUI-tabs-height) + var(--awUI-head-height)) !important;
 }
 /*
