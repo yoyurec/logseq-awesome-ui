@@ -78,3 +78,9 @@
 .ls-search .menu-link .chosen {
     background-color: var(--ls-a-chosen-bg);
 }
+
+
+/* in page */
+#search-in-page {
+    margin-top: 60px !important;
+}
