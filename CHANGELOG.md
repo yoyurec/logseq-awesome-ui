@@ -1,3 +1,10 @@
+## [1.4.14](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.13...v1.4.14) (2023-02-02)
+
+
+### Bug Fixes
+
+* **search:** page popup position ([130af59](https://github.com/yoyurec/logseq-awesome-ui/commit/130af5908361a3da038aaae26c50001c5555467c))
+
 ## [1.4.13](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.12...v1.4.13) (2023-01-27)
 
 
