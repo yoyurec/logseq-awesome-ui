@@ -1,4 +1,4 @@
-import { doc } from '../internal';
+import { doc } from '../globals/globals';
 
 import './sidebars.css';
 

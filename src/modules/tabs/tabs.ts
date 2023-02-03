@@ -1,12 +1,8 @@
-import {
-    globalContext,
-    root, doc, body,
-} from '../internal';
+import { root, doc, body, globals } from '../globals/globals';
+import { getInheritedBackgroundColor } from '../utils/utils';
 
 import './tabs.css';
 import tabsIframeStyles from './tabsIframe.css?inline';
-import { getInheritedBackgroundColor } from '../utils/utils';
-
 
 setTimeout(() => {
     // Listen for theme activated
@@ -76,20 +72,20 @@ const tabsPluginEjectCSS = (tabsPluginIframe: HTMLIFrameElement) => {
 
 // First init run
 export const tabsPluginLoad = async () => {
-    if (globalContext.tabsPluginIframe) {
-        tabPluginInjectCSS(globalContext.tabsPluginIframe);
-        tabPluginInjectCSSVars(globalContext.tabsPluginIframe);
+    if (globals.tabsPluginIframe) {
+        tabPluginInjectCSS(globals.tabsPluginIframe);
+        tabPluginInjectCSSVars(globals.tabsPluginIframe);
     }
 }
 export const tabsPluginUnload = () => {
-    if (globalContext.tabsPluginIframe) {
-        tabsPluginEjectCSS(globalContext.tabsPluginIframe);
+    if (globals.tabsPluginIframe) {
+        tabsPluginEjectCSS(globals.tabsPluginIframe);
     }
 }
 
 export const setTabsStyles = () => {
     root.style.setProperty('--awUI-calc-bg', getInheritedBackgroundColor(doc.querySelector('.left-sidebar-inner')).trim());
-    if (globalContext.tabsPluginIframe) {
-        tabPluginInjectCSSVars(globalContext.tabsPluginIframe);
+    if (globals.tabsPluginIframe) {
+        tabPluginInjectCSSVars(globals.tabsPluginIframe);
     }
 }

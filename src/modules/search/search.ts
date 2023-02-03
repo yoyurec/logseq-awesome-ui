@@ -1,8 +1,4 @@
-import {
-    globalContext,
-    body, doc,
-    initModalObserver, runModalObserver, stopModalObserver
-} from '../internal';
+import { doc, body, globals } from '../globals/globals';
 
 import './search.css';
 
@@ -36,7 +32,7 @@ export const onSearchModalClose = () => {
 
 // Reposition toolbar search button
 export const searchLoad = async () => {
-    body.classList.add(globalContext.isSearchEnabledClass);
+    body.classList.add(globals.isSearchEnabledClass);
     const rightToolbar = doc.querySelector('#head .r');
     if (rightToolbar) {
         const search = doc.getElementById('search-button');
@@ -44,17 +40,14 @@ export const searchLoad = async () => {
             rightToolbar.insertAdjacentElement('afterbegin', search);
         }
     }
-    initModalObserver();
-    runModalObserver();
 }
 
 export const searchUnload = () => {
-    body.classList.remove(globalContext.isSearchEnabledClass);
+    body.classList.remove(globals.isSearchEnabledClass);
     const leftToolbar = doc.querySelector('#head .l');
     const search = doc.getElementById('search-button');
     if (!leftToolbar || !search) {
         return;
     }
     leftToolbar.insertAdjacentElement('beforeend', search);
-    stopModalObserver();
 }

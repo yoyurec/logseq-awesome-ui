@@ -1,12 +1,9 @@
-import {
-    globalContext,
-    doc
-} from '../internal';
+import { doc, globals } from '../globals/globals';
 
 import columnsStyles from './columns.css?inline';
 
 export const toggleColumnsFeature = () => {
-    if (globalContext.pluginConfig.featureColumnsEnabled) {
+    if (globals.pluginConfig.featureColumnsEnabled) {
         columnsLoad();
     } else {
         columnsUnload();
@@ -14,7 +11,7 @@ export const toggleColumnsFeature = () => {
 }
 
 export const columnsLoad = async () => {
-    if (!globalContext.pluginConfig.featureColumnsEnabled) {
+    if (!globals.pluginConfig.featureColumnsEnabled) {
         return;
     }
     setTimeout(() => {

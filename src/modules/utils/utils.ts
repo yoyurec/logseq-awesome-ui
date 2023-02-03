@@ -1,6 +1,6 @@
 import { packageVersion } from '../../../.version';
 
-import { globalContext } from '../internal';
+import { globals } from '../globals/globals';
 
 export const objectDiff = (orig: object, updated: object) => {
     const difference = Object.keys(orig).filter((key) => {
@@ -26,7 +26,7 @@ export const getInheritedBackgroundColor = (el: Element | null): string => {
 
 export const checkUpdate = async () => {
     const response = await fetch(
-        `https://api.github.com/repos/yoyurec/${globalContext.pluginID}/releases/latest`,
+        `https://api.github.com/repos/yoyurec/${globals.pluginID}/releases/latest`,
         { headers: { 'Accept': 'application/vnd.github.v3+json' } }
     );
     if (!response.ok) {
@@ -39,7 +39,7 @@ export const checkUpdate = async () => {
         // https://stackoverflow.com/a/65687141
         const hasUpdate = latestReleaseVersion.localeCompare(packageVersion, undefined, { numeric: true, sensitivity: 'base' });
         if (hasUpdate == 1) {
-            logseq.UI.showMsg(`"${globalContext.pluginID}" new version is available! Please, update!`, 'warning', {timeout: 30000});
+            logseq.UI.showMsg(`"${globals.pluginID}" new version is available! Please, update!`, 'warning', {timeout: 30000});
         }
     }
 }

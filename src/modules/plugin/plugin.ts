@@ -1,23 +1,22 @@
-import {
-    globalContext,
-    doc, root, body, getDOMContainers,
-    setFeaturesCSSVars,
-    searchLoad, searchUnload,
-    rightSidebarLoad, rightSidebarUnload,
-    tabsPluginLoad, tabsPluginUnload,
-    tasksLoad, tasksUnload,
-    headersLabelsLoad, headersLabelsUnload,
-    columnsLoad, columnsUnload,
-    quoteLoad, quoteUnload,
-    awesomePropsLoad, awesomePropsLoadUnload,
-    calendarLoad, calendarUnload,
-    hidePropsUnload, hidePropsLoad,
-    flashcardLoad, flashcardUnload,
-} from '../internal';
+import { root, doc, body, globals } from '../globals/globals';
+
+import { awesomePropsLoad, awesomePropsLoadUnload } from '../awesomeProps/awesomeProps';
+import { calendarLoad, calendarUnload } from '../calendar/calendar';
+import { columnsLoad, columnsUnload } from '../columns/columns';
+import { setFeaturesCSSVars } from '../features/features';
+import { flashcardLoad, flashcardUnload } from '../flashcard/flashcard';
+import { headersLabelsLoad, headersLabelsUnload } from '../headersLabels/headersLabels';
+import { hidePropsLoad, hidePropsUnload } from '../props/props';
+import { quoteLoad, quoteUnload } from '../quote/quote';
+import { searchLoad, searchUnload } from '../search/search';
+import { rightSidebarLoad, rightSidebarUnload } from '../sidebars/sidebars';
+import { tabsPluginLoad, tabsPluginUnload } from '../tabs/tabs';
+import { tasksLoad, tasksUnload } from '../tasks/tasks';
 import { checkUpdate, getInheritedBackgroundColor } from '../utils/utils';
+import { modalObserverLoad, modalObserverUnload } from '../modalObserver/modalObserver';
 
 export const pluginLoad = () => {
-    body.classList.add(globalContext.isPluginEnabled);
+    body.classList.add(globals.isPluginEnabled);
     registerPlugin();
     runStuff();
 
@@ -28,7 +27,7 @@ export const pluginLoad = () => {
         });
     }, 2000)
 
-    if (globalContext.pluginConfig.featureUpdaterEnabled) {
+    if (globals.pluginConfig.featureUpdaterEnabled) {
         setTimeout(() => {
             checkUpdate();
         }, 8000)
@@ -36,7 +35,7 @@ export const pluginLoad = () => {
 }
 
 const pluginUnload = () => {
-    body.classList.remove(globalContext.isPluginEnabled);
+    body.classList.remove(globals.isPluginEnabled);
     unregisterPlugin();
     stopStuff();
 }
@@ -45,7 +44,7 @@ const registerPlugin = async () => {
     setTimeout(() => {
         if (doc.head) {
             const logseqCSS = doc.head.querySelector(`link[href="./css/style.css"]`);
-            logseqCSS!.insertAdjacentHTML('afterend', `<link rel="stylesheet" id="css-awesomeUI" href="lsp://logseq.io/${globalContext.pluginID}/dist/assets/awesomeUI.css">`)
+            logseqCSS!.insertAdjacentHTML('afterend', `<link rel="stylesheet" id="css-awesomeUI" href="lsp://logseq.io/${globals.pluginID}/dist/assets/awesomeUI.css">`)
         }
     }, 100)
 }
@@ -56,14 +55,15 @@ const unregisterPlugin = () => {
 
 // Main logic runners
 const runStuff = async () => {
-    getDOMContainers();
+    globals.getDOMContainers();
     setTimeout(() => {
         root.style.setProperty('--awUI-calc-bg', getInheritedBackgroundColor(doc.querySelector('.left-sidebar-inner')).trim());
-        globalContext.tabsPluginIframe = doc.getElementById('logseq-tabs_iframe') as HTMLIFrameElement;
+        globals.tabsPluginIframe = doc.getElementById('logseq-tabs_iframe') as HTMLIFrameElement;
         setFeaturesCSSVars();
         searchLoad();
         tabsPluginLoad();
         awesomePropsLoad();
+        modalObserverLoad();
         tasksLoad();
         headersLabelsLoad();
         columnsLoad();
@@ -82,6 +82,7 @@ const stopStuff = () => {
     tabsPluginUnload();
     rightSidebarUnload();
     awesomePropsLoadUnload();
+    modalObserverUnload();
     tasksUnload();
     headersLabelsUnload();
     columnsUnload();

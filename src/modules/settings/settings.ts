@@ -1,26 +1,23 @@
 import { LSPluginBaseInfo } from '@logseq/libs/dist/LSPlugin.user';
 
-import {
-    globalContext,
-    settingsConfig,
-    toggleCalendarFeature,
-    toggleColumnsFeature,
-    toggleQuoteFeature,
-    toggleContentFlashcard,
-    toggleTasksFeature,
-    toggleHeadersLabelsFeature,
-    toggleHideDotPropsFeature,
-    toggleHideSetOfPropsFeature,
-    toggleAwesomePropsFeature,
-    setFeaturesCSSVars,
-} from '../internal';
+import { globals } from '../globals/globals';
+import { settingsConfig } from './settingsConfig';
+import { toggleTasksFeature } from '../tasks/tasks';
+import { toggleColumnsFeature } from '../columns/columns';
+import { toggleQuoteFeature } from '../quote/quote';
+import { toggleAwesomePropsFeature } from '../awesomeProps/awesomeProps';
+import { toggleCalendarFeature } from '../calendar/calendar';
+import { setFeaturesCSSVars } from '../features/features';
+import { toggleContentFlashcard } from '../flashcard/flashcard';
+import { toggleHeadersLabelsFeature } from '../headersLabels/headersLabels';
+import { toggleHideDotPropsFeature, toggleHideSetOfPropsFeature } from '../props/props';
 import { objectDiff } from '../utils/utils';
 
 import './settings.css';
 
 export const settingsLoad = () => {
     logseq.useSettingsSchema(settingsConfig);
-    globalContext.pluginConfig = logseq.settings;
+    globals.pluginConfig = logseq.settings;
 
     // Listen settings update
     logseq.onSettingsChanged((settings, oldSettings) => {
@@ -30,8 +27,8 @@ export const settingsLoad = () => {
 
 // Setting changed
 export const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings'], oldSettings: LSPluginBaseInfo['settings']) => {
-    globalContext.pluginConfig = { ...settings };
-    const settingsDiff = objectDiff({ ...oldSettings }, globalContext.pluginConfig)
+    globals.pluginConfig = { ...settings };
+    const settingsDiff = objectDiff({ ...oldSettings }, globals.pluginConfig)
     console.log(`AwesomeUI: settings changed:`, settingsDiff);
 
     if (settingsDiff.includes('featureTasksEnabled')) {

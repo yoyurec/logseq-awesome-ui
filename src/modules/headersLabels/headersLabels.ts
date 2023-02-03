@@ -1,12 +1,9 @@
-import {
-    globalContext,
-    doc
-} from '../internal';
+import { doc, globals } from '../globals/globals';
 
 import headersLabelsStyles from './headersLabels.css?inline';
 
 export const toggleHeadersLabelsFeature = () => {
-    if (globalContext.pluginConfig.featureHeadersLabelsEnabled) {
+    if (globals.pluginConfig.featureHeadersLabelsEnabled) {
         headersLabelsLoad();
     } else {
         headersLabelsUnload();
@@ -14,7 +11,7 @@ export const toggleHeadersLabelsFeature = () => {
 }
 
 export const headersLabelsLoad = async () => {
-    if (!globalContext.pluginConfig.featureHeadersLabelsEnabled) {
+    if (!globals.pluginConfig.featureHeadersLabelsEnabled) {
         return;
     }
     setTimeout(() => {

@@ -1,8 +1,7 @@
-import {
-    globalContext,
-    doc,
-    propsChangedObserverInit, propsChangedObserverRun, propsChangedObserverStop
-} from '../internal';
+import { doc, globals } from '../globals/globals';
+import { hideProps } from './hideProps';
+
+import { propsChangedObserverInit, propsChangedObserverRun, propsChangedObserverStop } from './propsObserver';
 
 import './props.css';
 
@@ -26,7 +25,7 @@ export const hidePropsUnload = () => {
 }
 
 export const toggleHideDotPropsFeature = () => {
-    if (globalContext.pluginConfig.featureHideDotProps) {
+    if (globals.pluginConfig.featureHideDotProps) {
         hideProps();
     } else {
         hideDotPropsUnload();
@@ -34,7 +33,7 @@ export const toggleHideDotPropsFeature = () => {
 }
 
 export const toggleHideSetOfPropsFeature = () => {
-    if (globalContext.pluginConfig.featureHideSetOfProps) {
+    if (globals.pluginConfig.featureHideSetOfProps) {
         hideProps();
     } else {
         hideSetOfPropsUnload();
@@ -57,32 +56,6 @@ const hideSetOfPropsUnload = () => {
         for (let i = 0; i < setOfPropsList.length; i++) {
             const setOfPropsItem = setOfPropsList[i];
             setOfPropsItem.classList.remove('hidden', 'awUI-hideSetOfProps');
-        }
-    }
-}
-
-export const hideProps = async () => {
-    if (!globalContext.pluginConfig.featureHideDotProps && !globalContext.pluginConfig.featureHideSetOfProps) {
-        return;
-    }
-    let hidePropsArr: string[] = [];
-    if (globalContext.pluginConfig.featureHideSetOfProps) {
-        hidePropsArr = (globalContext.pluginConfig.featureHideSetOfProps as string).trim().toLowerCase().replaceAll(', ', ',').split(',');
-    }
-    const propKeyList = doc.querySelectorAll('.block-properties .page-property-key');
-    if (propKeyList.length) {
-        for (let i = 0; i < propKeyList.length; i++) {
-            const propKeyItemText = propKeyList[i].textContent;
-            const propItem = propKeyList[i].parentElement!.parentElement;
-            if (propKeyItemText && propItem) {
-                if (globalContext.pluginConfig.featureHideDotProps && propKeyItemText?.startsWith('.')) {
-                    propItem.classList.add('hidden', 'awUI-hideDotProp');
-                } else if (globalContext.pluginConfig.featureHideSetOfProps && hidePropsArr.includes(propKeyItemText)) {
-                    propItem.classList.add('hidden', 'awUI-hideSetOfProps');
-                } else {
-                    propItem.classList.remove('hidden', 'awUI-hideSetOfProps');
-                }
-            }
         }
     }
 }

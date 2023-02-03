@@ -1,12 +1,9 @@
-import {
-    globalContext,
-    doc
-} from '../internal';
+import { doc, globals } from '../globals/globals';
 
 import quoteStyles from './quote.css?inline';
 
 export const toggleQuoteFeature = () => {
-    if (globalContext.pluginConfig.featureQuoteEnabled) {
+    if (globals.pluginConfig.featureQuoteEnabled) {
         quoteLoad();
     } else {
         quoteUnload();
@@ -14,7 +11,7 @@ export const toggleQuoteFeature = () => {
 }
 
 export const quoteLoad = async () => {
-    if (!globalContext.pluginConfig.featureQuoteEnabled) {
+    if (!globals.pluginConfig.featureQuoteEnabled) {
         return;
     }
     setTimeout(() => {

@@ -1,13 +1,11 @@
 import { SettingSchemaDesc } from '@logseq/libs/dist/LSPlugin.user';
-import {
-    globalContext
-} from '../internal';
+import { globals } from '../globals/globals';
 
 export const settingsConfig: SettingSchemaDesc[] = [
     {
         key: 'promoAwesomeStyler',
         title: '',
-        description: globalContext.promoAwesomeStylerMsg,
+        description: globals.promoAwesomeStylerMsg,
         type: 'boolean',
         default: false,
     },

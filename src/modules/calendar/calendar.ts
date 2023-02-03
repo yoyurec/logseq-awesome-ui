@@ -1,7 +1,4 @@
-import {
-    globalContext,
-    root, doc
-} from '../internal';
+import { root, doc, globals } from '../globals/globals';
 
 import calendarStyles from './calendar.css?inline';
 
@@ -11,7 +8,7 @@ const setSidebarWidthVar = () => {
 }
 
 export const toggleCalendarFeature = () => {
-    if (globalContext.pluginConfig.featureCalendarEnabled) {
+    if (globals.pluginConfig.featureCalendarEnabled) {
         calendarLoad();
     } else {
         calendarUnload();
@@ -19,7 +16,7 @@ export const toggleCalendarFeature = () => {
 }
 
 export const calendarLoad = async (agendaPlugin?: HTMLElement) => {
-    if (!globalContext.pluginConfig.featureCalendarEnabled) {
+    if (!globals.pluginConfig.featureCalendarEnabled) {
         return;
     }
     logseq.provideStyle({ key: 'awUI-calendar-css', style: calendarStyles });

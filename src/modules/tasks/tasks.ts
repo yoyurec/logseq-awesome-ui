@@ -1,12 +1,9 @@
-import {
-    globalContext,
-    doc
-} from '../internal';
+import { doc, globals } from '../globals/globals';
 
 import tasksStyles from './tasks.css?inline';
 
 export const toggleTasksFeature = () => {
-    if (globalContext.pluginConfig.featureTasksEnabled) {
+    if (globals.pluginConfig.featureTasksEnabled) {
         tasksLoad();
     } else {
         tasksUnload();
@@ -14,7 +11,7 @@ export const toggleTasksFeature = () => {
 }
 
 export const tasksLoad = async () => {
-    if (!globalContext.pluginConfig.featureTasksEnabled) {
+    if (!globals.pluginConfig.featureTasksEnabled) {
         return;
     }
     setTimeout(() => {

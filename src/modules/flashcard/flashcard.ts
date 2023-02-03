@@ -1,13 +1,10 @@
-import {
-    globalContext,
-    doc
-} from '../internal';
+import { doc, globals } from '../globals/globals';
 
 import flashcardAwesomeStyles from './flashcardAwesome.css?inline';
 import flashcardFlatStyles from './flashcardFlat.css?inline';
 
 export const toggleContentFlashcard = () => {
-    if (globalContext.pluginConfig.contentFlashcard != 'Default') {
+    if (globals.pluginConfig.contentFlashcard != 'Default') {
         flashcardLoad();
     } else {
         flashcardUnload();
@@ -16,7 +13,7 @@ export const toggleContentFlashcard = () => {
 
 export const flashcardLoad = async () => {
     let flashcardStyles = '';
-    switch (globalContext.pluginConfig.contentFlashcard) {
+    switch (globals.pluginConfig.contentFlashcard) {
         case 'Awesome':
             flashcardStyles = flashcardAwesomeStyles
             break;
