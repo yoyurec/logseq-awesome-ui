@@ -1,3 +1,10 @@
+## [1.4.16](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.15...v1.4.16) (2023-02-03)
+
+
+### Bug Fixes
+
+* **quotes:** adjust icon and margins ([b0133d2](https://github.com/yoyurec/logseq-awesome-ui/commit/b0133d2ed5be4efbb1168b81a1d5cd316b9bc3b6))
+
 ## [1.4.15](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.14...v1.4.15) (2023-02-03)
 
 
