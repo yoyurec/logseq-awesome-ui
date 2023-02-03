@@ -1,6 +1,6 @@
 ## ⚠ ATTENTION!⚠
 
-### 🐱‍👤 To customize UI & content text/bg colors, install ["Awesome Styler" (former "Solarized Extended") theme!](https://github.com/yoyurec/logseq-awesome-styler)
+### 🎨 To customize UI & content text/bg colors, install ["Awesome Styler" plugin!](https://github.com/yoyurec/logseq-awesome-styler)
 ![](https://github.com//yoyurec/logseq-awesome-styler/raw/main/screenshots/market.png)
 
 <h1 align="center">"Awesome UI" plugin for Logseq</h1>
@@ -14,7 +14,7 @@
 
 ![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/scr.png)
 
-* 🐱‍👤 Changed default UI layout, sidebars
+* ⚡ Changed default UI layout, sidebars
 * ✨ Changed icons, new added
 * 🔥 Redesigned **head** toolbar: navigation arrows on left side, hidden home...
 * 🔍 Redesigned **search** <a href="#-search-panel">🡖</a>
@@ -40,7 +40,7 @@ From Logseq store - `Plugins -> Marketplace`
 ![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/market.png)
 
 ## Recommended plugins/themes
-* 🐱‍👤 [Awesome Styler](https://github.com/yoyurec/logseq-awesome-styler) theme
+* 🎨 [Awesome Styler](https://github.com/yoyurec/logseq-awesome-styler) theme
 * ⭐ [Awesome Links](https://github.com/yoyurec/logseq-awesome-links)
 * 📌 [Sticky Headers](https://github.com/yoyurec/logseq-sticky-headers)
 * 📰 [Banners](https://github.com/yoyurec/logseq-banners-plugin)

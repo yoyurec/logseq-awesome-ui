@@ -16,7 +16,7 @@ blockquote,
     transform: translateX(-8px);
 }
 
-blockquote::before,
+blockquote .is-paragraph::before,
 .ls-block[data-refs-self*='"quote"']:not(.pre-block) > .flex.flex-row::before {
   position: absolute;
   top: -10px;
@@ -30,6 +30,16 @@ blockquote::before,
 blockquote {
   padding: 8px 32px 8px 20px;
 }
+
+blockquote + blockquote,
+.ls-block[data-refs-self*='"quote"']:not(.pre-block) + .ls-block[data-refs-self*='"quote"']:not(.pre-block) {
+  margin-top: 2px;
+}
+
+blockquote .is-paragraph {
+  position: relative;
+}
+
 
 .ls-block[data-refs-self*='"quote"'].selected {
     background-color: var(--ls-block-highlight-color);
