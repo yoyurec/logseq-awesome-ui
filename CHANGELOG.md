@@ -1,3 +1,10 @@
+## [1.4.15](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.14...v1.4.15) (2023-02-03)
+
+
+### Bug Fixes
+
+* **all:** imports refactoring ([d8e8b42](https://github.com/yoyurec/logseq-awesome-ui/commit/d8e8b42af98d0e51241866553e353f825f2ab540))
+
 ## [1.4.14](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.13...v1.4.14) (2023-02-02)
 
 
