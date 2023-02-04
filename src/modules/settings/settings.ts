@@ -7,6 +7,7 @@ import { toggleColumnsFeature } from '../columns/columns';
 import { toggleQuoteFeature } from '../quote/quote';
 import { toggleAwesomePropsFeature } from '../awesomeProps/awesomeProps';
 import { toggleCalendarFeature } from '../calendar/calendar';
+import { toggleCompactSidebarMenuFeature } from '../compactSidebarMenu/compactSidebarMenu';
 import { setFeaturesCSSVars } from '../features/features';
 import { toggleContentFlashcard } from '../flashcard/flashcard';
 import { toggleHeadersLabelsFeature } from '../headersLabels/headersLabels';
@@ -48,6 +49,9 @@ export const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings']
     }
     if (settingsDiff.includes('featureCalendarEnabled')) {
         toggleCalendarFeature();
+    }
+    if (settingsDiff.includes('featureCompactSidebarMenuEnabled')) {
+        toggleCompactSidebarMenuFeature();
     }
     if (settingsDiff.includes('featureHideDotProps')) {
         toggleHideDotPropsFeature();

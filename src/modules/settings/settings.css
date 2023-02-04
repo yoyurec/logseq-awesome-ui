@@ -79,6 +79,9 @@
     content: "\eb34";
 }
 
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureCompactSidebarMenuEnabled"] small::before {
+    content: "\ebf3";
+}
 .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureHomeButtonEnabled"] small::before {
     content: "\eac1";
 }

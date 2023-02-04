@@ -26,6 +26,12 @@
 #left-sidebar .item > .ti {
     font-size: 18px;
 }
+#left-sidebar .nav-content-item {
+    border-top: 1px dotted var(--ls-guideline-color);
+}
+#left-sidebar .nav-content-item .header {
+    margin-top: 4px;
+}
 /*
   <<<< END: Left sidebar
 */

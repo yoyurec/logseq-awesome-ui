@@ -103,6 +103,13 @@ export const settingsConfig: SettingSchemaDesc[] = [
         default: null,
     },
     {
+        key: 'featureCompactSidebarMenuEnabled',
+        title: '',
+        description: 'Compact menu (horizontal, no labels) on left sidebar?',
+        type: 'boolean',
+        default: false,
+    },
+    {
         key: 'featureHomeButtonEnabled',
         title: '',
         description: 'Show "Home" button on header?',

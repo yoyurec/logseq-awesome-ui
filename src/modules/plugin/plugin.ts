@@ -14,6 +14,7 @@ import { tabsPluginLoad, tabsPluginUnload } from '../tabs/tabs';
 import { tasksLoad, tasksUnload } from '../tasks/tasks';
 import { checkUpdate, getInheritedBackgroundColor } from '../utils/utils';
 import { modalObserverLoad, modalObserverUnload } from '../modalObserver/modalObserver';
+import { compactSidebarMenuLoad, compactSidebarMenuUnload } from '../compactSidebarMenu/compactSidebarMenu';
 
 export const pluginLoad = () => {
     body.classList.add(globals.isPluginEnabled);
@@ -60,6 +61,7 @@ const runStuff = async () => {
         root.style.setProperty('--awUI-calc-bg', getInheritedBackgroundColor(doc.querySelector('.left-sidebar-inner')).trim());
         globals.tabsPluginIframe = doc.getElementById('logseq-tabs_iframe') as HTMLIFrameElement;
         setFeaturesCSSVars();
+        compactSidebarMenuLoad();
         searchLoad();
         tabsPluginLoad();
         awesomePropsLoad();
@@ -79,6 +81,7 @@ const runStuff = async () => {
 
 const stopStuff = () => {
     searchUnload();
+    compactSidebarMenuUnload();
     tabsPluginUnload();
     rightSidebarUnload();
     awesomePropsLoadUnload();
