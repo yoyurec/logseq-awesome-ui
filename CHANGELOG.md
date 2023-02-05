@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.16...v1.5.0) (2023-02-05)
+
+
+### Features
+
+* **sidebar:** compact menu ([3216a6f](https://github.com/yoyurec/logseq-awesome-ui/commit/3216a6f6d81fd21c63acea2eb2f5925585639fcb))
+
 ## [1.4.16](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.15...v1.4.16) (2023-02-03)
 
 
