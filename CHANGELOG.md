@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.5.2...v1.5.3) (2023-02-06)
+
+
+### Bug Fixes
+
+* **extplugins:** logseq analysis plugin iframe z-index ([aa1fe1e](https://github.com/yoyurec/logseq-awesome-ui/commit/aa1fe1eed4e0383e8f8f5b5590d16dbe987a8582))
+
 ## [1.5.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.5.1...v1.5.2) (2023-02-06)
 
 
