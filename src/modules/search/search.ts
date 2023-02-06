@@ -49,9 +49,15 @@ export const searchLoad = async () => {
 export const searchUnload = () => {
     body.classList.remove(globals.isSearchEnabledClass);
     const leftToolbar = doc.querySelector('#head .l');
-    const search = doc.getElementById('search-button');
-    if (!leftToolbar || !search) {
+    if (!leftToolbar) {
         return;
     }
-    leftToolbar.insertAdjacentElement('beforeend', search);
+    const search = doc.getElementById('search-button');
+    if (search) {
+        leftToolbar.insertAdjacentElement('beforeend', search);
+    }
+    const httpServerButton = doc.querySelector('.cp__server-indicator');
+    if (httpServerButton) {
+        leftToolbar.insertAdjacentElement('beforeend', httpServerButton);
+    }
 }

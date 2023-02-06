@@ -16,3 +16,13 @@
 /*
   <<<< END: Doc View Exporter plugin
 */
+
+/*
+  >>> BEGIN: Logseq Graph Analysis
+*/
+[data-pid="logseq-graph-analysis"].visible {
+  z-index: var(--ls-z-index-level-3) !important;
+}
+/*
+  <<<< END: Logseq Graph Analysis
+*/
