@@ -17,6 +17,10 @@
     height: 100%;
     border-bottom: 1px solid #80808080;
 }
+body.is-pdf-active #logseq-tabs_lsp_main {
+    left: calc(var(--ph-view-container-width)) !important;
+}
+
 .is-mac #logseq-tabs_lsp_main iframe {
     left: 84px;
 }

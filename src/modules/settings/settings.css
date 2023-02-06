@@ -47,6 +47,10 @@
     content: "\efe6";
 }
 
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureWideSearchEnabled"] small::before {
+    content: "\eb1c";
+}
+
 .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureTasksEnabled"] small::before {
     content: "\eb6a";
 }

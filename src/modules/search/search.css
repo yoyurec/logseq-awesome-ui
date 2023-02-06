@@ -8,7 +8,7 @@
     flex-grow: 1;
     overflow: hidden;
     height: 34px;
-    margin: 0 auto 0 0;
+    margin: 0 auto 0 70px;
     padding: 0 6px;
     border-radius: 5px;
     border: 1px solid #88888850;
@@ -41,7 +41,11 @@
         margin: -2rem;
     }
 }
-
+/* pdf */
+body.is-pdf-active.is-search-opened .ui__modal {
+    left: 0;
+    justify-content: flex-end;
+}
 
 .ls-search {
     border-radius: 4px;
@@ -78,8 +82,4 @@
 .ls-search .menu-link:hover,
 .ls-search .menu-link .chosen {
     background-color: var(--ls-primary-background-color);
-}
-
-.ls-left-sidebar-open .cp__server-indicator {
-    margin: 0 0 0 16px;
 }

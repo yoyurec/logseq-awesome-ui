@@ -11,6 +11,7 @@ export const rightSidebarLoad = async () => {
         onSidebarVisibleChangedCallback(visible);
     });
 }
+
 export const rightSidebarUnload = async () => {
     const hideRightSidebarButton = doc.querySelector('#head .hide-right-sidebar-button');
     const rightToolbarPlaceholder = doc.querySelector('.cp__right-sidebar-topbar div:last-child div');
@@ -18,6 +19,7 @@ export const rightSidebarUnload = async () => {
         rightToolbarPlaceholder.insertAdjacentElement('beforeend', hideRightSidebarButton);
     }
 }
+
 export const reorderRightSidebarToggleButton = (visible: boolean) => {
     if (visible) {
         const hideRightSidebarButton = doc.querySelector('#right-sidebar .toggle-right-sidebar');

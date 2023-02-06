@@ -1,80 +1,36 @@
-#head {
-    position: fixed;
-    top: var(--awUI-tabs-height) !important;
-    z-index: 99;
-    background-color: var(--awUI-calc-bg);
-}
-
-/* head left part */
-#head > .l {
-    min-width: 120px;
-    width: unset !important;
-    justify-content: unset !important;
-}
-html.is-mac:not(.is-fullscreen) body:not(.is-plugin-tabs-enabled) #head > .l {
-    min-width: 186px;
-    padding-left: 78px;
-}
-.is-mac #head > .l {
-    padding-left: 0.5rem;
-}
-
-/* left sidebar toggle button*/
-#head .ls-icon-menu-2 svg {
-    display: none;
-}
-#head .ls-icon-menu-2::before {
-    content: "\f005";
-}
-.ls-left-sidebar-open #head .ls-icon-menu-2::before {
-    content: "\f004";
-}
-
-/* arrows navigation */
-#head>.r>.flex {
-    position: absolute;
-    left: -74px;
-}
-
-/* head right part */
-#head>.r {
-    height: 100%;
-    flex: unset;
-    width: 100%;
-    justify-content: flex-start;
-}
-#head>.r::before {
-    content: "";
-    margin-left: auto;
-}
-
+/* toolbar buttons */
 #head .button i,
 #head .ti {
     color: var(--ls-icon-color);
     opacity: 0.6;
 }
 
-/* right sidebar toggle button*/
-#head .toggle-right-sidebar {
-    display: flex;
-    height: 30px;
-}
-#head .ls-icon-layout-sidebar-right svg {
-    display: none;
-}
-#head .ls-icon-layout-sidebar-right::before {
-    content: "\f007";
-}
-.ls-right-sidebar-open #head .ls-icon-layout-sidebar-right::before {
-    content: "\f006";
+/* HTTP server button */
+.cp__server-indicator {
+    margin: 0 0 0 16px;
 }
 
-/* Doc View Exporter plugin */
-.kef-doc-icon {
-    opacity: 0.5 !important;
+/* head left part */
+#head > .l {
+    min-width: unset;
 }
 
-.kef-doc-icon:hover {
-    background-color: none !important;
-    opacity: 1 !important;
+/* head right part */
+#head>.r {
+    margin-left: 4px;
+    flex: unset;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
 }
+#head>.r::before {
+    content: "";
+    margin-left: auto;
+}
+#head>.r>.flex {
+    position: absolute;
+    /* left: -74px; */
+}
+/* html.is-mac body:not(.is-pdf-active):not(.is-plugin-tabs-enabled) #head>.r>.flex {
+    left: calc(-1 * var(--ls-left-sidebar-width) + 178px);
+} */

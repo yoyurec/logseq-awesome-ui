@@ -2,6 +2,7 @@ import { LSPluginBaseInfo } from '@logseq/libs/dist/LSPlugin.user';
 
 import { globals } from '../globals/globals';
 import { settingsConfig } from './settingsConfig';
+import { toggleWideSearchFeature } from '../search/search';
 import { toggleTasksFeature } from '../tasks/tasks';
 import { toggleColumnsFeature } from '../columns/columns';
 import { toggleQuoteFeature } from '../quote/quote';
@@ -32,6 +33,9 @@ export const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings']
     const settingsDiff = objectDiff({ ...oldSettings }, globals.pluginConfig)
     console.log(`AwesomeUI: settings changed:`, settingsDiff);
 
+    if (settingsDiff.includes('featureWideSearchEnabled')) {
+        toggleWideSearchFeature();
+    }
     if (settingsDiff.includes('featureTasksEnabled')) {
         toggleTasksFeature();
     }

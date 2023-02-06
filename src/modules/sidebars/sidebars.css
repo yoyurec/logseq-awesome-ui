@@ -1,6 +1,20 @@
 /*
   >>> BEGIN: Left sidebar
 */
+/* left sidebar toggle button*/
+#head .ls-icon-menu-2 {
+    margin-top: -2px;
+}
+#head .ls-icon-menu-2 svg {
+    display: none;
+}
+#head .ls-icon-menu-2::before {
+    content: "\f005";
+}
+.ls-left-sidebar-open #head .ls-icon-menu-2::before {
+    content: "\f004";
+}
+
 #left-sidebar .ls-icon-infinity svg {
     display: none;
 }
@@ -40,6 +54,21 @@
 /*
   >>> BEGIN: Right sidebar
 */
+/* right sidebar toggle button*/
+#head .toggle-right-sidebar {
+    display: flex;
+    height: 30px;
+}
+#head .ls-icon-layout-sidebar-right svg {
+    display: none;
+}
+#head .ls-icon-layout-sidebar-right::before {
+    content: "\f007";
+}
+.ls-right-sidebar-open #head .ls-icon-layout-sidebar-right::before {
+    content: "\f006";
+}
+
 /* right sidebar toolabar icons */
 .cp__right-sidebar-topbar .cp__right-sidebar-settings-btn {
     display: flex;

@@ -24,21 +24,19 @@ const modalCallback: MutationCallback = (mutationsList) => {
             // Search opened
             const searchResults = addedNode.querySelector('.ls-search') as HTMLElement;
             if (searchResults) {
-                body.classList.add(globals.isSearchOpenedClass);
                 onSearchModalOpen(searchResults);
             }
             // Themes opened
             const themesModal = addedNode.querySelector('.cp__themes-installed') as HTMLElement;
             if (themesModal) {
                 body.classList.add(globals.isThemesOpenedClass);
-                onSearchModalClose();
             }
         }
         if (removedNode && removedNode.childNodes.length) {
             // Search opened
             const searchResults = removedNode.querySelector('.ls-search') as HTMLElement;
             if (searchResults) {
-                body.classList.remove(globals.isSearchOpenedClass);
+                onSearchModalClose();
             }
             // Themes opened
             const themesModal = removedNode.querySelector('.cp__themes-installed') as HTMLElement;

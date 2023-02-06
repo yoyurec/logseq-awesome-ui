@@ -17,6 +17,13 @@ export const settingsConfig: SettingSchemaDesc[] = [
         default: null,
     },
     {
+        key: 'featureWideSearchEnabled',
+        title: '',
+        description: 'Enable wide ("browser-like") search bar and search popup?',
+        type: 'boolean',
+        default: true,
+    },
+    {
         key: 'featureCalendarEnabled',
         title: '',
         description: 'Enable "Calendar" page menu sidebar item?',

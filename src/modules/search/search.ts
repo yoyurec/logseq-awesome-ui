@@ -1,8 +1,12 @@
 import { doc, body, globals } from '../globals/globals';
 
-import './search.css';
+import wideSearchStyles from './search.css?inline';
 
 export const onSearchModalOpen = (searchResults: HTMLElement) => {
+    if (!globals.pluginConfig.featureWideSearchEnabled) {
+        return;
+    }
+    body.classList.add(globals.isSearchOpenedClass);
     if (body.classList.contains('is-pdf-active')) {
         return;
     }
@@ -25,20 +29,34 @@ export const onSearchModalOpen = (searchResults: HTMLElement) => {
 }
 
 export const onSearchModalClose = () => {
+    if (!globals.pluginConfig.featureWideSearchEnabled) {
+        return;
+    }
+    body.classList.remove(globals.isSearchOpenedClass);
     const searchModal = doc.querySelector('.ui__modal') as HTMLElement;
     searchModal.style.left = '';
     searchModal.style.justifyContent = '';
 }
 
+export const toggleWideSearchFeature = () => {
+    if (globals.pluginConfig.featureWideSearchEnabled) {
+        wideSearchLoad();
+    } else {
+        wideSearchUnload();
+    }
+}
+
 // Reposition toolbar search button
-export const searchLoad = async () => {
+export const wideSearchLoad = async () => {
+    if (!globals.pluginConfig.featureWideSearchEnabled) {
+        return;
+    }
+    setTimeout(() => {
+        logseq.provideStyle({ key: 'awUI-wide-search-css', style: wideSearchStyles });
+    }, 500)
     body.classList.add(globals.isSearchEnabledClass);
     const rightToolbar = doc.querySelector('#head .r');
     if (rightToolbar) {
-        const httpServerButton = doc.querySelector('.cp__server-indicator');
-        if (httpServerButton) {
-            rightToolbar.insertAdjacentElement('afterbegin', httpServerButton);
-        }
         const search = doc.getElementById('search-button');
         if (search) {
             rightToolbar.insertAdjacentElement('afterbegin', search);
@@ -46,7 +64,8 @@ export const searchLoad = async () => {
     }
 }
 
-export const searchUnload = () => {
+export const wideSearchUnload = () => {
+    doc.head.querySelector('style[data-injected-style^="awUI-wide-search-css"]')?.remove();
     body.classList.remove(globals.isSearchEnabledClass);
     const leftToolbar = doc.querySelector('#head .l');
     if (!leftToolbar) {
@@ -55,9 +74,5 @@ export const searchUnload = () => {
     const search = doc.getElementById('search-button');
     if (search) {
         leftToolbar.insertAdjacentElement('beforeend', search);
-    }
-    const httpServerButton = doc.querySelector('.cp__server-indicator');
-    if (httpServerButton) {
-        leftToolbar.insertAdjacentElement('beforeend', httpServerButton);
     }
 }

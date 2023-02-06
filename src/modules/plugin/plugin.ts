@@ -8,13 +8,14 @@ import { flashcardLoad, flashcardUnload } from '../flashcard/flashcard';
 import { headersLabelsLoad, headersLabelsUnload } from '../headersLabels/headersLabels';
 import { hidePropsLoad, hidePropsUnload } from '../props/props';
 import { quoteLoad, quoteUnload } from '../quote/quote';
-import { searchLoad, searchUnload } from '../search/search';
+import { wideSearchLoad, wideSearchUnload } from '../search/search';
 import { rightSidebarLoad, rightSidebarUnload } from '../sidebars/sidebars';
 import { tabsPluginLoad, tabsPluginUnload } from '../tabs/tabs';
 import { tasksLoad, tasksUnload } from '../tasks/tasks';
 import { checkUpdate, getInheritedBackgroundColor } from '../utils/utils';
 import { modalObserverLoad, modalObserverUnload } from '../modalObserver/modalObserver';
 import { compactSidebarMenuLoad, compactSidebarMenuUnload } from '../compactSidebarMenu/compactSidebarMenu';
+import { headLoad, headUnload } from '../head/head';
 
 export const pluginLoad = () => {
     body.classList.add(globals.isPluginEnabled);
@@ -61,8 +62,9 @@ const runStuff = async () => {
         root.style.setProperty('--awUI-calc-bg', getInheritedBackgroundColor(doc.querySelector('.left-sidebar-inner')).trim());
         globals.tabsPluginIframe = doc.getElementById('logseq-tabs_iframe') as HTMLIFrameElement;
         setFeaturesCSSVars();
+        headLoad();
+        wideSearchLoad();
         compactSidebarMenuLoad();
-        searchLoad();
         tabsPluginLoad();
         awesomePropsLoad();
         modalObserverLoad();
@@ -80,7 +82,8 @@ const runStuff = async () => {
 }
 
 const stopStuff = () => {
-    searchUnload();
+    headUnload();
+    wideSearchUnload();
     compactSidebarMenuUnload();
     tabsPluginUnload();
     rightSidebarUnload();

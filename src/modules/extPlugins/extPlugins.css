@@ -1,6 +1,17 @@
 /*
   >>> BEGIN: Doc View Exporter plugin
 */
+/* head toolbar icon */
+.kef-doc-icon {
+  opacity: 0.5 !important;
+}
+
+.kef-doc-icon:hover {
+  background-color: none !important;
+  opacity: 1 !important;
+}
+
+/* exported doc */
 .kef-doc-exported .is-banner-active #banner,
 .kef-doc-exported .is-plugin-tabs-enabled.is-banner-active #banner,
 .kef-doc-exported body:not(.is-banner-active) .cp__sidebar-main-content,

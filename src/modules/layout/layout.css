@@ -1,12 +1,18 @@
-/*
-  >>> BEGIN: Layout
-*/
 .theme-inner {
     overflow: hidden;
     height: 100vh;
 }
 #main-container {
     transition: none;
+}
+#head {
+    position: fixed;
+    top: var(--awUI-tabs-height) !important;
+    z-index: 99;
+    background-color: var(--awUI-calc-bg);
+}
+body.is-pdf-active #head {
+    left: calc(var(--ph-view-container-width));
 }
 #left-sidebar {
     padding-top: 0 !important;
@@ -32,6 +38,11 @@ body:not(.is-banner-active) .cp__sidebar-main-content,
 #search-in-page {
     margin-top: calc(var(--awUI-tabs-height) + var(--awUI-head-height)) !important;
 }
-/*
-  <<<< END: Layout
-*/
+
+/* pdf */
+body.is-pdf-active #app-container {
+    padding-left: calc(var(--ph-view-container-width));
+}
+#pdf-layout-container {
+    top: 0 !important;
+}
