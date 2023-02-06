@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.5.3...v1.6.0) (2023-02-06)
+
+
+### Features
+
+* **search:** wide search (header bar and popup) now optional ([acaf950](https://github.com/yoyurec/logseq-awesome-ui/commit/acaf950bec1daa29820b80381a8925b0de53e62a))
+
 ## [1.5.3](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.5.2...v1.5.3) (2023-02-06)
 
 
