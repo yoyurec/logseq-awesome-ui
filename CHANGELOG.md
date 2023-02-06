@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.5.0...v1.5.1) (2023-02-06)
+
+
+### Bug Fixes
+
+* **http-server:** header button position ([2e3faad](https://github.com/yoyurec/logseq-awesome-ui/commit/2e3faad7fc0a667c328ea57b8c2179e5c6ae7aa6))
+
 # [1.5.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.4.16...v1.5.0) (2023-02-05)
 
 
