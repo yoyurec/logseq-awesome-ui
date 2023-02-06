@@ -35,6 +35,10 @@ export const searchLoad = async () => {
     body.classList.add(globals.isSearchEnabledClass);
     const rightToolbar = doc.querySelector('#head .r');
     if (rightToolbar) {
+        const httpServerButton = doc.querySelector('.cp__server-indicator');
+        if (httpServerButton) {
+            rightToolbar.insertAdjacentElement('afterbegin', httpServerButton);
+        }
         const search = doc.getElementById('search-button');
         if (search) {
             rightToolbar.insertAdjacentElement('afterbegin', search);

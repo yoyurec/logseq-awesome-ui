@@ -79,3 +79,7 @@
 .ls-search .menu-link .chosen {
     background-color: var(--ls-primary-background-color);
 }
+
+.ls-left-sidebar-open .cp__server-indicator {
+    margin: 16px;
+}
