@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.5.1...v1.5.2) (2023-02-06)
+
+
+### Bug Fixes
+
+* **http-server:** button margins ([2a3f413](https://github.com/yoyurec/logseq-awesome-ui/commit/2a3f4139971b32d1655f2ece418093e882976402))
+
 ## [1.5.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.5.0...v1.5.1) (2023-02-06)
 
 
