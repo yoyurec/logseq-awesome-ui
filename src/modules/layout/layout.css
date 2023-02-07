@@ -35,8 +35,7 @@ body.is-pdf-active #head {
 body:not(.is-banner-active) .cp__sidebar-main-content,
 #left-sidebar,
 #right-sidebar,
-#search-in-page,
-.whiteboard-page {
+#search-in-page {
     margin-top: calc(var(--awUI-tabs-height) + var(--awUI-head-height)) !important;
 }
 .whiteboard-page {
