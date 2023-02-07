@@ -28,7 +28,7 @@
 .block-properties > div {
     display: contents !important;
 }
-.block-properties > div > :is(div, span) {
+.block-properties > div > :is(div, span, a) {
     margin: 0;
     /* background-color: var(--ls-page-properties-background-color); */
 }
@@ -40,7 +40,7 @@
     text-overflow: ellipsis;
 }
 
-.block-properties > div > :is(div, span):first-child {
+.block-properties > div > :is(div, span, a):first-child {
     padding: 0 1.8em 0 1.7em;
     position: relative;
 }
@@ -49,7 +49,7 @@
     display: none;
 }
 
-.block-properties > div > :is(div, span):first-child::after {
+.block-properties > div > :is(div, span, a):first-child::after {
     content: "●";
     position: absolute;
     top: 0.7em;
