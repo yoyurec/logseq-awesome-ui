@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.2...v1.6.3) (2023-02-07)
+
+
+### Bug Fixes
+
+* **whiteboards:** top position or rename ([8a07504](https://github.com/yoyurec/logseq-awesome-ui/commit/8a07504297f5ac0a30266512e9f8027700bb2b00))
+
 ## [1.6.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.1...v1.6.2) (2023-02-07)
 
 
