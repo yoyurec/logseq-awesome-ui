@@ -25,7 +25,7 @@
 .block-marker.block-marker.block-marker,
 .done::before {
     display: inline-block;
-    margin: 0 6px 0 0 !important;
+    margin: 0 0.8ex 0 0 !important;
     padding: 2px 3px 1px 3px;
     font-family: var(--awUI-font-default-inter);
     font-size: 75% !important;
@@ -36,11 +36,13 @@
     background: var(--ls-primary-background-color);
 }
 .content .form-checkbox {
-    border-radius: 2px;
-    border: 1px solid var(--ls-primary-background-color);
-    margin-right: 4px !important;
     position: relative;
     top: -0.5px;
+    margin-right: 0.5ex !important;
+    width: 1rem !important;
+    height: 1rem !important;
+    border-radius: 2px;
+    border: 1px solid var(--ls-primary-background-color);
 }
 .content .form-checkbox:hover {
     opacity: 0.6 !important;
@@ -48,15 +50,15 @@
 }
 .content .done::before {
     content: "DONE";
-    margin: 0 6px 0 3.2ex !important;
+    margin: 0 0.8ex 0 3.2ex !important;
     color: var(--awUI-marker-done);
     border: 1px solid var(--awUI-marker-done);
 }
 .content .done .form-checkbox {
     position: absolute;
     left: 0;
-    top: 4px;
-    background-color: var(--awUI-marker-done);
+    top: 0.5ex;
+    background-color: var(--awUI-marker-done) !important;
     opacity: 0.9;
 }
 .now .block-marker.block-marker,
@@ -65,21 +67,21 @@
 }
 .content .now .form-checkbox,
 .content .doing .form-checkbox {
-    background-color: var(--awUI-marker-now-doing);
+    background-color: var(--awUI-marker-now-doing) !important;
     opacity: 0.4;
 }
 .later .block-marker.block-marker {
     color: var(--awUI-marker-later) !important;
 }
 .content .later .form-checkbox {
-    background-color: var(--awUI-marker-later);
+    background-color: var(--awUI-marker-later) !important;
     opacity: 0.4;
 }
 .todo .block-marker.block-marker {
     color: var(--awUI-marker-todo) !important;
 }
 .content .todo .form-checkbox {
-    background-color: var(--awUI-marker-todo);
+    background-color: var(--awUI-marker-todo) !important;
     opacity: 0.4;
 }
 .waiting .block-marker {
@@ -106,14 +108,16 @@
 }
 a[priority]::before,
 .priority::before {
+    content: "" !important;
     display: inline-block;
-    content: "";
-    border-radius: 100%;
-    height: 20px;
-    width: 20px;
     visibility: visible;
-    margin-right: 5px;
-    margin-bottom: -5px;
+    margin-right: 0.7ex;
+    margin-bottom: 1px;
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 100%;
+    font-size: 1rem !important;
+    vertical-align: bottom !important;
     -webkit-mask: var(--awUI-priority-bg) no-repeat 50% 50%;
     mask: var(--awUI-priority-bg) no-repeat 50% 50%;
 }
@@ -138,3 +142,11 @@ a.tooltip-priority {
 /*
   <<<< END: Tasks: priority recolor
 */
+
+
+/* Flow theme overrides */
+.block-marker:is(.TODO, .DOING, .NOW, .WAIT, .waiting, .LATER)::before {
+    display: none;
+}
+
+
