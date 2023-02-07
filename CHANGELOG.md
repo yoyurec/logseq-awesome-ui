@@ -1,3 +1,10 @@
+## [1.6.4](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.3...v1.6.4) (2023-02-07)
+
+
+### Bug Fixes
+
+* **props:** layout in page preview popup ([68216a9](https://github.com/yoyurec/logseq-awesome-ui/commit/68216a94c7c506e90790e446fc29a2fa96baf14b))
+
 ## [1.6.3](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.2...v1.6.3) (2023-02-07)
 
 
