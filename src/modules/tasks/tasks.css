@@ -11,8 +11,8 @@
     --awUI-marker-waiting: var(--awUI-cherry);
     --awUI-marker-later: var(--awUI-orange);
     --awUI-marker-todo: var(--awUI-red);
-    --awUI-marker-now-doing: var(--awUI-green);
-    --awUI-marker-done: var(--awUI-blue);
+    --awUI-marker-now-doing: var(--awUI-blue);
+    --awUI-marker-done: var(--awUI-green);
 
     --awUI-priority-a: var(--awUI-red);
     --awUI-priority-b: var(--awUI-orange);
@@ -22,12 +22,13 @@
 /*
   >>> BEGIN: Tasks: status recolor
 */
-.block-marker.block-marker.block-marker {
+.block-marker.block-marker.block-marker,
+.done::before {
     display: inline-block;
     margin: 0 6px 0 0 !important;
     padding: 2px 3px 1px 3px;
     font-family: var(--awUI-font-default-inter);
-    font-size: 12px !important;
+    font-size: 75% !important;
     font-weight: 600;
     line-height: 1;
     border-radius: 4px;
@@ -45,7 +46,16 @@
     opacity: 0.6 !important;
     transform: none;
 }
+.content .done::before {
+    content: "DONE";
+    margin: 0 6px 0 3.2ex !important;
+    color: var(--awUI-marker-done);
+    border: 1px solid var(--awUI-marker-done);
+}
 .content .done .form-checkbox {
+    position: absolute;
+    left: 0;
+    top: 4px;
     background-color: var(--awUI-marker-done);
     opacity: 0.9;
 }
