@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.0...v1.6.1) (2023-02-07)
+
+
+### Bug Fixes
+
+* **http=server:** margin ([5ea8f8b](https://github.com/yoyurec/logseq-awesome-ui/commit/5ea8f8bde121320ae3935b04f75ed6e76fb8297a))
+
 # [1.6.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.5.3...v1.6.0) (2023-02-06)
 
 
