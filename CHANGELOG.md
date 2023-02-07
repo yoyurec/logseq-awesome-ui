@@ -1,3 +1,10 @@
+## [1.6.5](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.4...v1.6.5) (2023-02-07)
+
+
+### Bug Fixes
+
+* **tasks:** make done status ui as others, swap doing-done colors ([173a6df](https://github.com/yoyurec/logseq-awesome-ui/commit/173a6df3c3583aef97d46560b79516d9a2b379b6))
+
 ## [1.6.4](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.3...v1.6.4) (2023-02-07)
 
 
