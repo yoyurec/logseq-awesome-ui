@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.1...v1.6.2) (2023-02-07)
+
+
+### Bug Fixes
+
+* **whiteboads:** layout height ([a8c48d9](https://github.com/yoyurec/logseq-awesome-ui/commit/a8c48d9ba9595a0e1dd01b9cf8faea2b7643da0c))
+
 ## [1.6.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.0...v1.6.1) (2023-02-07)
 
 
