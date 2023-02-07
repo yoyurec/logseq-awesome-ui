@@ -1,3 +1,10 @@
+## [1.6.6](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.5...v1.6.6) (2023-02-07)
+
+
+### Bug Fixes
+
+* **tasks:** override Flow theme styles ([6c06891](https://github.com/yoyurec/logseq-awesome-ui/commit/6c06891c79676216574fff1d4a02e3fba27d360c))
+
 ## [1.6.5](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.4...v1.6.5) (2023-02-07)
 
 
