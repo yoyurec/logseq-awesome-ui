@@ -133,6 +133,22 @@ Key can contain word (`type` = `page-type`, `item-type`, `task` = `tasks`, etc..
 
 <img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/tasks.png">
 
+To customize colors - paste code to your `custom.css` file.
+Use your own values, or set default `var(--ls-link-text-color)`
+```css
+:root {
+    --awUI-marker-waiting: ...;
+    --awUI-marker-later: ...;
+    --awUI-marker-todo: ...;
+    --awUI-marker-now-doing: ...;
+    --awUI-marker-done: ...;
+
+    --awUI-priority-a: ...;
+    --awUI-priority-b: ...;
+    --awUI-priority-c: ...;
+}
+```
+
 ### 🚥 Kanban board
 Just add `#.kanban` tag to parent block and all children will become columns!
 Recommend additionally to install [Logseq Plugin TODO Master](https://github.com/pengx17/logseq-plugin-todo-master)
