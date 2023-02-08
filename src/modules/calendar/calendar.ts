@@ -2,9 +2,26 @@ import { root, doc, globals } from '../globals/globals';
 
 import calendarStyles from './calendar.css?inline';
 
+let calendarButton: HTMLElement | null = null;
+let agendaButton: HTMLElement | null = null;
+let agendaPlugin: HTMLElement | null = null;
+
 const setSidebarWidthVar = () => {
+    const leftSidebarWidth = doc.getElementById('left-sidebar')?.getBoundingClientRect()?.width;
+    root.style.setProperty('--awUI-calc-left-sidebar-width', `${leftSidebarWidth}px`);
     const rightSidebarWidth = doc.getElementById('right-sidebar')?.getBoundingClientRect()?.width;
     root.style.setProperty('--awUI-calc-right-sidebar-width', `${rightSidebarWidth}px`);
+}
+
+const hideCalendar = () => {
+    agendaPlugin!.classList.remove('visible');
+    calendarButton!.classList.remove('active');
+}
+
+const calendarClickHandler = () => {
+    setSidebarWidthVar();
+    agendaButton!.click();
+    calendarButton!.classList.add('active');
 }
 
 export const toggleCalendarFeature = () => {
@@ -15,7 +32,7 @@ export const toggleCalendarFeature = () => {
     }
 }
 
-export const calendarLoad = async (agendaPlugin?: HTMLElement) => {
+export const calendarLoad = async () => {
     if (!globals.pluginConfig.featureCalendarEnabled) {
         return;
     }
@@ -23,26 +40,23 @@ export const calendarLoad = async (agendaPlugin?: HTMLElement) => {
     const journalsButton = doc.querySelector('.nav-header .journals-nav');
     const calendarButtonHTML = `
         <div class="calendar-nav">
-            <a href="#/page/Calendar" class="item group flex items-center text-sm font-medium rounded-md" id="awUI-calendar-menu">
+            <a href="#/page/calendar." class="item group flex items-center text-sm font-medium rounded-md" id="awUI-calendar-menu">
                 <span class="ui__icon ti ls-icon-calendar-time"></span><span class="flex-1">Calendar</span>
                 </a>
         </div>
     `;
     journalsButton?.insertAdjacentHTML('afterend', calendarButtonHTML);
-    const calendarButton = doc.getElementById('awUI-calendar-menu');
+    calendarButton = doc.getElementById('awUI-calendar-menu');
     setSidebarWidthVar();
 
-    if (!agendaPlugin) {
-        agendaPlugin = doc.getElementById('logseq-agenda_lsp_main') as HTMLElement;
-        if (agendaPlugin) {
-            console.log('AwesomeUI: agenda plugin found on init!');
-        }
-    }
-    if (!agendaPlugin) {
+    agendaPlugin = doc.getElementById('logseq-agenda_lsp_main') as HTMLElement;
+    if (agendaPlugin) {
+        console.log('AwesomeUI: agenda plugin found on init!');
+    }else {
         console.log('AwesomeUI: agenda plugin not found!');
         return;
     }
-    const agendaButton = doc.querySelector('#injected-ui-item-logseq-plugin-agenda-logseq-agenda .button') as HTMLAnchorElement;
+    agendaButton = doc.querySelector('#injected-ui-item-logseq-plugin-agenda-logseq-agenda .button') as HTMLAnchorElement;
     if (!agendaButton) {
         logseq.UI.showMsg('AwesomeUI: "Agenda" plugin button not found on toolbar, plz pin it and restart Logseq!', 'warning', {timeout: 20000});
         return;
@@ -52,21 +66,13 @@ export const calendarLoad = async (agendaPlugin?: HTMLElement) => {
         console.log('AwesomeUI: calendar button not found!');
         return;
     }
-    const hideCalendar = () => {
-        agendaPlugin!.classList.remove('visible');
-        calendarButton.classList.remove('active');
-    }
-
-    const calendarClickHandler = () => {
-        setSidebarWidthVar();
-        agendaButton.click();
-        calendarButton.classList.add('active');
-    }
 
     calendarButton.addEventListener('click', calendarClickHandler, false);
 
     logseq.App.onRouteChanged(({ path }) => {
-        if (path !== '/page/Calendar') {
+        if (path === '/page/calendar.') {
+            calendarClickHandler();
+        } else {
             hideCalendar();
         }
     });
