@@ -1,3 +1,10 @@
+## [1.6.7](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.6...v1.6.7) (2023-02-08)
+
+
+### Bug Fixes
+
+* **tasks:** cleaner design - sizes, hovering, spacing ([0f7ce21](https://github.com/yoyurec/logseq-awesome-ui/commit/0f7ce215502890cacf0992a91210aaaada0e8cd7))
+
 ## [1.6.6](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.5...v1.6.6) (2023-02-07)
 
 
