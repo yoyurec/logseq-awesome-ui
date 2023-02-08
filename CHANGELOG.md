@@ -1,3 +1,10 @@
+## [1.6.10](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.9...v1.6.10) (2023-02-08)
+
+
+### Bug Fixes
+
+* **calendar:** agenda popup visibility on routing ([2c42081](https://github.com/yoyurec/logseq-awesome-ui/commit/2c4208147a9f9fbdb496c406d32bd1f867cddd5c))
+
 ## [1.6.9](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.8...v1.6.9) (2023-02-08)
 
 
