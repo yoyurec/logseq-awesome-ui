@@ -1,3 +1,10 @@
+## [1.6.9](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.8...v1.6.9) (2023-02-08)
+
+
+### Bug Fixes
+
+* **tasks:** checkbox position in block refs ([8adbee0](https://github.com/yoyurec/logseq-awesome-ui/commit/8adbee051748c9cb045ac29c0eb68a63825be643))
+
 ## [1.6.8](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.7...v1.6.8) (2023-02-08)
 
 
