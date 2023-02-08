@@ -25,10 +25,10 @@
 .block-marker.block-marker.block-marker,
 .done::before {
     display: inline-block;
-    margin: 0 0.8ex 0 0 !important;
+    margin: 0 1ex 0 0 !important;
     padding: 2px 3px 1px 3px;
     font-family: var(--awUI-font-default-inter);
-    font-size: 75% !important;
+    font-size: 70% !important;
     font-weight: 600;
     line-height: 1;
     border-radius: 4px;
@@ -37,29 +37,36 @@
 }
 .content .form-checkbox {
     position: relative;
-    top: -0.5px;
+    top: 0;
     margin-right: 0.5ex !important;
-    width: 1rem !important;
-    height: 1rem !important;
-    border-radius: 2px;
-    border: 1px solid var(--ls-primary-background-color);
+    width: 1.1rem !important;
+    height: 1.05rem !important;
+    border-radius: 5px;
+    border: 2px solid var(--ls-primary-background-color) !important;
 }
 .content .form-checkbox:hover {
     opacity: 0.6 !important;
-    transform: none;
+    transform: none !important;
 }
 .content .done::before {
     content: "DONE";
-    margin: 0 0.8ex 0 3.2ex !important;
+    margin: 0 1ex 0 3.7ex !important;
     color: var(--awUI-marker-done);
     border: 1px solid var(--awUI-marker-done);
+    text-decoration: line-through;
 }
 .content .done .form-checkbox {
     position: absolute;
     left: 0;
-    top: 0.5ex;
+    top: 0.6ex;
     background-color: var(--awUI-marker-done) !important;
-    opacity: 0.9;
+    opacity: 0.7;
+    transform: none;
+    background-origin: content-box;
+}
+.content .done .form-checkbox:checked:hover {
+    opacity: 1 !important;
+    border: 1px solid var(--ls-primary-background-color);
 }
 .now .block-marker.block-marker,
 .doing .block-marker.block-marker {
@@ -88,7 +95,7 @@
     color: var(--awUI-marker-waiting) !important;
 }
 .waiting .block-marker:hover {
-    opacity: 1;
+    opacity: 1 !important;
 }
 .content .waiting .form-checkbox {
     background-color: var(--awUI-marker-waiting);
@@ -111,12 +118,11 @@ a[priority]::before,
     content: "" !important;
     display: inline-block;
     visibility: visible;
-    margin-right: 0.7ex;
-    margin-bottom: 1px;
+    margin: 0 0.2ex 1px 0;
     height: 1.25rem;
     width: 1.25rem;
     border-radius: 100%;
-    font-size: 1rem !important;
+    font-size: 0.9rem !important;
     vertical-align: bottom !important;
     -webkit-mask: var(--awUI-priority-bg) no-repeat 50% 50%;
     mask: var(--awUI-priority-bg) no-repeat 50% 50%;
