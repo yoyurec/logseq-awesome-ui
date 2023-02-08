@@ -1,3 +1,10 @@
+## [1.6.8](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.7...v1.6.8) (2023-02-08)
+
+
+### Bug Fixes
+
+* **tasks:** style tuning, lost Inter font is back ([e92df30](https://github.com/yoyurec/logseq-awesome-ui/commit/e92df30285be469eab33f52a5275d5ddfd0a7b68))
+
 ## [1.6.7](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.6...v1.6.7) (2023-02-08)
 
 
