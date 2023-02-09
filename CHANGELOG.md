@@ -1,3 +1,10 @@
+## [1.6.11](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.10...v1.6.11) (2023-02-09)
+
+
+### Bug Fixes
+
+* **tasks:** waiting status color ([3488eec](https://github.com/yoyurec/logseq-awesome-ui/commit/3488eec4a27a8ef66c9623e09643c80861c6e4e8))
+
 ## [1.6.10](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.9...v1.6.10) (2023-02-08)
 
 
