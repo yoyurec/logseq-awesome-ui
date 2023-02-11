@@ -1,3 +1,10 @@
+## [1.6.14](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.13...v1.6.14) (2023-02-11)
+
+
+### Bug Fixes
+
+* **layout:** missed css vars after refactoring ([b2b3e4f](https://github.com/yoyurec/logseq-awesome-ui/commit/b2b3e4f86f428cc499a9572736db76cb751f9f31))
+
 ## [1.6.13](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.12...v1.6.13) (2023-02-11)
 
 
