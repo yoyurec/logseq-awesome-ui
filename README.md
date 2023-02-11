@@ -62,9 +62,9 @@ Wide responsive search like in browser!
 
 ### 📅 Calendar / Agenda plugin support
 
-* custom "Calendar" menu item added (something like if it was added "Favs", but above, in the main links block)
-* on clicking you will be redirected to route /page/Calendar  -  users without "Agenda" plugin will just see the page.
-* on clicking this menu also "Agenda" toolbar button mimic click triggered (so it should be pinned!) - users with "Agenda" will see its own overlay popup, but centered and content-width (not default full-screen). after clicking "Agenda" own close (x) button - you will stay and see "Calendar" page
+* custom "Calendar" menu item added (something like if it was added to "Favs", but above, in the main links block)
+* on clicking you will be redirected to route `/page/calendar.` - users without "Agenda" plugin will just see the page.
+* on clicking this menu also "Agenda" toolbar button mimic click triggered - users with "Agenda" will see its own overlay popup, but centered and content-width (not default full-screen). after clicking "Agenda" own close (x) button - you will stay and see "Calendar" page
 
 <img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/calendar.png">
 
@@ -72,11 +72,10 @@ Wide responsive search like in browser!
   <summary>⚠ Instructions for "Agenda plugin"</summary>
 
 * install Agenda plugin
-* Agenda plugin button should be pinned on toolbar to proper work ⚠
 * go to Agenda settings and set "Home page" - Calendar
 * install latest AwesomeUI
 * restart Logseq may need
-* check that new "Calendar" item appeard in main menu
+* check that new "Calendar" item appeared in main menu
 
 <img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/agenda-settings.png" width="600">
 

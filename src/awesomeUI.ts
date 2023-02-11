@@ -1,7 +1,7 @@
 import '@logseq/libs';
 
-import { pluginLoad } from './modules/plugin/plugin';
-import { settingsLoad } from './modules/settings/settings';
+import { pluginLoad } from './plugin/plugin';
+import { settingsLoad } from './plugin/settings';
 
 import './awesomeUI.css';
 

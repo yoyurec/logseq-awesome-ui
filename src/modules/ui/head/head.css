@@ -1,0 +1,45 @@
+:root {
+    --awUI-head-height: 48px;
+}
+
+
+/* toolbar buttons */
+#head .button i,
+#head .ti {
+    color: var(--ls-icon-color);
+    opacity: 0.6;
+}
+
+/* HTTP server button */
+.cp__server-indicator {
+    margin: 0 0 0 16px !important;
+}
+
+/* head left part */
+#head > .l {
+    min-width: unset;
+}
+
+/* head right part */
+#head > .r {
+    margin-left: 4px;
+    flex: unset;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+}
+#head > .r::before {
+    content: "";
+    margin-left: auto;
+}
+#head > .r > .flex {
+    position: absolute;
+}
+
+.is-electron.is-mac .is-plugin-tabs-enabled  .cp__header > .l {
+    padding-left: 0.5rem;
+}
+
+/* html.is-mac body:not(.is-pdf-active):not(.is-plugin-tabs-enabled) #head > .r > .flex {
+    left: calc(-1 * var(--ls-left-sidebar-width) + 178px);
+} */
