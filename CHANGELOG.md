@@ -1,3 +1,10 @@
+## [1.6.12](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.11...v1.6.12) (2023-02-11)
+
+
+### Bug Fixes
+
+* **header:** macOS left spacing ([700da20](https://github.com/yoyurec/logseq-awesome-ui/commit/700da20f44aa018823978a78ea76de99f95bdfb3))
+
 ## [1.6.11](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.10...v1.6.11) (2023-02-09)
 
 
