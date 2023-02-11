@@ -35,17 +35,19 @@
 * 👓 Hide page props: all .dotProps or specified in list
 
 
-## Install plugin in app
+## Installation
+
+### Plugin in desktop app
 
 From Logseq store - `Plugins -> Marketplace`
 
 ![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/market.png)
 
-## Install styles in mobile app
+### Just CSS styles (for mobile app)
 Just content components styles, no header/sidebars/search/etc UI changes.
 Paste to your `custom.css`:
 ```css
-@import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/awesomeUI-content.css") only screen and (max-width: 1024px);
+@import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/awesomeUI-cdn.css") only screen and (max-width: 1024px);
 ```
 
 
