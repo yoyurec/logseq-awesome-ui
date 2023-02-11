@@ -1,3 +1,10 @@
+## [1.6.13](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.12...v1.6.13) (2023-02-11)
+
+
+### Bug Fixes
+
+* **styles:** add CDN for mobile imports ([d6e1f9d](https://github.com/yoyurec/logseq-awesome-ui/commit/d6e1f9ddab8a7d61c05cc63e8efd5478e40be32b))
+
 ## [1.6.12](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.11...v1.6.12) (2023-02-11)
 
 
