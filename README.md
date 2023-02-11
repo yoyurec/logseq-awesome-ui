@@ -3,6 +3,10 @@
 ### 🎨 To customize UI & content text/bg colors, install ["Awesome Styler" plugin!](https://github.com/yoyurec/logseq-awesome-styler)
 ![](https://github.com//yoyurec/logseq-awesome-styler/raw/main/screenshots/market.png)
 
+## If you ❤ what i'm doing - you can support my work! ☕
+
+<a href="https://www.buymeacoffee.com/yoyurec"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=yoyurec&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" /></a>
+
 <h1 align="center">"Awesome UI" plugin for Logseq</h1>
 <p align="center">
     <a href="https://github.com/yoyurec/logseq-awesome-ui">
@@ -30,14 +34,20 @@
 * ⚙ Simplified, less noise and compact Logseq plugins settings popup
 * 👓 Hide page props: all .dotProps or specified in list
 
-## If you ❤ what i'm doing - you can support my work! ☕
 
-<a href="https://www.buymeacoffee.com/yoyurec"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=yoyurec&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" /></a>
+## Install plugin in app
 
-## Install plugin
 From Logseq store - `Plugins -> Marketplace`
 
 ![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/market.png)
+
+## Install styles in mobile app
+Just content components styles, no header/sidebars/search/etc UI changes.
+Paste to your `custom.css`:
+```css
+@import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/awesomeUI-content.css") only screen and (max-width: 1024px);
+```
+
 
 ## Recommended plugins/themes
 * 🎨 [Awesome Styler](https://github.com/yoyurec/logseq-awesome-styler) theme

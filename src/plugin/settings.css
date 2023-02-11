@@ -5,6 +5,7 @@
     margin: 0 12px 0 32px;
 }
 
+
 /*
   >>> BEGIN: Settings icons
 */
@@ -59,7 +60,8 @@
     content: "\ee21";
 }
 
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureHideDotProps"] small::before {
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureHideDotProps"] small::before,
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureHideSetOfProps"] small::before {
     content: "\f181";
 }
 

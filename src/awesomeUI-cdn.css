@@ -1,0 +1,25 @@
+/* All */
+/* @import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/awesomeUI-content.css") only screen and (max-width: 1024px); */
+
+/* Components */
+
+@import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/modules/content/content.css") only screen and (max-width: 1024px);
+
+@import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/modules/content/pages/pages.css") only screen and (max-width: 1024px);
+
+@import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/modules/content/admonition/admonition.css") only screen and (max-width: 1024px);
+
+@import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/modules/content/calculator/calculator.css") only screen and (max-width: 1024px);
+
+@import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/modules/content/columns/columns.css") only screen and (max-width: 1024px);
+
+@import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/modules/content/flashcard/flashcardAwesome.css") only screen and (max-width: 1024px);
+
+@import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/modules/content/headersLabels/headersLabels.css") only screen and (max-width: 1024px);
+
+/* TODO: disabled for now  - weird look on mobile */
+/* @import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/modules/content/query/query.css") only screen and (max-width: 1024px); */
+
+@import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/modules/content/quote/quote.css") only screen and (max-width: 1024px);
+
+@import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/modules/content/tasks/tasks.css") only screen and (max-width: 1024px);
