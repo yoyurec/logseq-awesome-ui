@@ -1,4 +1,4 @@
-import { doc } from '../../globals/globals';
+import { doc, body } from '../../globals/globals';
 
 import './sidebars.css';
 
@@ -14,11 +14,10 @@ export const rightSidebarLoad = async () => {
 
 export const rightSidebarUnload = async () => {
     const hideRightSidebarButton = doc.querySelector('#head .hide-right-sidebar-button');
-    const rightToolbarPlaceholder = doc.querySelector('.cp__right-sidebar-topbar div:last-child div');
+    const rightToolbarPlaceholder = doc.querySelector('.cp__right-sidebar-topbar');
     if (rightToolbarPlaceholder && hideRightSidebarButton) {
         rightToolbarPlaceholder.insertAdjacentElement('beforeend', hideRightSidebarButton);
-    }
-}
+    }}
 
 export const reorderRightSidebarToggleButton = (visible: boolean) => {
     if (visible) {
@@ -33,7 +32,22 @@ export const reorderRightSidebarToggleButton = (visible: boolean) => {
     }
 }
 
+export const origRightSidebarToggleButton = (visible: boolean) => {
+    if (visible) {
+        const hideRightSidebarButton = doc.querySelector('#right-sidebar .toggle-right-sidebar');
+        const headToolbar = doc.querySelector('.cp__right-sidebar-topbar');
+        if (headToolbar && hideRightSidebarButton) {
+            headToolbar.insertAdjacentElement('beforeend', hideRightSidebarButton);
+        }
+    }// else {
+    //     doc.querySelector('#head .hide-right-sidebar-button')?.remove();
+    // }
+}
+
 // Sidebar toggled
 const onSidebarVisibleChangedCallback = (visible: boolean) => {
+    if (!body.classList.contains('is-awUi-enabled')) {
+        return;
+    }
     reorderRightSidebarToggleButton(visible);
 }

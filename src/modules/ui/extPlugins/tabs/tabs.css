@@ -1,10 +1,6 @@
 /*
   >>> BEGIN: Tabs plugin
 */
-.is-plugin-tabs-enabled {
-    --awUI-tabs-height: 40px;
-}
-
 #logseq-tabs_lsp_main {
     height: var(--awUI-tabs-height) !important;
     top: 0 !important;

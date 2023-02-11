@@ -7,3 +7,12 @@
 @import url("./modules/content/query/query.css");
 @import url("./modules/content/admonition/admonition.css");
 @import url("./modules/content/calculator/calculator.css");
+
+:root {
+    --awUI-tabs-height: 0px;
+    --awUI-head-height: 48px;
+}
+
+.is-plugin-tabs-enabled {
+    --awUI-tabs-height: 40px;
+}
