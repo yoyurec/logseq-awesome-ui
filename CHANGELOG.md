@@ -1,3 +1,10 @@
+## [1.6.16](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.15...v1.6.16) (2023-02-13)
+
+
+### Bug Fixes
+
+* **tabs:** inject css variables ([a4cddf3](https://github.com/yoyurec/logseq-awesome-ui/commit/a4cddf3792ba374a20095f139b3af21490217fce))
+
 ## [1.6.15](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.14...v1.6.15) (2023-02-13)
 
 
