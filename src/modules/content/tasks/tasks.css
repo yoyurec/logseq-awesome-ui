@@ -8,15 +8,15 @@
     --awUI-purple: #9c739c;
     --awUI-cherry: #c8896a;
 
-    --awUI-marker-waiting: var(--awUI-cherry);
-    --awUI-marker-later: var(--awUI-orange);
-    --awUI-marker-todo: var(--awUI-red);
-    --awUI-marker-now-doing: var(--awUI-blue);
-    --awUI-marker-done: var(--awUI-green);
+    --awUI-marker-waiting: var(--awUI-marker-waiting-user, var(--awUI-cherry));
+    --awUI-marker-later: var(--awUI-marker-later-user, var(--awUI-orange));
+    --awUI-marker-todo: var(--awUI-marker-todo-user, var(--awUI-red));
+    --awUI-marker-now-doing: var(--awUI-marker-now-doing-user, var(--awUI-blue));
+    --awUI-marker-done: var(--awUI-marker-done-user, var(--awUI-green));
 
-    --awUI-priority-a: var(--awUI-red);
-    --awUI-priority-b: var(--awUI-orange);
-    --awUI-priority-c: var(--awUI-green);
+    --awUI-priority-a: var(--awUI-priority-a-user, var(--awUI-red));
+    --awUI-priority-b: var(--awUI-priority-b-user, var(--awUI-orange));
+    --awUI-priority-c: var(--awUI-priority-c-user, var(--awUI-green));
 }
 
 /*

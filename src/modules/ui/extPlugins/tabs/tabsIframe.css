@@ -19,7 +19,7 @@ main .flex {
 }
 .light .logseq-tab[data-active=true],
 .dark .logseq-tab[data-active=true] {
-    color: var(--ls-primary-text-color) !important;
+    color: var(--ls-primary-text-color-alt) !important;
     background-color: var(--ls-secondary-background-color) !important;
     box-shadow: var(--ls-link-text-color) 0px -1px 1px 0px;
     transform: translateY(1px);

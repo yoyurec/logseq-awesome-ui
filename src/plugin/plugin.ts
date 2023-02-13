@@ -10,9 +10,9 @@ import { hidePropsLoad, hidePropsUnload } from '../modules/hideProps/hideProps';
 import { quoteLoad, quoteUnload } from '../modules/content/quote/quote';
 import { wideSearchLoad, wideSearchUnload } from '../modules/ui/search/search';
 import { rightSidebarLoad, rightSidebarUnload } from '../modules/ui/sidebars/sidebars';
-import { tabsPluginLoad, tabsPluginUnload } from '../modules/ui/extPlugins/tabs/tabs';
+import { setTabsCSSVarsStyles, tabsPluginLoad, tabsPluginUnload } from '../modules/ui/extPlugins/tabs/tabs';
 import { tasksLoad, tasksUnload } from '../modules/content/tasks/tasks';
-import { checkUpdate, getInheritedBackgroundColor } from '../modules/utils/utils';
+import { checkPluginUpdate, getInheritedBackgroundColor } from '../modules/utils/utils';
 import { modalObserverLoad, modalObserverUnload } from './modalObserver';
 import { compactSidebarMenuLoad, compactSidebarMenuUnload } from '../modules/ui/compactSidebarMenu/compactSidebarMenu';
 import { headLoad, headUnload } from '../modules/ui/head/head';
@@ -20,6 +20,7 @@ import { headLoad, headUnload } from '../modules/ui/head/head';
 export const pluginLoad = () => {
     body.classList.add(globals.isPluginEnabled);
     registerPlugin();
+
     runStuff();
 
     setTimeout(() => {
@@ -31,7 +32,7 @@ export const pluginLoad = () => {
 
     if (globals.pluginConfig.featureUpdaterEnabled) {
         setTimeout(() => {
-            checkUpdate();
+            checkPluginUpdate();
         }, 8000)
     }
 }
@@ -43,12 +44,27 @@ const pluginUnload = () => {
 }
 
 const registerPlugin = async () => {
+    logseq.provideModel({
+        onThemeChangedCallback: onThemeChangedCallback,
+    });
+
     setTimeout(() => {
         if (doc.head) {
             const logseqCSS = doc.head.querySelector(`link[href="./css/style.css"]`);
             logseqCSS!.insertAdjacentHTML('afterend', `<link rel="stylesheet" id="css-awesomeUI" href="lsp://logseq.io/${globals.pluginID}/dist/assets/awesomeUI.css">`)
         }
     }, 100)
+
+    setTimeout(() => {
+        // Listen for theme activated
+        logseq.App.onThemeChanged(() => {
+            onThemeChangedCallback();
+        });
+        // Listen for theme mode changed
+        logseq.App.onThemeModeChanged(() => {
+            onThemeChangedCallback();
+        });
+    }, 2000)
 }
 
 const unregisterPlugin = () => {
@@ -60,7 +76,6 @@ const runStuff = async () => {
     globals.getDOMContainers();
     setTimeout(() => {
         root.style.setProperty('--awUI-calc-bg', getInheritedBackgroundColor(doc.querySelector('.left-sidebar-inner')).trim());
-        globals.tabsPluginIframe = doc.getElementById('logseq-tabs_iframe') as HTMLIFrameElement;
         setFeaturesCSSVars();
         headLoad();
         wideSearchLoad();
@@ -96,4 +111,11 @@ const stopStuff = () => {
     flashcardUnload();
     calendarUnload();
     hidePropsUnload();
+}
+
+export const onThemeChangedCallback = () => {
+    setTabsCSSVarsStyles();
+    setTimeout(() => {
+        root.style.setProperty('--awUI-calc-bg', getInheritedBackgroundColor(doc.querySelector('.left-sidebar-inner')).trim());
+    }, 500);
 }

@@ -1,44 +1,10 @@
-import { root, doc, body, globals } from '../../../globals/globals';
-import { getInheritedBackgroundColor } from '../../../utils/utils';
+import { doc, body } from '../../../globals/globals';
+import { injectPluginCSS, ejectPluginCSS, getInheritedBackgroundColor } from '../../../utils/utils';
 
 import './tabs.css';
 import tabsIframeStyles from './tabsIframe.css?inline';
 
-setTimeout(() => {
-    // Listen for theme activated
-    logseq.App.onThemeChanged(() => {
-        onStylesChangedCallback();
-    });
-    // Listen for theme mode changed
-    logseq.App.onThemeModeChanged(() => {
-        onStylesChangedCallback();
-    });
-}, 2000)
-
-const onStylesChangedCallback = () => {
-    setTabsStyles();
-}
-
-// Add styles to TabsPlugin
-const injectCssToPlugin = (iframeEl: HTMLIFrameElement, cssContent: string, id: string) => {
-    const pluginDocument = iframeEl.contentDocument;
-    if (pluginDocument) {
-        pluginDocument.head.insertAdjacentHTML(
-            'beforeend',
-            `<style id='${id}'>
-                ${cssContent}
-            </style>`
-        );
-    }
-}
-const removeCssFromPlugin = (iframeEl: HTMLIFrameElement, id: string) => {
-    const pluginDocument = iframeEl.contentDocument;
-    if (pluginDocument) {
-        pluginDocument.getElementById(id)?.remove();
-    }
-}
-
-const tabsPluginCSSVars = (): string => {
+const getTabsPluginCSSVars = (): string => {
     const link = doc.createElement('a');
     body.insertAdjacentElement('beforeend', link);
     const linkColor = getComputedStyle(link).color.trim();
@@ -46,6 +12,7 @@ const tabsPluginCSSVars = (): string => {
     return `
         :root {
             --ls-primary-text-color:${getComputedStyle(doc.querySelector('.cp__sidebar-main-content')!).color.trim()};
+            --ls-primary-text-color-alt:${getComputedStyle(doc.querySelector('#left-sidebar .nav-header > div a span')!).color.trim()};
             --ls-link-text-color:${linkColor};
             --ls-primary-background-color:${getInheritedBackgroundColor(doc.querySelector('.cp__sidebar-main-content')).trim()};
             --ls-secondary-background-color:${getInheritedBackgroundColor(doc.querySelector('.left-sidebar-inner')).trim()};
@@ -53,39 +20,33 @@ const tabsPluginCSSVars = (): string => {
     `
 }
 
-export const tabPluginInjectCSS = (tabsPluginIframe: HTMLIFrameElement) => {
-    setTimeout(() => {
-        removeCssFromPlugin(tabsPluginIframe, 'tabs-styles');
-        injectCssToPlugin(tabsPluginIframe, tabsIframeStyles, 'tabs-styles');
-    }, 400);
-}
-export const tabPluginInjectCSSVars = (tabsPluginIframe: HTMLIFrameElement) => {
-    setTimeout(() => {
-        removeCssFromPlugin(tabsPluginIframe, 'tabs-vars');
-        injectCssToPlugin(tabsPluginIframe, tabsPluginCSSVars(), 'tabs-vars');
-    }, 800)
-}
-const tabsPluginEjectCSS = (tabsPluginIframe: HTMLIFrameElement) => {
-    removeCssFromPlugin(tabsPluginIframe, 'tabs-styles');
-    removeCssFromPlugin(tabsPluginIframe, 'tabs-vars');
-}
-
 // First init run
 export const tabsPluginLoad = async () => {
-    if (globals.tabsPluginIframe) {
-        tabPluginInjectCSS(globals.tabsPluginIframe);
-        tabPluginInjectCSSVars(globals.tabsPluginIframe);
+    const tabsPluginIframe = doc.getElementById('logseq-tabs_iframe') as HTMLIFrameElement;
+    if (!tabsPluginIframe) {
+        return;
     }
+    setTimeout(() => {
+        injectPluginCSS('logseq-tabs_iframe', 'awUi-tabs-styles', tabsIframeStyles);
+    }, 400);
+    setTabsCSSVarsStyles();
 }
 export const tabsPluginUnload = () => {
-    if (globals.tabsPluginIframe) {
-        tabsPluginEjectCSS(globals.tabsPluginIframe);
-    }
+        ejectPluginCSS('logseq-tabs_iframe', 'awUi-tabs-styles');
+        ejectPluginCSS('logseq-tabs_iframe', 'awUi-tabs-vars');
 }
 
-export const setTabsStyles = () => {
-    root.style.setProperty('--awUI-calc-bg', getInheritedBackgroundColor(doc.querySelector('.left-sidebar-inner')).trim());
-    if (globals.tabsPluginIframe) {
-        tabPluginInjectCSSVars(globals.tabsPluginIframe);
+export const setTabsCSSVarsStyles = () => {
+    const tabsPluginIframe = doc.getElementById('logseq-tabs_iframe') as HTMLIFrameElement;
+    if (!tabsPluginIframe) {
+        return;
     }
+    tabsPluginIframe.style.visibility = 'hidden';
+    setTimeout(() => {
+        const tabsCSSVars = getTabsPluginCSSVars();
+        injectPluginCSS('logseq-tabs_iframe', 'awUi-tabs-vars', tabsCSSVars);
+        setTimeout(() => {
+            tabsPluginIframe.style.visibility = 'visible';
+        }, 100)
+    }, 1000);
 }

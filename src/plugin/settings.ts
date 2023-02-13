@@ -13,7 +13,7 @@ import { setFeaturesCSSVars } from '../modules/ui/features/features';
 import { toggleContentFlashcard } from '../modules/content/flashcard/flashcard';
 import { toggleHeadersLabelsFeature } from '../modules/content/headersLabels/headersLabels';
 import { toggleHideDotPropsFeature, toggleHideSetOfPropsFeature } from '../modules/hideProps/hideProps';
-import { objectDiff } from '../modules/utils/utils';
+import { objectsKeysDiff } from '../modules/utils/utils';
 
 import './settings.css';
 
@@ -30,41 +30,45 @@ export const settingsLoad = () => {
 // Setting changed
 export const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings'], oldSettings: LSPluginBaseInfo['settings']) => {
     globals.pluginConfig = { ...settings };
-    const settingsDiff = objectDiff({ ...oldSettings }, globals.pluginConfig)
-    console.log(`AwesomeUI: settings changed:`, settingsDiff);
+    const settingsChangedKey = objectsKeysDiff({ ...oldSettings }, globals.pluginConfig)
+    if (!settingsChangedKey.length) {
+        return;
+    }
+    console.log(`AwesomeUI: settings changed:`, settingsChangedKey);
 
-    if (settingsDiff.includes('featureWideSearchEnabled')) {
+    if (settingsChangedKey.includes('featureWideSearchEnabled')) {
         toggleWideSearchFeature();
     }
-    if (settingsDiff.includes('featureTasksEnabled')) {
+    if (settingsChangedKey.includes('featureTasksEnabled')) {
         toggleTasksFeature();
     }
-    if (settingsDiff.includes('featureColumnsEnabled')) {
+    if (settingsChangedKey.includes('featureColumnsEnabled')) {
         toggleColumnsFeature();
     }
-    if (settingsDiff.includes('featureQuoteEnabled')) {
+    if (settingsChangedKey.includes('featureQuoteEnabled')) {
         toggleQuoteFeature();
     }
-    if (settingsDiff.includes('contentFlashcard')) {
+    if (settingsChangedKey.includes('contentFlashcard')) {
         toggleContentFlashcard();
     }
-    if (settingsDiff.includes('featureHeadersLabelsEnabled')) {
+    if (settingsChangedKey.includes('featureHeadersLabelsEnabled')) {
         toggleHeadersLabelsFeature();
     }
-    if (settingsDiff.includes('featureCalendarEnabled')) {
+    if (settingsChangedKey.includes('featureCalendarEnabled')) {
         toggleCalendarFeature();
     }
-    if (settingsDiff.includes('featureCompactSidebarMenuEnabled')) {
+    if (settingsChangedKey.includes('featureCompactSidebarMenuEnabled')) {
         toggleCompactSidebarMenuFeature();
     }
-    if (settingsDiff.includes('featureHideDotProps')) {
+    if (settingsChangedKey.includes('featureHideDotProps')) {
         toggleHideDotPropsFeature();
     }
-    if (settingsDiff.includes('featureHideSetOfProps')) {
+    if (settingsChangedKey.includes('featureHideSetOfProps')) {
         toggleHideSetOfPropsFeature();
     }
-    if (settingsDiff.includes('featureAwesomeProps')) {
+    if (settingsChangedKey.includes('featureAwesomeProps')) {
         toggleAwesomePropsFeature();
     }
+
     setFeaturesCSSVars();
 }

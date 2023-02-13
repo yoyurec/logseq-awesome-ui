@@ -1,8 +1,8 @@
 import { packageVersion } from '../../../.version';
 
-import { globals } from '../globals/globals';
+import { doc, globals } from '../globals/globals';
 
-export const objectDiff = (orig: object, updated: object) => {
+export const objectsKeysDiff = (orig: object, updated: object) => {
     const difference = Object.keys(orig).filter((key) => {
         if (key === 'presetCustom') {
             return false
@@ -24,7 +24,7 @@ export const getInheritedBackgroundColor = (el: Element | null): string => {
     return getInheritedBackgroundColor(el.parentElement)
 }
 
-export const checkUpdate = async () => {
+export const checkPluginUpdate = async () => {
     const response = await fetch(
         `https://api.github.com/repos/yoyurec/${globals.pluginID}/releases/latest`,
         { headers: { 'Accept': 'application/vnd.github.v3+json' } }
@@ -42,4 +42,26 @@ export const checkUpdate = async () => {
             logseq.UI.showMsg(`"${globals.pluginID}" new version is available! Please, update!`, 'warning', {timeout: 30000});
         }
     }
+}
+
+export const injectPluginCSS = (iframeId: string, label: string, cssContent: string) => {
+    const pluginIframe = doc.getElementById(iframeId) as HTMLIFrameElement;
+    if (!pluginIframe) {
+        return
+    }
+    ejectPluginCSS(iframeId, label);
+    pluginIframe.contentDocument?.head.insertAdjacentHTML(
+        'beforeend',
+        `<style id='${label}'>
+            ${cssContent}
+        </style>`
+    );
+}
+
+export const ejectPluginCSS = (iframeId: string, label: string) => {
+    const pluginIframe = doc.getElementById(iframeId) as HTMLIFrameElement;
+    if (!pluginIframe) {
+        return;
+    }
+    pluginIframe.contentDocument?.getElementById(label)?.remove();
 }
