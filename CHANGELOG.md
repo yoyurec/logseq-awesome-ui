@@ -1,3 +1,10 @@
+## [1.6.15](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.14...v1.6.15) (2023-02-13)
+
+
+### Bug Fixes
+
+* **awesome-props:** background and position, 3rd party themes fixes ([7f474cf](https://github.com/yoyurec/logseq-awesome-ui/commit/7f474cf9c2dd96ba1871799ad22ddf8c9ceb8546))
+
 ## [1.6.14](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.13...v1.6.14) (2023-02-11)
 
 
