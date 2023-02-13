@@ -1,4 +1,4 @@
-import { doc } from '../globals/globals';
+import { doc } from '../../globals/globals';
 import { hideProps } from './hideProps';
 
 let propsChangedObserverConfig: MutationObserverInit;

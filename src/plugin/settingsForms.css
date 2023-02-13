@@ -1,70 +1,4 @@
 /*
-  >>> BEGIN: Settings modal
-*/
-.ui__modal {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-.ui__modal .ui__modal-panel {
-    transition: none;
-}
-.ui__modal .settings-modal {
-    font-size: 16px;
-}
-.ui__modal-overlay > div {
-    opacity: 0.5;
-}
-.is-settings-opened .ui__modal {
-    justify-content: flex-end !important;
-}
-.is-settings-opened .ui__modal-overlay > div {
-    opacity: 0;
-}
-.ui__modal.is-sub-modal .ui__modal-overlay > div {
-    opacity: 0;
-}
-.ui__modal .ui__modal-panel > .absolute {
-    z-index: 10;
-}
-/*
-  <<<< END: Settings modal
-*/
-
-
-/*
-  >>> BEGIN: Settings plugins list
-*/
-.settings-modal .cp__settings-inner aside ul > li > a {
-    padding: 6px 10px;
-}
-.settings-modal .cp__plugins-settings aside ul :is(img, svg) {
-    height: 30px;
-    width: 30px;
-    margin: 0;
-}
-/*
-  <<<< END: Settings plugins list
-*/
-
-
-/*
-  >>> BEGIN: Themes popup
-*/
-.is-themes-opened .ui__modal {
-    justify-content: flex-end;
-}
-.is-themes-opened .ui__modal .panel-content {
-    min-width: unset;
-    width: 400px;
-}
-.cp__themes-installed .text-xs .opacity-60 {
-    display: none;
-}
-/*
-  <<<< END: Themes popup
-*/
-
-
-/*
   >>> BEGIN: Settings form
 */
 html[data-theme="dark"] .ui__modal .ui__button {
@@ -86,7 +20,7 @@ html[data-theme="dark"] .ui__modal .ui__button:hover {
     padding: 8px 8px;
     margin: 0 12px;
 }
-.settings-modal .desc-item+.desc-item {
+.settings-modal .desc-item + .desc-item {
     border-top: 1px solid #88888850;
 }
 .settings-modal .desc-item :is(h2, strong) {

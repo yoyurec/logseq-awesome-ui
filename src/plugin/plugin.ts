@@ -1,18 +1,18 @@
 import { root, doc, body, globals } from '../modules/globals/globals';
 
-import { awesomePropsLoad, awesomePropsLoadUnload } from '../modules/awesomeProps/awesomeProps';
+import { awesomePropsLoad, awesomePropsLoadUnload } from '../modules/ui/awesomeProps/awesomeProps';
 import { calendarLoad, calendarUnload } from '../modules/content/calendar/calendar';
 import { columnsLoad, columnsUnload } from '../modules/content/columns/columns';
 import { setFeaturesCSSVars } from '../modules/ui/features/features';
 import { flashcardLoad, flashcardUnload } from '../modules/content/flashcard/flashcard';
 import { headersLabelsLoad, headersLabelsUnload } from '../modules/content/headersLabels/headersLabels';
-import { hidePropsLoad, hidePropsUnload } from '../modules/hideProps/hideProps';
+import { hidePropsLoad, hidePropsUnload } from '../modules/ui/hideProps/hideProps';
 import { quoteLoad, quoteUnload } from '../modules/content/quote/quote';
 import { wideSearchLoad, wideSearchUnload } from '../modules/ui/search/search';
 import { rightSidebarLoad, rightSidebarUnload } from '../modules/ui/sidebars/sidebars';
 import { setTabsCSSVarsStyles, tabsPluginLoad, tabsPluginUnload } from '../modules/ui/extPlugins/tabs/tabs';
 import { tasksLoad, tasksUnload } from '../modules/content/tasks/tasks';
-import { checkPluginUpdate, getInheritedBackgroundColor } from '../modules/utils/utils';
+import { checkPluginUpdate, getInheritedBackgroundColor } from '../utils/utils';
 import { modalObserverLoad, modalObserverUnload } from './modalObserver';
 import { compactSidebarMenuLoad, compactSidebarMenuUnload } from '../modules/ui/compactSidebarMenu/compactSidebarMenu';
 import { headLoad, headUnload } from '../modules/ui/head/head';

@@ -1,5 +1,5 @@
 import { doc, body } from '../../../globals/globals';
-import { injectPluginCSS, ejectPluginCSS, getInheritedBackgroundColor } from '../../../utils/utils';
+import { injectPluginCSS, ejectPluginCSS, getInheritedBackgroundColor } from '../../../../utils/utils';
 
 import './tabs.css';
 import tabsIframeStyles from './tabsIframe.css?inline';

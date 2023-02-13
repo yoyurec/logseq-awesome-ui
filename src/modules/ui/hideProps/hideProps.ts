@@ -1,4 +1,4 @@
-import { doc, globals } from '../globals/globals';
+import { doc, globals } from '../../globals/globals';
 
 import { propsChangedObserverInit, propsChangedObserverRun, propsChangedObserverStop } from './propsObserver';
 

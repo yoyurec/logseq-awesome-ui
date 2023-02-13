@@ -121,7 +121,7 @@ export const settingsConfig: SettingSchemaDesc[] = [
         type: 'enum',
         enumPicker: 'radio',
         enumChoices: ['Default', 'Awesome', 'Flat'],
-        default: 'awesome',
+        default: 'Awesome',
     },
     {
         key: 'featureHeadersLabelsEnabled',

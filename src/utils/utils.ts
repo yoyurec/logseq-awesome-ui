@@ -1,6 +1,6 @@
-import { packageVersion } from '../../../.version';
+import { packageVersion } from '../../.version';
 
-import { doc, globals } from '../globals/globals';
+import { doc, globals } from '../modules/globals/globals';
 
 export const objectsKeysDiff = (orig: object, updated: object) => {
     const difference = Object.keys(orig).filter((key) => {

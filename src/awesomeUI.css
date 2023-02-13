@@ -16,3 +16,8 @@
 .is-plugin-tabs-enabled {
     --awUI-tabs-height: 40px;
 }
+
+.ui__modal,
+.text-sm {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
