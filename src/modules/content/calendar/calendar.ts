@@ -5,6 +5,8 @@ import calendarStyles from './calendar.css?inline';
 let sidebarCalendarButton: HTMLElement | null = null;
 let agendaPlugin: HTMLElement | null = null;
 
+const calendarPagePath = '/page/calendar'
+
 const setSidebarWidthVar = () => {
     const leftSidebarWidth = doc.getElementById('left-sidebar')?.getBoundingClientRect()?.width;
     root.style.setProperty('--awUI-calc-left-sidebar-width', `${leftSidebarWidth}px`);
@@ -39,7 +41,7 @@ export const calendarLoad = async () => {
     if (!globals.pluginConfig.featureCalendarEnabled) {
         return;
     }
-    if (window.parent.location.hash === '#/page/calendar.') {
+    if (window.parent.location.hash.toLowerCase() === `#${calendarPagePath}`) {
         setTimeout(() => {
             showCalendar();
         }, 1000);
@@ -48,7 +50,7 @@ export const calendarLoad = async () => {
     const journalsButton = doc.querySelector('.nav-header .journals-nav');
     const calendarButtonHTML = `
         <div class="calendar-nav">
-            <a href="#/page/calendar." class="item group flex items-center text-sm font-medium rounded-md" id="awUI-calendar-menu">
+            <a href="#${calendarPagePath}" class="item group flex items-center text-sm font-medium rounded-md" id="awUI-calendar-menu">
                 <span class="ui__icon ti ls-icon-calendar-time"></span><span class="flex-1">Calendar</span>
                 </a>
         </div>
@@ -71,7 +73,7 @@ export const calendarLoad = async () => {
     }
 
     logseq.App.onRouteChanged(({ path }) => {
-        if (path === '/page/calendar.') {
+        if (path.toLowerCase() === calendarPagePath) {
             showCalendar();
         } else {
             hideCalendar();

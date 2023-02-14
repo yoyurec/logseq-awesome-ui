@@ -75,8 +75,9 @@ Wide responsive search like in browser!
 ### 📅 Calendar / Agenda plugin support
 
 * custom "Calendar" menu item added (something like if it was added to "Favs", but above, in the main links block)
-* on clicking you will be redirected to route `/page/calendar.` - users without "Agenda" plugin will just see the page.
-* on clicking this menu also "Agenda" toolbar button mimic click triggered - users with "Agenda" will see its own overlay popup, but centered and content-width (not default full-screen). after clicking "Agenda" own close (x) button - you will stay and see "Calendar" page
+* on clicking you will be redirected to `/page/Calendar`
+  * users without "Agenda" plugin will just see the page.
+  * users with "Agenda" plugin will see its own overlay popup, but centered and content-width (not default full-screen). after clicking "Agenda" own close (x) button - you will stay and see "Calendar" page
 
 <img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/calendar.png">
 
