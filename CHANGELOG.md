@@ -1,3 +1,11 @@
+## [1.6.17](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.16...v1.6.17) (2023-02-14)
+
+
+### Bug Fixes
+
+* **calendar:** tabs switching, show calendar onload ([2d793d3](https://github.com/yoyurec/logseq-awesome-ui/commit/2d793d3ac6bc8d1837de241ac38c1fe22b7e950b)), closes [#42](https://github.com/yoyurec/logseq-awesome-ui/issues/42)
+* **tabs:** add hover style ([0a4b9f2](https://github.com/yoyurec/logseq-awesome-ui/commit/0a4b9f285a55cf7a875d06e9a2d6e7487a91fbe4))
+
 ## [1.6.16](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.15...v1.6.16) (2023-02-13)
 
 
