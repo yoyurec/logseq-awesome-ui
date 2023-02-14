@@ -16,7 +16,9 @@ const showCalendar = () => {
     if (agendaPlugin && sidebarCalendarButton) {
         logseq.App.invokeExternalPlugin('logseq-agenda.models.show');
         sidebarCalendarButton.classList.add('active');
-
+        setTimeout(() => {
+            doc.getElementById('logseq-agenda_iframe')?.blur();
+        }, 150);
     }
 }
 
@@ -36,6 +38,11 @@ export const toggleCalendarFeature = () => {
 export const calendarLoad = async () => {
     if (!globals.pluginConfig.featureCalendarEnabled) {
         return;
+    }
+    if (window.parent.location.hash === '#/page/calendar.') {
+        setTimeout(() => {
+            showCalendar();
+        }, 1000);
     }
     logseq.provideStyle({ key: 'awUI-calendar-css', style: calendarStyles });
     const journalsButton = doc.querySelector('.nav-header .journals-nav');
