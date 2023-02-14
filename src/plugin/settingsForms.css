@@ -1,6 +1,11 @@
 /*
   >>> BEGIN: Settings form
 */
+/* close button */
+.ui__modal .ui__modal-panel > .absolute {
+    z-index: 10;
+}
+
 html[data-theme="dark"] .ui__modal .ui__button {
     opacity: 0.8 !important;
 }
