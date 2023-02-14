@@ -1,3 +1,10 @@
+## [1.6.18](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.17...v1.6.18) (2023-02-14)
+
+
+### Bug Fixes
+
+* **calendar:** page path is back to 'page/calendar' ([ec09939](https://github.com/yoyurec/logseq-awesome-ui/commit/ec0993912a71605e606dec24d21d73510ac677b8))
+
 ## [1.6.17](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.16...v1.6.17) (2023-02-14)
 
 
