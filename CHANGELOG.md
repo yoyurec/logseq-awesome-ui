@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.18...v1.7.0) (2023-02-15)
+
+
+### Features
+
+* **props:** extraction to "Awesome" Props plugin ([a7cb777](https://github.com/yoyurec/logseq-awesome-ui/commit/a7cb7772b19a5b8f544bcdb6487a9eeb8a9a02c0))
+
 ## [1.6.18](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.17...v1.6.18) (2023-02-14)
 
 
