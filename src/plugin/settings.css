@@ -63,15 +63,6 @@
     content: "\ee21";
 }
 
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureHideDotProps"] small::before,
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureHideSetOfProps"] small::before {
-    content: "\f181";
-}
-
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureAwesomeProps"] small::before {
-    content: "\ea98";
-}
-
 .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureColumnsEnabled"] small::before {
     content: "\ec3f";
 }

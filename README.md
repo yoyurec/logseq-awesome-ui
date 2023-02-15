@@ -1,7 +1,7 @@
 ## ⚠ ATTENTION!⚠
 
-### 🎨 To customize UI & content text/bg colors, install ["Awesome Styler" plugin!](https://github.com/yoyurec/logseq-awesome-styler)
-![](https://github.com//yoyurec/logseq-awesome-styler/raw/main/screenshots/market.png)
+### 🎨 Awesome properties styles & hiding moved to separated ["Awesome Props" plugin!](https://github.com/yoyurec/logseq-awesome-props)
+![](https://github.com//yoyurec/logseq-awesome-props/raw/main/screenshots/market.png)
 
 ## If you ❤ what i'm doing - you can support my work! ☕
 
@@ -16,13 +16,10 @@
 
 ### ⚡ Reworked, simplified, fixed and pumped-up Logseq! Layout, components, etc...
 
-![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/scr.png)
-
 * ⚡ Changed default UI layout, sidebars
 * ✨ Changed icons, new added
 * 🔥 Redesigned **head** toolbar: navigation arrows on left side, hidden home...
 * 🔍 Redesigned **search** <a href="#-search-panel">🡖</a>
-* 📋 Restyled **page properties**: keys icons aka Notion/Tana style <a href="#-page-properties">🡖</a>
 * 🗂 **"Tabs"** plugin panel was moved to top & auto-recolored to current (ANY) theme <a href="#-tabs-plugin">🡖</a>
 * 📅 **"Calendar"** menu item added with **"Agenda"** plugin support/restyle <a href="#-calendar--agenda-plugin-support">🡖</a>
 * ✅ Colored **tasks** statuses & priorities <a href="#-colored-tasks-statuses--priorities">🡖</a>
@@ -32,8 +29,18 @@
 * 📋 Compact QUERY results header: settings, table toggler <a href="#-compact-query-results-header">🡖</a>
 * 🧮 Redesigned calculator <a href="#-redesigned-calculator">🡖</a>
 * ⚙ Simplified, less noise and compact Logseq plugins settings popup
-* 👓 Hide page props: all .dotProps or specified in list
 
+![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/scr.png)
+
+## Other my plugins/themes
+* 🎨 [Awesome Styler](https://github.com/yoyurec/logseq-awesome-styler)
+* 📋 [Awesome Props](https://github.com/yoyurec/logseq-awesome-props)
+* ⭐ [Awesome Links](https://github.com/yoyurec/logseq-awesome-links)
+* 📌 [Sticky Headers](https://github.com/yoyurec/logseq-sticky-headers)
+* 📰 [Banners](https://github.com/yoyurec/logseq-banners-plugin)
+
+## Recommended plugins
+* [Tabs](https://github.com/pengx17/logseq-plugin-tabs)
 
 ## Installation
 
@@ -49,15 +56,6 @@ Paste to your `custom.css`:
 ```css
 @import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/awesomeUI-cdn.css") only screen and (max-width: 1024px);
 ```
-
-
-## Recommended plugins/themes
-* 🎨 [Awesome Styler](https://github.com/yoyurec/logseq-awesome-styler) theme
-* ⭐ [Awesome Links](https://github.com/yoyurec/logseq-awesome-links)
-* 📌 [Sticky Headers](https://github.com/yoyurec/logseq-sticky-headers)
-* 📰 [Banners](https://github.com/yoyurec/logseq-banners-plugin)
-* [Tabs](https://github.com/pengx17/logseq-plugin-tabs)
-
 
 ## Features
 ![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/settings-features.png)
@@ -93,52 +91,6 @@ Wide responsive search like in browser!
 <img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/agenda-settings.png" width="600">
 
 </details>
-
-
-### 📋 Page properties
-
-Icons, according to property value or it's (predefined) name.
-Key can contain word (`type` = `page-type`, `item-type`, `task` = `tasks`, etc...)
-<details>
-  <summary>Full list</summary>
-
-* `link`, `links`, `url`, `source`
-* `tags`
-* `alias`
-* `related`
-* `type`
-* `media`
-* `author`, `creator`, `owner`, `who`, `attendee`, `participant`
-* `project`
-* `task`
-* `status`
-* `area`
-* `category`, `topic`
-* `date`, `day`, `week`, `month`, `year`
-* `time`, `duration`
-* `book`, `pdf`
-* `title`
-* `library`
-* `publisher`
-* `location`, `place`
-* `article`
-* `file`
-* `template`
-* `slide`
-* `summary`, `note`
-* `number`, `isbn`
-* `code`
-* `quote`
-* `image`, `cover`, `banner`
-* `rating`, `quality`
-* `level`
-* `price`
-* `size`
-* `lang`, `language`
-
-</details>
-
-![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/awesomeProps.png)
 
 
 ### ✅ Colored tasks statuses & priorities

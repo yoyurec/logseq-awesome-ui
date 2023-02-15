@@ -24,27 +24,6 @@ export const settingsConfig: SettingSchemaDesc[] = [
         default: true,
     },
     {
-        key: 'featureAwesomeProps',
-        title: '',
-        description: 'Enable predefined icons for props? (https://github.com/yoyurec/logseq-awesome-ui#-page-properties)',
-        type: 'boolean',
-        default: true,
-    },
-    {
-        key: 'featureHideDotProps',
-        title: '',
-        description: 'Hide (in view mode) page props started with dot (.propName)?',
-        type: 'boolean',
-        default: true,
-    },
-    {
-        key: 'featureHideSetOfProps',
-        title: '',
-        description: 'Hide own specific page props (comma separated). Delete to disable',
-        type: 'string',
-        default: 'propToHide,propAnother,color,hidetitle,banner',
-    },
-    {
         key: 'featureCompactSidebarMenuEnabled',
         title: '',
         description: 'Compact menu (horizontal, no labels) on left sidebar?',

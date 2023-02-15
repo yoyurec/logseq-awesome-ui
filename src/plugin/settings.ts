@@ -6,13 +6,11 @@ import { toggleWideSearchFeature } from '../modules/ui/search/search';
 import { toggleTasksFeature } from '../modules/content/tasks/tasks';
 import { toggleColumnsFeature } from '../modules/content/columns/columns';
 import { toggleQuoteFeature } from '../modules/content/quote/quote';
-import { toggleAwesomePropsFeature } from '../modules/ui/awesomeProps/awesomeProps';
 import { toggleCalendarFeature } from '../modules/content/calendar/calendar';
 import { toggleCompactSidebarMenuFeature } from '../modules/ui/compactSidebarMenu/compactSidebarMenu';
 import { setFeaturesCSSVars } from '../modules/ui/features/features';
 import { toggleContentFlashcard } from '../modules/content/flashcard/flashcard';
 import { toggleHeadersLabelsFeature } from '../modules/content/headersLabels/headersLabels';
-import { toggleHideDotPropsFeature, toggleHideSetOfPropsFeature } from '../modules/ui/hideProps/hideProps';
 import { objectsKeysDiff } from '../utils/utils';
 
 import './settings.css';
@@ -59,15 +57,6 @@ export const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings']
     }
     if (settingsChangedKey.includes('featureCompactSidebarMenuEnabled')) {
         toggleCompactSidebarMenuFeature();
-    }
-    if (settingsChangedKey.includes('featureHideDotProps')) {
-        toggleHideDotPropsFeature();
-    }
-    if (settingsChangedKey.includes('featureHideSetOfProps')) {
-        toggleHideSetOfPropsFeature();
-    }
-    if (settingsChangedKey.includes('featureAwesomeProps')) {
-        toggleAwesomePropsFeature();
     }
 
     setFeaturesCSSVars();
