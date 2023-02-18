@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.7.0...v1.7.1) (2023-02-18)
+
+
+### Bug Fixes
+
+* **content:** cards and quotes z layer and  position ([a33dd4f](https://github.com/yoyurec/logseq-awesome-ui/commit/a33dd4f5b975a1ebe421a74388e34650b2c05b64))
+
 # [1.7.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.6.18...v1.7.0) (2023-02-15)
 
 
