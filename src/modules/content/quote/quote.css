@@ -2,25 +2,25 @@ blockquote,
 .ls-block[data-refs-self*='"quote"']:not(.pre-block) {
     --ls-guideline-color: transparent;
     position: relative;
-    /* margin: 0px 0 8px 0; */
-    padding: 8px 20px 8px 0;
-    border-radius: 4px;
+    margin: -2px 0 8px 4px;
+    padding: 12px 28px 12px 0;
+    border-left-width: 4px;
     border-left: 4px solid var(--ls-page-blockquote-border-color);
+    border-radius: 4px;
     color: var(--ls-page-blockquote-color);
     background-color: var(--ls-page-blockquote-bg-color);
-    transform: translate(4px, 0);
 }
 
 .ls-block[data-refs-self*='"quote"']:not(.pre-block)::before,
 .ls-block[data-refs-self*='"quote"'] > div  {
-    transform: translateX(-8px);
+    margin-left: -8px;
 }
 
-blockquote .is-paragraph::before,
+blockquote::before,
 .ls-block[data-refs-self*='"quote"']:not(.pre-block) > .flex.flex-row::before {
   position: absolute;
-  top: -10px;
-  right: -20px;
+  top: 1px;
+  right: 7px;
   content: "\ee09";
   font-family: tabler-icons;
   font-size: 20px;
@@ -28,18 +28,9 @@ blockquote .is-paragraph::before,
 }
 
 blockquote {
-  padding: 8px 32px 8px 20px;
-}
-
-blockquote + blockquote,
-.ls-block[data-refs-self*='"quote"']:not(.pre-block) + .ls-block[data-refs-self*='"quote"']:not(.pre-block) {
-  margin-top: 2px;
-}
-
-blockquote .is-paragraph {
   position: relative;
+  padding: 8px 30px 8px 20px;
 }
-
 
 .ls-block[data-refs-self*='"quote"'].selected {
     background-color: var(--ls-block-highlight-color);
