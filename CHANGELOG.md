@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.8.0...v1.8.1) (2023-02-22)
+
+
+### Bug Fixes
+
+* **plugins:** add tags plugin support ([06c7879](https://github.com/yoyurec/logseq-awesome-ui/commit/06c787924af990966e9d22249397691f7cec35b9))
+
 # [1.8.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.7.1...v1.8.0) (2023-02-22)
 
 
