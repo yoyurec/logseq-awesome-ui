@@ -28,12 +28,12 @@
   <<<< END: Doc View Exporter plugin
 */
 
-/*
-  >>> BEGIN: Logseq Graph Analysis
-*/
+/* Logseq Graph Analysis */
 [data-pid="logseq-graph-analysis"].visible {
   z-index: var(--ls-z-index-level-3) !important;
 }
-/*
-  <<<< END: Logseq Graph Analysis
-*/
+
+/* Tags plugin */
+#logseq-tags_iframe {
+  padding-top: calc(var(--awUI-tabs-height) - 8px);
+}
