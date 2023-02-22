@@ -14,6 +14,7 @@ import { checkPluginUpdate, getInheritedBackgroundColor } from '../utils/utils';
 import { modalObserverLoad, modalObserverUnload } from './modalObserver';
 import { compactSidebarMenuLoad, compactSidebarMenuUnload } from '../modules/ui/compactSidebarMenu/compactSidebarMenu';
 import { headLoad, headUnload } from '../modules/ui/head/head';
+import { contentMermaidLoad } from '../modules/content/mermaid/mermaid';
 
 export const pluginLoad = () => {
     body.classList.add(globals.isPluginEnabled);
@@ -85,6 +86,7 @@ const runStuff = async () => {
         columnsLoad();
         quoteLoad();
         flashcardLoad();
+        contentMermaidLoad();
         calendarLoad();
     }, 2000);
     setTimeout(() => {
@@ -104,6 +106,7 @@ const stopStuff = () => {
     columnsUnload();
     quoteUnload();
     flashcardUnload();
+    contentMermaidLoad();
     calendarUnload();
 }
 

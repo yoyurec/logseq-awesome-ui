@@ -30,5 +30,5 @@
 /* line */
 hr {
     margin: 0.7em 0;
-    border-top: 2px dotted var(--ls-border-color);
+    border-top: 2px dotted var(--ls-guideline-color);
 }

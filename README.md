@@ -26,6 +26,7 @@
 * 🚥`#.kanban` & `#.grid` **columns** (no plugin needed) <a href="#-kanban-board">🡖</a>
 * 📝 Redesigned **admonition** blocks <a href="#-redesigned-admonition-blocks">🡖</a>
 * 💬 Custom styled `#quote` <a href="#-blockquotes">🡖</a>
+* 💬 Custom styled Mermaid diagrams <a href="#-diagrams">🡖</a>
 * 📋 Compact QUERY results header: settings, table toggler <a href="#-compact-query-results-header">🡖</a>
 * 🧮 Redesigned calculator <a href="#-redesigned-calculator">🡖</a>
 * ⚙ Simplified, less noise and compact Logseq plugins settings popup
@@ -128,6 +129,11 @@ and check [Logseq template](./extra/Kanban%20template.md)
 Just add `#quote` tag to parent block!
 
 <img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/quote.png" width="740">
+
+### 💬 Diagrams
+ *Mermaid* diagrams redesign - theme related colors, light/dark mode support. Use plugin https://github.com/xyhp915/logseq-fenced-code-plus
+
+<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/mermaid.png" width="740">
 
 ### 📋 Compact QUERY results header
 

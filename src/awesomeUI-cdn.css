@@ -17,6 +17,8 @@
 
 @import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/modules/content/headersLabels/headersLabels.css") only screen and (max-width: 1024px);
 
+@import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/modules/content/mermaid/mermaid.css") only screen and (max-width: 1024px);
+
 /* TODO: disabled for now  - weird look on mobile */
 /* @import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/modules/content/query/query.css") only screen and (max-width: 1024px); */
 

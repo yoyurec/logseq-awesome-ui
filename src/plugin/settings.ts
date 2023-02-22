@@ -1,6 +1,8 @@
 import { LSPluginBaseInfo } from '@logseq/libs/dist/LSPlugin.user';
 
+import { objectsKeysDiff } from '../utils/utils';
 import { globals } from '../modules/globals/globals';
+
 import { settingsConfig } from './settingsConfig';
 import { toggleWideSearchFeature } from '../modules/ui/search/search';
 import { toggleTasksFeature } from '../modules/content/tasks/tasks';
@@ -11,7 +13,7 @@ import { toggleCompactSidebarMenuFeature } from '../modules/ui/compactSidebarMen
 import { setFeaturesCSSVars } from '../modules/ui/features/features';
 import { toggleContentFlashcard } from '../modules/content/flashcard/flashcard';
 import { toggleHeadersLabelsFeature } from '../modules/content/headersLabels/headersLabels';
-import { objectsKeysDiff } from '../utils/utils';
+import { toggleContentMermaid } from '../modules/content/mermaid/mermaid';
 
 import './settings.css';
 
@@ -57,6 +59,9 @@ export const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings']
     }
     if (settingsChangedKey.includes('featureCompactSidebarMenuEnabled')) {
         toggleCompactSidebarMenuFeature();
+    }
+    if (settingsChangedKey.includes('contentMermaid')) {
+        toggleContentMermaid();
     }
 
     setFeaturesCSSVars();

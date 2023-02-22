@@ -110,6 +110,13 @@ export const settingsConfig: SettingSchemaDesc[] = [
         default: true,
     },
     {
+        key: 'contentMermaid',
+        title: '',
+        description: 'Apply theme styles to Mermaid diagrams? (use plugin https://github.com/xyhp915/logseq-fenced-code-plus)',
+        type: 'boolean',
+        default: true,
+    },
+    {
         key: 'otherHeading',
         title: 'Other',
         description: '',
