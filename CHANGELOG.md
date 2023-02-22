@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.7.1...v1.8.0) (2023-02-22)
+
+
+### Features
+
+* **diagrams:** mermaid coloring ([ebbb35f](https://github.com/yoyurec/logseq-awesome-ui/commit/ebbb35fe42ef151773e4c92beb30827f39fbe569))
+
 ## [1.7.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.7.0...v1.7.1) (2023-02-18)
 
 
