@@ -9,7 +9,7 @@
     position: fixed;
     top: var(--awUI-tabs-height) !important;
     z-index: 99;
-    background-color: var(--awUI-calc-bg);
+    background-color: var(--ls-primary-background-color);
 }
 body.is-pdf-active #head {
     left: calc(var(--ph-view-container-width));
