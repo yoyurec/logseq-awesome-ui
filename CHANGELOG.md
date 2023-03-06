@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.8.1...v1.8.2) (2023-03-06)
+
+
+### Bug Fixes
+
+* **header:** temp fix for bg ([58ca699](https://github.com/yoyurec/logseq-awesome-ui/commit/58ca699a163ea6f290e4d6f1afc8e715b286406b))
+
 ## [1.8.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.8.0...v1.8.1) (2023-02-22)
 
 
