@@ -47,7 +47,7 @@ const moveHead = () => {
     }
 }
 const moveNavigationButton = () => {
-    const navPanel = doc.querySelector('#head .navigation.nav-left.button')?.parentElement;
+    const navPanel = doc.querySelector('#head .r .flex.flex-row');
     if (navPanel) {
         const leftSidebarToggler = doc.getElementById('left-menu');
         if (leftSidebarToggler) {
