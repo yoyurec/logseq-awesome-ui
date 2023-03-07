@@ -1,7 +1,7 @@
 ## ⚠ ATTENTION!⚠
 
 ### 🎨 Awesome content blocks styles moved to separated ["Awesome Content" plugin!](https://github.com/yoyurec/logseq-awesome-content)
-![](https://github.com//yoyurec/logseq-awesome-props/raw/main/screenshots/market.png)
+![](https://github.com//yoyurec/logseq-awesome-content/raw/main/screenshots/market.png)
 
 ### 🎨 Awesome properties styles & hiding moved to separated ["Awesome Props" plugin!](https://github.com/yoyurec/logseq-awesome-props)
 ![](https://github.com//yoyurec/logseq-awesome-props/raw/main/screenshots/market.png)
