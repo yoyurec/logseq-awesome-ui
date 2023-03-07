@@ -1,3 +1,10 @@
+## [2.0.7](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.6...v2.0.7) (2023-03-07)
+
+
+### Bug Fixes
+
+* **loaders:** proper togglers ([ebd18ef](https://github.com/yoyurec/logseq-awesome-ui/commit/ebd18ef383ed6d2d219647bfee37415a5f6a2311))
+
 ## [2.0.6](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.5...v2.0.6) (2023-03-07)
 
 
