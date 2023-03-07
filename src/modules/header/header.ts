@@ -49,7 +49,7 @@ const moveHead = () => {
 const moveNavigationButton = () => {
     const navPanel = doc.querySelector('#head .r .flex.flex-row');
     if (navPanel) {
-        const leftSidebarToggler = doc.getElementById('left-menu');
+        const leftSidebarToggler = doc.querySelector('#head .l')?.firstElementChild;
         if (leftSidebarToggler) {
             leftSidebarToggler.insertAdjacentElement('afterend', navPanel);
         }
