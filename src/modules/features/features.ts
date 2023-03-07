@@ -22,8 +22,8 @@ export const setFeaturesCSSVars = () => {
     }
 
     if (globals.pluginConfig.alwaysShowNewBlockBullet) {
-        root.style.removeProperty('--awUI-new-bullet-hidden');
-    } else {
         root.style.setProperty('--awUI-new-bullet-hidden', 'none');
+    } else {
+        root.style.removeProperty('--awUI-new-bullet-hidden');
     }
 }
