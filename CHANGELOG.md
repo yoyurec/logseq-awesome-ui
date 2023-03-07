@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.4...v2.0.5) (2023-03-07)
+
+
+### Bug Fixes
+
+* **header:** nav buttons ([b2ae56d](https://github.com/yoyurec/logseq-awesome-ui/commit/b2ae56d4f6d9098deb1100c2b02b249f848b63e7))
+
 ## [2.0.4](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.3...v2.0.4) (2023-03-07)
 
 
