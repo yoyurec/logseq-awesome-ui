@@ -1,3 +1,10 @@
+## [2.0.8](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.7...v2.0.8) (2023-03-07)
+
+
+### Bug Fixes
+
+* **content:** + button settings ([911738e](https://github.com/yoyurec/logseq-awesome-ui/commit/911738e5caac0a68e9ee4cf15cfe080bf9dd5693))
+
 ## [2.0.7](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.6...v2.0.7) (2023-03-07)
 
 
