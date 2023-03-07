@@ -1,3 +1,10 @@
+## [2.0.6](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.5...v2.0.6) (2023-03-07)
+
+
+### Bug Fixes
+
+* **sidebar:** add page button position ([94befe1](https://github.com/yoyurec/logseq-awesome-ui/commit/94befe1d80e22cae16b06ca69c57d4e178fb8461))
+
 ## [2.0.5](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.4...v2.0.5) (2023-03-07)
 
 
