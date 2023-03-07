@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.1...v2.0.2) (2023-03-07)
+
+
+### Bug Fixes
+
+* **tabs:** add plugin detection ([809f305](https://github.com/yoyurec/logseq-awesome-ui/commit/809f305e35e61742bae44f983df8ec4fdcdf9114))
+
 ## [2.0.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.0...v2.0.1) (2023-03-07)
 
 
