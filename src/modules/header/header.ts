@@ -5,17 +5,17 @@ import './header.css';
 import { wideSearchLoad, wideSearchUnload } from './wideSearch/wideSearch';
 import { compactHeaderUnload, compactHeaderLoad } from './compactHeader/compactHeader';
 
-export const headerLoad = async () => {
+export const headerLoad = () => {
     moveHead();
     moveNavigationButton();
     toggleHeaderVariant();
 }
 
-export const headerUnload = async () => {
+export const headerUnload = () => {
     headerVariantUnload();
 }
 
-export const toggleHeaderVariant = async () => {
+export const toggleHeaderVariant = () => {
     switch (globals.pluginConfig.headerVariant) {
         case 'Browser-like (wide search)':
             wideSearchLoad();
@@ -32,7 +32,7 @@ export const toggleHeaderVariant = async () => {
     }
 }
 
-export const headerVariantUnload = async () => {
+export const headerVariantUnload = () => {
     wideSearchUnload();
     compactHeaderUnload();
 }

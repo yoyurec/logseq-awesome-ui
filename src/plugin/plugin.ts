@@ -11,6 +11,8 @@ import { headerLoad, headerUnload } from '../modules/header/header';
 import { headerFlashcardsButtonLoad, headerFlashcardsButtonUnload } from '../modules/header/flashcardsButton/flashcardButton';
 import { hideRightSidebarToolbarLoad, hideRightSidebarToolbarUnload } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
 
+import awUiStyles from '../awesomeUI.css?inline';
+
 export const pluginLoad = () => {
     body.classList.add(globals.isPluginEnabled);
     registerPlugin();
@@ -43,10 +45,12 @@ const registerPlugin = async () => {
     });
 
     setTimeout(() => {
-        if (doc.head) {
-            const logseqCSS = doc.head.querySelector(`link[href="./css/style.css"]`);
-            logseqCSS!.insertAdjacentHTML('afterend', `<link rel="stylesheet" id="css-awesomeUI" href="lsp://logseq.io/${globals.pluginID}/dist/assets/awesomeUI.css">`)
-        }
+        logseq.provideStyle({ key: 'awUI-css', style: awUiStyles });
+        // if (doc.head) {
+        //     const cssPath = document.styleSheets[0].href;
+        //     const logseqCSS = doc.head.querySelector(`link[href="./css/style.css"]`);
+        //     logseqCSS!.insertAdjacentHTML('afterend', `<link rel="stylesheet" id="css-awesomeUI" href="${cssPath}">`)
+        // }
     }, 100)
 
     setTimeout(() => {
@@ -62,7 +66,7 @@ const registerPlugin = async () => {
 }
 
 const unregisterPlugin = () => {
-    doc.getElementById('css-awesomeUI')?.remove();
+    doc.head.querySelector(`style[data-injected-style^="awUI-tabs-css"]`)?.remove();
 }
 
 // Main logic runners

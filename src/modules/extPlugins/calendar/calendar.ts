@@ -15,7 +15,7 @@ export const toggleMenuCalendar = () => {
     }
 }
 
-export const menuCalendarLoad = async () => {
+export const menuCalendarLoad = () => {
     if (!globals.pluginConfig.menuCalendar) {
         return;
     }

@@ -11,9 +11,9 @@ export default defineConfig({
     minify: 'esbuild',
     rollupOptions: {
       output: {
-        entryFileNames: `assets/${name}.js`,
-        chunkFileNames: `assets/chunks/${name}.js`,
-        assetFileNames: `assets/${name}.[ext]`,
+        entryFileNames: `assets/${name}-[hash].js`,
+        chunkFileNames: `assets/chunks/${name}-[hash].js`,
+        assetFileNames: `assets/${name}-[hash].[ext]`,
       }
     }
   }

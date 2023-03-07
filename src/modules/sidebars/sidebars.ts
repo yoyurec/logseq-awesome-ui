@@ -3,7 +3,7 @@ import { doc, body } from '../globals/globals';
 import './sidebars.css';
 
 // Reposition right sidebar toggle button
-export const rightSidebarLoad = async () => {
+export const rightSidebarLoad = () => {
     const toggleRightSidebar = doc.querySelector('#right-sidebar .toggle-right-sidebar');
     reorderRightSidebarToggleButton(toggleRightSidebar ? true : false);
     // Listen sidebar update
@@ -12,7 +12,7 @@ export const rightSidebarLoad = async () => {
     });
 }
 
-export const rightSidebarUnload = async () => {
+export const rightSidebarUnload = () => {
     const hideRightSidebarButton = doc.querySelector('#head .hide-right-sidebar-button');
     const rightToolbarPlaceholder = doc.querySelector('.cp__right-sidebar-topbar');
     if (rightToolbarPlaceholder && hideRightSidebarButton) {
