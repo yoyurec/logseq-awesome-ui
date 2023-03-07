@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.3...v2.0.4) (2023-03-07)
+
+
+### Bug Fixes
+
+* **css:** imports ([1beda45](https://github.com/yoyurec/logseq-awesome-ui/commit/1beda45013aaa39bb37184bb4256d6aa86a77793))
+
 ## [2.0.3](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.2...v2.0.3) (2023-03-07)
 
 
