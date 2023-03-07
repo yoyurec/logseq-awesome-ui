@@ -1,0 +1,89 @@
+:root {
+    --awUI-tabs-height: 36px;
+    --ls-headbar-height: 44px;
+}
+
+/*
+  >>> BEGIN: Layout
+*/
+#root {
+    margin-top: var(--awUI-tabs-height) !important;
+}
+
+#left-sidebar {
+    margin-top: var(--awUI-tabs-height) !important;
+}
+
+#left-sidebar .left-sidebar-inner > .wrap {
+    margin-top: var(--ls-headbar-height) !important;
+}
+
+.sidebar-item-list {
+    height: calc(100vh - var(--ls-headbar-height));
+}
+
+.cp__sidebar-main-content {
+    padding-top: 0 !important;
+}
+/*
+  <<<< END: Layout
+*/
+
+/*
+  >>> BEGIN: Tabs plugin
+*/
+
+#logseq-tabs_iframe {
+    position: static !important;
+    top: unset !important;
+    right: unset !important;
+    bottom: unset !important;
+    left: unset !important;
+    z-index: unset !important;
+    height: var(--awUI-tabs-height) !important;
+}
+
+[data-pid="logseq-tabs"] {
+    position: fixed !important;
+    top: 0 !important;
+    left: unset !important;
+    right: unset !important;
+    bottom: unset !important;
+    z-index: 99 !important;
+    height: var(--awUI-tabs-height) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background-color: var(--awesome-ui-calc-bg, var(--ls-secondary-background-color));
+}
+
+.is-mac [data-pid="logseq-tabs"]::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    content: '';
+    width: 84px;
+    height: var(--awUI-tabs-height);
+    border-bottom: 1px solid #80808080;
+}
+.is-mac [data-pid="logseq-tabs"] {
+    left: 84px !important;
+}
+
+body.is-pdf-active [data-pid="logseq-tabs"] {
+    left: calc(var(--ph-view-container-width)) !important;
+}
+
+
+html.is-mac.is-fullscreen [data-pid="logseq-tabs"],
+html.is-mac .is-pdf-active [data-pid="logseq-tabs"] {
+    left: 0 !important;
+}
+html.is-mac.is-fullscreen [data-pid="logseq-tabs"]::before,
+html.is-mac .is-pdf-active [data-pid="logseq-tabs"]::before {
+    display: none;
+}
+
+/*
+  <<<< END: Tabs plugin
+*/

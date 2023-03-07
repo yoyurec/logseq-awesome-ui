@@ -1,7 +1,11 @@
 ## ⚠ ATTENTION!⚠
 
+### 🎨 Awesome content blocks styles moved to separated ["Awesome Content" plugin!](https://github.com/yoyurec/logseq-awesome-content)
+![](https://github.com//yoyurec/logseq-awesome-props/raw/main/screenshots/market.png)
+
 ### 🎨 Awesome properties styles & hiding moved to separated ["Awesome Props" plugin!](https://github.com/yoyurec/logseq-awesome-props)
 ![](https://github.com//yoyurec/logseq-awesome-props/raw/main/screenshots/market.png)
+
 
 ## If you ❤ what i'm doing - you can support my work! ☕
 
@@ -14,7 +18,7 @@
     </a>
 </p>
 
-### ⚡ Reworked, simplified, fixed and pumped-up Logseq! Layout, components, etc...
+### 🪓 Reworked, simplified, fixed and pumped-up Logseq! Layout, components, etc...
 
 * ⚡ Changed default UI layout, sidebars
 * ✨ Changed icons, new added
@@ -22,41 +26,28 @@
 * 🔍 Redesigned **search** <a href="#-search-panel">🡖</a>
 * 🗂 **"Tabs"** plugin panel was moved to top & auto-recolored to current (ANY) theme <a href="#-tabs-plugin">🡖</a>
 * 📅 **"Calendar"** menu item added with **"Agenda"** plugin support/restyle <a href="#-calendar--agenda-plugin-support">🡖</a>
-* ✅ Colored **tasks** statuses & priorities <a href="#-colored-tasks-statuses--priorities">🡖</a>
-* 🚥`#.kanban` & `#.grid` **columns** (no plugin needed) <a href="#-kanban-board">🡖</a>
-* 📝 Redesigned **admonition** blocks <a href="#-redesigned-admonition-blocks">🡖</a>
-* 💬 Custom styled `#quote` <a href="#-blockquotes">🡖</a>
-* 🔶 Custom styled Mermaid diagrams <a href="#-diagrams">🡖</a>
-* 📋 Compact QUERY results header: settings, table toggler <a href="#-compact-query-results-header">🡖</a>
-* 🧮 Redesigned calculator <a href="#-redesigned-calculator">🡖</a>
 * ⚙ Simplified, less noise and compact Logseq plugins settings popup
 
 ![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/scr.png)
 
 ## Other my plugins/themes
+* 📝 [Awesome Content](https://github.com/yoyurec/logseq-awesome-content)
 * 🎨 [Awesome Styler](https://github.com/yoyurec/logseq-awesome-styler)
 * 📋 [Awesome Props](https://github.com/yoyurec/logseq-awesome-props)
 * ⭐ [Awesome Links](https://github.com/yoyurec/logseq-awesome-links)
-* 📌 [Sticky Headers](https://github.com/yoyurec/logseq-sticky-headers)
 * 📰 [Banners](https://github.com/yoyurec/logseq-banners-plugin)
+* 📌 [Sticky Headers](https://github.com/yoyurec/logseq-sticky-headers)
 
 ## Recommended plugins
 * [Tabs](https://github.com/pengx17/logseq-plugin-tabs)
 
 ## Installation
 
-### Plugin in desktop app
+### Plugin for desktop app
 
 From Logseq store - `Plugins -> Marketplace`
 
 ![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/market.png)
-
-### Just CSS styles (for mobile app)
-Just content components styles, no header/sidebars/search/etc UI changes.
-Paste to your `custom.css`:
-```css
-@import url("https://raw.githack.com/yoyurec/logseq-awesome-ui/main/src/awesomeUI-cdn.css") only screen and (max-width: 1024px);
-```
 
 ## Features
 ![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/settings-features.png)
@@ -92,56 +83,6 @@ Wide responsive search like in browser!
 <img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/agenda-settings.png" width="600">
 
 </details>
-
-
-### ✅ Colored tasks statuses & priorities
-
-<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/tasks.png">
-
-To customize colors - paste code to your `custom.css` file.
-Use your own values, or set default `var(--ls-link-text-color)`
-```css
-:root {
-    --awUI-marker-waiting: ...;
-    --awUI-marker-later: ...;
-    --awUI-marker-todo: ...;
-    --awUI-marker-now-doing: ...;
-    --awUI-marker-done: ...;
-
-    --awUI-priority-a: ...;
-    --awUI-priority-b: ...;
-    --awUI-priority-c: ...;
-}
-```
-
-### 🚥 Kanban board
-Just add `#.kanban` tag to parent block and all children will become columns!
-Recommend additionally to install [Logseq Plugin TODO Master](https://github.com/pengx17/logseq-plugin-todo-master)
-and check [Logseq template](./extra/Kanban%20template.md)
-
-<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/kanban.png" width="740">
-
-### 📝 Redesigned admonition blocks
-
-![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/admonition.png)
-
-### 💬 Blockquotes
-Just add `#quote` tag to parent block!
-
-<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/quote.png" width="740">
-
-### 🔶 Diagrams
- *Mermaid* diagrams redesign - theme related colors, light/dark mode support. Use plugin https://github.com/xyhp915/logseq-fenced-code-plus
-
-<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/mermaid.png" width="740">
-
-### 📋 Compact QUERY results header
-
-![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/queries.png)
-
-### 🧮 Redesigned calculator
-
-<img src="https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/calculator.png">
 
 ## What is Logseq?
 Logseq is a privacy-first, open-source knowledge base. Visit https://logseq.com for more information.

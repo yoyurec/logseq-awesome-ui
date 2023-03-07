@@ -1,0 +1,52 @@
+#right-sidebar .cp__right-sidebar-topbar {
+    display: none;
+}
+
+.cp__sidebar-main-content > div {
+    position: relative;
+}
+
+.cp__sidebar-main-content .cp__right-sidebar-settings-btn {
+    position: absolute;
+    right: 8px;
+    top: 21px;
+    z-index: 1;
+    padding: 0;
+    width: 34px;
+    height: 30px;
+    font-size: 0;
+    font-weight: 400;
+    transition: 0.3s;
+    color: var(--ls-link-text-color);
+    opacity: 0.2;
+}
+
+.cp__sidebar-main-content .cp__right-sidebar-settings-btn:hover {
+    opacity: 1;
+}
+
+.cp__sidebar-main-content .cp__right-sidebar-settings-btn::before {
+    content: '\edff';
+    font-family: 'tabler-icons';
+    font-size: 18px;
+}
+
+.cp__sidebar-main-content .cp__right-sidebar-settings-btn::after {
+    content: 'Show page graph';
+    font-size: 14px;
+    white-space: nowrap;
+    display: none;
+    position: absolute;
+    top: -1.5em;
+    right: 0;
+    transition: 1s;
+    opacity: 0;
+}
+.cp__sidebar-main-content .cp__right-sidebar-settings-btn:hover::after {
+    display: block;
+    opacity: 0.8;
+}
+
+body:is([data-page="whiteboard"], [data-page="all-pages"]) .cp__sidebar-main-content .cp__right-sidebar-settings-btn {
+    display: none;
+}

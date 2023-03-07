@@ -31,96 +31,62 @@
     transform: translateY(1px);
 }
 
+
 .panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="infoHeading"] h2::before {
     content: "\eac5";
 }
 
-.panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="featureHeading"] h2::before {
-    content: "\ea38";
-}
-
-.panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="pageHeading"] h2::before {
+/* Header */
+.panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="headerHeading"] h2::before {
     content: "\ead7";
 }
-
-.panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="contentHeading"] h2::before {
-    content: "\ebb2";
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="tabsOnTop"] small:before {
+    content: "\ea43";
 }
-
-.panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="appUIHeading"] h2::before {
-    content: "\efe6";
-}
-
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureWideSearchEnabled"] small::before {
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="headerVariant"] small::before {
     content: "\eb1c";
 }
-
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureTasksEnabled"] small::before {
-    content: "\eb6a";
-}
-
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureCalendarEnabled"] small::before {
-    content: "\ee21";
-}
-
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureColumnsEnabled"] small::before {
-    content: "\ec3f";
-}
-
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureQuoteEnabled"] small::before {
-    content: "\ee09";
-}
-
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="contentFlashcard"] small::before {
-    content: "\ea38";
-}
-
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureHeadersLabelsEnabled"] small::before {
-    content: "\eb34";
-}
-
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="contentMermaid"] small::before {
-    content: "\ecdf";
-}
-
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureCompactSidebarMenuEnabled"] small::before {
-    content: "\ebf3";
-}
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureHomeButtonEnabled"] small::before {
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="hideHomeButton"] small::before {
     content: "\eac1";
 }
 
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureSidebarNewPageEnabled"] small::before {
+/* Left sidebar */
+.panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="leftSidebarHeading"] h2::before {
+    content: "\eada";
+}
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="compactSidebarMenu"] small::before {
+    content: "\ebf3";
+}
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="menuCalendar"] small::before {
+    content: "\ee21";
+}
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="headerFlashcardsButton"] small::before {
+    content: "\ea38";
+}
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="hideSidebarPageIcons"] small::before {
+    content: "\eaa2";
+}
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="hideAddNewPage"] small::before {
     content: "\eb2a";
 }
 
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureSidebarPageIconEnabled"] small::before {
-    content: "\eaa2";
+/* Right sidebar*/
+.panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="rightSidebarHeading"] h2::before {
+    content: "\ead9";
+}
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="hideRightSidebarToolbar"] small::before {
+    content: "\ead5";
 }
 
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="featureNewBlockBulletEnabled"] small::before {
+/* Content */
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="alwaysShowNewBlockBullet"] small::before {
     content: "\ea69";
 }
 
+/* Other */
 .panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="otherHeading"] h2::before {
     content: "\ea03";
 }
 /*
   <<<< END: Settings icons
 */
-
-
-/* promo */
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="promoAwesomeStyler"] {
-    display: none;
-}
-body:not(.is-awSt-enabled) .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="promoAwesomeStyler"] {
-    display: block;
-}
-.desc-item[data-key="promoAwesomeStyler"] {
-    margin: 0.5em 0 !important;
-    font-size: 1.2em;
-}
-.desc-item[data-key="promoAwesomeStyler"] .form-checkbox {
-    display: none;
-}

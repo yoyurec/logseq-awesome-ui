@@ -1,8 +1,9 @@
-import { body, globals } from '../modules/globals/globals';
+import { body, doc, globals } from '../modules/globals/globals';
 
-import { onSearchModalOpen, onSearchModalClose } from '../modules/ui/search/search';
+import { onSearchModalOpen, onSearchModalClose } from '../modules/header/wideSearch/wideSearch';
 
 // Detect modals opened/closed
+let modalContainer = null;
 let modalObserver: MutationObserver;
 let modalObserverConfig: MutationObserverInit;
 
@@ -55,10 +56,11 @@ export const initModalObserver = () => {
 }
 
 export const runModalObserver = () => {
-    if (!globals.modalContainer) {
+    modalContainer = doc.querySelector('.ui__modal-panel')
+    if (!modalContainer) {
         return;
     }
-    modalObserver.observe(globals.modalContainer, modalObserverConfig);
+    modalObserver.observe(modalContainer, modalObserverConfig);
 };
 
 export const stopModalObserver = () => {

@@ -4,16 +4,13 @@ import { objectsKeysDiff } from '../utils/utils';
 import { globals } from '../modules/globals/globals';
 
 import { settingsConfig } from './settingsConfig';
-import { toggleWideSearchFeature } from '../modules/ui/search/search';
-import { toggleTasksFeature } from '../modules/content/tasks/tasks';
-import { toggleColumnsFeature } from '../modules/content/columns/columns';
-import { toggleQuoteFeature } from '../modules/content/quote/quote';
-import { toggleCalendarFeature } from '../modules/content/calendar/calendar';
-import { toggleCompactSidebarMenuFeature } from '../modules/ui/compactSidebarMenu/compactSidebarMenu';
-import { setFeaturesCSSVars } from '../modules/ui/features/features';
-import { toggleContentFlashcard } from '../modules/content/flashcard/flashcard';
-import { toggleHeadersLabelsFeature } from '../modules/content/headersLabels/headersLabels';
-import { toggleContentMermaid } from '../modules/content/mermaid/mermaid';
+import { toggleHeaderVariant } from '../modules/header/header';
+import { toggleHeaderFlashcardsButton } from '../modules/header/flashcardsButton/flashcardButton';
+import { toggleMenuCalendar } from '../modules/extPlugins/calendar/calendar';
+import { toggleCompactSidebarMenu } from '../modules/sidebars/compactSidebarMenu/compactSidebarMenu';
+import { setFeaturesCSSVars } from '../modules/features/features';
+import { toggleHideRightSidebarToolbar } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
+import { toggleTabs } from '../modules/extPlugins/tabs/tabs';
 
 import './settings.css';
 
@@ -34,34 +31,24 @@ export const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings']
     if (!settingsChangedKey.length) {
         return;
     }
-    console.log(`AwesomeUI: settings changed:`, settingsChangedKey);
 
-    if (settingsChangedKey.includes('featureWideSearchEnabled')) {
-        toggleWideSearchFeature();
+    if (settingsChangedKey.includes('tabsOnTop')) {
+        toggleTabs();
     }
-    if (settingsChangedKey.includes('featureTasksEnabled')) {
-        toggleTasksFeature();
+    if (settingsChangedKey.includes('headerVariant')) {
+        toggleHeaderVariant();
     }
-    if (settingsChangedKey.includes('featureColumnsEnabled')) {
-        toggleColumnsFeature();
+    if (settingsChangedKey.includes('menuCalendar')) {
+        toggleMenuCalendar();
     }
-    if (settingsChangedKey.includes('featureQuoteEnabled')) {
-        toggleQuoteFeature();
+    if (settingsChangedKey.includes('compactSidebarMenu')) {
+        toggleCompactSidebarMenu();
     }
-    if (settingsChangedKey.includes('contentFlashcard')) {
-        toggleContentFlashcard();
+    if (settingsChangedKey.includes('headerFlashcardsButton')) {
+        toggleHeaderFlashcardsButton();
     }
-    if (settingsChangedKey.includes('featureHeadersLabelsEnabled')) {
-        toggleHeadersLabelsFeature();
-    }
-    if (settingsChangedKey.includes('featureCalendarEnabled')) {
-        toggleCalendarFeature();
-    }
-    if (settingsChangedKey.includes('featureCompactSidebarMenuEnabled')) {
-        toggleCompactSidebarMenuFeature();
-    }
-    if (settingsChangedKey.includes('contentMermaid')) {
-        toggleContentMermaid();
+    if (settingsChangedKey.includes('hideRightSidebarToolbar')) {
+        toggleHideRightSidebarToolbar();
     }
 
     setFeaturesCSSVars();

@@ -1,0 +1,25 @@
+#head {
+    background: none !important;
+}
+
+#app-container {
+    margin-top: calc(var(--ls-headbar-height) * -1) !important;
+}
+
+#right-sidebar {
+    border-top: var(--ls-headbar-height) solid var(--awSt-ui-rsidebar-bg, transparent) !important;
+}
+
+#head {
+    pointer-events: none;
+}
+
+#head .l *,
+#head .r * {
+    pointer-events: auto;
+}
+
+[data-pid="logseq-agenda"] {
+    top: var(--awUI-tabs-height, 0px) !important;
+    height: calc(100vh - var(--awUI-tabs-height, 0px)) !important;
+}

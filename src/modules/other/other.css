@@ -1,0 +1,18 @@
+
+.ui__modal,
+.text-sm {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.cp__plugins-page {
+    /* more space to see last row plugins "uninstall" menu item ;) */
+    padding: 1.5rem 2rem 5rem 2rem;
+}
+
+.cp__plugins-page .text-xl {
+    font-size: 16px;
+}
+
+.cp__plugins-item-card > .r .ctl .de .menu-list > li:hover {
+    background-color: var(--ls-secondary-background-color);
+}

@@ -15,10 +15,5 @@ export const globals: globalsType = {
     isPluginEnabled: 'is-awUi-enabled',
     isSearchOpenedClass: 'is-search-opened',
     isThemesOpenedClass: 'is-themes-opened',
-    isSearchEnabledClass: 'awUi-search',
-    promoAwesomeStylerMsg: 'To customize UI & content text/bg colors, install "Awesome Styler" (former "Solarized Extended") theme! https://github.com/yoyurec/logseq-awesome-styler',
-    tabsPluginIframe: null,
-    getDOMContainers() {
-        this.modalContainer = doc.querySelector('.ui__modal-panel');
-    }
+    tabsPluginIframe: null
 };

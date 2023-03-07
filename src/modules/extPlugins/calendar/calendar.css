@@ -1,0 +1,16 @@
+[data-pid="logseq-agenda"] {
+    z-index: 10 !important;
+    width: calc(
+        100%
+        - var(--awUI-calc-left-sidebar-width, var(--ls-left-sidebar-width))
+        - var(--awUI-calc-right-sidebar-width, var(--ls-right-sidebar-width))
+        ) !important;
+    height: calc(100vh - var(--awUI-tabs-height, 0px) - var(--ls-headbar-height)) !important;
+    left: var(--awUI-calc-left-sidebar-width, var(--ls-left-sidebar-width));
+    right: var(--awUI-calc-right-sidebar-width, var(--ls-right-sidebar-width));
+    top: calc(var(--awUI-tabs-height, 0px) + var(--ls-headbar-height)) !important;
+}
+
+#awUI-calendar-menu .ls-icon-calendar-time::before {
+    content: "\ee21";
+}

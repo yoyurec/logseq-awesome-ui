@@ -1,0 +1,8 @@
+#head .flashcards-nav .flex-1 {
+    display: none;
+}
+#head .flashcards-nav .text-xs {
+    margin: 0 0 0 6px;
+    padding: 0;
+    white-space: nowrap;
+}

@@ -1,0 +1,35 @@
+/* Markmap */
+#injected-ui-item-logseq-mark-map-logseq-mark-map .ti {
+  font-size: 18px;
+  line-height: 1.4em;
+}
+
+/*
+  >>> BEGIN: Doc View Exporter plugin
+*/
+/* head toolbar icon */
+.kef-doc-icon {
+  opacity: 0.5 !important;
+}
+
+.kef-doc-icon:hover {
+  background-color: none !important;
+  opacity: 1 !important;
+}
+
+/* exported doc */
+.kef-doc-exported .is-banner-active #banner,
+.kef-doc-exported .is-plugin-tabs-enabled.is-banner-active #banner,
+.kef-doc-exported body:not(.is-banner-active) .cp__sidebar-main-content,
+.kef-doc-exported .is-plugin-tabs-enabled:not(.is-banner-active) .cp__sidebar-main-content {
+    margin-top: 0 !important;
+}
+.kef-doc-exported .theme-inner {
+    overflow: overlay;
+}
+.kef-doc-exported .add-button-link-wrap {
+    display: none;
+}
+/*
+  <<<< END: Doc View Exporter plugin
+*/

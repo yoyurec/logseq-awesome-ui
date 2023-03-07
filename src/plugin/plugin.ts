@@ -1,20 +1,15 @@
-import { root, doc, body, globals } from '../modules/globals/globals';
+import { doc, body, globals } from '../modules/globals/globals';
+import { checkPluginUpdate  } from '../utils/utils';
 
-import { calendarLoad, calendarUnload } from '../modules/content/calendar/calendar';
-import { columnsLoad, columnsUnload } from '../modules/content/columns/columns';
-import { setFeaturesCSSVars } from '../modules/ui/features/features';
-import { flashcardLoad, flashcardUnload } from '../modules/content/flashcard/flashcard';
-import { headersLabelsLoad, headersLabelsUnload } from '../modules/content/headersLabels/headersLabels';
-import { quoteLoad, quoteUnload } from '../modules/content/quote/quote';
-import { wideSearchLoad, wideSearchUnload } from '../modules/ui/search/search';
-import { rightSidebarLoad, rightSidebarUnload } from '../modules/ui/sidebars/sidebars';
-import { setTabsCSSVarsStyles, tabsPluginLoad, tabsPluginUnload } from '../modules/ui/extPlugins/tabs/tabs';
-import { tasksLoad, tasksUnload } from '../modules/content/tasks/tasks';
-import { checkPluginUpdate, getInheritedBackgroundColor } from '../utils/utils';
+import { menuCalendarLoad, menuCalendarUnload } from '../modules/extPlugins/calendar/calendar';
+import { setFeaturesCSSVars } from '../modules/features/features';
+import { rightSidebarLoad, rightSidebarUnload } from '../modules/sidebars/sidebars';
+import { setTabsCSSVarsStyles, toggleTabs, tabsUnload } from '../modules/extPlugins/tabs/tabs';
 import { modalObserverLoad, modalObserverUnload } from './modalObserver';
-import { compactSidebarMenuLoad, compactSidebarMenuUnload } from '../modules/ui/compactSidebarMenu/compactSidebarMenu';
-import { headLoad, headUnload } from '../modules/ui/head/head';
-import { contentMermaidLoad } from '../modules/content/mermaid/mermaid';
+import { compactSidebarMenuLoad, compactSidebarMenuUnload } from '../modules/sidebars/compactSidebarMenu/compactSidebarMenu';
+import { headerLoad, headerUnload } from '../modules/header/header';
+import { headerFlashcardsButtonLoad, headerFlashcardsButtonUnload } from '../modules/header/flashcardsButton/flashcardButton';
+import { hideRightSidebarToolbarLoad, hideRightSidebarToolbarUnload } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
 
 export const pluginLoad = () => {
     body.classList.add(globals.isPluginEnabled);
@@ -29,7 +24,7 @@ export const pluginLoad = () => {
         });
     }, 2000)
 
-    if (globals.pluginConfig.featureUpdaterEnabled) {
+    if (globals.pluginConfig.pluginUpdateNotify) {
         setTimeout(() => {
             checkPluginUpdate();
         }, 8000)
@@ -71,23 +66,16 @@ const unregisterPlugin = () => {
 }
 
 // Main logic runners
-const runStuff = async () => {
-    globals.getDOMContainers();
+const runStuff = () => {
     setTimeout(() => {
-        root.style.setProperty('--awUI-calc-bg', getInheritedBackgroundColor(doc.querySelector('.left-sidebar-inner')).trim());
         setFeaturesCSSVars();
-        headLoad();
-        wideSearchLoad();
+        headerLoad();
         compactSidebarMenuLoad();
-        tabsPluginLoad();
+        headerFlashcardsButtonLoad();
+        hideRightSidebarToolbarLoad();
         modalObserverLoad();
-        tasksLoad();
-        headersLabelsLoad();
-        columnsLoad();
-        quoteLoad();
-        flashcardLoad();
-        contentMermaidLoad();
-        calendarLoad();
+        menuCalendarLoad();
+        toggleTabs();
     }, 2000);
     setTimeout(() => {
         rightSidebarLoad();
@@ -95,24 +83,16 @@ const runStuff = async () => {
 }
 
 const stopStuff = () => {
-    headUnload();
-    wideSearchUnload();
+    headerUnload();
     compactSidebarMenuUnload();
-    tabsPluginUnload();
+    headerFlashcardsButtonUnload();
+    hideRightSidebarToolbarUnload();
     rightSidebarUnload();
     modalObserverUnload();
-    tasksUnload();
-    headersLabelsUnload();
-    columnsUnload();
-    quoteUnload();
-    flashcardUnload();
-    contentMermaidLoad();
-    calendarUnload();
+    menuCalendarUnload();
+    tabsUnload();
 }
 
 export const onThemeChangedCallback = () => {
     setTabsCSSVarsStyles();
-    setTimeout(() => {
-        root.style.setProperty('--awUI-calc-bg', getInheritedBackgroundColor(doc.querySelector('.left-sidebar-inner')).trim());
-    }, 500);
 }
