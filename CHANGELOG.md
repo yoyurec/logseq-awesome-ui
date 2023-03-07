@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.0...v2.0.1) (2023-03-07)
+
+
+### Bug Fixes
+
+* **tabs:** padding on mac ([4d1580b](https://github.com/yoyurec/logseq-awesome-ui/commit/4d1580b6838f06f73b04e193bdc82dd03ab7da15))
+
 # [2.0.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.8.2...v2.0.0) (2023-03-07)
 
 
