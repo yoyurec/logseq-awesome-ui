@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.8.2...v2.0.0) (2023-03-07)
+
+
+### Features
+
+* **all:** content moved to AwesomeContent, layout reworked, compact menus ([b163377](https://github.com/yoyurec/logseq-awesome-ui/commit/b16337701dcfcc3ac7e11578b19cc3091357ab6e))
+
+
+### BREAKING CHANGES
+
+* **all:** total refactoring
+
 ## [1.8.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v1.8.1...v1.8.2) (2023-03-06)
 
 
