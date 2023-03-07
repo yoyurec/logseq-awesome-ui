@@ -16,9 +16,6 @@ export const toggleMenuCalendar = () => {
 }
 
 export const menuCalendarLoad = () => {
-    if (!globals.pluginConfig.menuCalendar) {
-        return;
-    }
     agendaPlugin = doc.getElementById('logseq-agenda_lsp_main') as HTMLElement;
     if (!agendaPlugin) {
         console.log('AwesomeUI: agenda plugin not found!');

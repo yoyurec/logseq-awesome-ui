@@ -1,15 +1,15 @@
 import { doc, body, globals } from '../modules/globals/globals';
 import { checkPluginUpdate  } from '../utils/utils';
 
-import { menuCalendarLoad, menuCalendarUnload } from '../modules/extPlugins/calendar/calendar';
+import { toggleMenuCalendar, menuCalendarUnload } from '../modules/extPlugins/calendar/calendar';
 import { setFeaturesCSSVars } from '../modules/features/features';
 import { rightSidebarLoad, rightSidebarUnload } from '../modules/sidebars/sidebars';
 import { setTabsCSSVarsStyles, toggleTabs, tabsUnload } from '../modules/extPlugins/tabs/tabs';
 import { modalObserverLoad, modalObserverUnload } from './modalObserver';
-import { compactSidebarMenuLoad, compactSidebarMenuUnload } from '../modules/sidebars/compactSidebarMenu/compactSidebarMenu';
+import { toggleCompactSidebarMenu, compactSidebarMenuUnload } from '../modules/sidebars/compactSidebarMenu/compactSidebarMenu';
 import { headerLoad, headerUnload } from '../modules/header/header';
-import { headerFlashcardsButtonLoad, headerFlashcardsButtonUnload } from '../modules/header/flashcardsButton/flashcardButton';
-import { hideRightSidebarToolbarLoad, hideRightSidebarToolbarUnload } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
+import { toggleHeaderFlashcardsButton, headerFlashcardsButtonUnload } from '../modules/header/flashcardsButton/flashcardButton';
+import { toggleHideRightSidebarToolbar, hideRightSidebarToolbarUnload } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
 
 export const pluginLoad = () => {
     body.classList.add(globals.isPluginEnabled);
@@ -70,11 +70,11 @@ const unregisterPlugin = () => {
 const runStuff = () => {
     setTimeout(() => {
         setFeaturesCSSVars();
-        compactSidebarMenuLoad();
-        headerFlashcardsButtonLoad();
-        hideRightSidebarToolbarLoad();
+        toggleCompactSidebarMenu();
+        toggleHeaderFlashcardsButton();
+        toggleHideRightSidebarToolbar();
         modalObserverLoad();
-        menuCalendarLoad();
+        toggleMenuCalendar();
         headerLoad();
         toggleTabs();
     }, 2000);

@@ -11,9 +11,6 @@ export const toggleHeaderFlashcardsButton = () => {
 }
 
 export const headerFlashcardsButtonLoad = () => {
-    if (!globals.pluginConfig.headerFlashcardsButton) {
-        return;
-    }
     const synchButton = doc.querySelector('.cp__file-sync-indicator');
     if (synchButton) {
     const flashcardsButton = doc.querySelector('.flashcards-nav');

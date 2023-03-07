@@ -11,9 +11,6 @@ export const toggleCompactSidebarMenu = () => {
 }
 
 export const compactSidebarMenuLoad = () => {
-    if (!globals.pluginConfig.compactSidebarMenu) {
-        return;
-    }
     logseq.provideStyle({ key: 'awUI-compactSidebarMenu-css', style: compactSidebarMenuStyles });
 }
 
