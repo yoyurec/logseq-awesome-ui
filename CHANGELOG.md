@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.2...v2.0.3) (2023-03-07)
+
+
+### Bug Fixes
+
+* **css:** drop cache ([f40e23e](https://github.com/yoyurec/logseq-awesome-ui/commit/f40e23e0b0bf42a7ef7e05b1f0a59792bfb089a9))
+
 ## [2.0.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.1...v2.0.2) (2023-03-07)
 
 
