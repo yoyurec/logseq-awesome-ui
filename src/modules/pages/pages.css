@@ -101,7 +101,7 @@
 */
 .whiteboard-page {
     padding: 0 !important;
-    height: calc(100% - var(--ls-headbar-height));
+    height: calc(100vh - var(--ls-headbar-height)) !important;
 }
 /*
   <<<< END: Whiteboard page

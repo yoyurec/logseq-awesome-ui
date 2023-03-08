@@ -5,6 +5,7 @@
 #left-sidebar .nav-header {
     flex-direction: row;
     gap: 4px;
+    height: 30px;
 }
 #left-sidebar .nav-header .ui__icon {
     margin: 0;
