@@ -1,3 +1,10 @@
+## [2.0.13](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.12...v2.0.13) (2023-03-08)
+
+
+### Bug Fixes
+
+* **calendar:** button fix ([ab9dbdb](https://github.com/yoyurec/logseq-awesome-ui/commit/ab9dbdb15ce0c5844ba6319cc88e5bcacbf30568))
+
 ## [2.0.12](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.11...v2.0.12) (2023-03-08)
 
 
