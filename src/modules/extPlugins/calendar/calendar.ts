@@ -16,18 +16,19 @@ export const toggleMenuCalendar = () => {
 }
 
 export const menuCalendarLoad = () => {
+    addCalendarButtonToSidebar();
+    logseq.provideStyle({ key: 'awUI-calendar-css', style: calendarStyles });
+    // show on 1st load
+    if (window.parent.location.hash.toLowerCase() === `#${calendarPagePath}`) {
+        setTimeout(() => {
+            showAgendaPlugin();
+        }, 1000);
+    }
+
     agendaPlugin = doc.getElementById('logseq-agenda_lsp_main') as HTMLElement;
     if (!agendaPlugin) {
         console.log('AwesomeUI: agenda plugin not found!');
         return;
-    }
-    logseq.provideStyle({ key: 'awUI-calendar-css', style: calendarStyles });
-    addCalendarButtonToSidebar();
-    // show on 1st load
-    if (window.parent.location.hash.toLowerCase() === `#${calendarPagePath}`) {
-        setTimeout(() => {
-            showCalendar();
-        }, 1000);
     }
 
     sidebarCalendarButton = doc.getElementById('awUI-calendar-menu');
@@ -36,9 +37,9 @@ export const menuCalendarLoad = () => {
     logseq.App.onRouteChanged(({ path }) => {
         if (globals.pluginConfig.menuCalendar) {
             if (path.toLowerCase() === calendarPagePath) {
-                showCalendar();
+                showAgendaPlugin();
             } else {
-                hideCalendar();
+                hideAgendaPlugin();
             }
         }
     });
@@ -54,7 +55,7 @@ export const menuCalendarUnload = () => {
 }
 
 
-const showCalendar = async () => {
+const showAgendaPlugin = async () => {
     setSidebarWidthVar();
     if (agendaPlugin && sidebarCalendarButton) {
         await logseq.App.invokeExternalPlugin('logseq-agenda.models.show');
@@ -65,7 +66,7 @@ const showCalendar = async () => {
     }
 }
 
-const hideCalendar = () => {
+const hideAgendaPlugin = () => {
     logseq.App.invokeExternalPlugin('logseq-agenda.models.hide');
     sidebarCalendarButton?.classList.remove('active');
 }
