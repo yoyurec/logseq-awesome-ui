@@ -20,7 +20,7 @@
 }
 
 /* search popup position */
-.ui__modal[label=ls-modal-search] .ui__modal-panel {
+.ui__modal[label="ls-modal-search"] .ui__modal-panel {
     transition: none !important;
 }
 .is-search-opened .ui__modal {

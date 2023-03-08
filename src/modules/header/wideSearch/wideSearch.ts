@@ -3,7 +3,7 @@ import { doc, body, globals } from '../../globals/globals';
 import wideSearchStyles from './wideSearch.css?inline';
 
 export const onSearchModalOpen = (searchResults: HTMLElement) => {
-    if (!globals.pluginConfig.featureWideSearchEnabled) {
+    if (!(globals.pluginConfig.headerVariant === 'Browser-like (wide search)')) {
         return;
     }
     body.classList.add(globals.isSearchOpenedClass);
