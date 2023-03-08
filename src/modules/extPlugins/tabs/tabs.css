@@ -7,13 +7,21 @@
 /*
   >>> BEGIN: Layout
 */
+#main-content-container {
+    height: calc(100vh - var(--ls-headbar-height) - var(--awUI-tabs-height)) !important;
+}
+
 #left-sidebar .left-sidebar-inner > .wrap {
     margin-top: var(--ls-headbar-height) !important;
     height: calc(100vh - var(--ls-headbar-height) - var(--awUI-tabs-height)) !important;
 }
 
+#right-sidebar {
+    height: calc(100vh - var(--ls-headbar-height) - var(--awUI-tabs-height)) !important;
+}
+
 .sidebar-item-list {
-    height: calc(100vh - var(--ls-headbar-height));
+    height: calc(100vh - var(--ls-headbar-height) - var(--awUI-tabs-height)) !important;
 }
 
 .cp__sidebar-main-content {

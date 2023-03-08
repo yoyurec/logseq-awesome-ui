@@ -21,5 +21,4 @@
 
 [data-pid="logseq-agenda"] {
     top: var(--awUI-tabs-height, 0px) !important;
-    height: calc(100vh - var(--awUI-tabs-height, 0px)) !important;
 }
