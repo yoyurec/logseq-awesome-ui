@@ -1,3 +1,10 @@
+## [2.0.12](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.11...v2.0.12) (2023-03-08)
+
+
+### Bug Fixes
+
+* **search:** wide search checking ([eed34a5](https://github.com/yoyurec/logseq-awesome-ui/commit/eed34a5a23d82a41a98870d1cf898d8ff13cce5b))
+
 ## [2.0.11](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.10...v2.0.11) (2023-03-08)
 
 
