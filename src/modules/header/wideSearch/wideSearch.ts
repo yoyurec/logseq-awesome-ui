@@ -6,10 +6,10 @@ export const onSearchModalOpen = (searchResults: HTMLElement) => {
     if (!(globals.pluginConfig.headerVariant === 'Browser-like (wide search)')) {
         return;
     }
-    body.classList.add(globals.isSearchOpenedClass);
     if (body.classList.contains('is-pdf-active')) {
         return;
     }
+    body.classList.add(globals.isSearchOpenedClass);
     const searchModal = searchResults.closest('.ui__modal') as HTMLElement;
     const searchButton = doc.getElementById('search-button');
     if (!searchButton || !searchModal) {

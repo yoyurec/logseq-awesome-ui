@@ -1,3 +1,15 @@
 #head .l #search-button {
     transform: translateY(1px);
 }
+
+.is-pdf-active button.navigation {
+    display: none;
+}
+
+body.is-pdf-active #head {
+    margin-left: calc(var(--ph-view-container-width)) !important;
+}
+
+body.is-pdf-active #head > .l {
+    min-width: unset;
+}

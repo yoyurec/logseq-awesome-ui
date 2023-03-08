@@ -41,11 +41,6 @@
         margin: -2rem;
     }
 }
-/* pdf */
-body.is-pdf-active.is-search-opened .ui__modal {
-    left: 0;
-    justify-content: flex-end;
-}
 
 .ls-search {
     border-radius: 4px;

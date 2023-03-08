@@ -11,6 +11,10 @@ import { headerLoad, headerUnload } from '../modules/header/header';
 import { toggleHeaderFlashcardsButton, headerFlashcardsButtonUnload } from '../modules/header/flashcardsButton/flashcardButton';
 import { toggleHideRightSidebarToolbar, hideRightSidebarToolbarUnload } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
 
+import '../modules/extPlugins/extPlugins';
+import '../modules/pages/pages';
+import '../modules/other/other';
+
 export const pluginLoad = () => {
     body.classList.add(globals.isPluginEnabled);
     registerPlugin();

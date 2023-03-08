@@ -33,3 +33,13 @@
 /*
   <<<< END: Doc View Exporter plugin
 */
+
+/* Logseq Graph Analysis */
+[data-pid="logseq-graph-analysis"].visible {
+  z-index: var(--ls-z-index-level-3) !important;
+}
+
+/* Tags plugin */
+#logseq-tags_iframe {
+  padding-top: calc(var(--awUI-tabs-height) - 8px);
+}

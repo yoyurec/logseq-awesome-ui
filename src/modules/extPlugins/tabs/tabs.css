@@ -65,19 +65,19 @@
     border-bottom: 1px solid #80808080;
     background-color: var(--ls-secondary-background-color);
 }
+
 .is-mac [data-pid="logseq-tabs"] {
     left: 84px !important;
+}
+
+html.is-mac.is-fullscreen [data-pid="logseq-tabs"] {
+    left: 0 !important;
 }
 
 body.is-pdf-active [data-pid="logseq-tabs"] {
     left: calc(var(--ph-view-container-width)) !important;
 }
 
-
-html.is-mac.is-fullscreen [data-pid="logseq-tabs"],
-html.is-mac .is-pdf-active [data-pid="logseq-tabs"] {
-    left: 0 !important;
-}
 html.is-mac.is-fullscreen [data-pid="logseq-tabs"]::before,
 html.is-mac .is-pdf-active [data-pid="logseq-tabs"]::before {
     display: none;
