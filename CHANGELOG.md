@@ -1,3 +1,10 @@
+## [2.0.14](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.13...v2.0.14) (2023-03-08)
+
+
+### Bug Fixes
+
+* **pdf:** header, tans and search ([d786eae](https://github.com/yoyurec/logseq-awesome-ui/commit/d786eae968ac4c055ca9587aff0f066f2269e602))
+
 ## [2.0.13](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.12...v2.0.13) (2023-03-08)
 
 
