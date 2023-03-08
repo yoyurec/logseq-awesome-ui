@@ -7,7 +7,7 @@ import { compactHeaderUnload, compactHeaderLoad } from './compactHeader/compactH
 
 export const headerLoad = () => {
     moveHead();
-    moveNavigationButton();
+    renderNavigationButton();
     toggleHeaderVariant();
 }
 
@@ -46,12 +46,21 @@ const moveHead = () => {
         }
     }
 }
-const moveNavigationButton = () => {
-    const navPanel = doc.querySelector('#head .r .flex.flex-row');
-    if (navPanel) {
-        const leftSidebarToggler = doc.querySelector('#head .l')?.firstElementChild;
-        if (leftSidebarToggler) {
-            leftSidebarToggler.insertAdjacentElement('afterend', navPanel);
+const renderNavigationButton = () => {
+    const header = doc.getElementById('head');
+    const navPanel = header?.querySelector('.r .flex.flex-row') as HTMLElement;
+    const leftSidebarToggler = header?.querySelector('.l')?.firstElementChild;
+    const navpanelHTML = navPanel?.innerHTML;
+    if (leftSidebarToggler && navpanelHTML) {
+        leftSidebarToggler.insertAdjacentHTML('afterend', navpanelHTML);
+        navPanel.style.display = 'none';
+        const navBack: HTMLButtonElement | null = header?.querySelector('.l .nav-left');
+        const navForward: HTMLButtonElement | null = header?.querySelector('.l .nav-left');
+        const navBackOrig: HTMLButtonElement | null = header?.querySelector('.r .nav-left');
+        const navForwardOrig: HTMLButtonElement | null = header?.querySelector('.r .nav-left');
+        if (navBackOrig && navForwardOrig) {
+            navBack?.addEventListener('click', () => { parent.window.history.back() })
+            navForward?.addEventListener('click', () => { parent.window.history.forward() })
         }
     }
 }

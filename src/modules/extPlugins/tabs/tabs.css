@@ -1,19 +1,12 @@
 :root {
     --awUI-tabs-height: 36px;
     --ls-headbar-height: 44px;
+    --ls-headbar-inner-top-padding: var(--awUI-tabs-height);
 }
 
 /*
   >>> BEGIN: Layout
 */
-#root {
-    margin-top: var(--awUI-tabs-height) !important;
-}
-
-#left-sidebar {
-    margin-top: var(--awUI-tabs-height) !important;
-}
-
 #left-sidebar .left-sidebar-inner > .wrap {
     margin-top: var(--ls-headbar-height) !important;
     height: calc(100vh - var(--ls-headbar-height) - var(--awUI-tabs-height)) !important;
