@@ -1,3 +1,10 @@
+## [2.0.11](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.10...v2.0.11) (2023-03-08)
+
+
+### Bug Fixes
+
+* **nav:** forward ([a4c1c61](https://github.com/yoyurec/logseq-awesome-ui/commit/a4c1c61aaf73a3c526c558a46aa2450e5a196bab))
+
 ## [2.0.10](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.9...v2.0.10) (2023-03-08)
 
 
