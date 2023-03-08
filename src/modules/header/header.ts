@@ -55,12 +55,8 @@ const renderNavigationButton = () => {
         leftSidebarToggler.insertAdjacentHTML('afterend', navpanelHTML);
         navPanel.style.display = 'none';
         const navBack: HTMLButtonElement | null = header?.querySelector('.l .nav-left');
-        const navForward: HTMLButtonElement | null = header?.querySelector('.l .nav-left');
-        const navBackOrig: HTMLButtonElement | null = header?.querySelector('.r .nav-left');
-        const navForwardOrig: HTMLButtonElement | null = header?.querySelector('.r .nav-left');
-        if (navBackOrig && navForwardOrig) {
-            navBack?.addEventListener('click', () => { parent.window.history.back() })
-            navForward?.addEventListener('click', () => { parent.window.history.forward() })
-        }
+        const navForward: HTMLButtonElement | null = header?.querySelector('.l .nav-right');
+        navBack?.addEventListener('click', () => { parent.window.history.back() });
+        navForward?.addEventListener('click', () => { parent.window.history.forward() });
     }
 }
