@@ -1,3 +1,10 @@
+## [2.0.16](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.15...v2.0.16) (2023-03-08)
+
+
+### Bug Fixes
+
+* **external-pligins:** twxt wrapper topsotion ([a98762e](https://github.com/yoyurec/logseq-awesome-ui/commit/a98762ed54575a86d24de0adcd5bfebaa8b39f74))
+
 ## [2.0.15](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.14...v2.0.15) (2023-03-08)
 
 
