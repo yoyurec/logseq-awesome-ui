@@ -1,3 +1,10 @@
+## [2.0.15](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.14...v2.0.15) (2023-03-08)
+
+
+### Bug Fixes
+
+* **whiteboards:** height layout ([fcdcb84](https://github.com/yoyurec/logseq-awesome-ui/commit/fcdcb84fdf8080ed2eeee7aa004417441e765272))
+
 ## [2.0.14](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.13...v2.0.14) (2023-03-08)
 
 
