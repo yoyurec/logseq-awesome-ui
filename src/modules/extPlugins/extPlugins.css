@@ -43,3 +43,13 @@
 #logseq-tags_iframe {
   padding-top: calc(var(--awUI-tabs-height) - 8px);
 }
+
+
+/* >>> BEGIN: TextWrapper plugin
+*/
+#kef-wrap-toolbar {
+  transform: translateY(calc(var(--awUI-tabs-height) * -1));
+}
+/*
+<<<< END: TextWrapper plugin
+*/
