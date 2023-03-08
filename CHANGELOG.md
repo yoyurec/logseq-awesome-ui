@@ -1,3 +1,10 @@
+## [2.0.17](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.16...v2.0.17) (2023-03-08)
+
+
+### Bug Fixes
+
+* **layout:** content & r sidebar height ([b98db55](https://github.com/yoyurec/logseq-awesome-ui/commit/b98db55223eedcaf500ff15492061a1ec2edaf18))
+
 ## [2.0.16](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.15...v2.0.16) (2023-03-08)
 
 
