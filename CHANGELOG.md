@@ -1,3 +1,10 @@
+## [2.0.19](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.18...v2.0.19) (2023-03-09)
+
+
+### Bug Fixes
+
+* **cssvars:** missed ([3592855](https://github.com/yoyurec/logseq-awesome-ui/commit/3592855b72a451006f28c95b0c8d700929fcb717))
+
 ## [2.0.18](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.17...v2.0.18) (2023-03-09)
 
 
