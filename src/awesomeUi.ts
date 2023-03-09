@@ -3,11 +3,11 @@ import '@logseq/libs';
 import { pluginLoad } from './plugin/plugin';
 import { settingsLoad } from './plugin/settings';
 
-import './awesomeUI.css';
+import './awesomeUi.css';
 
 // Main logseq on ready
 const main = async () => {
-    console.log(`AwesomeUI: plugin loaded`);
+    console.log(`AwesomeUi: plugin loaded`);
     settingsLoad();
     pluginLoad();
 };

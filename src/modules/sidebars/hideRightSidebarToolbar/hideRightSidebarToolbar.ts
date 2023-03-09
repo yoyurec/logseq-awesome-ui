@@ -11,7 +11,7 @@ export const toggleHideRightSidebarToolbar = () => {
 }
 
 export const hideRightSidebarToolbarLoad = () => {
-    logseq.provideStyle({ key: 'awUI-hideRightSidebarToolbar-css', style: hiddenRightSidebarToolbarStyles });
+    logseq.provideStyle({ key: '--awUi-hideRightSidebarToolbar-css', style: hiddenRightSidebarToolbarStyles });
     setTimeout(() => {
         moveGraphButtonToTitle();
      }, 500)
@@ -39,5 +39,5 @@ const moveGraphButtonToSidebar = () => {
 
 export const hideRightSidebarToolbarUnload = () => {
     moveGraphButtonToSidebar();
-    doc.head.querySelector(`style[data-injected-style^="awUI-hideRightSidebarToolbar-css"]`)?.remove();
+    doc.head.querySelector(`style[data-injected-style^="--awUi-hideRightSidebarToolbar-css"]`)?.remove();
 }

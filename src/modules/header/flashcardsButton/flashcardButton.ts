@@ -18,7 +18,7 @@ export const headerFlashcardsButtonLoad = () => {
         synchButton.insertAdjacentElement('beforebegin', flashcardsButton);
     }
 }
-    logseq.provideStyle({ key: 'awUI-flashcardsButton-css', style: flashcardsButtonStyles });
+    logseq.provideStyle({ key: '--awUi-flashcardsButton-css', style: flashcardsButtonStyles });
 }
 
 export const headerFlashcardsButtonUnload = () => {
@@ -30,5 +30,5 @@ export const headerFlashcardsButtonUnload = () => {
     if (flashcardsButton) {
         graphButton.insertAdjacentElement('beforebegin', flashcardsButton);
     }
-    doc.head.querySelector(`style[data-injected-style^="awUI-flashcardsButton-css"]`)?.remove();
+    doc.head.querySelector(`style[data-injected-style^="--awUi-flashcardsButton-css"]`)?.remove();
 }

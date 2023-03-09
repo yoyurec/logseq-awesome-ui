@@ -20,11 +20,11 @@ export const toggleTabs = () => {
 }
 
 export const tabsLoad = () => {
-    logseq.provideStyle({ key: 'awUI-tabs-css', style: tabsStyles });
+    logseq.provideStyle({ key: '--awUi-tabs-css', style: tabsStyles });
 }
 
 export const tabsUnload = () => {
-    doc.head.querySelector(`style[data-injected-style^="awUI-tabs-css"]`)?.remove();
+    doc.head.querySelector(`style[data-injected-style^="--awUi-tabs-css"]`)?.remove();
 }
 
 export const tabsPluginLoad = () => {

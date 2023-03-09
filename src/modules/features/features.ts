@@ -4,26 +4,26 @@ import './features.css';
 
 export const setFeaturesCSSVars = () => {
     if (globals.pluginConfig.hideHomeButton) {
-        root.style.setProperty('--awUI-home-button', 'none');
+        root.style.setProperty('--awUi-home-button', 'none');
     } else {
-        root.style.removeProperty('--awUI-home-button');
+        root.style.removeProperty('--awUi-home-button');
     }
 
     if (globals.pluginConfig.hideAddNewPage) {
-        root.style.removeProperty('--awUI-sidebar-new-page');
+        root.style.removeProperty('--awUi-sidebar-new-page');
     } else {
-        root.style.setProperty('--awUI-sidebar-new-page', 'block');
+        root.style.setProperty('--awUi-sidebar-new-page', 'block');
     }
 
     if (globals.pluginConfig.hideSidebarPageIcons) {
-        root.style.removeProperty('--awUI-sidebar-page-icon');
+        root.style.removeProperty('--awUi-sidebar-page-icon');
     } else {
-        root.style.setProperty('--awUI-sidebar-page-icon', 'visible');
+        root.style.setProperty('--awUi-sidebar-page-icon', 'visible');
     }
 
     if (globals.pluginConfig.alwaysShowNewBlockBullet) {
-        root.style.setProperty('--awUI-new-bullet-hidden', 'none');
+        root.style.setProperty('--awUi-new-bullet-hidden', 'none');
     } else {
-        root.style.removeProperty('--awUI-new-bullet-hidden');
+        root.style.removeProperty('--awUi-new-bullet-hidden');
     }
 }

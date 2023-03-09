@@ -10,13 +10,13 @@
     border-radius: 5px;
     border: 1px solid #88888850;
     transition: all .3s;
-    font-family: var(--awUI-font);
+    font-family: var(--awUi-font);
 }
 #search-button::after {
     display: block;
     content: "Search or create page";
     margin: 0 0 0 5px;
-    font-size: calc(var(--awUI-font-size) + 2px);
+    font-size: calc(var(--awUi-font-size) + 2px);
 }
 
 /* search popup position */
@@ -24,7 +24,7 @@
     transition: none !important;
 }
 .is-search-opened .ui__modal {
-    top: calc(var(--awUI-tabs-height, 0px) + 5px);
+    top: calc(var(--awUi-tabs-height, 0px) + 5px);
     padding: 0;
 }
 .is-search-opened .panel-content,
@@ -58,7 +58,7 @@
     top: 1px;
 }
 .ls-search .input-wrap .cp__palette-input {
-    font-size: calc(var(--awUI-font-size) + 2px);
+    font-size: calc(var(--awUi-font-size) + 2px);
     padding: 0 31px 2px 31px;
 }
 

@@ -12,7 +12,7 @@ export const body = doc.body;
 export const globals: globalsType = {
     pluginID: PL.id,
     pluginConfig: null,
-    isPluginEnabled: 'is-awUi-enabled',
+    isPluginEnabled: 'is--awUi-enabled',
     isSearchOpenedClass: 'is-search-opened',
     isThemesOpenedClass: 'is-themes-opened',
     tabsPluginIframe: null

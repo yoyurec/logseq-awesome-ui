@@ -1,27 +1,33 @@
 :root {
-    --awUI-tabs-height: 36px;
-    --ls-headbar-height: 44px;
-    --ls-headbar-inner-top-padding: var(--awUI-tabs-height);
+    --awUi-tabs-height: 36px;
+    --awUi-header-height: 44px;
+    --ls-headbar-inner-top-padding: var(--awUi-tabs-height);
 }
 
 /*
   >>> BEGIN: Layout
 */
 #main-content-container {
-    height: calc(100vh - var(--ls-headbar-height) - var(--awUI-tabs-height)) !important;
+    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
 }
-
 #left-sidebar .left-sidebar-inner > .wrap {
     margin-top: var(--ls-headbar-height) !important;
-    height: calc(100vh - var(--ls-headbar-height) - var(--awUI-tabs-height)) !important;
+    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
 }
 
 #right-sidebar {
-    height: calc(100vh - var(--ls-headbar-height) - var(--awUI-tabs-height)) !important;
+    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
 }
 
 .sidebar-item-list {
-    height: calc(100vh - var(--ls-headbar-height) - var(--awUI-tabs-height)) !important;
+    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
+}
+
+.whiteboard-page {
+    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
+}
+body[data-page="graph"] .graph {
+    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
 }
 
 .cp__sidebar-main-content {
@@ -46,7 +52,7 @@
     bottom: unset !important;
     left: unset !important;
     z-index: unset !important;
-    height: var(--awUI-tabs-height) !important;
+    height: var(--awUi-tabs-height) !important;
 }
 
 [data-pid="logseq-tabs"] {
@@ -56,7 +62,7 @@
     right: unset !important;
     bottom: unset !important;
     z-index: 99 !important;
-    height: var(--awUI-tabs-height) !important;
+    height: var(--awUi-tabs-height) !important;
     width: 100% !important;
     max-width: 100% !important;
     background-color: var(--awesome-ui-calc-bg, var(--ls-secondary-background-color));
@@ -69,7 +75,7 @@
     display: block;
     content: '';
     width: 84px;
-    height: var(--awUI-tabs-height);
+    height: var(--awUi-tabs-height);
     border-bottom: 1px solid #80808080;
     background-color: var(--ls-secondary-background-color);
 }

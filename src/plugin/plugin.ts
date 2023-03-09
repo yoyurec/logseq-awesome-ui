@@ -50,7 +50,7 @@ const registerPlugin = async () => {
         if (doc.head) {
             const cssPath = document.styleSheets[0].href;
             const logseqCSS = doc.head.querySelector(`link[href="./css/style.css"]`);
-            logseqCSS!.insertAdjacentHTML('afterend', `<link rel="stylesheet" id="css-awesomeUI" href="${cssPath}">`)
+            logseqCSS!.insertAdjacentHTML('afterend', `<link rel="stylesheet" id="css-awesomeUi" href="${cssPath}">`)
         }
     }, 100)
 
@@ -67,7 +67,7 @@ const registerPlugin = async () => {
 }
 
 const unregisterPlugin = () => {
-    doc.getElementById('css-awesomeUI')?.remove();
+    doc.getElementById('css-awesomeUi')?.remove();
 }
 
 // Main logic runners

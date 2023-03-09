@@ -1,20 +1,20 @@
 /* hide home button */
 #head .button[title="Home"] {
-    display: var(--awUI-home-button, flex) !important;
+    display: var(--awUi-home-button, flex) !important;
 }
 
 /* add new block (+) bullet */
 .add-button-link {
-    opacity: calc(var(--awUI-new-bullet-hidden, 0) * 1);
+    opacity: calc(var(--awUi-new-bullet-hidden, 0) * 1);
 }
 
 /* sidebar page icon */
 #left-sidebar .left-sidebar-inner .page-icon .ui__icon {
-    visibility: var(--awUI-sidebar-page-icon, hidden) !important;
+    visibility: var(--awUi-sidebar-page-icon, hidden) !important;
 }
 
 /* new page button */
 #left-sidebar .left-sidebar-inner .create {
-    display: var(--awUI-sidebar-new-page, none) !important;
+    display: var(--awUi-sidebar-new-page, none) !important;
     position: fixed;
 }

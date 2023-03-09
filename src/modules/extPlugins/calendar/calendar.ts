@@ -17,7 +17,7 @@ export const toggleMenuCalendar = () => {
 
 export const menuCalendarLoad = () => {
     addCalendarButtonToSidebar();
-    logseq.provideStyle({ key: 'awUI-calendar-css', style: calendarStyles });
+    logseq.provideStyle({ key: '--awUi-calendar-css', style: calendarStyles });
     // show on 1st load
     if (window.parent.location.hash.toLowerCase() === `#${calendarPagePath}`) {
         setTimeout(() => {
@@ -27,11 +27,11 @@ export const menuCalendarLoad = () => {
 
     agendaPlugin = doc.getElementById('logseq-agenda_lsp_main') as HTMLElement;
     if (!agendaPlugin) {
-        console.log('AwesomeUI: agenda plugin not found!');
+        console.log('AwesomeUi: agenda plugin not found!');
         return;
     }
 
-    sidebarCalendarButton = doc.getElementById('awUI-calendar-menu');
+    sidebarCalendarButton = doc.getElementById('--awUi-calendar-menu');
     const leftSidebartoggleBtn = doc.getElementById('left-menu');
     leftSidebartoggleBtn!.addEventListener('click', setSidebarWidthVar);
     logseq.App.onRouteChanged(({ path }) => {
@@ -50,7 +50,7 @@ export const menuCalendarLoad = () => {
 }
 
 export const menuCalendarUnload = () => {
-    doc.head.querySelector(`style[data-injected-style^="awUI-calendar-css"]`)?.remove();
+    doc.head.querySelector(`style[data-injected-style^="--awUi-calendar-css"]`)?.remove();
     doc.querySelector('.nav-header .calendar-nav')?.remove();
 }
 
@@ -75,7 +75,7 @@ const addCalendarButtonToSidebar = () => {
     const journalsButton = doc.querySelector('.nav-header .journals-nav');
     const calendarButtonHTML = `
         <div class="calendar-nav">
-            <a href="#${calendarPagePath}" class="item group flex items-center text-sm font-medium rounded-md" id="awUI-calendar-menu">
+            <a href="#${calendarPagePath}" class="item group flex items-center text-sm font-medium rounded-md" id="--awUi-calendar-menu">
                 <span class="ui__icon ti ls-icon-calendar-time"></span><span class="flex-1">Calendar</span>
                 </a>
         </div>
@@ -91,8 +91,8 @@ const setSidebarWidthVar = () => {
         } else {
             leftSidebarWidth = 0;
         }
-        root.style.setProperty('--awUI-calc-left-sidebar-width', `${leftSidebarWidth}px`);
+        root.style.setProperty('--awUi-calc-left-sidebar-width', `${leftSidebarWidth}px`);
         const rightSidebarWidth = doc.getElementById('right-sidebar')?.getBoundingClientRect()?.width;
-        root.style.setProperty('--awUI-calc-right-sidebar-width', `${rightSidebarWidth}px`);
+        root.style.setProperty('--awUi-calc-right-sidebar-width', `${rightSidebarWidth}px`);
     }, 500);
 }

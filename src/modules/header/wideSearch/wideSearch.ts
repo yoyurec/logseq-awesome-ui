@@ -41,7 +41,7 @@ export const onSearchModalClose = () => {
 // Reposition toolbar search button
 export const wideSearchLoad = async () => {
     setTimeout(() => {
-        logseq.provideStyle({ key: 'awUI-wide-search-css', style: wideSearchStyles });
+        logseq.provideStyle({ key: '--awUi-wide-search-css', style: wideSearchStyles });
     }, 500)
     const rightToolbar = doc.querySelector('#head .r');
     if (rightToolbar) {
@@ -53,7 +53,7 @@ export const wideSearchLoad = async () => {
 }
 
 export const wideSearchUnload = () => {
-    doc.head.querySelector('style[data-injected-style^="awUI-wide-search-css"]')?.remove();
+    doc.head.querySelector('style[data-injected-style^="--awUi-wide-search-css"]')?.remove();
     const leftToolbar = doc.querySelector('#head .l');
     if (!leftToolbar) {
         return;

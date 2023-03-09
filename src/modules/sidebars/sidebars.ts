@@ -46,7 +46,7 @@ export const origRightSidebarToggleButton = (visible: boolean) => {
 
 // Sidebar toggled
 const onSidebarVisibleChangedCallback = (visible: boolean) => {
-    if (!body.classList.contains('is-awUi-enabled')) {
+    if (!body.classList.contains('is--awUi-enabled')) {
         return;
     }
     reorderRightSidebarToggleButton(visible);
