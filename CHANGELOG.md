@@ -1,3 +1,10 @@
+## [2.0.18](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.17...v2.0.18) (2023-03-09)
+
+
+### Bug Fixes
+
+* **layout:** a lot ) ([e62a7f5](https://github.com/yoyurec/logseq-awesome-ui/commit/e62a7f5868fde65d174af7ce7f26e2fa3c4ba913))
+
 ## [2.0.17](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.16...v2.0.17) (2023-03-08)
 
 
