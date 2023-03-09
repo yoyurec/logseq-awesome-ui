@@ -10,6 +10,10 @@
     margin-top: calc(var(--ls-headbar-height) * -1) !important;
 }
 
+#main-content-container {
+    padding: 1rem;
+}
+
 #right-sidebar {
     border-top: var(--ls-headbar-height) solid var(--awSt-ui-rsidebar-bg, transparent) !important;
 }

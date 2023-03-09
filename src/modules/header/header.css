@@ -1,3 +1,7 @@
+#head {
+    height: calc(var(--ls-headbar-height) + var(--ls-headbar-inner-top-padding)) !important;
+}
+
 #head .l #search-button {
     transform: translateY(1px);
 }
