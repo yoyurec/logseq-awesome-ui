@@ -1,3 +1,10 @@
+## [2.0.20](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.19...v2.0.20) (2023-03-09)
+
+
+### Bug Fixes
+
+* **header:** flow theme fix ([f27f0bb](https://github.com/yoyurec/logseq-awesome-ui/commit/f27f0bb539193ac1ea6f9ffab55e76a00135b6c3))
+
 ## [2.0.19](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.18...v2.0.19) (2023-03-09)
 
 
