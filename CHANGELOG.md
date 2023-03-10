@@ -1,3 +1,10 @@
+## [2.0.21](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.20...v2.0.21) (2023-03-10)
+
+
+### Bug Fixes
+
+* **css-vars:** regression ([4c934ce](https://github.com/yoyurec/logseq-awesome-ui/commit/4c934ce6d4d9df69d009d2c2239fe5b447bec199))
+
 ## [2.0.20](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.19...v2.0.20) (2023-03-09)
 
 
