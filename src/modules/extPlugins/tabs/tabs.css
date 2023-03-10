@@ -65,7 +65,7 @@ body[data-page="graph"] .graph {
     height: var(--awUi-tabs-height) !important;
     width: 100% !important;
     max-width: 100% !important;
-    background-color: var(--awesome-ui-calc-bg, var(--ls-secondary-background-color));
+    background-color: var(--ls-tertiary-background-color);
 }
 
 .is-mac [data-pid="logseq-tabs"]::before {
