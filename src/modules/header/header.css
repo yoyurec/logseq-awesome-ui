@@ -1,5 +1,9 @@
+#app-container {
+    margin-top: calc(var(--awUi-header-height) + var(--awUi-tabs-height)) !important;
+}
+
 #head {
-    height: calc(var(--ls-headbar-height) + var(--ls-headbar-inner-top-padding)) !important;
+    position: fixed;
 }
 
 #head .l #search-button {
@@ -17,3 +21,14 @@ body.is-pdf-active #head {
 body.is-pdf-active #head > .l {
     min-width: unset;
 }
+
+/* TODO: delete afte Logseq upd */
+.cp__header > .l, .cp__header > .r {
+    transform: none;
+}
+.cp__server-indicator {
+    position: fixed;
+    right: 8px;
+    bottom: 6px;
+}
+

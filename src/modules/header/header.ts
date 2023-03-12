@@ -46,6 +46,7 @@ const moveHead = () => {
         }
     }
 }
+
 const renderNavigationButton = () => {
     const header = doc.getElementById('head');
     const navPanel = header?.querySelector('.r .flex.flex-row') as HTMLElement;

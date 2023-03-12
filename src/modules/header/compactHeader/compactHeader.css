@@ -6,10 +6,6 @@
     background: none !important;
 }
 
-#app-container {
-    margin-top: calc(var(--ls-headbar-height) * -1) !important;
-}
-
 #main-content-container {
     padding: 1rem;
 }
