@@ -1,3 +1,10 @@
+## [2.0.23](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.22...v2.0.23) (2023-03-12)
+
+
+### Bug Fixes
+
+* **pages:** cleand up ([02585c2](https://github.com/yoyurec/logseq-awesome-ui/commit/02585c235956c5482e90b770508eff62098848dd))
+
 ## [2.0.22](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.21...v2.0.22) (2023-03-12)
 
 
