@@ -1,3 +1,10 @@
+## [2.0.22](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.21...v2.0.22) (2023-03-12)
+
+
+### Bug Fixes
+
+* **header:** jumping ([b5e9ba6](https://github.com/yoyurec/logseq-awesome-ui/commit/b5e9ba661321879ba2bd2cd89deaeafdd0767188))
+
 ## [2.0.21](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.20...v2.0.21) (2023-03-10)
 
 
