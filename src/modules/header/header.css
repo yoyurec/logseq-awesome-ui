@@ -32,3 +32,7 @@ body.is-pdf-active #head > .l {
     bottom: 6px;
 }
 
+.whiteboard-page {
+    padding: 0 !important;
+    height: calc(100vh - var(--awUi-header-height)) !important;
+}

@@ -12,7 +12,6 @@ import { toggleHeaderFlashcardsButton, headerFlashcardsButtonUnload } from '../m
 import { toggleHideRightSidebarToolbar, hideRightSidebarToolbarUnload } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
 
 import '../modules/extPlugins/extPlugins';
-import '../modules/pages/pages';
 import '../modules/other/other';
 
 export const pluginLoad = () => {
