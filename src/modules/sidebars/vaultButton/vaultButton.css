@@ -1,17 +1,17 @@
 .cp__menubar-repos .ui__dropdown-trigger {
     position: fixed;
     left: 0;
-    bottom: 4px;
+    bottom: 0;
     width: var(--ls-left-sidebar-width);
     background: var(--ls-tertiary-background-color);
 }
 
 .left-sidebar-inner .nav-contents-container {
-    height: calc(100% - 40px);
+    height: calc(100% - 36px);
 }
 
 .cp__menubar-repos .dropdown-wrapper {
-    bottom: 34px;
+    bottom: 30px;
     box-shadow: none;
 }
 
@@ -20,5 +20,5 @@
 }
 
 #left-sidebar .left-sidebar-inner .create {
-    bottom: 30px;
+    bottom: 26px;
 }
