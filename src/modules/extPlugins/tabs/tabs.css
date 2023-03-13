@@ -77,7 +77,7 @@ body[data-page="graph"] .graph {
     width: 84px;
     height: var(--awUi-tabs-height);
     border-bottom: 1px solid #80808080;
-    background-color: var(--ls-secondary-background-color);
+    background-color: var(--ls-tertiary-background-color);
 }
 
 .is-mac [data-pid="logseq-tabs"] {
