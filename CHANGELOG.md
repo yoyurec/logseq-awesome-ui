@@ -1,3 +1,10 @@
+## [2.2.4](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.2.3...v2.2.4) (2023-03-13)
+
+
+### Bug Fixes
+
+* **httpapi:** move btn after cloud btn ([b0e6ccf](https://github.com/yoyurec/logseq-awesome-ui/commit/b0e6ccf0b6f7c30175e320a534e9a0d17ecd8d50))
+
 ## [2.2.3](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.2.2...v2.2.3) (2023-03-13)
 
 
