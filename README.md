@@ -18,7 +18,7 @@
     </a>
 </p>
 
-### 🪓 Reworked, simplified, fixed and pumped-up Logseq! Layout, components, etc...
+### 🪓 Reworked, simplified, fixed and pumped-up Logseq layout!
 
 * ⚡ Changed default UI layout, sidebars
 * ✨ Changed icons, new added
