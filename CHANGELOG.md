@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.23...v2.1.0) (2023-03-13)
+
+
+### Features
+
+* **left-sidebar:** vaults button to bottom ([1463c5d](https://github.com/yoyurec/logseq-awesome-ui/commit/1463c5d90a36dad2f2b8a4ae057053cf837a8b45))
+
 ## [2.0.23](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.22...v2.0.23) (2023-03-12)
 
 
