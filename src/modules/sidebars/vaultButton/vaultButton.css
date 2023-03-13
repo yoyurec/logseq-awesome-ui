@@ -2,7 +2,8 @@
     position: fixed;
     left: 0;
     bottom: 0;
-    width: var(--ls-left-sidebar-width);
+    margin: 0 0.5rem;
+    width: calc(var(--ls-left-sidebar-width) - 1rem);
 }
 
 .left-sidebar-inner .nav-contents-container {
