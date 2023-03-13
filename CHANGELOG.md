@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.1.2...v2.2.0) (2023-03-13)
+
+
+### Features
+
+* **right-sidebar:** hide help button ([b56b3ff](https://github.com/yoyurec/logseq-awesome-ui/commit/b56b3ff81c1d9b6905cc768718cae0d8ca5622f4))
+
 ## [2.1.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.1.1...v2.1.2) (2023-03-13)
 
 
