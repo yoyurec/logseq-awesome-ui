@@ -1,18 +1,19 @@
 import { doc, body, globals } from '../modules/globals/globals';
 import { checkPluginUpdate  } from '../utils/utils';
 
-import { toggleMenuCalendar, menuCalendarUnload } from '../modules/extPlugins/calendar/calendar';
+import { menuCalendarToggle, menuCalendarUnload } from '../modules/extPlugins/calendar/calendar';
 import { setFeaturesCSSVars } from '../modules/features/features';
 import { rightSidebarLoad, rightSidebarUnload } from '../modules/sidebars/sidebars';
-import { setTabsCSSVarsStyles, toggleTabs, tabsUnload } from '../modules/extPlugins/tabs/tabs';
+import { setTabsCSSVarsStyles, tabsToggle, tabsUnload } from '../modules/extPlugins/tabs/tabs';
 import { modalObserverLoad, modalObserverUnload } from './modalObserver';
-import { toggleCompactSidebarMenu, compactSidebarMenuUnload } from '../modules/sidebars/compactSidebarMenu/compactSidebarMenu';
+import { compactSidebarMenuToggle, compactSidebarMenuUnload } from '../modules/sidebars/compactSidebarMenu/compactSidebarMenu';
 import { headerLoad, headerUnload } from '../modules/header/header';
-import { toggleHeaderFlashcardsButton, headerFlashcardsButtonUnload } from '../modules/header/flashcardsButton/flashcardButton';
-import { toggleHideRightSidebarToolbar, hideRightSidebarToolbarUnload } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
+import { flashcardsButtonToggle, flashcardsButtonUnload } from '../modules/header/flashcardsButton/flashcardButton';
+import { hideRightSidebarToolbarToggle, hideRightSidebarToolbarUnload } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
 
 import '../modules/extPlugins/extPlugins';
 import '../modules/other/other';
+import { vaultButtonToggle, vaultButtonUnload } from '../modules/sidebars/vaultButton/vaultButton';
 
 export const pluginLoad = () => {
     body.classList.add(globals.isPluginEnabled);
@@ -73,13 +74,14 @@ const unregisterPlugin = () => {
 const runStuff = () => {
     setTimeout(() => {
         setFeaturesCSSVars();
-        toggleCompactSidebarMenu();
-        toggleHeaderFlashcardsButton();
-        toggleHideRightSidebarToolbar();
+        compactSidebarMenuToggle();
+        flashcardsButtonToggle();
+        hideRightSidebarToolbarToggle();
         modalObserverLoad();
-        toggleMenuCalendar();
+        menuCalendarToggle();
         headerLoad();
-        toggleTabs();
+        tabsToggle();
+        vaultButtonToggle();
     }, 2000);
     setTimeout(() => {
         rightSidebarLoad();
@@ -88,13 +90,14 @@ const runStuff = () => {
 
 const stopStuff = () => {
     compactSidebarMenuUnload();
-    headerFlashcardsButtonUnload();
+    flashcardsButtonUnload();
     hideRightSidebarToolbarUnload();
     rightSidebarUnload();
     modalObserverUnload();
     menuCalendarUnload();
     headerUnload();
     tabsUnload();
+    vaultButtonUnload();
 }
 
 export const onThemeChangedCallback = () => {

@@ -4,15 +4,16 @@ import { objectsKeysDiff } from '../utils/utils';
 import { globals } from '../modules/globals/globals';
 
 import { settingsConfig } from './settingsConfig';
-import { toggleHeaderVariant } from '../modules/header/header';
-import { toggleHeaderFlashcardsButton } from '../modules/header/flashcardsButton/flashcardButton';
-import { toggleMenuCalendar } from '../modules/extPlugins/calendar/calendar';
-import { toggleCompactSidebarMenu } from '../modules/sidebars/compactSidebarMenu/compactSidebarMenu';
+import { headerVariantToggle } from '../modules/header/header';
+import { flashcardsButtonToggle } from '../modules/header/flashcardsButton/flashcardButton';
+import { menuCalendarToggle } from '../modules/extPlugins/calendar/calendar';
+import { compactSidebarMenuToggle } from '../modules/sidebars/compactSidebarMenu/compactSidebarMenu';
 import { setFeaturesCSSVars } from '../modules/features/features';
-import { toggleHideRightSidebarToolbar } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
-import { toggleTabs } from '../modules/extPlugins/tabs/tabs';
+import { hideRightSidebarToolbarToggle } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
+import { tabsToggle } from '../modules/extPlugins/tabs/tabs';
 
 import './settings.css';
+import { vaultButtonToggle } from '../modules/sidebars/vaultButton/vaultButton';
 
 export const settingsLoad = () => {
     logseq.useSettingsSchema(settingsConfig);
@@ -33,22 +34,25 @@ export const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings']
     }
 
     if (settingsChangedKey.includes('tabsOnTop')) {
-        toggleTabs();
+        tabsToggle();
     }
     if (settingsChangedKey.includes('headerVariant')) {
-        toggleHeaderVariant();
+        headerVariantToggle();
     }
     if (settingsChangedKey.includes('menuCalendar')) {
-        toggleMenuCalendar();
+        menuCalendarToggle();
     }
     if (settingsChangedKey.includes('compactSidebarMenu')) {
-        toggleCompactSidebarMenu();
+        compactSidebarMenuToggle();
     }
     if (settingsChangedKey.includes('headerFlashcardsButton')) {
-        toggleHeaderFlashcardsButton();
+        flashcardsButtonToggle();
     }
     if (settingsChangedKey.includes('hideRightSidebarToolbar')) {
-        toggleHideRightSidebarToolbar();
+        hideRightSidebarToolbarToggle();
+    }
+    if (settingsChangedKey.includes('vaultButtonToBottom')) {
+        vaultButtonToggle();
     }
 
     setFeaturesCSSVars();

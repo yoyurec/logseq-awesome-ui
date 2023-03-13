@@ -43,6 +43,13 @@ export const settingsConfig: SettingSchemaDesc[] = [
         default: null,
     },
     {
+        key: 'vaultButtonToBottom',
+        title: '',
+        description: 'Move vaults list to bottom of left sidebar?',
+        type: 'boolean',
+        default: false,
+    },
+    {
         key: 'compactSidebarMenu',
         title: '',
         description: 'Compact menu (horizontal, no labels) on left sidebar?',

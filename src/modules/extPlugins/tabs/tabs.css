@@ -12,7 +12,7 @@
 }
 #left-sidebar .left-sidebar-inner > .wrap {
     margin-top: var(--ls-headbar-height) !important;
-    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
+    height: calc(100vh - var(--ls-headbar-height) - var(--awUi-tabs-height)) !important;
 }
 
 #right-sidebar {

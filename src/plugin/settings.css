@@ -32,14 +32,11 @@
 }
 
 
-.panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="infoHeading"] h2::before {
-    content: "\eac5";
-}
-
 /* Header */
 .panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="headerHeading"] h2::before {
     content: "\ead7";
 }
+
 .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="tabsOnTop"] small:before {
     content: "\ea43";
 }
@@ -53,6 +50,10 @@
 /* Left sidebar */
 .panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="leftSidebarHeading"] h2::before {
     content: "\eada";
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="vaultButtonToBottom"] small::before {
+    content: "\ea88";
 }
 .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="compactSidebarMenu"] small::before {
     content: "\ebf3";
@@ -74,6 +75,7 @@
 .panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="rightSidebarHeading"] h2::before {
     content: "\ead9";
 }
+
 .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="hideRightSidebarToolbar"] small::before {
     content: "\ead5";
 }
@@ -87,6 +89,7 @@
 .panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="otherHeading"] h2::before {
     content: "\ea03";
 }
+
 /*
   <<<< END: Settings icons
 */

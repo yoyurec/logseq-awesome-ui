@@ -8,14 +8,14 @@ import { compactHeaderUnload, compactHeaderLoad } from './compactHeader/compactH
 export const headerLoad = () => {
     moveHead();
     renderNavigationButton();
-    toggleHeaderVariant();
+    headerVariantToggle();
 }
 
 export const headerUnload = () => {
     headerVariantUnload();
 }
 
-export const toggleHeaderVariant = () => {
+export const headerVariantToggle = () => {
     switch (globals.pluginConfig.headerVariant) {
         case 'Browser-like (wide search)':
             wideSearchLoad();

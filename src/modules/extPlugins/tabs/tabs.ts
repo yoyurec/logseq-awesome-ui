@@ -5,7 +5,7 @@ import tabsStyles from './tabs.css?inline';
 import tabsIframeStyles from './tabsIframe.css?inline';
 
 
-export const toggleTabs = () => {
+export const tabsToggle = () => {
     const tabsPluginIframe = doc.getElementById('logseq-tabs_iframe') as HTMLIFrameElement;
     if (!tabsPluginIframe) {
         return;

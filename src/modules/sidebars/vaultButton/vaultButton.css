@@ -1,0 +1,24 @@
+.cp__menubar-repos .ui__dropdown-trigger {
+    position: fixed;
+    left: 0;
+    bottom: 4px;
+    width: var(--ls-left-sidebar-width);
+    background: var(--ls-tertiary-background-color);
+}
+
+.left-sidebar-inner .nav-contents-container {
+    height: calc(100% - 40px);
+}
+
+.cp__menubar-repos .dropdown-wrapper {
+    bottom: 34px;
+    box-shadow: none;
+}
+
+.cp__menubar-repos .menu-links-wrapper {
+    box-shadow: none;
+}
+
+#left-sidebar .left-sidebar-inner .create {
+    bottom: 30px;
+}

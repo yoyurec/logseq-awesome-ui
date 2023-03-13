@@ -2,15 +2,15 @@ import { doc, globals } from '../../globals/globals';
 
 import flashcardsButtonStyles from './flashcardsButton.css?inline';
 
-export const toggleHeaderFlashcardsButton = () => {
+export const flashcardsButtonToggle = () => {
     if (globals.pluginConfig.headerFlashcardsButton) {
-        headerFlashcardsButtonLoad();
+        flashcardsButtonLoad();
     } else {
-        headerFlashcardsButtonUnload();
+        flashcardsButtonUnload();
     }
 }
 
-export const headerFlashcardsButtonLoad = () => {
+export const flashcardsButtonLoad = () => {
     const synchButton = doc.querySelector('.cp__file-sync-indicator');
     if (synchButton) {
     const flashcardsButton = doc.querySelector('.flashcards-nav');
@@ -21,7 +21,7 @@ export const headerFlashcardsButtonLoad = () => {
     logseq.provideStyle({ key: '--awUi-flashcardsButton-css', style: flashcardsButtonStyles });
 }
 
-export const headerFlashcardsButtonUnload = () => {
+export const flashcardsButtonUnload = () => {
     const graphButton = doc.querySelector('#left-sidebar .graph-view-nav');
     if (!graphButton) {
         return;

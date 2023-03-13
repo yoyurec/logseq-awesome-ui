@@ -7,7 +7,7 @@ let agendaPlugin: HTMLElement | null = null;
 
 const calendarPagePath = '/page/calendar'
 
-export const toggleMenuCalendar = () => {
+export const menuCalendarToggle = () => {
     if (globals.pluginConfig.menuCalendar) {
         menuCalendarLoad();
     } else {

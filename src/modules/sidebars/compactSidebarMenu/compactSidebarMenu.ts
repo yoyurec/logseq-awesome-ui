@@ -2,7 +2,7 @@ import { doc, globals } from '../../globals/globals';
 
 import compactSidebarMenuStyles from './compactSidebarMenu.css?inline';
 
-export const toggleCompactSidebarMenu = () => {
+export const compactSidebarMenuToggle = () => {
     if (globals.pluginConfig.compactSidebarMenu) {
         compactSidebarMenuLoad();
     } else {
