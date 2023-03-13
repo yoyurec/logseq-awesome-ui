@@ -96,7 +96,14 @@ export const settingsConfig: SettingSchemaDesc[] = [
         title: '',
         description: 'Hide toolbar on right sidebar?',
         type: 'boolean',
-        default: true,
+        default: false,
+    },
+    {
+        key: 'hideBottomHelpButton',
+        title: '',
+        description: 'Hide bottom help button',
+        type: 'boolean',
+        default: false,
     },
     {
         key: 'contentHeading',

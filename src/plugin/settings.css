@@ -79,6 +79,9 @@
 .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="hideRightSidebarToolbar"] small::before {
     content: "\ead5";
 }
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="hideBottomHelpButton"] small::before {
+    content: "\eabf";
+}
 
 /* Content */
 .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="alwaysShowNewBlockBullet"] small::before {
