@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.1.1...v2.1.2) (2023-03-13)
+
+
+### Bug Fixes
+
+* **vaults:** no bg ([58b0e17](https://github.com/yoyurec/logseq-awesome-ui/commit/58b0e17ce7b17f5cd592ca96b93397c2195e54d3))
+
 ## [2.1.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.1.0...v2.1.1) (2023-03-13)
 
 
