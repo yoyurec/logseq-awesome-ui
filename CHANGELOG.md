@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.1.0...v2.1.1) (2023-03-13)
+
+
+### Bug Fixes
+
+* **vaults:** y position ([45f78fd](https://github.com/yoyurec/logseq-awesome-ui/commit/45f78fd35381637650d29064dbf255eb73bb0465))
+
 # [2.1.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.0.23...v2.1.0) (2023-03-13)
 
 
