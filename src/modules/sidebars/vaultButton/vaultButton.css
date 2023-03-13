@@ -3,7 +3,6 @@
     left: 0;
     bottom: 0;
     width: var(--ls-left-sidebar-width);
-    background: var(--ls-tertiary-background-color);
 }
 
 .left-sidebar-inner .nav-contents-container {
