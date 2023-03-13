@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.2.1...v2.2.2) (2023-03-13)
+
+
+### Bug Fixes
+
+* **http-api:** button to right ([20f69c8](https://github.com/yoyurec/logseq-awesome-ui/commit/20f69c88df4dd9b59ba7625d31731a0fb2297b44))
+
 ## [2.2.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.2.0...v2.2.1) (2023-03-13)
 
 
