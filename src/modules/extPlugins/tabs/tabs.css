@@ -84,7 +84,7 @@ body[data-page="graph"] .graph {
     left: 84px !important;
 }
 
-html.is-mac.is-fullscreen [data-pid="logseq-tabs"] {
+html.is-mac.is-fullscreen body:not(.is-pdf-active) [data-pid="logseq-tabs"] {
     left: 0 !important;
 }
 
