@@ -65,11 +65,11 @@ const renderNavigationButton = () => {
 
 const moveHTTPAPI = () => {
         // Reposition HTTP server button
-        const rightToolbar = doc.querySelector('#head .r');
-        if (rightToolbar) {
+        const cloudSyncBtn = doc.querySelector('.cp__file-sync-indicator');
+        if (cloudSyncBtn) {
             const httpServerButton = doc.querySelector('.cp__server-indicator');
             if (httpServerButton) {
-                rightToolbar.insertAdjacentElement('afterbegin', httpServerButton);
+                cloudSyncBtn.insertAdjacentElement('afterend', httpServerButton);
             }
         }
 }
