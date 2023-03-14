@@ -1,9 +1,13 @@
+body {
+    background-color: var(--ls-primary-background-color);
+}
 #app-container {
     margin-top: calc(var(--awUi-header-height) + var(--awUi-tabs-height)) !important;
 }
 
 #head {
     position: fixed;
+    height: calc(var(--ls-headbar-height) + var(--ls-headbar-inner-top-padding)) !important;
 }
 
 #head .l #search-button {
