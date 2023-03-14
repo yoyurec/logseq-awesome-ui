@@ -1,3 +1,10 @@
+## [2.2.5](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.2.4...v2.2.5) (2023-03-14)
+
+
+### Bug Fixes
+
+* **header:** flow theme height & bg ([58feef4](https://github.com/yoyurec/logseq-awesome-ui/commit/58feef42fae4d884385d1f8e6e818675e3762abb))
+
 ## [2.2.4](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.2.3...v2.2.4) (2023-03-13)
 
 
