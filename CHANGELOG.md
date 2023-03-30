@@ -1,3 +1,10 @@
+## [2.2.6](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.2.5...v2.2.6) (2023-03-30)
+
+
+### Bug Fixes
+
+* **header:** remove HTTP server code ([3bd4db3](https://github.com/yoyurec/logseq-awesome-ui/commit/3bd4db3f2bf7d8d81e16921daed2a32893b4c978))
+
 ## [2.2.5](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.2.4...v2.2.5) (2023-03-14)
 
 
