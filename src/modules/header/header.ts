@@ -9,7 +9,6 @@ export const headerLoad = () => {
     moveHead();
     renderNavigationButton();
     headerVariantToggle();
-    moveHTTPAPI();
 }
 
 export const headerUnload = () => {
@@ -61,15 +60,4 @@ const renderNavigationButton = () => {
         navBack?.addEventListener('click', () => { parent.window.history.back() });
         navForward?.addEventListener('click', () => { parent.window.history.forward() });
     }
-}
-
-const moveHTTPAPI = () => {
-        // Reposition HTTP server button
-        const cloudSyncBtn = doc.querySelector('.cp__file-sync-indicator');
-        if (cloudSyncBtn) {
-            const httpServerButton = doc.querySelector('.cp__server-indicator');
-            if (httpServerButton) {
-                cloudSyncBtn.insertAdjacentElement('afterend', httpServerButton);
-            }
-        }
 }
