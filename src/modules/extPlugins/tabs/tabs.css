@@ -1,7 +1,6 @@
 :root {
     --awUi-tabs-height: 36px;
     --awUi-header-height: 44px;
-    --ls-headbar-inner-top-padding: var(--awUi-tabs-height);
 }
 
 /*
@@ -11,8 +10,9 @@
     height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
 }
 #left-sidebar .left-sidebar-inner > .wrap {
-    margin-top: var(--ls-headbar-height) !important;
     height: calc(100vh - var(--ls-headbar-height) - var(--awUi-tabs-height)) !important;
+    margin-top: var(--ls-headbar-height) !important;
+    padding-top: var(--ls-headbar-height) !important;
 }
 
 #right-sidebar {
@@ -37,6 +37,11 @@ body[data-page="graph"] .graph {
 .is-mac #head > .l {
     padding-left: 0.5rem;
 }
+
+#head {
+    top: var(--awUi-header-height);
+}
+
 /*
   <<<< END: Layout
 */
