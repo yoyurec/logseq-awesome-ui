@@ -1,5 +1,4 @@
 import { doc, body, globals } from '../modules/globals/globals';
-import { checkPluginUpdate  } from '../utils/utils';
 
 import { menuCalendarToggle, menuCalendarUnload } from '../modules/extPlugins/calendar/calendar';
 import { setFeaturesCSSVars } from '../modules/features/features';
@@ -28,11 +27,6 @@ export const pluginLoad = () => {
         });
     }, 2000)
 
-    if (globals.pluginConfig.pluginUpdateNotify) {
-        setTimeout(() => {
-            checkPluginUpdate();
-        }, 8000)
-    }
 }
 
 const pluginUnload = () => {

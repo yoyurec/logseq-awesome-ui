@@ -126,11 +126,4 @@ export const settingsConfig: SettingSchemaDesc[] = [
         type: 'heading',
         default: null,
     },
-    {
-        key: 'pluginUpdateNotify',
-        title: '',
-        description: 'Enable new version notifier on app load?',
-        type: 'boolean',
-        default: true,
-    },
 ];
