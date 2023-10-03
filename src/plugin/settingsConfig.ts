@@ -64,13 +64,6 @@ export const settingsConfig: SettingSchemaDesc[] = [
         default: true,
     },
     {
-        key: 'headerFlashcardsButton',
-        title: '',
-        description: 'Move "Flashcards" button to header plugins toolbar?',
-        type: 'boolean',
-        default: false,
-    },
-    {
         key: 'hideSidebarPageIcons',
         title: '',
         description: 'Hide default page icons on left sidebar favs/recent?',

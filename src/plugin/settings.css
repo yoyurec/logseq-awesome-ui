@@ -61,9 +61,6 @@
 .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="menuCalendar"] small::before {
     content: "\ee21";
 }
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="headerFlashcardsButton"] small::before {
-    content: "\ea38";
-}
 .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="hideSidebarPageIcons"] small::before {
     content: "\eaa2";
 }

@@ -1,10 +1,11 @@
-## ⚠ ATTENTION!⚠
-
-### 🎨 Awesome content blocks styles moved to separated ["Awesome Content" plugin!](https://github.com/yoyurec/logseq-awesome-content)
-![](https://github.com//yoyurec/logseq-awesome-content/raw/main/screenshots/market.png)
-
-### 🎨 Awesome properties styles & hiding moved to separated ["Awesome Props" plugin!](https://github.com/yoyurec/logseq-awesome-props)
-![](https://github.com//yoyurec/logseq-awesome-props/raw/main/screenshots/market.png)
+## Other my plugins/themes
+* 🎨 [Awesome Styler](https://github.com/yoyurec/logseq-awesome-styler)
+* 📝 [Awesome Content](https://github.com/yoyurec/logseq-awesome-content)
+* 📋 [Awesome Props](https://github.com/yoyurec/logseq-awesome-props)
+* ⭐ [Awesome Links](https://github.com/yoyurec/logseq-awesome-links)
+* ✨ [Tabler picker](https://github.com/yoyurec/logseq-tabler-picker)
+* 📌 [Sticky Headers](https://github.com/yoyurec/logseq-sticky-headers)
+* 📰 [Banners](https://github.com/yoyurec/logseq-banners-plugin)
 
 
 ## If you ❤ what i'm doing - you can support my work! ☕
@@ -29,14 +30,6 @@
 * ⚙ Simplified, less noise and compact Logseq plugins settings popup
 
 ![](https://github.com//yoyurec/logseq-awesome-ui/raw/main/screenshots/scr.png)
-
-## Other my plugins/themes
-* 📝 [Awesome Content](https://github.com/yoyurec/logseq-awesome-content)
-* 🎨 [Awesome Styler](https://github.com/yoyurec/logseq-awesome-styler)
-* 📋 [Awesome Props](https://github.com/yoyurec/logseq-awesome-props)
-* ⭐ [Awesome Links](https://github.com/yoyurec/logseq-awesome-links)
-* 📰 [Banners](https://github.com/yoyurec/logseq-banners-plugin)
-* 📌 [Sticky Headers](https://github.com/yoyurec/logseq-sticky-headers)
 
 ## Recommended plugins
 * [Tabs](https://github.com/pengx17/logseq-plugin-tabs)

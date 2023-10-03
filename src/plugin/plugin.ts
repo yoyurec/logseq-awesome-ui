@@ -7,7 +7,6 @@ import { setTabsCSSVarsStyles, tabsToggle, tabsUnload } from '../modules/extPlug
 import { modalObserverLoad, modalObserverUnload } from './modalObserver';
 import { compactSidebarMenuToggle, compactSidebarMenuUnload } from '../modules/sidebars/compactSidebarMenu/compactSidebarMenu';
 import { headerLoad, headerUnload } from '../modules/header/header';
-import { flashcardsButtonToggle, flashcardsButtonUnload } from '../modules/header/flashcardsButton/flashcardButton';
 import { hideRightSidebarToolbarToggle, hideRightSidebarToolbarUnload } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
 
 import '../modules/extPlugins/extPlugins';
@@ -69,7 +68,6 @@ const runStuff = () => {
     setTimeout(() => {
         setFeaturesCSSVars();
         compactSidebarMenuToggle();
-        flashcardsButtonToggle();
         hideRightSidebarToolbarToggle();
         modalObserverLoad();
         menuCalendarToggle();
@@ -84,7 +82,6 @@ const runStuff = () => {
 
 const stopStuff = () => {
     compactSidebarMenuUnload();
-    flashcardsButtonUnload();
     hideRightSidebarToolbarUnload();
     rightSidebarUnload();
     modalObserverUnload();

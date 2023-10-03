@@ -32,7 +32,7 @@
     background-color: var(--ls-secondary-background-color);
 }
 
-#left-sidebar .nav-header .ui__icon ~ :is(.flex-1, .ml-1) {
+#left-sidebar .nav-header .ui__icon ~ :is(.flex-1, .ml-1:not(.text-xs)) {
     display: none;
 }
 

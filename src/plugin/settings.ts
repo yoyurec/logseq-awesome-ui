@@ -5,7 +5,6 @@ import { globals } from '../modules/globals/globals';
 
 import { settingsConfig } from './settingsConfig';
 import { headerVariantToggle } from '../modules/header/header';
-import { flashcardsButtonToggle } from '../modules/header/flashcardsButton/flashcardButton';
 import { menuCalendarToggle } from '../modules/extPlugins/calendar/calendar';
 import { compactSidebarMenuToggle } from '../modules/sidebars/compactSidebarMenu/compactSidebarMenu';
 import { setFeaturesCSSVars } from '../modules/features/features';
@@ -44,9 +43,6 @@ export const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings']
     }
     if (settingsChangedKey.includes('compactSidebarMenu')) {
         compactSidebarMenuToggle();
-    }
-    if (settingsChangedKey.includes('headerFlashcardsButton')) {
-        flashcardsButtonToggle();
     }
     if (settingsChangedKey.includes('hideRightSidebarToolbar')) {
         hideRightSidebarToolbarToggle();
