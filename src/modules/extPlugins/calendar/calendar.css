@@ -10,7 +10,3 @@
     right: var(--awUi-calc-right-sidebar-width, var(--ls-right-sidebar-width));
     top: calc(var(--awUi-tabs-height, 0px) + var(--awUi-header-height)) !important;
 }
-
-#--awUi-calendar-menu .ls-icon-calendar-time::before {
-    content: "\ee21";
-}

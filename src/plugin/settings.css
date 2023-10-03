@@ -84,6 +84,10 @@
 }
 
 /* Content */
+.panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="contentHeading"] h2::before {
+    content: "\eaa2";
+}
+
 .panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="alwaysShowNewBlockBullet"] small::before {
     content: "\ea69";
 }

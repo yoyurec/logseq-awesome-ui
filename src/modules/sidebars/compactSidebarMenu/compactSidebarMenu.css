@@ -6,6 +6,10 @@
     flex-direction: row;
     gap: 4px;
     height: 30px;
+    margin-top: 0;
+}
+#left-sidebar .nav-content-item {
+    margin-top: 0;
 }
 #left-sidebar .nav-header .item {
     padding: 5px;
@@ -30,19 +34,6 @@
 
 #left-sidebar .nav-header .ui__icon ~ :is(.flex-1, .ml-1) {
     display: none;
-}
-
-#left-sidebar .nav-header .ui__icon ~ .flex-1 {
-    display: none;
-    position: absolute;
-    width: var(--ls-left-sidebar-width);
-    top: -0.6rem;
-    opacity: 0.4;
-    font-size: 0.8rem;
-}
-
-#left-sidebar .nav-header .item:hover .flex-1 {
-    display:block;
 }
 
 #left-sidebar .flashcards-nav .rounded-full {
