@@ -1,18 +1,27 @@
 :root {
     --awUi-tabs-height: 36px;
     --awUi-header-height: 44px;
-    --ls-headbar-inner-top-padding: var(--awUi-tabs-height);
 }
 
 /*
   >>> BEGIN: Layout
 */
+#head {
+    top: var(--awUi-tabs-height);
+}
+
+#app-container {
+    margin-top: calc(var(--awUi-header-height) + var(--awUi-tabs-height)) !important;
+}
+
 #main-content-container {
     height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
 }
+
 #left-sidebar .left-sidebar-inner > .wrap {
     margin-top: var(--ls-headbar-height) !important;
-    height: calc(100vh - var(--ls-headbar-height) - var(--awUi-tabs-height)) !important;
+    padding-top: var(--ls-headbar-height) !important;
+    height: calc(100vh - var(--awUi-tabs-height)) !important;
 }
 
 #right-sidebar {
