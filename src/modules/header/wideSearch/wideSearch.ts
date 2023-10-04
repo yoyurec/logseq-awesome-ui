@@ -16,7 +16,7 @@ export const onSearchModalOpen = (searchResults: HTMLElement) => {
         return;
     }
     const searchModalLeft = searchButton.getBoundingClientRect().left;
-    const searchResultsWidth = searchButton.offsetWidth;
+    const searchResultsWidth = searchButton.offsetWidth - 2;
     if (searchResultsWidth && searchResultsWidth > 600) {
         searchResults.style.width = searchResultsWidth + 'px';
         searchModal.style.left = searchModalLeft + 'px';
@@ -42,7 +42,7 @@ export const onSearchModalClose = () => {
 export const wideSearchLoad = async () => {
     setTimeout(() => {
         logseq.provideStyle({ key: '--awUi-wide-search-css', style: wideSearchStyles });
-    }, 500)
+    }, 500);
     const rightToolbar = doc.querySelector('#head .r');
     if (rightToolbar) {
         const search = doc.getElementById('search-button');
