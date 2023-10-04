@@ -18,9 +18,16 @@
     height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
 }
 
+#left-sidebar {
+    padding-top: 0;
+}
+
+#left-sidebar .left-sidebar-inner {
+    margin-top: 0;
+}
+
 #left-sidebar .left-sidebar-inner > .wrap {
-    margin-top: var(--ls-headbar-height) !important;
-    padding-top: var(--ls-headbar-height) !important;
+    margin-top: calc(var(--ls-headbar-height) + var(--awUi-tabs-height)) !important;
     height: calc(100vh - var(--awUi-tabs-height)) !important;
 }
 
@@ -30,6 +37,7 @@
 
 .sidebar-item-list {
     height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
+    padding-top: 16px !important;
 }
 
 .whiteboard-page {
@@ -49,7 +57,7 @@ body[data-page="graph"] .graph {
 }
 
 .ls-window-controls .window-controls {
-    top: calc( var(--awUi-tabs-height) + 3px);
+    top: calc( var(--awUi-tabs-height) + 7px);
 }
 /*
   <<<< END: Layout

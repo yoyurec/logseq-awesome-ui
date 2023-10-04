@@ -4,17 +4,6 @@
 
 #head {
     background: none !important;
-}
-
-#main-content-container {
-    padding: 1rem;
-}
-
-#right-sidebar {
-    border-top: var(--ls-headbar-height) solid var(--awSt-ui-rsidebar-bg, transparent) !important;
-}
-
-#head {
     pointer-events: none;
 }
 
@@ -23,6 +12,14 @@
     pointer-events: auto;
 }
 
-[data-pid="logseq-agenda"] {
-    top: var(--awUi-tabs-height, 0px) !important;
+#head::after {
+    display: none;
+}
+
+#main-content-container {
+    padding: 1rem;
+}
+
+#right-sidebar {
+    border-top: var(--ls-headbar-height) solid var(--awSt-ui-rsidebar-bg, transparent) !important;
 }
