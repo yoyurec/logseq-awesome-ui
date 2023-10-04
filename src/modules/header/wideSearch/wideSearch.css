@@ -44,7 +44,6 @@
 
 .ls-search {
     border-radius: 4px;
-    border: 1px solid #88888850;
 }
 .ls-search .input-wrap {
     height: 34px;
@@ -54,8 +53,8 @@
     content: "\eb1c";
     font-size: 20px;
     position: absolute;
-    left: 7px;
-    top: 1px;
+    left: 6px;
+    top: 0;
 }
 .ls-search .input-wrap .cp__palette-input {
     font-size: calc(var(--awUi-font-size) + 2px);
