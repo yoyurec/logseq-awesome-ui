@@ -26,6 +26,7 @@
 .whiteboard-page {
     height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
 }
+
 body[data-page="graph"] .graph {
     height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
 }
@@ -36,6 +37,10 @@ body[data-page="graph"] .graph {
 
 .is-mac #head > .l {
     padding-left: 0.5rem;
+}
+
+.ls-window-controls .window-controls {
+    top: calc( var(--awUi-tabs-height) + 3px);
 }
 /*
   <<<< END: Layout
