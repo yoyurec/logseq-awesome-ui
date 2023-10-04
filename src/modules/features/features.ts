@@ -26,9 +26,4 @@ export const setFeaturesCSSVars = () => {
     } else {
         root.style.removeProperty('--awUi-new-bullet-hidden');
     }
-    if (globals.pluginConfig.hideBottomHelpButton) {
-        root.style.setProperty('--awUi-help-button-hidden', 'none');
-    } else {
-        root.style.removeProperty('--awUi-help-button-hidden');
-    }
 }

@@ -18,8 +18,3 @@
     display: var(--awUi-sidebar-new-page, none) !important;
     position: fixed;
 }
-
-/* new page button */
-.cp__sidebar-help-btn {
-    display: var(--awUi-help-button-hidden, block) !important;
-}

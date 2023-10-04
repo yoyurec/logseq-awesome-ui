@@ -92,13 +92,6 @@ export const settingsConfig: SettingSchemaDesc[] = [
         default: false,
     },
     {
-        key: 'hideBottomHelpButton',
-        title: '',
-        description: 'Hide bottom help button',
-        type: 'boolean',
-        default: false,
-    },
-    {
         key: 'contentHeading',
         title: 'Content',
         description: '',
