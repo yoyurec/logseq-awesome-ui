@@ -78,10 +78,8 @@ const runStuff = () => {
         tabsPositionToggle();
         tabsStyleToggle();
         vaultButtonToggle();
-    }, 2000);
-    setTimeout(() => {
         rightSidebarLoad();
-    }, 3000)
+    }, 2000);
 }
 
 const stopStuff = () => {
