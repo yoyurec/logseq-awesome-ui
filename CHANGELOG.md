@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.3.0...v2.3.1) (2023-10-05)
+
+
+### Bug Fixes
+
+* **sidebar:** deletet outdated right sidebar toggler functionality ([5cf33d5](https://github.com/yoyurec/logseq-awesome-ui/commit/5cf33d54152c0e5a9ea210f459258691d88f7ae0))
+
 # [2.3.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.2.6...v2.3.0) (2023-10-05)
 
 
