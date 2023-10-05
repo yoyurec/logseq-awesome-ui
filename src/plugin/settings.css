@@ -9,11 +9,12 @@
     background-color: var(--ls-primary-background-color);
 }
 
+
 /*
   >>> BEGIN: Settings icons
 */
 .panel-wrap[data-id="logseq-awesome-ui"] .heading-item h2::before,
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key] small::before {
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key] p::before {
     display: inline-block;
     margin-right: 4px;
     font-family: "tabler-icons";
@@ -27,8 +28,21 @@
     transform: translateY(3px);
 }
 
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key] small::before {
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key] p::before {
     transform: translateY(1px);
+}
+
+
+/* Tabs */
+.panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="tabsHeading"] h2::before {
+    content: "\ea43";
+}
+
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="tabsPosition"] p:before {
+    content: "\ea10";
+}
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="tabsStyle"] p:before {
+    content: "\eb01";
 }
 
 
@@ -37,54 +51,65 @@
     content: "\ead7";
 }
 
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="tabsOnTop"] small:before {
-    content: "\ea43";
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="headerVariant"] p::before {
+    content: "\ef37";
 }
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="headerVariant"] small::before {
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="searchStyle"] p::before {
     content: "\eb1c";
 }
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="hideHomeButton"] small::before {
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="navigationPosition"] p::before {
+    content: "\ea19\ea1f";
+}
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="hideHomeButton"] p::before {
     content: "\eac1";
 }
+
 
 /* Left sidebar */
 .panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="leftSidebarHeading"] h2::before {
     content: "\eada";
 }
 
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="vaultButtonToBottom"] small::before {
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="vaultButtonToBottom"] p::before {
     content: "\ea88";
 }
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="compactSidebarMenu"] small::before {
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="compactSidebarMenu"] p::before {
     content: "\ebf3";
 }
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="menuCalendar"] small::before {
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="menuCalendar"] p::before {
     content: "\ee21";
 }
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="hideSidebarPageIcons"] small::before {
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="hideSidebarPageIcons"] p::before {
     content: "\eaa2";
 }
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="hideAddNewPage"] small::before {
-    content: "\eb2a";
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="hideAddNewPage"] p::before {
+    content: "\eed0";
 }
+
 
 /* Right sidebar*/
 .panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="rightSidebarHeading"] h2::before {
     content: "\ead9";
 }
 
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="hideRightSidebarToolbar"] small::before {
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="hideRightSidebarToolbar"] p::before {
     content: "\ead5";
 }
+
+body:not([data-awui-header-variant="Wide"]) .desc-item[data-key="hideRightSidebarToolbar"] {
+    display: none;
+}
+
 
 /* Content */
 .panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="contentHeading"] h2::before {
     content: "\eaa2";
 }
 
-.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="alwaysShowNewBlockBullet"] small::before {
+.panel-wrap[data-id="logseq-awesome-ui"] .desc-item[data-key="alwaysShowNewBlockBullet"] p::before {
     content: "\ea69";
 }
+
 
 /* Other */
 .panel-wrap[data-id="logseq-awesome-ui"] .heading-item[data-key="otherHeading"] h2::before {

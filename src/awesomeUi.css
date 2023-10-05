@@ -1,6 +1,30 @@
 :root {
+    --awUi-tabs-height: 0px;
     --awUi-header-height: 44px;
     --ls-headbar-height: 44px;
     --awUi-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --awUi-font-size: 13px;
 }
+
+
+/*
+  >>> BEGIN: Window controls
+*/
+.ls-window-controls .window-controls {
+    top: 7px;
+    right: 6px;
+    gap: 4px;
+}
+
+.ls-window-controls .window-controls .button {
+    z-index: 100;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    outline: 1px dotted var(--ls-border-color);
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 0px var(--ls-border-color);
+}
+/*
+  <<<< END: Window controls
+*/

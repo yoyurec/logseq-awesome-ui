@@ -11,6 +11,10 @@ body {
     height: var(--ls-headbar-height) !important;
 }
 
+#left-sidebar .left-sidebar-inner > .wrap {
+    margin-top: calc(var(--ls-headbar-height) + var(--awUi-tabs-height)) !important;
+}
+
 #head .l #search-button {
     transform: translateY(1px);
 }
@@ -30,24 +34,4 @@ body.is-pdf-active #head > .l {
 .whiteboard-page {
     padding: 0 !important;
     height: calc(100vh - var(--awUi-header-height)) !important;
-}
-
-.ls-window-controls .cp__header > .r {
-    margin-right: 120px !important;
-}
-
-.ls-window-controls .window-controls {
-    top: 7px;
-    right: 6px;
-    gap: 4px;
-}
-
-.ls-window-controls .window-controls .button {
-    z-index: 100;
-    height: 30px;
-    width: 30px;
-    padding: 0;
-    outline: 1px dotted var(--ls-border-color);
-    border-radius: 4px;
-    box-shadow: 1px 1px 1px 0px var(--ls-border-color);
 }

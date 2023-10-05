@@ -1,6 +1,12 @@
 /*
   >>> BEGIN: Settings form
 */
+
+.ui__modal:has(~ .ui__modal .settings-modal.of-plugins) .absolute.opacity-75,
+.ui__modal:has(.settings-modal.of-plugins) .absolute.opacity-75 {
+    opacity: 0.2;
+}
+
 /* close button */
 .ui__modal .ui__modal-panel > .absolute {
     z-index: 10;

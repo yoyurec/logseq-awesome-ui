@@ -3,7 +3,7 @@ import { doc, globals } from '../../globals/globals';
 import hiddenRightSidebarToolbarStyles from './hiddenRightSidebarToolbar.css?inline';
 
 export const hideRightSidebarToolbarToggle = () => {
-    if (globals.pluginConfig.hideRightSidebarToolbar) {
+    if (globals.pluginConfig.hideRightSidebarToolbar && globals.pluginConfig.headerVariant == 'Wide') {
         hideRightSidebarToolbarLoad();
     } else {
         hideRightSidebarToolbarUnload();

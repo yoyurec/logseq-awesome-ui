@@ -2,18 +2,43 @@ import { SettingSchemaDesc } from '@logseq/libs/dist/LSPlugin.user';
 
 export const settingsConfig: SettingSchemaDesc[] = [
     {
-        key: 'headerHeading',
-        title: 'Header',
+        key: 'tabsHeading',
+        title: 'Tabs',
         description: '',
         type: 'heading',
         default: null,
     },
     {
-        key: 'tabsOnTop',
+        key: 'tabsPosition',
         title: '',
-        description: 'Move Tabs panel on top?',
-        type: 'boolean',
-        default: true,
+        description: 'Choose tabs position:',
+        type: 'enum',
+        enumPicker: 'radio',
+        enumChoices: [
+            'TopPanel',
+            'Standard',
+        ],
+        default: 'TopPanel',
+    },
+    {
+        key: 'tabsStyle',
+        title: '',
+        description: 'Choose tabs style:',
+        type: 'enum',
+        enumPicker: 'radio',
+        enumChoices: [
+            'Awesome',
+            'AwesomeUpside',
+            'Standard',
+        ],
+        default: 'Awesome',
+    },
+    {
+        key: 'headerHeading',
+        title: 'Header',
+        description: '',
+        type: 'heading',
+        default: null,
     },
     {
         key: 'headerVariant',
@@ -22,11 +47,34 @@ export const settingsConfig: SettingSchemaDesc[] = [
         type: 'enum',
         enumPicker: 'radio',
         enumChoices: [
-            'Browser-like (wide search)',
+            'Wide',
             'Standard',
-            'Compact',
         ],
-        default: 'Browser-like (wide search)',
+        default: 'Wide',
+    },
+    {
+        key: 'navigationPosition',
+        title: '',
+        description: 'Choose navigation arrows position:',
+        type: 'enum',
+        enumPicker: 'radio',
+        enumChoices: [
+            'Left',
+            'Standard',
+        ],
+        default: 'Left',
+    },
+    {
+        key: 'searchStyle',
+        title: '',
+        description: 'Choose search style:',
+        type: 'enum',
+        enumPicker: 'radio',
+        enumChoices: [
+            'Wide',
+            'Standard',
+        ],
+        default: 'Awesome',
     },
     {
         key: 'hideHomeButton',
@@ -87,7 +135,7 @@ export const settingsConfig: SettingSchemaDesc[] = [
     {
         key: 'hideRightSidebarToolbar',
         title: '',
-        description: 'Hide toolbar on right sidebar?',
+        description: 'Hide toolbar on right sidebar? (Only for "Wide header" mode)',
         type: 'boolean',
         default: false,
     },

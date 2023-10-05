@@ -5,8 +5,8 @@
         - var(--awUi-calc-left-sidebar-width, var(--ls-left-sidebar-width))
         - var(--awUi-calc-right-sidebar-width, var(--ls-right-sidebar-width))
         ) !important;
-    height: calc(100vh - var(--awUi-tabs-height, 0px) - var(--awUi-header-height)) !important;
+    height: calc(100vh - var(--awUi-tabs-height) - var(--awUi-header-height)) !important;
     left: var(--awUi-calc-left-sidebar-width, var(--ls-left-sidebar-width));
     right: var(--awUi-calc-right-sidebar-width, var(--ls-right-sidebar-width));
-    top: calc(var(--awUi-tabs-height, 0px) + var(--awUi-header-height)) !important;
+    top: calc(var(--awUi-tabs-height) + var(--awUi-header-height)) !important;
 }

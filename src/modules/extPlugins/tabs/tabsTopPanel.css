@@ -6,6 +6,14 @@
 /*
   >>> BEGIN: Layout
 */
+.ls-window-controls .window-controls {
+    top: calc( var(--awUi-tabs-height) + 7px);
+}
+
+.cp__sidebar-main-content {
+    padding-top: 0 !important;
+}
+
 #head {
     top: var(--awUi-tabs-height);
 }
@@ -15,50 +23,27 @@
 }
 
 #main-content-container {
-    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
+  margin-top: 0 !important;
+  height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
 }
 
-#left-sidebar {
-    padding-top: 0;
-}
-
-#left-sidebar .left-sidebar-inner {
-    margin-top: 0;
-}
-
-#left-sidebar .left-sidebar-inner > .wrap {
+#left-sidebar .left-sidebar-inner>.wrap {
+    height: calc(100vh - var(--awUi-tabs-height) - var(--ls-headbar-height)) !important;
     margin-top: calc(var(--ls-headbar-height) + var(--awUi-tabs-height)) !important;
-    height: calc(100vh - var(--awUi-tabs-height)) !important;
 }
 
-#right-sidebar {
-    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
-}
-
-.sidebar-item-list {
-    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
-    padding-top: 16px !important;
+#right-sidebar .sidebar-item-list {
+    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height) - 2.5rem) !important;
 }
 
 .whiteboard-page {
     height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
 }
 
-body[data-page="graph"] .graph {
-    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
-}
-
-.cp__sidebar-main-content {
-    padding-top: 0 !important;
-}
-
 .is-mac #head > .l {
     padding-left: 0.5rem;
 }
 
-.ls-window-controls .window-controls {
-    top: calc( var(--awUi-tabs-height) + 7px);
-}
 /*
   <<<< END: Layout
 */
@@ -66,17 +51,6 @@ body[data-page="graph"] .graph {
 /*
   >>> BEGIN: Tabs plugin
 */
-
-#logseq-tabs_iframe {
-    position: static !important;
-    top: unset !important;
-    right: unset !important;
-    bottom: unset !important;
-    left: unset !important;
-    z-index: unset !important;
-    height: var(--awUi-tabs-height) !important;
-}
-
 [data-pid="logseq-tabs"] {
     position: fixed !important;
     top: 0 !important;
@@ -90,6 +64,16 @@ body[data-page="graph"] .graph {
     background-color: var(--ls-tertiary-background-color);
 }
 
+#logseq-tabs_iframe {
+    position: static !important;
+    top: unset !important;
+    right: unset !important;
+    bottom: unset !important;
+    left: unset !important;
+    z-index: unset !important;
+    height: var(--awUi-tabs-height) !important;
+}
+
 .is-mac [data-pid="logseq-tabs"]::before {
     position: fixed;
     top: 0;
@@ -97,7 +81,7 @@ body[data-page="graph"] .graph {
     display: block;
     content: '';
     width: 84px;
-    height: var(--awUi-tabs-height);
+    height: var(--awUi-tabs-height, 0px);
     border-bottom: 1px solid #80808080;
     background-color: var(--ls-tertiary-background-color);
 }

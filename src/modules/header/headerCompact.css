@@ -20,6 +20,10 @@
     padding: 1rem;
 }
 
+body:not([data-awui-tabs-position="TopPanel"]) #main-content-container {
+    padding-top: var(--awUi-tabs-height)!important;
+}
+
 #right-sidebar {
     border-top: var(--ls-headbar-height) solid var(--awSt-ui-rsidebar-bg, transparent) !important;
 }

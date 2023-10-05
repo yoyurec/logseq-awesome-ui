@@ -1,0 +1,123 @@
+:root {
+    --awUi-tabs-height: 36px;
+    --awUi-header-height: 44px;
+}
+
+/*
+  >>> BEGIN: Layout
+*/
+#head {
+    top: var(--awUi-tabs-height);
+}
+
+#app-container {
+    margin-top: calc(var(--awUi-header-height) + var(--awUi-tabs-height)) !important;
+}
+
+#main-content-container {
+    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
+}
+
+#left-sidebar {
+    padding-top: 0;
+}
+
+#left-sidebar .left-sidebar-inner {
+    margin-top: 0;
+}
+
+#left-sidebar .left-sidebar-inner > .wrap {
+    height: calc(100vh - var(--awUi-tabs-height)) !important;
+}
+
+#right-sidebar {
+    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
+}
+
+.sidebar-item-list {
+    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
+    padding-top: 8px !important;
+}
+
+.whiteboard-page {
+    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
+}
+
+body[data-page="graph"] .graph {
+    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
+}
+
+.cp__sidebar-main-content {
+    padding-top: 0 !important;
+}
+
+.is-mac #head > .l {
+    padding-left: 0.5rem;
+}
+
+.ls-window-controls .window-controls {
+    top: calc( var(--awUi-tabs-height) + 7px);
+}
+/*
+  <<<< END: Layout
+*/
+
+/*
+  >>> BEGIN: Tabs plugin
+*/
+
+#logseq-tabs_iframe {
+    position: static !important;
+    top: unset !important;
+    right: unset !important;
+    bottom: unset !important;
+    left: unset !important;
+    z-index: unset !important;
+    height: var(--awUi-tabs-height) !important;
+}
+
+[data-pid="logseq-tabs"] {
+    position: fixed !important;
+    top: 0 !important;
+    left: unset !important;
+    right: unset !important;
+    bottom: unset !important;
+    z-index: 99 !important;
+    height: var(--awUi-tabs-height) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background-color: var(--ls-tertiary-background-color);
+}
+
+.is-mac [data-pid="logseq-tabs"]::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    content: '';
+    width: 84px;
+    height: var(--awUi-tabs-height, 0px);
+    border-bottom: 1px solid #80808080;
+    background-color: var(--ls-tertiary-background-color);
+}
+
+.is-mac [data-pid="logseq-tabs"] {
+    left: 84px !important;
+}
+
+html.is-mac.is-fullscreen body:not(.is-pdf-active) [data-pid="logseq-tabs"] {
+    left: 0 !important;
+}
+
+body.is-pdf-active [data-pid="logseq-tabs"] {
+    left: calc(var(--ph-view-container-width)) !important;
+}
+
+html.is-mac.is-fullscreen [data-pid="logseq-tabs"]::before,
+html.is-mac .is-pdf-active [data-pid="logseq-tabs"]::before {
+    display: none;
+}
+
+/*
+  <<<< END: Tabs plugin
+*/

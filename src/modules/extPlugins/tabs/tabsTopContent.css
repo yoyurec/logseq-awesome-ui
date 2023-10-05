@@ -1,0 +1,21 @@
+:root {
+    --awUi-tabs-height: 36px;
+    --awUi-header-height: 44px;
+}
+
+/*
+  >>> BEGIN: Tabs plugin
+*/
+[data-pid="logseq-tabs"] {
+    top: 0 !important;
+    height: var(--awUi-tabs-height) !important;
+    background-color: var(--ls-tertiary-background-color);
+}
+
+
+#logseq-tabs_iframe {
+    height: var(--awUi-tabs-height) !important;
+}
+/*
+  <<<< END: Tabs plugin
+*/

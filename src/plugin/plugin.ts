@@ -2,11 +2,13 @@ import { doc, body, globals } from '../modules/globals/globals';
 
 import { menuCalendarToggle, menuCalendarUnload } from '../modules/extPlugins/calendar/calendar';
 import { setFeaturesCSSVars } from '../modules/features/features';
+import { headerLoad, headerUnload } from '../modules/header/headerVariant';
+import { searchStyleToggle, searchStyleUnload } from '../modules/header/searchStyle';
 import { rightSidebarLoad, rightSidebarUnload } from '../modules/sidebars/sidebars';
-import { setTabsCSSVarsStyles, tabsToggle, tabsUnload } from '../modules/extPlugins/tabs/tabs';
-import { modalObserverLoad, modalObserverUnload } from './modalObserver';
+import { tabsPositionToggle, tabsPositionUnload } from '../modules/extPlugins/tabs/tabsPosition';
+import { navigationPositionToggle, navigationPositionUnload } from '../modules/header/navigationPosition';
+import { setTabsCSSVarsStyles, tabsStyleToggle, tabsStyleUnload } from '../modules/extPlugins/tabs/tabsStyle';
 import { compactSidebarMenuToggle, compactSidebarMenuUnload } from '../modules/sidebars/compactSidebarMenu/compactSidebarMenu';
-import { headerLoad, headerUnload } from '../modules/header/header';
 import { hideRightSidebarToolbarToggle, hideRightSidebarToolbarUnload } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
 
 import '../modules/extPlugins/extPlugins';
@@ -69,10 +71,12 @@ const runStuff = () => {
         setFeaturesCSSVars();
         compactSidebarMenuToggle();
         hideRightSidebarToolbarToggle();
-        modalObserverLoad();
         menuCalendarToggle();
         headerLoad();
-        tabsToggle();
+        navigationPositionToggle();
+        searchStyleToggle();
+        tabsPositionToggle();
+        tabsStyleToggle();
         vaultButtonToggle();
     }, 2000);
     setTimeout(() => {
@@ -84,10 +88,12 @@ const stopStuff = () => {
     compactSidebarMenuUnload();
     hideRightSidebarToolbarUnload();
     rightSidebarUnload();
-    modalObserverUnload();
     menuCalendarUnload();
     headerUnload();
-    tabsUnload();
+    navigationPositionUnload();
+    searchStyleUnload();
+    tabsPositionUnload();
+    tabsStyleUnload();
     vaultButtonUnload();
 }
 

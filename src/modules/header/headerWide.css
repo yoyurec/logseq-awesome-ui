@@ -1,0 +1,23 @@
+body {
+    background-color: var(--ls-primary-background-color);
+}
+
+#app-container {
+    margin-top: var(--awUi-header-height) !important;
+}
+.cp__sidebar-main-content {
+    padding-top: 0 !important;
+}
+
+#head {
+    position: fixed;
+    height: var(--ls-headbar-height) !important;
+}
+
+#main-content-container {
+    margin-top: var(--ls-headbar-height) !important;
+}
+
+.ls-window-controls .cp__header > .r {
+    margin-right: 120px !important;
+}

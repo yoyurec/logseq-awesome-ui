@@ -1,3 +1,8 @@
+/* Tabs */
+body[data-awui-tabs-style="AwesomeUpside"]:not([data-awui-tabs-position="TopPanel"]) [data-pid="logseq-tabs"] {
+  transform: translateY(-3px);
+}
+
 /* Markmap */
 #injected-ui-item-logseq-mark-map-logseq-mark-map .ti {
   font-size: 18px;
@@ -41,14 +46,14 @@
 
 /* Tags plugin */
 #logseq-tags_iframe {
-  padding-top: calc(var(--awUi-tabs-height, 0px) - 8px);
+  padding-top: calc(var(--awUi-tabs-height) - 8px);
 }
 
 
 /* >>> BEGIN: TextWrapper plugin
 */
 #kef-wrap-toolbar {
-  transform: translateY(calc( (var(--awUi-header-height) + var(--awUi-tabs-height, 0px)) * -1 ));
+  transform: translateY(calc( (var(--awUi-header-height) + var(--awUi-tabs-height)) * -1 ));
 }
 /*
 <<<< END: TextWrapper plugin

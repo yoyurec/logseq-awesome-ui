@@ -58,6 +58,9 @@ export const getMainCSSColors = (): string => {
     const chosenColor = getComputedStyle(link).backgroundColor.trim();
     const borderColor = getComputedStyle(link).borderColor.trim();
     link.remove();
+    const headerRight = doc.querySelector('#head .r');
+    const secondBg = getInheritedBackgroundColor(headerRight);
+
     return `
         :root {
             --ls-primary-text-color:${textColor};
@@ -65,6 +68,7 @@ export const getMainCSSColors = (): string => {
             --ls-link-text-color:${linkColor};
             --ls-a-chosen-bg:${chosenColor};
             --ls-border-color:${borderColor};
+            --ls-secondary-background-color:${secondBg};
         }
     `
 }

@@ -4,12 +4,15 @@ import { objectsKeysDiff } from '../utils/utils';
 import { globals } from '../modules/globals/globals';
 
 import { settingsConfig } from './settingsConfig';
-import { headerVariantToggle } from '../modules/header/header';
+import { headerVariantToggle } from '../modules/header/headerVariant';
 import { menuCalendarToggle } from '../modules/extPlugins/calendar/calendar';
 import { compactSidebarMenuToggle } from '../modules/sidebars/compactSidebarMenu/compactSidebarMenu';
 import { setFeaturesCSSVars } from '../modules/features/features';
 import { hideRightSidebarToolbarToggle } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
-import { tabsToggle } from '../modules/extPlugins/tabs/tabs';
+import { tabsPositionToggle } from '../modules/extPlugins/tabs/tabsPosition';
+import { tabsStyleToggle } from '../modules/extPlugins/tabs/tabsStyle';
+import { searchStyleToggle } from '../modules/header/searchStyle';
+import { navigationPositionToggle } from '../modules/header/navigationPosition';
 
 import './settings.css';
 import { vaultButtonToggle } from '../modules/sidebars/vaultButton/vaultButton';
@@ -32,11 +35,21 @@ export const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings']
         return;
     }
 
-    if (settingsChangedKey.includes('tabsOnTop')) {
-        tabsToggle();
+    if (settingsChangedKey.includes('tabsPosition')) {
+        tabsPositionToggle();
+    }
+    if (settingsChangedKey.includes('tabsStyle')) {
+        tabsStyleToggle();
     }
     if (settingsChangedKey.includes('headerVariant')) {
         headerVariantToggle();
+        hideRightSidebarToolbarToggle();
+    }
+    if (settingsChangedKey.includes('navigationPosition')) {
+        navigationPositionToggle();
+    }
+    if (settingsChangedKey.includes('searchStyle')) {
+        searchStyleToggle();
     }
     if (settingsChangedKey.includes('menuCalendar')) {
         menuCalendarToggle();

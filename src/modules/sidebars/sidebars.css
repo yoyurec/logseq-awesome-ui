@@ -1,6 +1,29 @@
 /*
   >>> BEGIN: Left sidebar
 */
+#left-sidebar .left-sidebar-inner > .wrap {
+    margin-top: var(--ls-headbar-height);
+}
+#left-sidebar .cp__menubar-repos {
+    border-top: 1px dotted var(--ls-guideline-color);
+}
+#left-sidebar .nav-content-item {
+    border-top: 1px dotted var(--ls-guideline-color);
+}
+#left-sidebar .nav-content-item .header {
+    margin-top: 4px;
+}
+#left-sidebar .nav-header {
+    gap: 0;
+}
+#left-sidebar .item {
+    padding: 5px 8px;
+    transition: none;
+}
+#left-sidebar .item > .ti {
+    font-size: 18px;
+}
+
 /* left sidebar toggle button*/
 #head .ls-icon-menu-2 {
     margin-top: -2px;
@@ -31,22 +54,6 @@
 }
 .text-sm li {
     margin: 0;
-}
-#left-sidebar .nav-header {
-    gap: 0;
-}
-#left-sidebar .item {
-    padding: 5px 8px;
-    transition: none;
-}
-#left-sidebar .item > .ti {
-    font-size: 18px;
-}
-#left-sidebar .nav-content-item {
-    border-top: 1px dotted var(--ls-guideline-color);
-}
-#left-sidebar .nav-content-item .header {
-    margin-top: 4px;
 }
 /*
   <<<< END: Left sidebar
