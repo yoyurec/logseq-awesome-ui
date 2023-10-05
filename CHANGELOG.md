@@ -1,3 +1,23 @@
+# [2.3.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.2.6...v2.3.0) (2023-10-05)
+
+
+### Bug Fixes
+
+* **compactsidebarmenu:** fixed paddings ([b8d0274](https://github.com/yoyurec/logseq-awesome-ui/commit/b8d02746f59b92d7e413b0a68f69a8df6d084d55)), closes [#60](https://github.com/yoyurec/logseq-awesome-ui/issues/60)
+* **features:** delete hiding help button ([f64e052](https://github.com/yoyurec/logseq-awesome-ui/commit/f64e052c538c3dfbca6aa6dac2cbaeaa58d3c622))
+* **flashcards:** delete option "move to header" ([e7c6922](https://github.com/yoyurec/logseq-awesome-ui/commit/e7c692268d245c7a0a609e06ea4d29810cbb11e0))
+* **header:** pixel shifting ([974a004](https://github.com/yoyurec/logseq-awesome-ui/commit/974a00475e81301b4d663d5a679c8db46ba5c192))
+* **left sidebar:** compact menu and vaults ([defa239](https://github.com/yoyurec/logseq-awesome-ui/commit/defa239ebd3a97b8a7814d0c6bed5aedc65b8c83))
+* **search:** pixel shifting for wide search ([98f6c57](https://github.com/yoyurec/logseq-awesome-ui/commit/98f6c57845898e72f957f4e4d56dd335a063a905))
+* **search:** popup pixel shifting ([62699bd](https://github.com/yoyurec/logseq-awesome-ui/commit/62699bdf0fa727ffc5985c1d7f26398c55442222))
+* **tabs:** position and unclickable ([cd11f1e](https://github.com/yoyurec/logseq-awesome-ui/commit/cd11f1e670bcfc6e9f6b33d5ba64add4d0ebb15f))
+* **window:** fix controls ([c54f596](https://github.com/yoyurec/logseq-awesome-ui/commit/c54f596bb26cb0f697de18aeae0e9c7d618c9322))
+
+
+### Features
+
+* **all:** simplified, reworked, atomized header settings, upside tabs style ([89a23dc](https://github.com/yoyurec/logseq-awesome-ui/commit/89a23dc9dbd052710c81c7185b753b32b58a9c32))
+
 ## [2.2.6](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.2.5...v2.2.6) (2023-03-30)
 
 
