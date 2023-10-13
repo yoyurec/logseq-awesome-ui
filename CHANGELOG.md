@@ -1,3 +1,10 @@
+## [2.3.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.3.1...v2.3.2) (2023-10-13)
+
+
+### Bug Fixes
+
+* **search:** width ([5eea7e7](https://github.com/yoyurec/logseq-awesome-ui/commit/5eea7e76f102278fc8a34d31c50c71d6cd51f588))
+
 ## [2.3.1](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.3.0...v2.3.1) (2023-10-05)
 
 
