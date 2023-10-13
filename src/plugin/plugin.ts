@@ -6,7 +6,7 @@ import { headerLoad, headerUnload } from '../modules/header/headerVariant';
 import { searchStyleToggle, searchStyleUnload } from '../modules/header/searchStyle';
 import { rightSidebarLoad, rightSidebarUnload } from '../modules/sidebars/sidebars';
 import { tabsPositionToggle, tabsPositionUnload } from '../modules/extPlugins/tabs/tabsPosition';
-import { navigationPositionToggle, navigationPositionUnload } from '../modules/header/navigationPosition';
+import { navigationPositionLoad, navigationPositionUnload } from '../modules/header/navigationPosition';
 import { setTabsCSSVarsStyles, tabsStyleToggle, tabsStyleUnload } from '../modules/extPlugins/tabs/tabsStyle';
 import { compactSidebarMenuToggle, compactSidebarMenuUnload } from '../modules/sidebars/compactSidebarMenu/compactSidebarMenu';
 import { hideRightSidebarToolbarToggle, hideRightSidebarToolbarUnload } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
@@ -73,7 +73,7 @@ const runStuff = () => {
         hideRightSidebarToolbarToggle();
         menuCalendarToggle();
         headerLoad();
-        navigationPositionToggle();
+        navigationPositionLoad();
         searchStyleToggle();
         tabsPositionToggle();
         tabsStyleToggle();

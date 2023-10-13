@@ -57,10 +57,11 @@
 }
 @media (min-width: 1400px) {
     .ui__modal-panel .panel-content .ls-search {
-        width: calc(var(--ls-main-content-max-width-wide) - var(--ls-left-sidebar-width));
+        width: calc(var(--ls-main-content-max-width) + var(--ls-left-sidebar-width));
     }
 }
 .ls-search .input-wrap {
+    position: relative;
     height: 32px;
 }
 .ls-search .input-wrap::before {

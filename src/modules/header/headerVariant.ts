@@ -1,10 +1,8 @@
 import { doc, body, globals } from '../globals/globals';
 
 import headerWideCSS from './headerWide.css?inline';
-// import headerCompactCSS from './headerCompact.css?inline';
 
 export const headerLoad = () => {
-//    moveHead();
     headerVariantToggle();
 }
 
