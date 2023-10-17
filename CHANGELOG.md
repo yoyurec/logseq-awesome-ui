@@ -1,3 +1,10 @@
+## [2.3.3](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.3.2...v2.3.3) (2023-10-17)
+
+
+### Bug Fixes
+
+* **layout:** change margin to top ([8c204e7](https://github.com/yoyurec/logseq-awesome-ui/commit/8c204e7ac0b7cac585adce94e85eab484933a64e))
+
 ## [2.3.2](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.3.1...v2.3.2) (2023-10-13)
 
 
