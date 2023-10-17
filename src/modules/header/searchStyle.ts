@@ -21,7 +21,7 @@ export const searchStyleLoad = (searchStyleCSS: string) => {
 }
 
 export const searchStyleUnload = () => {
-    delete body.dataset.awuiTabsStyle;
+    delete body.dataset.awuiSearchStyle;
     doc.head.querySelector(`style[data-injected-style^="--awUi-search-style-css"]`)?.remove();
 }
 

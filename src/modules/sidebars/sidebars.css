@@ -2,7 +2,7 @@
   >>> BEGIN: Left sidebar
 */
 #left-sidebar .left-sidebar-inner > .wrap {
-    margin-top: var(--ls-headbar-height);
+    margin-top: var(--awUi-header-height);
 }
 #left-sidebar .cp__menubar-repos {
     border-top: 1px dotted var(--ls-guideline-color);

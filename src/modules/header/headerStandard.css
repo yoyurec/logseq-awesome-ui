@@ -13,10 +13,6 @@
     height: calc(100vh - var(--awUi-header-height)) !important;
 }
 
-#right-sidebar {
-    top: var(--awUi-header-height) !important;
-}
-
-.ls-window-controls .cp__header > .r {
-    margin-right: 120px !important;
+.whiteboard-page {
+    height: calc(100vh - var(--awUi-header-height)) !important;
 }

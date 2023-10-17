@@ -46,15 +46,15 @@ body[data-awui-tabs-style="AwesomeUpside"]:not([data-awui-tabs-position="TopPane
 
 /* Tags plugin */
 #logseq-tags_iframe {
-  padding-top: calc(var(--awUi-tabs-height) - 8px);
+  top: calc(var(--awUi-tabs-height) - 8px);
 }
 
 
 /* >>> BEGIN: TextWrapper plugin
 */
-#kef-wrap-toolbar {
+/* #kef-wrap-toolbar {
   transform: translateY(calc( (var(--awUi-header-height) + var(--awUi-tabs-height)) * -1 ));
-}
+} */
 /*
 <<<< END: TextWrapper plugin
 */

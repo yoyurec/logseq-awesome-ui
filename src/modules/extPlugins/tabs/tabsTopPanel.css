@@ -1,6 +1,5 @@
 :root {
     --awUi-tabs-height: 36px;
-    --awUi-header-height: 44px;
 }
 
 /*
@@ -15,29 +14,35 @@
 }
 
 #head {
-    top: var(--awUi-tabs-height);
+    top: var(--awUi-tabs-height) !important;
 }
 
-#app-container {
+#left-sidebar .left-sidebar-inner > .wrap {
+    height: calc(100vh - var(--awUi-tabs-height) - var(--awUi-header-height)) !important;
     margin-top: calc(var(--awUi-header-height) + var(--awUi-tabs-height)) !important;
 }
 
 #main-content-container {
-  margin-top: 0 !important;
-  height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
+    top: var(--awUi-tabs-height) !important;
+    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
+}
+body[data-awui-header-variant="Wide"] #main-content-container {
+    top: calc(var(--awUi-header-height) + var(--awUi-tabs-height)) !important;
+    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
 }
 
-#left-sidebar .left-sidebar-inner>.wrap {
-    height: calc(100vh - var(--awUi-tabs-height) - var(--ls-headbar-height)) !important;
-    margin-top: calc(var(--ls-headbar-height) + var(--awUi-tabs-height)) !important;
+#right-sidebar {
+    top: var(--awUi-tabs-height) !important;
+}
+body[data-awui-header-variant="Wide"] #right-sidebar {
+    top: calc(var(--awUi-header-height) + var(--awUi-tabs-height)) !important;
 }
 
 #right-sidebar .sidebar-item-list {
-    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height) - 2.5rem) !important;
+    height: calc(100vh - var(--awUi-tabs-height) - 2.5rem) !important;
 }
-
-.whiteboard-page {
-    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height)) !important;
+body[data-awui-header-variant="Wide"] #right-sidebar .sidebar-item-list {
+    height: calc(100vh - var(--awUi-header-height) - var(--awUi-tabs-height) - 2.5rem) !important;
 }
 
 .is-mac #head > .l {

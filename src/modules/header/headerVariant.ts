@@ -22,8 +22,9 @@ export const headerVariantToggle = () => {
         //     break;
         case 'Standard':
             headerVariantUnload();
-            break;
+        break;
     }
+    body.dataset.awuiHeaderVariant = globals.pluginConfig.headerVariant;
 }
 
 export const headerVariantLoad = (headerVariantCSS: string) => {
