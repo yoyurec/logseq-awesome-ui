@@ -1,3 +1,10 @@
+## [2.3.4](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.3.3...v2.3.4) (2023-10-19)
+
+
+### Bug Fixes
+
+* **agenda:** agenda plugin checking ([4c200bf](https://github.com/yoyurec/logseq-awesome-ui/commit/4c200bfc17abb599f87ec6f4d61a2dc27871d8f9))
+
 ## [2.3.3](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.3.2...v2.3.3) (2023-10-17)
 
 
