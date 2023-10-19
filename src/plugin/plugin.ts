@@ -1,6 +1,6 @@
 import { doc, body, globals } from '../modules/globals/globals';
 
-import { menuCalendarToggle, menuCalendarUnload } from '../modules/extPlugins/calendar/calendar';
+import { calendarToggle, calendarUnload } from '../modules/extPlugins/calendar/calendar';
 import { setFeaturesCSSVars } from '../modules/features/features';
 import { headerLoad, headerUnload } from '../modules/header/headerVariant';
 import { searchStyleToggle, searchStyleUnload } from '../modules/header/searchStyle';
@@ -71,7 +71,7 @@ const runStuff = () => {
         setFeaturesCSSVars();
         compactSidebarMenuToggle();
         hideRightSidebarToolbarToggle();
-        menuCalendarToggle();
+        calendarToggle();
         headerLoad();
         navigationPositionLoad();
         searchStyleToggle();
@@ -86,7 +86,7 @@ const stopStuff = () => {
     compactSidebarMenuUnload();
     hideRightSidebarToolbarUnload();
     rightSidebarUnload();
-    menuCalendarUnload();
+    calendarUnload();
     headerUnload();
     navigationPositionUnload();
     searchStyleUnload();

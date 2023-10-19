@@ -3,72 +3,27 @@ import { root, doc, globals } from '../../globals/globals';
 import calendarStyles from './calendar.css?inline';
 
 let sidebarCalendarButton: HTMLElement | null = null;
-let agendaPlugin: HTMLElement | null = null;
 
 const calendarPagePath = '/page/calendar'
 
-export const menuCalendarToggle = () => {
+export const calendarToggle = () => {
     if (globals.pluginConfig.menuCalendar) {
-        menuCalendarLoad();
+        calendarLoad();
     } else {
-        menuCalendarUnload();
+        calendarUnload();
     }
 }
 
-export const menuCalendarLoad = () => {
+export const calendarLoad = () => {
     addCalendarButtonToSidebar();
-    logseq.provideStyle({ key: '--awUi-calendar-css', style: calendarStyles });
-    // show on 1st load
-    if (window.parent.location.hash.toLowerCase() === `#${calendarPagePath}`) {
-        setTimeout(() => {
-            showAgendaPlugin();
-        }, 1000);
-    }
 
-    agendaPlugin = doc.getElementById('logseq-agenda_lsp_main') as HTMLElement;
-    if (!agendaPlugin) {
-        console.log('AwesomeUi: agenda plugin not found!');
-        return;
-    }
-
-    sidebarCalendarButton = doc.getElementById('--awUi-calendar-menu');
-    const leftSidebartoggleBtn = doc.getElementById('left-menu');
-    leftSidebartoggleBtn!.addEventListener('click', setSidebarWidthVar);
-    logseq.App.onRouteChanged(({ path }) => {
-        if (globals.pluginConfig.menuCalendar) {
-            if (path.toLowerCase() === calendarPagePath) {
-                showAgendaPlugin();
-            } else {
-                hideAgendaPlugin();
-            }
-        }
-    });
-
-    logseq.App.onSidebarVisibleChanged(() => {
-        setSidebarWidthVar();
-    });
+    // Agenda plugin integration
+    loadAgenda();
 }
 
-export const menuCalendarUnload = () => {
+export const calendarUnload = () => {
     doc.head.querySelector(`style[data-injected-style^="--awUi-calendar-css"]`)?.remove();
     doc.querySelector('.nav-header .calendar-nav')?.remove();
-}
-
-
-const showAgendaPlugin = async () => {
-    setSidebarWidthVar();
-    if (agendaPlugin && sidebarCalendarButton) {
-        await logseq.App.invokeExternalPlugin('logseq-agenda.models.show');
-        sidebarCalendarButton.classList.add('active');
-        setTimeout(() => {
-            doc.getElementById('logseq-agenda_iframe')?.blur();
-        }, 150);
-    }
-}
-
-const hideAgendaPlugin = () => {
-    logseq.App.invokeExternalPlugin('logseq-agenda.models.hide');
-    sidebarCalendarButton?.classList.remove('active');
 }
 
 const addCalendarButtonToSidebar = () => {
@@ -86,7 +41,66 @@ const addCalendarButtonToSidebar = () => {
     journalsButton?.insertAdjacentHTML('afterend', calendarButtonHTML);
 }
 
-const setSidebarWidthVar = () => {
+const loadAgenda = () => {
+    const agendaPluginIframe = doc.getElementById('logseq-agenda_iframe') as HTMLElement;
+    if (!agendaPluginIframe) {
+        console.log('AwesomeUi: agenda plugin not found!');
+        return;
+    }
+
+    // add Agenda popup styles
+    logseq.provideStyle({ key: '--awUi-calendar-css', style: calendarStyles });
+
+    // show on 1st load if opened page is "#calendar"
+    if (window.parent.location.hash.toLowerCase() === `#${calendarPagePath}`) {
+        setTimeout(() => {
+            showAgendaPlugin();
+        }, 1000);
+    }
+
+    updateAgendaPopupSizeOnSidebarsToggle();
+
+    logseq.App.onRouteChanged(({ path }) => {
+        if (globals.pluginConfig.menuCalendar) {
+            if (path.toLowerCase() === calendarPagePath) {
+                showAgendaPlugin();
+            } else {
+                hideAgendaPlugin();
+            }
+        }
+    });
+}
+
+const updateAgendaPopupSizeOnSidebarsToggle = () => {
+    // left sidebar
+    sidebarCalendarButton = doc.getElementById('--awUi-calendar-menu');
+    const leftSidebartoggleBtn = doc.getElementById('left-menu');
+    leftSidebartoggleBtn!.addEventListener('click', setAgendaPopupCSSVars);
+
+    // right sidebar
+    logseq.App.onSidebarVisibleChanged(() => {
+        setAgendaPopupCSSVars();
+    });
+}
+
+const showAgendaPlugin = async () => {
+    setAgendaPopupCSSVars();
+    if (sidebarCalendarButton) {
+        await logseq.App.invokeExternalPlugin('logseq-agenda.models.show');
+        sidebarCalendarButton.classList.add('active');
+        // unfocus iframe to fix hotkeys navigation
+        setTimeout(() => {
+            doc.getElementById('logseq-agenda_iframe')?.blur();
+        }, 150);
+    }
+}
+
+const hideAgendaPlugin = () => {
+    logseq.App.invokeExternalPlugin('logseq-agenda.models.hide');
+    sidebarCalendarButton?.classList.remove('active');
+}
+
+const setAgendaPopupCSSVars = () => {
     setTimeout(() => {
         let leftSidebarWidth;
         if (doc.getElementById('left-sidebar')?.classList.contains('is-open')) {

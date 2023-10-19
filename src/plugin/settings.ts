@@ -5,7 +5,7 @@ import { globals } from '../modules/globals/globals';
 
 import { settingsConfig } from './settingsConfig';
 import { headerVariantToggle } from '../modules/header/headerVariant';
-import { menuCalendarToggle } from '../modules/extPlugins/calendar/calendar';
+import { calendarToggle } from '../modules/extPlugins/calendar/calendar';
 import { compactSidebarMenuToggle } from '../modules/sidebars/compactSidebarMenu/compactSidebarMenu';
 import { setFeaturesCSSVars } from '../modules/features/features';
 import { hideRightSidebarToolbarToggle } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
@@ -52,7 +52,7 @@ export const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings']
         searchStyleToggle();
     }
     if (settingsChangedKey.includes('menuCalendar')) {
-        menuCalendarToggle();
+        calendarToggle();
     }
     if (settingsChangedKey.includes('compactSidebarMenu')) {
         compactSidebarMenuToggle();
