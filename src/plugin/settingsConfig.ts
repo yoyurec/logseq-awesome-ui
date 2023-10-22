@@ -160,4 +160,11 @@ export const settingsConfig: SettingSchemaDesc[] = [
         type: 'heading',
         default: null,
     },
+    {
+        key: 'killAnimations',
+        title: '',
+        description: 'Disable ALL transitions and animations',
+        type: 'boolean',
+        default: true,
+    },
 ];

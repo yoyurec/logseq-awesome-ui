@@ -13,6 +13,7 @@ import { tabsPositionToggle } from '../modules/extPlugins/tabs/tabsPosition';
 import { tabsStyleToggle } from '../modules/extPlugins/tabs/tabsStyle';
 import { searchStyleToggle } from '../modules/header/searchStyle';
 import { navigationPositionToggle } from '../modules/header/navigationPosition';
+import { animationsToggle } from '../modules/other/animations';
 
 import './settings.css';
 import { vaultButtonToggle } from '../modules/sidebars/vaultButton/vaultButton';
@@ -62,6 +63,9 @@ export const onSettingsChangedCallback = (settings: LSPluginBaseInfo['settings']
     }
     if (settingsChangedKey.includes('vaultButtonToBottom')) {
         vaultButtonToggle();
+    }
+    if (settingsChangedKey.includes('killAnimations')) {
+        animationsToggle();
     }
 
     setFeaturesCSSVars();

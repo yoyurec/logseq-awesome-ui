@@ -10,10 +10,11 @@ import { navigationPositionLoad, navigationPositionUnload } from '../modules/hea
 import { setTabsCSSVarsStyles, tabsStyleToggle, tabsStyleUnload } from '../modules/extPlugins/tabs/tabsStyle';
 import { compactSidebarMenuToggle, compactSidebarMenuUnload } from '../modules/sidebars/compactSidebarMenu/compactSidebarMenu';
 import { hideRightSidebarToolbarToggle, hideRightSidebarToolbarUnload } from '../modules/sidebars/hideRightSidebarToolbar/hideRightSidebarToolbar';
+import { vaultButtonToggle, vaultButtonUnload } from '../modules/sidebars/vaultButton/vaultButton';
+import { animationsToggle, animationsUnload } from '../modules/other/animations';
 
 import '../modules/extPlugins/extPlugins';
 import '../modules/other/other';
-import { vaultButtonToggle, vaultButtonUnload } from '../modules/sidebars/vaultButton/vaultButton';
 
 export const pluginLoad = () => {
     body.classList.add(globals.isPluginEnabled);
@@ -79,6 +80,7 @@ const runStuff = () => {
         tabsStyleToggle();
         vaultButtonToggle();
         rightSidebarLoad();
+        animationsToggle();
     }, 2000);
 }
 
@@ -93,6 +95,7 @@ const stopStuff = () => {
     tabsPositionUnload();
     tabsStyleUnload();
     vaultButtonUnload();
+    animationsUnload();
 }
 
 export const onThemeChangedCallback = () => {
