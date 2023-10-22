@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.3.4...v2.4.0) (2023-10-22)
+
+
+### Features
+
+* **animations:** add kill option ([5bbed90](https://github.com/yoyurec/logseq-awesome-ui/commit/5bbed9086d8ba89cb69e4cd05c93583bfba55fd2))
+
 ## [2.3.4](https://github.com/yoyurec/logseq-awesome-ui/compare/v2.3.3...v2.3.4) (2023-10-19)
 
 
