@@ -81,8 +81,8 @@ Wide responsive search like in browser!
 Logseq is a privacy-first, open-source knowledge base. Visit https://logseq.com for more information.
 
 ## Support
-* Read about Logseq plugin updates on Dicscord - https://discord.com/channels/725182569297215569/896368413243494430
-* Ask about Logseq plugins on Dicscord - https://discord.com/channels/725182569297215569/752845167030960141
+* Read about Logseq plugin updates on Discord - https://discord.com/channels/725182569297215569/896368413243494430
+* Ask about Logseq plugins on Discord - https://discord.com/channels/725182569297215569/752845167030960141
 * If you have any questions, issues or feature request, use the issue submission on GitHub: https://github.com/yoyurec/logseq-awesome-ui/issues
 
 ## Credits
