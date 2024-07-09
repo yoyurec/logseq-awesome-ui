@@ -1,0 +1,8 @@
+.r .flex.flex-row {
+    position: absolute;
+    right: calc(100% + 8.9rem);
+}
+
+#head .l #search-button {
+    margin-left: 3.9rem;
+}

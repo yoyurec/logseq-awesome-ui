@@ -1,9 +1,8 @@
 import { doc, globals } from '../globals/globals';
 
-let navPanel: HTMLElement;
+import navigationLeftCSS from './navigationLeft.css?inline';
 
 export const navigationPositionLoad = () => {
-    navPanel = doc.querySelector('.r .flex.flex-row') as HTMLElement;
     navigationPositionToggle();
 }
 
@@ -26,20 +25,19 @@ export const navigationPositionUnload = () => {
 }
 
 const leftNavigationButtons = () => {
-    const leftSidebarToggler = doc.querySelector('#head .l')?.firstElementChild;
-    if (leftSidebarToggler) {
-        leftSidebarToggler.insertAdjacentElement('afterend', navPanel);
-    }
+    logseq.provideStyle({
+        key: '--awUi-navigation-position-css',
+        style: navigationLeftCSS,
+    });
 }
 
 // const centerNavigationButtons = () => {
 // }
 
 const standardNavigationButtons = () => {
-    const rightDotsMenuToggler = doc.querySelector('#head .r > .ui__dropdown-trigger');
-    if (rightDotsMenuToggler) {
-        rightDotsMenuToggler.insertAdjacentElement('beforebegin', navPanel);
-    }
+    doc.head
+        .querySelector(
+            `style[data-injected-style^="--awUi-navigation-position-css"]`
+        )
+        ?.remove();
 }
-
-
